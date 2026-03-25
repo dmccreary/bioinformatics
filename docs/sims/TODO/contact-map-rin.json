@@ -1,0 +1,14 @@
+{
+  "sim_id": "contact-map-rin",
+  "diagram_name": "Contact Map and Residue Interaction Network",
+  "chapter_number": 8,
+  "chapter_title": "Structural Bioinformatics and Molecular Interactions",
+  "chapter_dir": "08-structural-bioinformatics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: contact-map-rin\nLibrary: p5.js\nStatus: Specified\n\nA dual-panel interactive visualization. The left panel shows a protein contact map as a symmetric heatmap grid where contacts are colored by distance. The right panel shows the corresponding residue interaction network as a force-directed graph layout. Hovering over a cell in the contact map highlights the corresponding edge in the network, and vice versa. Students can adjust the distance threshold using a slider to see how the network density changes. Secondary structure elements are color-coded in both views."
+}

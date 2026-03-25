@@ -1,0 +1,14 @@
+{
+  "sim_id": "phylogenetic-network",
+  "diagram_name": "Phylogenetic Network with Reticulation Events",
+  "chapter_number": 7,
+  "chapter_title": "Phylogenetics and Evolutionary Graphs",
+  "chapter_dir": "07-phylogenetics-evolutionary-graphs",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: phylogenetic-network\nLibrary: vis-network\nStatus: Specified\n\nAn interactive phylogenetic network visualization. Tree edges are drawn in teal; reticulation edges (representing HGT or hybridization events) are drawn in orange with directional arrows. Students can toggle reticulation events on and off to see how the network simplifies to a tree. Node tooltips explain whether each internal node is a tree node (speciation) or a reticulation node (HGT/hybridization). The slight y-offset on horizontal edges ensures correct label rendering on initial load."
+}

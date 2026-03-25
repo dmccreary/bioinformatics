@@ -1,0 +1,14 @@
+{
+  "sim_id": "louvain-vs-leiden",
+  "diagram_name": "Louvain vs. Leiden Community Detection",
+  "chapter_number": 15,
+  "chapter_title": "Multi-Omics Integration and Graph Analytics",
+  "chapter_dir": "15-multi-omics-graph-analytics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: louvain-vs-leiden\nLibrary: p5.js\nStatus: Specified\n\nA side-by-side comparison. Left panel shows a Louvain partition with one community containing a disconnected bridge (highlighted in red). Right panel shows the Leiden partition of the same graph where the refinement phase has split the disconnected community into properly connected subcommunities. Nodes are colored by community. A slider controls the number of iterations."
+}

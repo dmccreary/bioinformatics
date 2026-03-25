@@ -26,6 +26,7 @@ nav:
     - 14. Knowledge Graphs: chapters/14-knowledge-graphs-ontologies/index.md
     - 15. Multi-Omics Integration: chapters/15-multi-omics-graph-analytics/index.md
     - 16. Python Tools and Capstone: chapters/16-python-tools-capstone/index.md
+  
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -34,9 +35,22 @@ nav:
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
     - Mascot Style Guide: learning-graph/mascot-test.md
+    - Book Metrics: learning-graph/book-metrics.md
+    - Chapter Metrics: learning-graph/chapter-metrics.md
+  
+  
   - MicroSims:
+    - List of MicroSims: sims/index.md
+    - Central Dogma and Its Exceptions: sims/central-dogma-exceptions/index.md
+    - Central Dogma Information Flow: sims/central-dogma-flow/index.md
+    - Codon Table Explorer: sims/codon-table-explorer/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Mutation Types and Their Effects on Protein Sequence: sims/mutation-types-explorer/index.md
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
+    - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
+
+
+  - Glossary: glossary.md
   - About: about.md
   - License: license.md
   - Contact: contact.md
@@ -65,10 +79,13 @@ theme:
 
 exclude_docs: |
   sims/prokaryote-vs-eukaryote/image-prompt.md
+  sims/TODO.md
+  sims/TODO/*.json
 
 plugins:
   - search
   - social
+  - social_override
   - glightbox:
       touchNavigation: true
       loop: false

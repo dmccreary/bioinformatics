@@ -1,0 +1,14 @@
+{
+  "sim_id": "transcriptome-landscape",
+  "diagram_name": "The Transcriptome Landscape",
+  "chapter_number": 11,
+  "chapter_title": "Transcriptomics and Gene Regulatory Networks",
+  "chapter_dir": "11-transcriptomics-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: transcriptome-landscape\nLibrary: p5.js\nStatus: Specified\n\nAn interactive diagram showing a cell with its nucleus, depicting DNA being transcribed into various RNA types (mRNA, miRNA, lncRNA, rRNA). Arrows show mRNA export to the cytoplasm for translation. Alternative splicing is depicted with an exon-intron gene model where different exon combinations produce different transcript isoforms. Users can click on each RNA type for a brief description."
+}

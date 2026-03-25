@@ -1,0 +1,14 @@
+{
+  "sim_id": "rnaseq-pipeline",
+  "diagram_name": "RNA-Seq Pipeline Overview",
+  "chapter_number": 11,
+  "chapter_title": "Transcriptomics and Gene Regulatory Networks",
+  "chapter_dir": "11-transcriptomics-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: rnaseq-pipeline\nLibrary: p5.js\nStatus: Specified\n\nAn animated flowchart showing the RNA-Seq pipeline stages: RNA extraction, library preparation, sequencing, quality trimming, read alignment (with splice-aware mapping illustrated), and transcript quantification. Reads flow through each stage as small colored rectangles. Clicking a stage highlights it and displays tools commonly used at that step (e.g., fastp, STAR, featureCounts). A final panel shows a simplified gene-by-sample count matrix."
+}

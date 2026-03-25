@@ -1,0 +1,14 @@
+{
+  "sim_id": "bipartite-metabolic-graph",
+  "diagram_name": "Bipartite Metabolic Graph Structure",
+  "chapter_number": 12,
+  "chapter_title": "Metabolic Pathway Modeling",
+  "chapter_dir": "12-metabolic-pathway-modeling",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: bipartite-metabolic-graph\nLibrary: vis-network\nStatus: Specified\n\nAn interactive bipartite graph showing metabolite nodes (circles, teal) and reaction nodes (squares, orange). Directed edges show substrate-to-reaction and reaction-to-product connections with stoichiometric weights. The user can toggle between the bipartite view and a projected unipartite metabolite-only view."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "kg-construction-pipeline",
+  "diagram_name": "Knowledge Graph Construction Pipeline",
+  "chapter_number": 14,
+  "chapter_title": "Biomedical Knowledge Graphs and Ontologies",
+  "chapter_dir": "14-knowledge-graphs-ontologies",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: kg-construction-pipeline\nLibrary: vis-network\nStatus: Specified\n\nA left-to-right flowchart showing multiple source databases (UniProt, OMIM, DrugBank, GO) feeding into extraction nodes, then schema mapping, entity resolution, and data integration steps, ending with a single unified knowledge graph node. Arrows are labeled with the transformation at each stage."
+}

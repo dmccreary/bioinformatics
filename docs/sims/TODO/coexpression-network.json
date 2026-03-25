@@ -1,0 +1,14 @@
+{
+  "sim_id": "coexpression-network",
+  "diagram_name": "Co-Expression Network and Module Detection",
+  "chapter_number": 11,
+  "chapter_title": "Transcriptomics and Gene Regulatory Networks",
+  "chapter_dir": "11-transcriptomics-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: coexpression-network\nLibrary: p5.js\nStatus: Specified\n\nAn interactive network visualization of a simulated co-expression network. Nodes represent genes, colored by module assignment (clusters of tightly co-expressed genes). Edge thickness reflects correlation strength. A slider adjusts the soft-thresholding power, and users can observe how increasing the power prunes weak edges and sharpens module boundaries. Clicking a module highlights its member genes and displays the module eigengene as a small line chart."
+}

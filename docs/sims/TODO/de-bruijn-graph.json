@@ -1,0 +1,14 @@
+{
+  "sim_id": "de-bruijn-graph",
+  "diagram_name": "De Bruijn Graph Construction",
+  "chapter_number": 10,
+  "chapter_title": "Genome Assembly and Variation Graphs",
+  "chapter_dir": "10-genome-assembly-variation-graphs",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: de-bruijn-graph\nLibrary: p5.js\nStatus: Specified\n\nAn interactive de Bruijn graph builder. Students enter a short DNA sequence and select a value of k using a slider (range 3-7). The visualization decomposes the sequence into k-mers, displays the prefix/suffix table, and draws the corresponding directed graph with labeled nodes and edges. Nodes are colored circles with (k-1)-mer labels. Edges are labeled with the k-mer they represent. An \"Animate Eulerian Path\" button highlights the Eulerian path step by step, reconstructing the sequence in a text panel below the graph."
+}

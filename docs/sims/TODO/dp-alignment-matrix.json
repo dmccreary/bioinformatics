@@ -1,0 +1,14 @@
+{
+  "sim_id": "dp-alignment-matrix",
+  "diagram_name": "Dynamic Programming Matrix Visualization",
+  "chapter_number": 6,
+  "chapter_title": "Sequence Alignment and Homology",
+  "chapter_dir": "06-sequence-alignment-homology",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: dp-alignment-matrix\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization of the Needleman-Wunsch and Smith-Waterman dynamic programming matrices. Students can enter short sequences, adjust match/mismatch/gap scores, and watch the matrix fill step by step. The traceback path is highlighted in a contrasting color. A toggle switches between global and local alignment modes."
+}

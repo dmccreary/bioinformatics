@@ -1,0 +1,14 @@
+{
+  "sim_id": "signaling-cascade-overview",
+  "diagram_name": "Cell Signaling Cascade Overview",
+  "chapter_number": 13,
+  "chapter_title": "Signaling Networks and Disease Modules",
+  "chapter_dir": "13-signaling-networks-disease",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: signaling-cascade-overview\nLibrary: vis-network\nStatus: Specified\n\nA directed graph showing a receptor at the membrane, adaptor proteins, a kinase cascade (RAF-MEK-ERK), second messenger nodes, and transcription factor targets in the nucleus. Edge arrows indicate activation. Feedback loops are drawn as dashed edges returning from downstream to upstream nodes."
+}

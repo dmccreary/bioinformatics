@@ -1,0 +1,14 @@
+{
+  "sim_id": "scrna-clustering",
+  "diagram_name": "Single-Cell Clustering and Trajectory",
+  "chapter_number": 11,
+  "chapter_title": "Transcriptomics and Gene Regulatory Networks",
+  "chapter_dir": "11-transcriptomics-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: scrna-clustering\nLibrary: p5.js\nStatus: Specified\n\nA UMAP-style 2D scatter plot of simulated single-cell data. Cells are colored by cluster (cell type) assignment. A toggle button switches between cluster view and trajectory view, where a principal curve traces through the point cloud to show a differentiation trajectory with pseudotime encoded as a color gradient. A slider controls the resolution parameter for clustering, and users can observe how increasing resolution splits clusters into finer subpopulations."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "graphlet-analysis",
+  "diagram_name": "Graphlet Orbits and Network Comparison",
+  "chapter_number": 9,
+  "chapter_title": "Protein-Protein Interaction Networks",
+  "chapter_dir": "09-protein-interaction-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: graphlet-analysis\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization showing all graphlets up to 5 nodes with their orbits labeled. Students can select a node in a sample PPI network to see its graphlet degree vector displayed as a bar chart. A comparison panel shows graphlet frequency distributions for two networks (e.g., yeast and human PPI networks) side by side, with a computed graphlet correlation distance. Students can toggle between different random graph models to see how their graphlet distributions differ from biological networks."
+}

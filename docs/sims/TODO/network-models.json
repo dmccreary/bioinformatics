@@ -1,0 +1,14 @@
+{
+  "sim_id": "network-models",
+  "diagram_name": "Network Model Comparison",
+  "chapter_number": 4,
+  "chapter_title": "Graph Theory Fundamentals",
+  "chapter_dir": "04-graph-theory-fundamentals",
+  "library": null,
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "- sim-id: network-models\n- Library: p5.js\n- Status: Specified\n\nThis interactive visualization generates and displays three network types side-by-side: Erdos-Renyi random graph, Barabasi-Albert scale-free network, and Watts-Strogatz small-world network. Each panel shows the graph layout along with its degree distribution plotted on a log-log scale. Sliders control the parameters of each model."
+}

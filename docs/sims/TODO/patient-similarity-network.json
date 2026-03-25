@@ -1,0 +1,14 @@
+{
+  "sim_id": "patient-similarity-network",
+  "diagram_name": "Patient Similarity Network Construction",
+  "chapter_number": 15,
+  "chapter_title": "Multi-Omics Integration and Graph Analytics",
+  "chapter_dir": "15-multi-omics-graph-analytics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: patient-similarity-network\nLibrary: p5.js\nStatus: Specified\n\nAn animated diagram showing three stages. Stage 1: a data matrix (rows = patients, columns = features) with color-coded columns for different omics types. Stage 2: a heatmap of pairwise patient similarities. Stage 3: a force-directed graph where patients are nodes, edges connect similar patients, and node colors indicate community membership detected by Leiden. A slider controls the KNN parameter $k$."
+}

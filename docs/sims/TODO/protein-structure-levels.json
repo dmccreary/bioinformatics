@@ -1,0 +1,14 @@
+{
+  "sim_id": "protein-structure-levels",
+  "diagram_name": "Protein Structure Hierarchy",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Molecular Biology",
+  "chapter_dir": "01-foundations-molecular-biology",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "Identify, describe",
+  "learning_objective": "Students will identify and describe the four levels of protein structure (primary, secondary, tertiary, quaternary) and recognize the types of bonds and forces that stabilize each level.",
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "Type: infographic\n**sim-id:** protein-structure-levels<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\n**Bloom Level:** Remember (L1)\n**Bloom Verb:** Identify, describe\n\n**Learning Objective:** Students will identify and describe the four levels of protein structure (primary, secondary, tertiary, quaternary) and recognize the types of bonds and forces that stabilize each level.\n\n**Visual Elements:**\n- Four panels arranged left to right (or wrapping on narrow screens)\n- Panel 1 — Primary: a linear chain of colored circles representing amino acids with single-letter codes\n- Panel 2 — Secondary: a ribbon diagram showing an alpha helix and a beta sheet with hydrogen bonds indicated by dashed lines\n- Panel 3 — Tertiary: a compact 3D-like fold of the entire chain with hydrophobic core shaded\n- Panel 4 — Quaternary: two or more folded subunits assembled together\n\n**Interactive Controls:**\n- Click on any panel to expand it and see a detailed description, stabilizing forces, and bioinformatics data format (e.g., \"Primary → FASTA\", \"Tertiary → PDB\")\n- Hover over bond types (hydrogen bonds, disulfide bridges, hydrophobic interactions) to see tooltip explanations\n\n**Data Visibility Requirements:**\n- Default: all four panels visible with level name and a key visual\n- Expanded: panel fills display area, shows labeled diagram with force annotations and 2-3 sentence description\n\n**Instructional Rationale:** A visual hierarchy with interactive drill-down supports the Remember/identify objective by giving students a spatial mental model of the four levels that they can revisit and explore at their own pace.\n\n**Canvas:** Responsive, minimum 700px wide. Aliceblue background."
+}

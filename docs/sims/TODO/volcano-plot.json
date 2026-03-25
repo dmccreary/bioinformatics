@@ -1,0 +1,14 @@
+{
+  "sim_id": "volcano-plot",
+  "diagram_name": "Volcano Plot for Differential Expression",
+  "chapter_number": 11,
+  "chapter_title": "Transcriptomics and Gene Regulatory Networks",
+  "chapter_dir": "11-transcriptomics-regulatory-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: volcano-plot\nLibrary: p5.js\nStatus: Specified\n\nAn interactive volcano plot with log2 fold change on the x-axis and negative log10 adjusted p-value on the y-axis. Simulated gene data points are colored by significance: gray for non-significant, blue for significant fold change only, red for significant by both fold change and FDR thresholds. Sliders allow the user to adjust the fold change and FDR cutoffs and watch the coloring update in real time. Hovering over a point shows a gene name tooltip."
+}

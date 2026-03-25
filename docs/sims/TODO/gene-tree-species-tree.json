@@ -1,0 +1,14 @@
+{
+  "sim_id": "gene-tree-species-tree",
+  "diagram_name": "Gene Tree vs Species Tree Discordance",
+  "chapter_number": 7,
+  "chapter_title": "Phylogenetics and Evolutionary Graphs",
+  "chapter_dir": "07-phylogenetics-evolutionary-graphs",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: gene-tree-species-tree\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization showing a species tree (drawn as a wide translucent tube) with one or more gene trees embedded inside it. Students can adjust the population size of ancestral species (wider tubes allow more ILS) and watch how gene tree topologies change relative to the species tree. A toggle demonstrates horizontal gene transfer events as edges crossing between species tubes. Color-coded gene lineages trace back to their coalescent events within ancestral populations."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "biomedical-kg-anatomy",
+  "diagram_name": "Anatomy of a Biomedical Knowledge Graph",
+  "chapter_number": 14,
+  "chapter_title": "Biomedical Knowledge Graphs and Ontologies",
+  "chapter_dir": "14-knowledge-graphs-ontologies",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: biomedical-kg-anatomy\nLibrary: vis-network\nStatus: Specified\n\nA heterogeneous graph with color-coded node types: genes (blue), diseases (red), drugs (green), phenotypes (orange), and GO terms (purple). Edges are labeled with relation types such as \"targets,\" \"associated_with,\" \"treats,\" and \"annotated_to.\" A legend maps colors to entity types."
+}

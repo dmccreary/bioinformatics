@@ -1,0 +1,14 @@
+{
+  "sim_id": "kg-integrated-pipeline",
+  "diagram_name": "Integrated Knowledge Graph Pipeline",
+  "chapter_number": 14,
+  "chapter_title": "Biomedical Knowledge Graphs and Ontologies",
+  "chapter_dir": "14-knowledge-graphs-ontologies",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: kg-integrated-pipeline\nLibrary: vis-network\nStatus: Specified\n\nA comprehensive flowchart showing the full pipeline: ontologies and databases at the top feeding into a knowledge graph construction layer, then branching into three paths -- graph embeddings (Node2Vec, TransE), GNNs (message passing), and text mining (NER, relation extraction). All three paths converge on downstream tasks: link prediction, drug repurposing, and disease diagnosis. Arrows labeled with data flow descriptions."
+}

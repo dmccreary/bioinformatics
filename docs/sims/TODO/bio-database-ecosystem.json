@@ -1,0 +1,14 @@
+{
+  "sim_id": "bio-database-ecosystem",
+  "diagram_name": "Biological Database Ecosystem",
+  "chapter_number": 2,
+  "chapter_title": "Biological Databases",
+  "chapter_dir": "02-biological-databases",
+  "library": null,
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "- **Sim ID**: bio-database-ecosystem\n- **Library**: vis-network\n- **Status**: Specified\n\nThis interactive network diagram shows the major biological databases covered in this chapter as nodes, colored by category (sequence = blue, structure = green, pathway/interaction = orange, ontology = purple, disease = red, integrative = gold). Edges represent cross-reference relationships between databases. Users can click a node to highlight its connections and see a brief description.\n\nNode types and examples:\n\n- Sequence: NCBI/GenBank, UniProt (Swiss-Prot + TrEMBL), Ensembl\n- Structure: PDB\n- Pathway/Interaction: KEGG, Reactome, BioGRID, STRING, IntAct\n- Ontology: Gene Ontology, Disease Ontology, HPO\n- Disease: COSMIC, OMIM\n- Integrative: Hetionet, BioCyc\n\nEdges represent known cross-reference links (e.g., GenBank to UniProt, UniProt to PDB, GO to UniProt, OMIM to GenBank, Hetionet to many sources). Layout uses a force-directed algorithm. Node labels are database names. Edge labels are omitted to reduce clutter.\n\nNote: Apply slight y-offset (from 480 to 490) for any horizontal edges to avoid the vis-network label rendering bug."
+}

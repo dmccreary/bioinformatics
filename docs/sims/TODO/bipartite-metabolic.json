@@ -1,0 +1,14 @@
+{
+  "sim_id": "bipartite-metabolic",
+  "diagram_name": "Bipartite Graph of a Metabolic Sub-network",
+  "chapter_number": 4,
+  "chapter_title": "Graph Theory Fundamentals",
+  "chapter_dir": "04-graph-theory-fundamentals",
+  "library": null,
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "- sim-id: bipartite-metabolic\n- Library: p5.js\n- Status: Specified\n\nThis interactive diagram shows a bipartite layout of a simplified glycolysis sub-network with enzyme nodes on one side and metabolite nodes on the other. Hover over nodes to highlight connected edges and partners."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "ppi-module-detection",
+  "diagram_name": "Module Detection in PPI Networks",
+  "chapter_number": 9,
+  "chapter_title": "Protein-Protein Interaction Networks",
+  "chapter_dir": "09-protein-interaction-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: ppi-module-detection\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization showing a PPI network with modules highlighted by color. Students can select different detection algorithms from a dropdown (MCODE, MCL, Clique Percolation) and see how the identified modules change. A side panel lists detected modules with their sizes, densities, and GO enrichment terms. Clicking on a module zooms in to show the internal structure and highlights inter-module connector proteins (bottlenecks) in a distinct color."
+}

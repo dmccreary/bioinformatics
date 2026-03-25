@@ -1,0 +1,14 @@
+{
+  "sim_id": "fba-formulation",
+  "diagram_name": "Flux Balance Analysis Formulation",
+  "chapter_number": 12,
+  "chapter_title": "Metabolic Pathway Modeling",
+  "chapter_dir": "12-metabolic-pathway-modeling",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: fba-formulation\nLibrary: p5.js\nStatus: Specified\n\nAn interactive diagram showing a small metabolic network (5-6 reactions) alongside its stoichiometric matrix $S$, flux vector $v$, and the LP formulation. Users can adjust exchange reaction bounds (nutrient uptake rates) with sliders and see how the optimal flux distribution changes. Flux values are displayed on the graph edges as proportional widths."
+}

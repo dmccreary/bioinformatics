@@ -1,0 +1,14 @@
+{
+  "sim_id": "variation-graph",
+  "diagram_name": "Variation Graph for a Genomic Region",
+  "chapter_number": 10,
+  "chapter_title": "Genome Assembly and Variation Graphs",
+  "chapter_dir": "10-genome-assembly-variation-graphs",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: variation-graph\nLibrary: p5.js\nStatus: Specified\n\nAn interactive variation graph showing a small genomic region with SNPs, an insertion, and a deletion represented as alternative paths through the graph. Nodes are labeled with sequence segments and colored by type (reference = teal, SNP variant = orange, insertion = purple, deletion shown as a skip edge). Two haplotype paths are highlighted in different colors. A dropdown lets students switch between haplotypes to see how each traverses the graph differently. A text panel reconstructs the haplotype sequence as the student follows the path."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "ppi-network-overview",
+  "diagram_name": "Protein Interaction Network Overview",
+  "chapter_number": 9,
+  "chapter_title": "Protein-Protein Interaction Networks",
+  "chapter_dir": "09-protein-interaction-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: ppi-network-overview\nLibrary: p5.js\nStatus: Specified\n\nAn interactive force-directed graph visualization of a sample protein interaction network. Nodes represent proteins, sized by degree. Hub proteins are highlighted in a distinct color. Students can hover over a node to see its name, degree, and functional annotation. A sidebar panel shows global network statistics: number of nodes, edges, average degree, clustering coefficient, and network diameter. Students can toggle between a full network view and a filtered view showing only high-confidence interactions."
+}

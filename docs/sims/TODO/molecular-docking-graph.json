@@ -1,0 +1,14 @@
+{
+  "sim_id": "molecular-docking-graph",
+  "diagram_name": "Molecular Docking and Protein-Ligand Graph",
+  "chapter_number": 8,
+  "chapter_title": "Structural Bioinformatics and Molecular Interactions",
+  "chapter_dir": "08-structural-bioinformatics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: molecular-docking-graph\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization with two panels. The left panel shows a simplified 2D representation of a ligand docked into a protein binding pocket, with interaction lines drawn between ligand atoms and protein residues. The right panel shows the corresponding protein-ligand graph as a bipartite network, with ligand atoms on one side and protein residues on the other. Students can select different ligands from a dropdown to see how the interaction graph changes. Edge colors indicate interaction type: green for hydrogen bonds, gray for hydrophobic, purple for pi-stacking."
+}

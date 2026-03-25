@@ -1,0 +1,14 @@
+{
+  "sim_id": "central-dogma-flow",
+  "diagram_name": "Central Dogma Information Flow",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Molecular Biology",
+  "chapter_dir": "01-foundations-molecular-biology",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain, summarize",
+  "learning_objective": "Students will explain the flow of genetic information from DNA through RNA to protein, identifying the key molecular machinery and regulation points at each step.",
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "Type: infographic\n**sim-id:** central-dogma-flow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\n**Bloom Level:** Understand (L2)\n**Bloom Verb:** Explain, summarize\n\n**Learning Objective:** Students will explain the flow of genetic information from DNA through RNA to protein, identifying the key molecular machinery and regulation points at each step.\n\n**Visual Elements:**\n- A horizontal flow diagram with three main stages: DNA → RNA → Protein\n- Each stage represented as a distinct panel with the molecule depicted schematically (double helix, single strand, folded chain)\n- Arrows between stages labeled \"Transcription\" and \"Translation\"\n- Key molecular players shown at each transition: RNA polymerase at the transcription arrow, ribosome at the translation arrow\n- Regulation points marked with small control icons at each level (transcriptional, post-transcriptional, translational, post-translational)\n\n**Interactive Controls:**\n- Step-through mode: \"Next\" / \"Previous\" buttons to walk through the process one stage at a time\n- At each stage, an info panel below shows: (1) what molecule is being produced, (2) what machinery is involved, (3) where in the cell it happens, (4) the bioinformatics data type that captures it (e.g., \"RNA-seq measures mRNA abundance\")\n- Hover over regulation points to see a tooltip describing that regulatory mechanism\n\n**Data Visibility Requirements:**\n- Stage 1: DNA in nucleus, highlight the gene region with promoter labeled\n- Stage 2: Transcription in progress — RNA polymerase on template strand, growing mRNA\n- Stage 3: Mature mRNA after processing (cap, poly-A tail, introns removed)\n- Stage 4: Translation at ribosome — codons read, amino acids assembled\n- Stage 5: Folded protein with annotation of its function\n\n**Instructional Rationale:** A step-through infographic with concrete molecular details at each stage supports the Understand/explain objective by requiring students to trace the full information flow rather than just memorizing \"DNA → RNA → Protein.\" Connecting each step to its bioinformatics data type reinforces the course's computational focus.\n\n**Canvas:** Responsive, minimum 700px wide. Aliceblue background."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "node2vec-random-walk",
+  "diagram_name": "Node2Vec Biased Random Walk",
+  "chapter_number": 14,
+  "chapter_title": "Biomedical Knowledge Graphs and Ontologies",
+  "chapter_dir": "14-knowledge-graphs-ontologies",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: node2vec-random-walk\nLibrary: p5.js\nStatus: Specified\n\nAn animated graph with nodes and edges. A walker (highlighted circle) moves step by step along a random walk. At each step, candidate neighbors are shown with their transition probabilities labeled as 1/p, 1, or 1/q depending on their distance to the previous node. Sliders control p and q values and the animation shows how walk behavior changes."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "four-omics-layers",
+  "diagram_name": "The Four Omics Layers",
+  "chapter_number": 15,
+  "chapter_title": "Multi-Omics Integration and Graph Analytics",
+  "chapter_dir": "15-multi-omics-graph-analytics",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: four-omics-layers\nLibrary: vis-network\nStatus: Specified\n\nA layered graph with four horizontal tiers: genomics (blue) at the bottom, transcriptomics (green) above it, proteomics (orange) next, and metabolomics (red) at the top. Intra-layer edges connect nodes within each layer. Inter-layer edges (dashed, gray) connect genes to transcripts, transcripts to proteins, and proteins to metabolites. A legend identifies each layer by color."
+}

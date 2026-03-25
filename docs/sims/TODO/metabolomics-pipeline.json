@@ -1,0 +1,14 @@
+{
+  "sim_id": "metabolomics-pipeline",
+  "diagram_name": "Metabolomics to Network Mapping Pipeline",
+  "chapter_number": 12,
+  "chapter_title": "Metabolic Pathway Modeling",
+  "chapter_dir": "12-metabolic-pathway-modeling",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: metabolomics-pipeline\nLibrary: p5.js\nStatus: Specified\n\nA step-by-step pipeline diagram showing the flow from biological sample through LC-MS/MS, feature extraction, statistical testing, and pathway enrichment, ending with highlighted metabolites on a metabolic network graph. Each step is clickable to reveal details."
+}

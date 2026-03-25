@@ -1,0 +1,14 @@
+{
+  "sim_id": "metabolic-network-overview",
+  "diagram_name": "Overview of a Metabolic Network",
+  "chapter_number": 12,
+  "chapter_title": "Metabolic Pathway Modeling",
+  "chapter_dir": "12-metabolic-pathway-modeling",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: metabolic-network-overview\nLibrary: vis-network\nStatus: Specified\n\nA network visualization showing metabolite nodes (circles) and reaction nodes (squares) connected by directed edges. Hub metabolites such as ATP, NADH, and pyruvate appear as large nodes with many connections. Pathway clusters (glycolysis, TCA cycle, pentose phosphate) are color-coded."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "text-mining-pipeline",
+  "diagram_name": "Text Mining Pipeline for Knowledge Graph Population",
+  "chapter_number": 14,
+  "chapter_title": "Biomedical Knowledge Graphs and Ontologies",
+  "chapter_dir": "14-knowledge-graphs-ontologies",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: text-mining-pipeline\nLibrary: vis-network\nStatus: Specified\n\nA left-to-right flowchart showing a PubMed abstract as input, followed by NER (with highlighted entity spans), relation extraction (with labeled arcs between entities), and finally new triples being added to a knowledge graph. Color-coded entity types match the knowledge graph node colors."
+}

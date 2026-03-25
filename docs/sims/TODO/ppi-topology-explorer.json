@@ -1,0 +1,14 @@
+{
+  "sim_id": "ppi-topology-explorer",
+  "diagram_name": "PPI Network Topology Explorer",
+  "chapter_number": 9,
+  "chapter_title": "Protein-Protein Interaction Networks",
+  "chapter_dir": "09-protein-interaction-networks",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: ppi-topology-explorer\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization that displays a PPI network and allows students to explore its topological properties. The left panel shows a force-directed layout of the network with nodes colored by degree. The right panel displays interactive charts: a degree distribution histogram (log-log scale), a clustering coefficient distribution, and a shortest path length distribution. Students can click on individual nodes to highlight their neighborhood and see local metrics. A confidence threshold slider dynamically filters edges and updates all statistics in real time."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "central-dogma-exceptions",
+  "diagram_name": "Central Dogma and Its Exceptions",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Molecular Biology",
+  "chapter_dir": "01-foundations-molecular-biology",
+  "library": "p5.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "Explain, classify",
+  "learning_objective": "Students will explain the standard flow of genetic information and classify the known exceptions (reverse transcription, RNA replication, prions, functional ncRNAs) by identifying which step of the central dogma each exception modifies or bypasses.",
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "Type: diagram\n**sim-id:** central-dogma-exceptions<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\n**Bloom Level:** Understand (L2)\n**Bloom Verb:** Explain, classify\n\n**Learning Objective:** Students will explain the standard flow of genetic information and classify the known exceptions (reverse transcription, RNA replication, prions, functional ncRNAs) by identifying which step of the central dogma each exception modifies or bypasses.\n\n**Visual Elements:**\n- Central triangle/flow diagram with DNA, RNA, and Protein at the three main positions\n- Standard arrows: DNA → RNA (transcription), RNA → Protein (translation), DNA → DNA (replication)\n- Exception arrows in dashed style: RNA → DNA (reverse transcription, red), RNA → RNA (RNA replication, orange), Protein → Protein (prion propagation, purple), RNA → ∅ (functional ncRNA, teal, arrow ending without reaching Protein)\n- Each exception arrow labeled with the biological example (e.g., \"HIV reverse transcriptase\")\n\n**Interactive Controls:**\n- Default view shows only the standard arrows\n- Button: \"Show Exceptions\" — reveals all exception arrows with animation\n- Click on any arrow (standard or exception) to see an info panel with: process name, molecular machinery, biological example, and bioinformatics relevance\n- Toggle: \"Standard Only\" / \"All Pathways\" to switch between views\n\n**Data Visibility Requirements:**\n- Default: three standard arrows visible with process names\n- Exception mode: four additional arrows appear, each with a distinct color and label\n- Info panel: 3-4 sentences per pathway explaining the mechanism and its significance\n\n**Instructional Rationale:** Starting with the standard model and then revealing exceptions helps students build a correct baseline before learning about departures. Clicking individual arrows to see details supports the Understand/classify objective by requiring active categorization rather than passive reading.\n\n**Canvas:** Responsive, minimum 700px wide. Aliceblue background."
+}

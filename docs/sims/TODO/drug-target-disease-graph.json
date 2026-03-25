@@ -1,0 +1,14 @@
+{
+  "sim_id": "drug-target-disease-graph",
+  "diagram_name": "Drug-Target-Disease Knowledge Graph",
+  "chapter_number": 13,
+  "chapter_title": "Signaling Networks and Disease Modules",
+  "chapter_dir": "13-signaling-networks-disease",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: drug-target-disease-graph\nLibrary: vis-network\nStatus: Specified\n\nA heterogeneous knowledge graph with three node types: drugs (blue circles), protein targets (green diamonds), and diseases (red squares). Multiple edge types are shown in different colors: \"binds\" edges from drugs to targets, \"associated with\" edges from targets to diseases, \"treats\" edges from drugs to diseases, and \"comorbid with\" edges between diseases. The user can click on a drug node to highlight all its connections and explore potential repurposing paths."
+}

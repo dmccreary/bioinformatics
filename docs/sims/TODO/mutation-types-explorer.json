@@ -1,0 +1,14 @@
+{
+  "sim_id": "mutation-types-explorer",
+  "diagram_name": "Mutation Types and Their Effects on Protein Sequence",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Molecular Biology",
+  "chapter_dir": "01-foundations-molecular-biology",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloom_verb": "Differentiate, examine",
+  "learning_objective": "Students will differentiate between SNPs, insertions, deletions, and frameshift mutations by observing how each type of change in a DNA sequence alters the resulting mRNA codons and protein sequence.",
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "Type: microsim\n**sim-id:** mutation-types-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\n**Bloom Level:** Analyze (L4)\n**Bloom Verb:** Differentiate, examine\n\n**Learning Objective:** Students will differentiate between SNPs, insertions, deletions, and frameshift mutations by observing how each type of change in a DNA sequence alters the resulting mRNA codons and protein sequence.\n\n**Visual Elements:**\n- A reference DNA sequence (top row, ~30 nucleotides) with codon boundaries marked\n- A mutated DNA sequence (second row) with the mutation highlighted in red\n- The mRNA sequence derived from each (third and fourth rows)\n- The amino acid sequence from each (fifth and sixth rows) with changes highlighted\n- Visual diff markers showing where the protein sequence diverges\n\n**Interactive Controls:**\n- Dropdown: mutation type (SNP — synonymous, SNP — missense, SNP — nonsense, 1-bp insertion, 1-bp deletion, 3-bp deletion)\n- Button: \"Apply Mutation\" — introduces the selected mutation at a marked position in the reference\n- Button: \"Reset\" — returns to the reference sequence\n- Slider: position along the sequence where the mutation is introduced\n- Each row is color-coded: reference in blue, mutant in red, unchanged positions in gray\n\n**Data Visibility Requirements:**\n- Stage 1: Reference DNA → mRNA → protein shown with codon groupings\n- Stage 2: Mutation introduced; changed nucleotide(s) highlighted in red\n- Stage 3: New codon groupings shown (critical for frameshifts)\n- Stage 4: Translated protein shown with changed amino acids highlighted; frameshift = all downstream amino acids changed\n\n**Instructional Rationale:** Allowing students to apply different mutation types at different positions and immediately see the downstream effect on protein sequence supports the Analyze/differentiate objective. Students discover for themselves that a 1-bp indel is far more disruptive than a synonymous SNP, building intuition for variant prioritization in later chapters.\n\n**Canvas:** Responsive, minimum 700px wide. Aliceblue background."
+}

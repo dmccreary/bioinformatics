@@ -1,0 +1,14 @@
+{
+  "sim_id": "phylogenetic-tree-types",
+  "diagram_name": "Rooted and Unrooted Phylogenetic Trees",
+  "chapter_number": 7,
+  "chapter_title": "Phylogenetics and Evolutionary Graphs",
+  "chapter_dir": "07-phylogenetics-evolutionary-graphs",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: phylogenetic-tree-types\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization showing the same set of taxa displayed as a rooted cladogram, a rooted phylogram, and an unrooted tree. Students can drag taxa to different positions, re-root the tree by clicking on branches, and toggle between cladogram and phylogram views. The outgroup is highlighted in a distinct color. A sidebar explains the graph-theoretic properties of each representation."
+}

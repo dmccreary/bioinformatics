@@ -1,0 +1,14 @@
+{
+  "sim_id": "graph-data-model-design",
+  "diagram_name": "Graph Data Model Design Process",
+  "chapter_number": 16,
+  "chapter_title": "Python Tools and Capstone Projects",
+  "chapter_dir": "16-python-tools-capstone",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "**sim-id:** graph-data-model-design\n**Library:** vis-network\n**Status:** Specified\n\nA flowchart showing the iterative process of graph data model design: Identify Entities, Define Relationships, Assign Properties, Validate Against Queries, and Iterate. Each step is a node connected by directed edges, with a feedback loop from Iterate back to Identify Entities."
+}

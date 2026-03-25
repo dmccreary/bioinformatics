@@ -1,0 +1,14 @@
+{
+  "sim_id": "disease-module-interactome",
+  "diagram_name": "Disease Module in the Human Interactome",
+  "chapter_number": 13,
+  "chapter_title": "Signaling Networks and Disease Modules",
+  "chapter_dir": "13-signaling-networks-disease",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: disease-module-interactome\nLibrary: vis-network\nStatus: Specified\n\nAn interactive network visualization of a subset of the human interactome. Disease-associated genes for two diseases (e.g., asthma and diabetes) are highlighted in distinct colors. The user can toggle disease modules on and off to see how they cluster within the larger network. Overlapping modules (shared genes between diseases) are highlighted, illustrating comorbidity."
+}

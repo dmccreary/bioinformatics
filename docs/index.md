@@ -2,6 +2,7 @@
 title: Bioinformatics
 description: A college-level bioinformatics interactive intelligent textbook with a distinctive emphasis on graph-based representations of biological data. Covers sequence analysis, structural biology, network analysis, knowledge graphs, and multi-omics integration.
 image: img/cover.png
+og:image: img/cover.png
 ---
 
 # Bioinformatics

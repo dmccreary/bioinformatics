@@ -1,0 +1,14 @@
+{
+  "sim_id": "codon-table-explorer",
+  "diagram_name": "Codon Table Explorer",
+  "chapter_number": 1,
+  "chapter_title": "Foundations of Molecular Biology",
+  "chapter_dir": "01-foundations-molecular-biology",
+  "library": "p5.js",
+  "bloom_level": "Apply (L3)",
+  "bloom_verb": "Use, demonstrate",
+  "learning_objective": "Students will use the codon table to translate a short mRNA sequence into an amino acid sequence, demonstrating understanding of the genetic code's degeneracy and the role of start and stop codons.",
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "Type: microsim\n**sim-id:** codon-table-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\n**Bloom Level:** Apply (L3)\n**Bloom Verb:** Use, demonstrate\n\n**Learning Objective:** Students will use the codon table to translate a short mRNA sequence into an amino acid sequence, demonstrating understanding of the genetic code's degeneracy and the role of start and stop codons.\n\n**Visual Elements:**\n- A circular or grid-format codon table showing all 64 codons mapped to their amino acids, color-coded by amino acid property (hydrophobic = blue, polar = green, charged = red, special = yellow)\n- An input area where the student types or selects an mRNA sequence (up to 30 nucleotides)\n- A translation output area showing the resulting amino acid chain with codon-to-amino-acid mapping highlighted\n- Start codons (AUG) highlighted in green, stop codons in red\n\n**Interactive Controls:**\n- Text input: type an mRNA sequence (validated to only accept A, U, G, C)\n- Button: \"Translate\" — performs codon-by-codon translation\n- Button: \"Random Sequence\" — generates a random mRNA with at least one start and one stop codon\n- Toggle: \"Show Reading Frames\" — displays all three forward reading frames with ORFs highlighted\n- Hover over any cell in the codon table to see: codon, amino acid name, three-letter code, one-letter code, and property\n\n**Data Visibility Requirements:**\n- Stage 1: Show the raw mRNA sequence with nucleotides in distinct colors\n- Stage 2: Show the sequence split into triplets (codons) with visual grouping\n- Stage 3: Show each codon mapped to its amino acid via the table, with connecting lines\n- Stage 4: Show the resulting polypeptide chain with amino acid properties color-coded\n\n**Instructional Rationale:** Hands-on translation of sequences supports the Apply/use objective by giving students direct practice with the codon table rather than passive memorization. The reading frame toggle extends to ORF identification, connecting to genome annotation tasks later in the course.\n\n**Canvas:** Responsive, minimum 700px wide. Aliceblue background."
+}

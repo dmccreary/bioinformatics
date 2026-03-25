@@ -1,0 +1,14 @@
+{
+  "sim_id": "fastq-qc-pipeline",
+  "diagram_name": "FASTQ Quality Control Pipeline",
+  "chapter_number": 3,
+  "chapter_title": "Bioinformatics Data Formats",
+  "chapter_dir": "03-bioinformatics-data-formats",
+  "library": null,
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "- **Sim ID**: fastq-qc-pipeline\n- **Library**: vis-network\n- **Status**: Specified\n\nThis interactive flowchart diagram shows the steps in a FASTQ quality control pipeline as a directed graph. Nodes represent processing steps (Raw FASTQ, FastQC Assessment, Adapter Trimming, Quality Trimming, Length Filtering, Clean FASTQ, MultiQC Report). Edges are directed arrows showing the data flow. Decision nodes indicate pass/fail quality checks. Color coding: input/output nodes in blue, QC assessment nodes in green, trimming/filtering nodes in orange, decision nodes in yellow. Layout is top-to-bottom to show pipeline flow.\n\nNote: Apply slight y-offset (from 480 to 490) for any horizontal edges to avoid the vis-network label rendering bug."
+}

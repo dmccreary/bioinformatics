@@ -1,0 +1,14 @@
+{
+  "sim_id": "genome-assembly-pipeline",
+  "diagram_name": "Genome Assembly Pipeline Overview",
+  "chapter_number": 10,
+  "chapter_title": "Genome Assembly and Variation Graphs",
+  "chapter_dir": "10-genome-assembly-variation-graphs",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: genome-assembly-pipeline\nLibrary: p5.js\nStatus: Specified\n\nAn animated pipeline diagram showing the stages of genome assembly: raw reads enter from the left, pass through quality filtering, k-mer counting, de Bruijn graph construction, contig generation, scaffolding, and gap filling. Each stage is represented as a labeled box connected by directional arrows. Clicking a stage highlights it and displays a brief description in a side panel. The animation shows reads flowing through the pipeline, merging into longer contigs and scaffolds."
+}

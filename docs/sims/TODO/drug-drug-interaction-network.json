@@ -1,0 +1,14 @@
+{
+  "sim_id": "drug-drug-interaction-network",
+  "diagram_name": "Drug-Drug Interaction Network",
+  "chapter_number": 13,
+  "chapter_title": "Signaling Networks and Disease Modules",
+  "chapter_dir": "13-signaling-networks-disease",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: drug-drug-interaction-network\nLibrary: vis-network\nStatus: Specified\n\nAn interactive network showing drug nodes colored by therapeutic class. Edges represent known drug-drug interactions, with edge color indicating severity (red for severe, orange for moderate, yellow for mild). The user can search for a drug and see all its interactions highlighted. Dense clusters indicate drug classes with many internal interactions."
+}

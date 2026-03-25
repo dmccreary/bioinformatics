@@ -1,0 +1,14 @@
+{
+  "sim_id": "sequence-similarity-network",
+  "diagram_name": "Sequence Similarity Network",
+  "chapter_number": 6,
+  "chapter_title": "Sequence Alignment and Homology",
+  "chapter_dir": "06-sequence-alignment-homology",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: sequence-similarity-network\nLibrary: vis-network\nStatus: Specified\n\nAn interactive graph visualization of a sequence similarity network. Nodes represent protein sequences colored by functional family. Edges represent significant BLAST hits. A slider controls the E-value threshold: as the slider moves from stringent to relaxed, more edges appear and clusters merge. Node tooltips show sequence accession and function. The slight y-offset on edge labels ensures correct rendering on initial load."
+}

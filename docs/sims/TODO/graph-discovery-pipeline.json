@@ -1,0 +1,14 @@
+{
+  "sim_id": "graph-discovery-pipeline",
+  "diagram_name": "Graph-Based Discovery Pipeline",
+  "chapter_number": 16,
+  "chapter_title": "Python Tools and Capstone Projects",
+  "chapter_dir": "16-python-tools-capstone",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "**sim-id:** graph-discovery-pipeline\n**Library:** vis-network\n**Status:** Specified\n\nA directed acyclic graph showing the eight stages of the bench-to-bedside pipeline: Data Acquisition, Data Wrangling, Graph Construction, Graph Analysis, Machine Learning, Visualization, Interpretation, and Communication. Edges show data flow between stages, with feedback loops from Interpretation back to Graph Analysis and Data Wrangling."
+}

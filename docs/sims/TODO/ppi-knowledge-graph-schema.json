@@ -1,0 +1,14 @@
+{
+  "sim_id": "ppi-knowledge-graph-schema",
+  "diagram_name": "PPI Knowledge Graph Schema",
+  "chapter_number": 5,
+  "chapter_title": "Graph Databases and Query Languages",
+  "chapter_dir": "05-graph-databases-query-languages",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: ppi-knowledge-graph-schema\nLibrary: vis-network\nStatus: Specified\n\nNode labels: Protein, Gene, Disease, Drug, Pathway, Organism.\nRelationship types: INTERACTS_WITH (Protein-Protein), ENCODED_BY (Protein-Gene), ASSOCIATED_WITH (Gene-Disease), TREATS (Drug-Disease), TARGETS (Drug-Protein), PARTICIPATES_IN (Protein-Pathway), BELONGS_TO (Protein-Organism)."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "protein-structure-hierarchy",
+  "diagram_name": "Protein Structure Hierarchy",
+  "chapter_number": 8,
+  "chapter_title": "Structural Bioinformatics and Molecular Interactions",
+  "chapter_dir": "08-structural-bioinformatics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: protein-structure-hierarchy\nLibrary: p5.js\nStatus: Specified\n\nAn interactive visualization showing the four levels of protein structure. Students can toggle between views of a primary amino acid sequence, secondary structure elements (alpha helices as ribbons and beta sheets as arrows), a tertiary fold shown as a 3D ribbon diagram, and a quaternary assembly of subunits. A color legend indicates different secondary structure elements. Clicking on a residue highlights its hydrogen bonding partners."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "alphafold-pipeline",
+  "diagram_name": "AlphaFold Prediction Pipeline",
+  "chapter_number": 8,
+  "chapter_title": "Structural Bioinformatics and Molecular Interactions",
+  "chapter_dir": "08-structural-bioinformatics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-03-25",
+  "specification": "sim-id: alphafold-pipeline\nLibrary: p5.js\nStatus: Specified\n\nAn animated flowchart showing the AlphaFold prediction pipeline. Starting from an amino acid sequence, the visualization shows multiple sequence alignment generation, the Evoformer attention mechanism processing pairwise residue features, iterative refinement of the distance matrix (shown as a heatmap grid), and the final 3D structure output. Students can click on each stage to see a detailed explanation. Confidence scores are color-coded from blue (high) to orange (low)."
+}
