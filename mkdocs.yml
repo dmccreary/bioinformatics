@@ -91,6 +91,7 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - Biological Database Ecosystem: sims/bio-database-ecosystem/index.md
     - Central Dogma and Its Exceptions: sims/central-dogma-exceptions/index.md
     - Central Dogma Information Flow: sims/central-dogma-flow/index.md
     - Codon Table Explorer: sims/codon-table-explorer/index.md
@@ -98,6 +99,8 @@ nav:
     - Mutation Types and Their Effects on Protein Sequence: sims/mutation-types-explorer/index.md
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
     - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
+
+
 
 
   - FAQ: faq.md
