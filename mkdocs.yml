@@ -1,4 +1,4 @@
-site_name: Bioinformatics - An Interactive Course
+site_name: Bioinformatics
 repo_url: https://github.com/dmccreary/bioinformatics
 site_url: https://dmccreary.github.io/bioinformatics/
 site_description: An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.
@@ -6,7 +6,26 @@ site_author: Dan McCreary
 
 nav:
   - Home: index.md
+  - About This Course: about.md
   - Course Description: course-description.md
+  - Chapters:
+    - List of Chapters: chapters/index.md
+    - 1. Foundations of Molecular Biology: chapters/01-foundations-molecular-biology/index.md
+    - 2. Biological Databases: chapters/02-biological-databases/index.md
+    - 3. Bioinformatics Data Formats: chapters/03-bioinformatics-data-formats/index.md
+    - 4. Graph Theory Fundamentals: chapters/04-graph-theory-fundamentals/index.md
+    - 5. Graph Databases and Queries: chapters/05-graph-databases-query-languages/index.md
+    - 6. Sequence Alignment: chapters/06-sequence-alignment-homology/index.md
+    - 7. Phylogenetics: chapters/07-phylogenetics-evolutionary-graphs/index.md
+    - 8. Structural Bioinformatics: chapters/08-structural-bioinformatics/index.md
+    - 9. Protein Interaction Networks: chapters/09-protein-interaction-networks/index.md
+    - 10. Genome Assembly: chapters/10-genome-assembly-variation-graphs/index.md
+    - 11. Transcriptomics: chapters/11-transcriptomics-regulatory-networks/index.md
+    - 12. Metabolic Pathways: chapters/12-metabolic-pathway-modeling/index.md
+    - 13. Signaling and Disease: chapters/13-signaling-networks-disease/index.md
+    - 14. Knowledge Graphs: chapters/14-knowledge-graphs-ontologies/index.md
+    - 15. Multi-Omics Integration: chapters/15-multi-omics-graph-analytics/index.md
+    - 16. Python Tools and Capstone: chapters/16-python-tools-capstone/index.md
   - Learning Graph:
     - Introduction: learning-graph/index.md
     - Course Description Assessment: learning-graph/course-description-assessment.md
@@ -14,17 +33,20 @@ nav:
     - Graph Quality Analysis: learning-graph/quality-metrics.md
     - Concept Taxonomy: learning-graph/concept-taxonomy.md
     - Taxonomy Distribution Report: learning-graph/taxonomy-distribution.md
+    - Mascot Style Guide: learning-graph/mascot-test.md
   - MicroSims:
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
+  - About: about.md
   - License: license.md
   - Contact: contact.md
 
 theme:
   name: material
-  # logo: img/logo.png
-  # favicon: img/favicon.ico
+  logo: img/logo.png
+  favicon: img/favicon.ico
   palette:
-    primary: 'green'
+    primary: 'teal'
     accent: 'white'
   include_sidebar: true
   features:
@@ -37,6 +59,9 @@ theme:
     - navigation.top
     - navigation.footer
     - content.action.edit
+
+exclude_docs: |
+  sims/prokaryote-vs-eukaryote/image-prompt.md
 
 plugins:
   - search
@@ -67,6 +92,7 @@ markdown_extensions:
 
 extra_css:
   - css/extra.css
+  - css/mascot.css
 
 extra_javascript:
   - js/extra.js

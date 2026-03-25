@@ -2,10 +2,10 @@
 
 **Title:** Bioinformatics
 
-**Duration:** 14 weeks
-**Prerequisites:** Introductory biology (molecular biology or genetics), one semester of programming (Python preferred), basic statistics
-**Target Audience:** Upper-division undergraduates, graduate students, and working professionals seeking to expand their bioinformatics skill set
-**Modality:** In-person or hybrid with hands-on lab sessions
+**Duration:** 14 weeks<br/>
+**Prerequisites:** Introductory biology (molecular biology or genetics), one semester of programming (Python preferred), basic statistics<br/>
+**Target Audience:** Upper-division undergraduates, graduate students, and working professionals seeking to expand their bioinformatics skill set<br/>
+**Modality:** In-person or hybrid with hands-on lab sessions or fully independent self-paced study
 
 ## Course Overview
 
