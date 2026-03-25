@@ -1,0 +1,1988 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/bioinformatics/chapters/03-bioinformatics-data-formats/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../04-graph-theory-fundamentals/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - Bioinformatics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Quiz - Bioinformatics">
+      
+        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/03-bioinformatics-data-formats/quiz.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/bioinformatics/chapters/03-bioinformatics-data-formats/quiz/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Quiz - Bioinformatics">
+      
+        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/03-bioinformatics-data-formats/quiz.png">
+      
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-bioinformatics-data-formats" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bioinformatics" class="md-header__button md-logo" aria-label="Bioinformatics" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioinformatics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bioinformatics" class="md-nav__button md-logo" aria-label="Bioinformatics" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Bioinformatics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-foundations-molecular-biology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations of Molecular Biology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-biological-databases/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Biological Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    3. Bioinformatics Data Formats
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Bioinformatics Data Formats
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-information-does-the-fastq-format-add-beyond-what-fasta-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What information does the FASTQ format add beyond what FASTA provides?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-phred-quality-score-of-30-corresponds-to-what-probability-of-an-incorrect-base-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. A Phred quality score of 30 corresponds to what probability of an incorrect base call?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-the-critical-coordinate-system-difference-between-bed-and-gff3-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. What is the critical coordinate system difference between BED and GFF3 formats?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-in-a-vcf-file-what-does-the-genotype-field-01-indicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. In a VCF file, what does the genotype field 0/1 indicate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-does-the-cigar-string-50m2i48m-in-a-sam-alignment-record-represent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What does the CIGAR string 50M2I48M in a SAM alignment record represent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-which-format-is-specifically-designed-for-representing-quantitative-computational-models-of-biological-processes-including-species-reactions-and-mathematical-rate-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Which format is specifically designed for representing quantitative computational models of biological processes, including species, reactions, and mathematical rate laws?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-is-the-primary-purpose-of-the-genbank-flat-file-format-compared-to-fasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What is the primary purpose of the GenBank flat-file format compared to FASTA?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-which-quality-control-metric-when-showing-a-bimodal-distribution-in-sequencing-data-may-suggest-sample-contamination" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Which quality control metric, when showing a bimodal distribution in sequencing data, may suggest sample contamination?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-in-the-pdb-file-format-what-information-does-the-chain-identifier-encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. In the PDB file format, what information does the chain identifier encode?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-when-converting-from-genbank-format-to-fasta-format-what-important-consideration-must-be-kept-in-mind" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. When converting from GenBank format to FASTA format, what important consideration must be kept in mind?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-graph-theory-fundamentals/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Graph Theory Fundamentals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-graph-databases-query-languages/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Graph Databases and Queries
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-sequence-alignment-homology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Sequence Alignment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-phylogenetics-evolutionary-graphs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Phylogenetics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-structural-bioinformatics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. Structural Bioinformatics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-protein-interaction-networks/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Protein Interaction Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-genome-assembly-variation-graphs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Genome Assembly
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-transcriptomics-regulatory-networks/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Transcriptomics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-metabolic-pathway-modeling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Metabolic Pathways
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../13-signaling-networks-disease/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    13. Signaling and Disease
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-knowledge-graphs-ontologies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Knowledge Graphs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-multi-omics-graph-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Multi-Omics Integration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-python-tools-capstone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Python Tools and Capstone
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-information-does-the-fastq-format-add-beyond-what-fasta-provides" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What information does the FASTQ format add beyond what FASTA provides?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-phred-quality-score-of-30-corresponds-to-what-probability-of-an-incorrect-base-call" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. A Phred quality score of 30 corresponds to what probability of an incorrect base call?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-what-is-the-critical-coordinate-system-difference-between-bed-and-gff3-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. What is the critical coordinate system difference between BED and GFF3 formats?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-in-a-vcf-file-what-does-the-genotype-field-01-indicate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. In a VCF file, what does the genotype field 0/1 indicate?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-does-the-cigar-string-50m2i48m-in-a-sam-alignment-record-represent" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What does the CIGAR string 50M2I48M in a SAM alignment record represent?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-which-format-is-specifically-designed-for-representing-quantitative-computational-models-of-biological-processes-including-species-reactions-and-mathematical-rate-laws" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Which format is specifically designed for representing quantitative computational models of biological processes, including species, reactions, and mathematical rate laws?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-is-the-primary-purpose-of-the-genbank-flat-file-format-compared-to-fasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What is the primary purpose of the GenBank flat-file format compared to FASTA?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-which-quality-control-metric-when-showing-a-bimodal-distribution-in-sequencing-data-may-suggest-sample-contamination" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Which quality control metric, when showing a bimodal distribution in sequencing data, may suggest sample contamination?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-in-the-pdb-file-format-what-information-does-the-chain-identifier-encode" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. In the PDB file format, what information does the chain identifier encode?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-when-converting-from-genbank-format-to-fasta-format-what-important-consideration-must-be-kept-in-mind" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. When converting from GenBank format to FASTA format, what important consideration must be kept in mind?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/bioinformatics/edit/master/docs/chapters/03-bioinformatics-data-formats/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-bioinformatics-data-formats">Quiz: Bioinformatics Data Formats</h1>
+<p>Test your understanding of standard bioinformatics file formats, coordinate systems, quality scores, and data conversion practices with these review questions.</p>
+<hr>
+<h4 id="1-what-information-does-the-fastq-format-add-beyond-what-fasta-provides">1. What information does the FASTQ format add beyond what FASTA provides?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Feature annotations and cross-references to other databases</li>
+<li>Per-base quality scores encoded using the Phred scale</li>
+<li>Three-dimensional atomic coordinates</li>
+<li>Hierarchical gene model relationships using parent-child attributes</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. FASTQ extends FASTA by adding per-base quality scores, making it the standard format for raw sequencing data. Each FASTQ record contains four lines: a header, the nucleotide sequence, a separator, and a quality line with ASCII-encoded Phred scores. Feature annotations (A) are found in GenBank format. 3D coordinates (C) are in PDB format. Parent-child attributes (D) are a feature of GFF3 format.</p>
+<p><strong>Concept Tested:</strong> FASTQ Format</p>
+</details>
+<hr>
+<h4 id="2-a-phred-quality-score-of-30-corresponds-to-what-probability-of-an-incorrect-base-call">2. A Phred quality score of 30 corresponds to what probability of an incorrect base call?</h4>
+<div class="upper-alpha">
+<ol>
+<li>1 in 10 (90% accuracy)</li>
+<li>1 in 100 (99% accuracy)</li>
+<li>1 in 1,000 (99.9% accuracy)</li>
+<li>1 in 10,000 (99.99% accuracy)</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. The Phred quality score relates to error probability by <span class="arithmatex">\(Q = -10 \cdot \log_{10}(P)\)</span>. A Phred score of 30 means <span class="arithmatex">\(P = 10^{-3}\)</span>, or a 1 in 1,000 chance of error (99.9% accuracy). A score of 10 gives 90% accuracy (A), 20 gives 99% accuracy (B), and 40 gives 99.99% accuracy (D). Modern Illumina instruments routinely produce reads with average quality scores above 30.</p>
+<p><strong>Concept Tested:</strong> FASTQ Format</p>
+</details>
+<hr>
+<h4 id="3-what-is-the-critical-coordinate-system-difference-between-bed-and-gff3-formats">3. What is the critical coordinate system difference between BED and GFF3 formats?</h4>
+<div class="upper-alpha">
+<ol>
+<li>BED uses 0-based half-open coordinates while GFF3 uses 1-based fully closed coordinates</li>
+<li>BED uses 1-based coordinates while GFF3 uses 0-based coordinates</li>
+<li>BED encodes coordinates as floating-point numbers while GFF3 uses integers</li>
+<li>BED stores coordinates in columns 4-5 while GFF3 stores them in columns 1-2</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>A</strong>. BED uses zero-based, half-open coordinates where the start is inclusive and the end is exclusive. GFF3 uses one-based, fully closed coordinates where both start and end are inclusive. A feature from position 100 to 200 is written as <code>99  200</code> in BED but <code>100  200</code> in GFF3. This difference is one of the most common sources of off-by-one errors in bioinformatics pipelines.</p>
+<p><strong>Concept Tested:</strong> BED Format and GFF3 Format</p>
+</details>
+<hr>
+<h4 id="4-in-a-vcf-file-what-does-the-genotype-field-01-indicate">4. In a VCF file, what does the genotype field <code>0/1</code> indicate?</h4>
+<div class="upper-alpha">
+<ol>
+<li>The sample is homozygous for the reference allele</li>
+<li>The sample has no data at this position</li>
+<li>The sample is heterozygous, carrying one reference and one alternate allele</li>
+<li>The sample is homozygous for the alternate allele</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. In VCF format, the genotype field uses <code>0</code> for the reference allele and <code>1</code> for the first alternate allele. The notation <code>0/1</code> indicates a heterozygous call with one reference and one alternate allele. Homozygous reference would be <code>0/0</code> (A), and homozygous alternate would be <code>1/1</code> (D). The slash indicates unphased genotypes, while a pipe <code>|</code> would indicate phased genotypes.</p>
+<p><strong>Concept Tested:</strong> VCF Format</p>
+</details>
+<hr>
+<h4 id="5-what-does-the-cigar-string-50m2i48m-in-a-sam-alignment-record-represent">5. What does the CIGAR string <code>50M2I48M</code> in a SAM alignment record represent?</h4>
+<div class="upper-alpha">
+<ol>
+<li>50 mismatches, 2 insertions, and 48 mismatches</li>
+<li>50 aligned bases, a 2-base insertion relative to the reference, then 48 more aligned bases</li>
+<li>A sequence that is 50 bases long with 2 introns and 48 exonic bases</li>
+<li>50 soft-clipped bases, 2 indels, and 48 hard-clipped bases</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. In SAM format, the CIGAR string compactly encodes alignment structure. <code>M</code> indicates a match or mismatch (aligned position), <code>I</code> indicates an insertion to the reference, and <code>D</code> indicates a deletion from the reference. So <code>50M2I48M</code> means 50 aligned bases, followed by a 2-base insertion in the read relative to the reference, then 48 more aligned bases. <code>M</code> does not distinguish matches from mismatches.</p>
+<p><strong>Concept Tested:</strong> SAM and BAM Format</p>
+</details>
+<hr>
+<h4 id="6-which-format-is-specifically-designed-for-representing-quantitative-computational-models-of-biological-processes-including-species-reactions-and-mathematical-rate-laws">6. Which format is specifically designed for representing quantitative computational models of biological processes, including species, reactions, and mathematical rate laws?</h4>
+<div class="upper-alpha">
+<ol>
+<li>BioPAX</li>
+<li>OWL</li>
+<li>SBML (Systems Biology Markup Language)</li>
+<li>GFF3</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. SBML (Systems Biology Markup Language) is an XML-based format for representing computational models of biological processes, encoding species, reactions, compartments, and mathematical rate laws. BioPAX (A) focuses on qualitative pathway knowledge rather than quantitative models. OWL (B) is a general ontology language. GFF3 (D) describes genomic feature annotations, not pathway models.</p>
+<p><strong>Concept Tested:</strong> SBML Format</p>
+</details>
+<hr>
+<h4 id="7-what-is-the-primary-purpose-of-the-genbank-flat-file-format-compared-to-fasta">7. What is the primary purpose of the GenBank flat-file format compared to FASTA?</h4>
+<div class="upper-alpha">
+<ol>
+<li>GenBank stores only protein sequences while FASTA stores only DNA sequences</li>
+<li>GenBank provides richly annotated records including metadata, feature annotations, and literature references alongside the sequence</li>
+<li>GenBank is a binary compressed format that saves storage space</li>
+<li>GenBank is designed exclusively for variant data representation</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. GenBank format provides comprehensive metadata beyond the raw sequence, including organism information, literature references linked to PubMed, feature annotations (coding sequences, regulatory regions, variation sites), accession numbers with version tracking, and cross-references to other databases. FASTA stores only a header line and the sequence. Both formats can store DNA or protein sequences, making option A incorrect.</p>
+<p><strong>Concept Tested:</strong> GenBank Format</p>
+</details>
+<hr>
+<h4 id="8-which-quality-control-metric-when-showing-a-bimodal-distribution-in-sequencing-data-may-suggest-sample-contamination">8. Which quality control metric, when showing a bimodal distribution in sequencing data, may suggest sample contamination?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Per-base quality scores</li>
+<li>Read length distribution</li>
+<li>GC content distribution</li>
+<li>Adapter content percentage</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. The GC content distribution should match the expected GC content of the sequenced organism. A bimodal distribution suggests contamination from a second organism with different GC content. Per-base quality drops (A) indicate sequencing quality degradation. Read length variation (B) reflects trimming or platform characteristics. High adapter content (D) indicates incomplete removal of sequencing adapters.</p>
+<p><strong>Concept Tested:</strong> Data Quality Control</p>
+</details>
+<hr>
+<h4 id="9-in-the-pdb-file-format-what-information-does-the-chain-identifier-encode">9. In the PDB file format, what information does the chain identifier encode?</h4>
+<div class="upper-alpha">
+<ol>
+<li>The experimental method used to determine the structure</li>
+<li>The resolution of the crystallographic data</li>
+<li>Which polypeptide or nucleic acid chain each atom belongs to</li>
+<li>The publication reference for the structure</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. The chain identifier in PDB format is a single letter that indicates which polypeptide or nucleic acid chain each atom belongs to. When a PDB structure contains multiple protein chains (e.g., chains A and B), these identifiers define the subunits of a complex. Co-crystal structures with multiple chains provide direct structural evidence for physical interactions between proteins, implicitly encoding graph edges in protein interaction networks.</p>
+<p><strong>Concept Tested:</strong> PDB File Format</p>
+</details>
+<hr>
+<h4 id="10-when-converting-from-genbank-format-to-fasta-format-what-important-consideration-must-be-kept-in-mind">10. When converting from GenBank format to FASTA format, what important consideration must be kept in mind?</h4>
+<div class="upper-alpha">
+<ol>
+<li>The conversion requires changing coordinate systems from 0-based to 1-based</li>
+<li>FASTA files cannot store DNA sequences longer than 10,000 bases</li>
+<li>The conversion discards feature annotations, metadata, and literature references, retaining only the sequence</li>
+<li>GenBank and FASTA use incompatible character encodings for nucleotides</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>C</strong>. Converting from GenBank to FASTA necessarily discards the rich annotations that GenBank provides, including feature annotations (coding sequences, regulatory regions), literature references, organism metadata, and database cross-references. Only the header description and the raw sequence are retained. This is a key principle of format conversion: translating from a richer format to a simpler one always involves information loss, and you must verify you do not need what is discarded.</p>
+<p><strong>Concept Tested:</strong> Data Format Conversion</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../04-graph-theory-fundamentals/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="../../../js/mathjax-config.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

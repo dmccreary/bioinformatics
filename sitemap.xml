@@ -37,7 +37,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/01-foundations-molecular-biology/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/02-biological-databases/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/02-biological-databases/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -45,7 +53,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/03-bioinformatics-data-formats/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/04-graph-theory-fundamentals/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/04-graph-theory-fundamentals/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -53,7 +69,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/05-graph-databases-query-languages/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/06-sequence-alignment-homology/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/06-sequence-alignment-homology/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -61,7 +85,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/07-phylogenetics-evolutionary-graphs/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/08-structural-bioinformatics/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/08-structural-bioinformatics/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -69,7 +101,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/09-protein-interaction-networks/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/10-genome-assembly-variation-graphs/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/10-genome-assembly-variation-graphs/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -77,7 +117,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/11-transcriptomics-regulatory-networks/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/12-metabolic-pathway-modeling/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/12-metabolic-pathway-modeling/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -85,7 +133,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/13-signaling-networks-disease/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/14-knowledge-graphs-ontologies/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/14-knowledge-graphs-ontologies/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -93,7 +149,15 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/15-multi-omics-graph-analytics/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/16-python-tools-capstone/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/16-python-tools-capstone/quiz/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -138,6 +202,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/learning-graph/quality-metrics/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/learning-graph/quiz-generation-report/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>

@@ -1,0 +1,1988 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/bioinformatics/chapters/13-signaling-networks-disease/quiz/">
+      
+      
+        <link rel="prev" href="../">
+      
+      
+        <link rel="next" href="../../14-knowledge-graphs-ontologies/">
+      
+      
+      <link rel="icon" href="../../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Quiz - Bioinformatics</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Quiz - Bioinformatics">
+      
+        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/13-signaling-networks-disease/quiz.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/bioinformatics/chapters/13-signaling-networks-disease/quiz/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Quiz - Bioinformatics">
+      
+        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/13-signaling-networks-disease/quiz.png">
+      
+    
+    
+  <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quiz-signaling-networks-and-disease-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Bioinformatics" class="md-header__button md-logo" aria-label="Bioinformatics" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Bioinformatics
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quiz
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Bioinformatics" class="md-nav__button md-logo" aria-label="Bioinformatics" data-md-component="logo">
+      
+  <img src="../../../img/logo.png" alt="logo">
+
+    </a>
+    Bioinformatics
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/bioinformatics" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../01-foundations-molecular-biology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    1. Foundations of Molecular Biology
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../02-biological-databases/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    2. Biological Databases
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../03-bioinformatics-data-formats/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    3. Bioinformatics Data Formats
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../04-graph-theory-fundamentals/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    4. Graph Theory Fundamentals
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../05-graph-databases-query-languages/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    5. Graph Databases and Queries
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../06-sequence-alignment-homology/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    6. Sequence Alignment
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../07-phylogenetics-evolutionary-graphs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    7. Phylogenetics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../08-structural-bioinformatics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    8. Structural Bioinformatics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../09-protein-interaction-networks/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    9. Protein Interaction Networks
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../10-genome-assembly-variation-graphs/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    10. Genome Assembly
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../11-transcriptomics-regulatory-networks/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    11. Transcriptomics
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../12-metabolic-pathway-modeling/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    12. Metabolic Pathways
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_14" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    13. Signaling and Disease
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4_14" id="__nav_4_14_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_14">
+            <span class="md-nav__icon md-icon"></span>
+            13. Signaling and Disease
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quiz
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-disease-module-in-the-context-of-network-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is a disease module in the context of network medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-guilt-by-association-principle-used-for-in-network-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the "guilt by association" principle used for in network biology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-does-drug-repurposing-through-knowledge-graphs-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How does drug repurposing through knowledge graphs work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-distinguishes-an-oncogene-from-a-tumor-suppressor-gene-in-cancer-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What distinguishes an oncogene from a tumor suppressor gene in cancer biology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-network-proximity-used-to-measure-in-network-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is network proximity used to measure in network medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-biological-function-does-a-negative-feedback-loop-serve-in-a-signaling-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What biological function does a negative feedback loop serve in a signaling network?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-is-the-coherent-feed-forward-loop-motif-and-what-function-does-it-serve-in-signaling-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What is the coherent feed-forward loop motif, and what function does it serve in signaling networks?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-pharmacogenomics-and-how-does-it-relate-to-precision-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is pharmacogenomics and how does it relate to precision medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-can-comorbidity-networks-help-understand-disease-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How can comorbidity networks help understand disease relationships?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-makes-cancer-driver-genes-different-from-passenger-mutations-in-cancer-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. What makes cancer driver genes different from passenger mutations in cancer genomics?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../14-knowledge-graphs-ontologies/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    14. Knowledge Graphs
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../15-multi-omics-graph-analytics/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    15. Multi-Omics Integration
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../16-python-tools-capstone/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    16. Python Tools and Capstone
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About This Course
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-a-disease-module-in-the-context-of-network-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is a disease module in the context of network medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-what-is-the-guilt-by-association-principle-used-for-in-network-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. What is the "guilt by association" principle used for in network biology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-does-drug-repurposing-through-knowledge-graphs-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. How does drug repurposing through knowledge graphs work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-what-distinguishes-an-oncogene-from-a-tumor-suppressor-gene-in-cancer-biology" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. What distinguishes an oncogene from a tumor suppressor gene in cancer biology?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-what-is-network-proximity-used-to-measure-in-network-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. What is network proximity used to measure in network medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-what-biological-function-does-a-negative-feedback-loop-serve-in-a-signaling-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. What biological function does a negative feedback loop serve in a signaling network?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-what-is-the-coherent-feed-forward-loop-motif-and-what-function-does-it-serve-in-signaling-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. What is the coherent feed-forward loop motif, and what function does it serve in signaling networks?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-what-is-pharmacogenomics-and-how-does-it-relate-to-precision-medicine" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. What is pharmacogenomics and how does it relate to precision medicine?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-how-can-comorbidity-networks-help-understand-disease-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. How can comorbidity networks help understand disease relationships?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-what-makes-cancer-driver-genes-different-from-passenger-mutations-in-cancer-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. What makes cancer driver genes different from passenger mutations in cancer genomics?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/bioinformatics/edit/master/docs/chapters/13-signaling-networks-disease/quiz.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="quiz-signaling-networks-and-disease-modules">Quiz: Signaling Networks and Disease Modules</h1>
+<p>Test your understanding of cell signaling as directed graphs, network medicine, disease modules, drug repurposing, and cancer genomics.</p>
+<hr>
+<h4 id="1-what-is-a-disease-module-in-the-context-of-network-medicine">1. What is a disease module in the context of network medicine?</h4>
+<div class="upper-alpha">
+<ol>
+<li>A software tool for diagnosing diseases based on patient symptoms</li>
+<li>A connected subgraph within the human interactome where disease-associated genes cluster together, reflecting dysfunction of coherent molecular pathways</li>
+<li>A laboratory protocol for testing drug candidates against disease targets</li>
+<li>A database entry describing a single disease and its symptoms</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A disease module is a connected subgraph within the human protein interaction network where genes associated with a particular disease tend to cluster. This clustering was formalized by Barabasi and colleagues, who showed that disease-associated proteins are significantly closer to each other in the interactome than expected by chance. Disease modules reflect the biological reality that diseases arise from dysfunction of interconnected molecular pathways, not isolated gene failures.</p>
+<p><strong>Concept Tested:</strong> Disease Module</p>
+</details>
+<hr>
+<h4 id="2-what-is-the-guilt-by-association-principle-used-for-in-network-biology">2. What is the "guilt by association" principle used for in network biology?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Determining which researcher published incorrect data</li>
+<li>Predicting that a protein of unknown function is likely involved in a disease pathway if it interacts with several known disease proteins</li>
+<li>Identifying proteins that are toxic based on their chemical structure</li>
+<li>Measuring the expression level of genes adjacent to disease genes on a chromosome</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. The guilt-by-association principle states that if a protein of unknown function interacts with multiple known disease-associated proteins in the interactome, it is likely involved in the same disease pathway. This principle underlies disease gene prioritization methods that use network context to rank candidate genes from GWAS loci. More sophisticated implementations use random walks with restart, network propagation, or graph neural networks rather than simple neighbor counting.</p>
+<p><strong>Concept Tested:</strong> Guilt by Association</p>
+</details>
+<hr>
+<h4 id="3-how-does-drug-repurposing-through-knowledge-graphs-work">3. How does drug repurposing through knowledge graphs work?</h4>
+<div class="upper-alpha">
+<ol>
+<li>By synthesizing new chemical compounds that resemble existing drugs</li>
+<li>By traversing drug-target-disease graphs to find existing drugs whose targets overlap with or are proximal to disease modules in the interactome</li>
+<li>By increasing the dosage of existing drugs until new therapeutic effects appear</li>
+<li>By combining two or more existing drugs to create new formulations</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Drug repurposing via knowledge graphs exploits the network relationships between drugs, their protein targets, and diseases. If a drug's targets are close to (or overlap with) a disease module in the interactome, the drug may have therapeutic potential for that disease even if it was originally approved for a different indication. This approach uses network proximity measures and path-finding algorithms on drug-target-disease graphs to systematically identify repurposing candidates.</p>
+<p><strong>Concept Tested:</strong> Drug Repurposing and Graph Model for Repurposing</p>
+</details>
+<hr>
+<h4 id="4-what-distinguishes-an-oncogene-from-a-tumor-suppressor-gene-in-cancer-biology">4. What distinguishes an oncogene from a tumor suppressor gene in cancer biology?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Oncogenes are found only in viruses while tumor suppressors are found in human cells</li>
+<li>Oncogenes promote cell growth when abnormally activated (gain-of-function), while tumor suppressors normally restrain growth and contribute to cancer when inactivated (loss-of-function)</li>
+<li>Oncogenes cause cancer through single mutations while tumor suppressors require environmental triggers</li>
+<li>Tumor suppressors are always located on the X chromosome while oncogenes are on autosomes</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Oncogenes are mutated forms of normal cellular genes (proto-oncogenes) that promote cell proliferation when abnormally activated through gain-of-function mutations, amplifications, or translocations. Tumor suppressor genes normally restrain cell growth, and cancer develops when both copies are inactivated (loss-of-function) following Knudson's two-hit hypothesis. Examples include RAS (oncogene) and TP53 (tumor suppressor). In cancer network analysis, both types are key nodes whose mutation disrupts signaling pathways.</p>
+<p><strong>Concept Tested:</strong> Oncogene and Tumor Suppressor Gene</p>
+</details>
+<hr>
+<h4 id="5-what-is-network-proximity-used-to-measure-in-network-medicine">5. What is network proximity used to measure in network medicine?</h4>
+<div class="upper-alpha">
+<ol>
+<li>The physical distance between two proteins inside a cell measured in nanometers</li>
+<li>The shortest path distance between two sets of genes in the interactome, used to assess whether drug targets are close to disease genes</li>
+<li>The similarity between two DNA sequences based on alignment scores</li>
+<li>The number of publications linking two genes in the biomedical literature</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Network proximity quantifies the closeness between two sets of genes (e.g., drug targets and disease genes) in the interactome by computing average shortest path distances. A significantly negative z-score (compared to random gene sets) indicates that the sets are closer than expected by chance, suggesting a biological relationship. This metric is used to predict drug-disease associations, assess comorbidity patterns, and prioritize drug repurposing candidates.</p>
+<p><strong>Concept Tested:</strong> Network Proximity</p>
+</details>
+<hr>
+<h4 id="6-what-biological-function-does-a-negative-feedback-loop-serve-in-a-signaling-network">6. What biological function does a negative feedback loop serve in a signaling network?</h4>
+<div class="upper-alpha">
+<ol>
+<li>It amplifies the signal indefinitely to ensure a strong cellular response</li>
+<li>It dampens the signal and restores the system to its resting state, providing homeostasis</li>
+<li>It creates a permanent memory of the signaling event</li>
+<li>It blocks all signaling from the receptor</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. A negative feedback loop is a directed cycle in the signaling graph where a downstream component inhibits an upstream component. For example, the phosphatase SHP-1 dephosphorylates an activated receptor, reducing signal strength. Negative feedback provides signal attenuation and homeostasis, preventing runaway activation. Without negative feedback, a single growth factor molecule could drive continuous cell division. Positive feedback (not negative) creates bistable switches and memory (A and C are incorrect).</p>
+<p><strong>Concept Tested:</strong> Feedback Loop</p>
+</details>
+<hr>
+<h4 id="7-what-is-the-coherent-feed-forward-loop-motif-and-what-function-does-it-serve-in-signaling-networks">7. What is the coherent feed-forward loop motif, and what function does it serve in signaling networks?</h4>
+<div class="upper-alpha">
+<ol>
+<li>A motif where three nodes inhibit each other in a cycle, creating oscillations</li>
+<li>A three-node motif where node A activates B and C, and B also activates C, serving as a persistence detector that filters out transient noise</li>
+<li>A random connection pattern with no functional significance</li>
+<li>A motif found only in metabolic networks, not signaling networks</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. In a coherent type 1 feed-forward loop, node A regulates B (activation), B regulates C (activation), and A also directly activates C. This means C is activated only when A provides a sustained signal, because both the direct path (A to C) and indirect path (A to B to C) must deliver their inputs. This acts as a persistence detector, filtering out transient noise — C does not respond to brief fluctuations in A's activity. This motif is statistically enriched in both transcriptional and signaling networks.</p>
+<p><strong>Concept Tested:</strong> Feed-Forward Loop</p>
+</details>
+<hr>
+<h4 id="8-what-is-pharmacogenomics-and-how-does-it-relate-to-precision-medicine">8. What is pharmacogenomics and how does it relate to precision medicine?</h4>
+<div class="upper-alpha">
+<ol>
+<li>The study of how drugs affect the genome by causing mutations</li>
+<li>The study of how genetic variation affects an individual's response to drugs, enabling personalized treatment decisions based on genotype</li>
+<li>The process of manufacturing drugs from genetically modified organisms</li>
+<li>A database of pharmaceutical company names and their product portfolios</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Pharmacogenomics studies how an individual's genetic variation influences drug metabolism, efficacy, and adverse effects. For example, variants in CYP2D6 affect metabolism of many common drugs, and HLA genotype predicts severe drug hypersensitivity reactions. Pharmacogenomics is a key component of precision medicine, where treatment decisions are tailored to each patient's molecular profile rather than using a one-size-fits-all approach.</p>
+<p><strong>Concept Tested:</strong> Pharmacogenomics and Precision Medicine</p>
+</details>
+<hr>
+<h4 id="9-how-can-comorbidity-networks-help-understand-disease-relationships">9. How can comorbidity networks help understand disease relationships?</h4>
+<div class="upper-alpha">
+<ol>
+<li>By measuring the cost of treating multiple diseases simultaneously</li>
+<li>By connecting diseases that share genetic risk factors or overlapping disease modules in the interactome, revealing common molecular mechanisms</li>
+<li>By tracking which hospitals treat the most patients with multiple conditions</li>
+<li>By counting the number of medications prescribed for each disease</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Comorbidity networks connect diseases that co-occur in patients more frequently than expected by chance. When these clinical observations are mapped onto the molecular interactome, comorbid diseases often share overlapping disease modules — their disease-associated genes are proximal or shared in the network. This provides molecular explanations for clinical comorbidity patterns and can reveal shared pathogenic mechanisms that suggest common therapeutic strategies.</p>
+<p><strong>Concept Tested:</strong> Comorbidity Network</p>
+</details>
+<hr>
+<h4 id="10-what-makes-cancer-driver-genes-different-from-passenger-mutations-in-cancer-genomics">10. What makes cancer driver genes different from passenger mutations in cancer genomics?</h4>
+<div class="upper-alpha">
+<ol>
+<li>Driver genes are always inherited while passenger mutations are always somatic</li>
+<li>Driver genes confer a selective growth advantage to cancer cells and are causally implicated in tumor development, while passenger mutations are neutral bystanders acquired during tumor evolution</li>
+<li>Passenger mutations are more common in oncogenes while driver genes are more common in tumor suppressors</li>
+<li>Driver genes can only be detected by whole-genome sequencing while passenger mutations require RNA-seq</li>
+</ol>
+</div>
+<details class="question">
+<summary>Show Answer</summary>
+<p>The correct answer is <strong>B</strong>. Cancer driver genes carry mutations that confer a selective growth advantage to cancer cells, contributing causally to tumor initiation, progression, or metastasis. Passenger mutations are neutral or near-neutral mutations that accumulate during the rapid cell division of tumor cells but do not contribute to cancer development. Distinguishing drivers from passengers is a central challenge in cancer genomics, addressed by methods that assess mutation recurrence, network centrality, and functional impact.</p>
+<p><strong>Concept Tested:</strong> Cancer Driver Genes</p>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: Content">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../14-knowledge-graphs-ontologies/" class="md-footer__link md-footer__link--next" aria-label="Next: Content">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Content
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "toc.follow", "navigation.top", "navigation.footer", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../js/extra.js"></script>
+      
+        <script src="../../../js/mathjax-config.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-chtml.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
