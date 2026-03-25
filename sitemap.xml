@@ -41,11 +41,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/01-foundations-molecular-biology/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/02-biological-databases/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/02-biological-databases/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/02-biological-databases/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -57,11 +65,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/03-bioinformatics-data-formats/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/04-graph-theory-fundamentals/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/04-graph-theory-fundamentals/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/04-graph-theory-fundamentals/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -73,11 +89,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/05-graph-databases-query-languages/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/06-sequence-alignment-homology/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/06-sequence-alignment-homology/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/06-sequence-alignment-homology/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -89,11 +113,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/07-phylogenetics-evolutionary-graphs/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/08-structural-bioinformatics/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/08-structural-bioinformatics/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/08-structural-bioinformatics/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -105,11 +137,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/09-protein-interaction-networks/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/10-genome-assembly-variation-graphs/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/10-genome-assembly-variation-graphs/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/10-genome-assembly-variation-graphs/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -121,11 +161,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/11-transcriptomics-regulatory-networks/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/12-metabolic-pathway-modeling/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/12-metabolic-pathway-modeling/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/12-metabolic-pathway-modeling/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -137,11 +185,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/13-signaling-networks-disease/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/14-knowledge-graphs-ontologies/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/14-knowledge-graphs-ontologies/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/14-knowledge-graphs-ontologies/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -153,11 +209,19 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/15-multi-omics-graph-analytics/references/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/16-python-tools-capstone/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/chapters/16-python-tools-capstone/quiz/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/chapters/16-python-tools-capstone/references/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
