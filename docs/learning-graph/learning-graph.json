@@ -1,0 +1,5205 @@
+{
+  "metadata": {
+    "title": "Bioinformatics with Graph-Based Data Modeling",
+    "description": "A comprehensive learning graph for a 14-week bioinformatics course with emphasis on graph-based representations of biological data including protein interactions, metabolic pathways, gene regulatory networks, and biomedical knowledge graphs.",
+    "creator": "Dan McCreary",
+    "date": "2026-03-24",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Foundation Concepts",
+      "color": {
+        "color": "lightcoral",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "DBAS": {
+      "classifierName": "Biological Databases",
+      "color": {
+        "color": "peachpuff",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "DFMT": {
+      "classifierName": "Data Formats",
+      "color": {
+        "color": "thistle",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "GRTH": {
+      "classifierName": "Graph Theory",
+      "color": {
+        "color": "powderblue",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "GRDB": {
+      "classifierName": "Graph Databases",
+      "color": {
+        "color": "lightsteelblue",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "SEQA": {
+      "classifierName": "Sequence Analysis",
+      "color": {
+        "color": "palegreen",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "PHYL": {
+      "classifierName": "Phylogenetics",
+      "color": {
+        "color": "honeydew",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "STRU": {
+      "classifierName": "Structural Bioinformatics",
+      "color": {
+        "color": "lightpink",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "PPIS": {
+      "classifierName": "Protein Interactions",
+      "color": {
+        "color": "lavender",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "GENO": {
+      "classifierName": "Genomics",
+      "color": {
+        "color": "lightyellow",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "TRNS": {
+      "classifierName": "Transcriptomics",
+      "color": {
+        "color": "paleturquoise",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "PATH": {
+      "classifierName": "Pathways and Disease",
+      "color": {
+        "color": "mistyrose",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "KNOW": {
+      "classifierName": "Knowledge Graphs",
+      "color": {
+        "color": "aquamarine",
+        "font": {
+          "color": "black"
+        }
+      }
+    },
+    "TOOL": {
+      "classifierName": "Tools and Capstone",
+      "color": {
+        "color": "gainsboro",
+        "font": {
+          "color": "black"
+        }
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Bioinformatics",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Computational Biology",
+      "group": "FOUND"
+    },
+    {
+      "id": 3,
+      "label": "Central Dogma",
+      "group": "FOUND"
+    },
+    {
+      "id": 4,
+      "label": "DNA Structure",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "RNA Structure",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Protein Structure",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "Amino Acids",
+      "group": "FOUND"
+    },
+    {
+      "id": 8,
+      "label": "Nucleotides",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "Codons",
+      "group": "FOUND"
+    },
+    {
+      "id": 10,
+      "label": "Gene",
+      "group": "FOUND"
+    },
+    {
+      "id": 11,
+      "label": "Genome",
+      "group": "FOUND"
+    },
+    {
+      "id": 12,
+      "label": "Transcription",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Translation",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Gene Expression",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Sequence Data",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "Molecular Biology",
+      "group": "FOUND"
+    },
+    {
+      "id": 17,
+      "label": "Cell Biology Basics",
+      "group": "FOUND"
+    },
+    {
+      "id": 18,
+      "label": "Genetic Code",
+      "group": "FOUND"
+    },
+    {
+      "id": 19,
+      "label": "Open Reading Frame",
+      "group": "FOUND"
+    },
+    {
+      "id": 20,
+      "label": "Complementary Base Pairing",
+      "group": "FOUND"
+    },
+    {
+      "id": 21,
+      "label": "Chromosomes",
+      "group": "FOUND"
+    },
+    {
+      "id": 22,
+      "label": "Mutations",
+      "group": "FOUND"
+    },
+    {
+      "id": 23,
+      "label": "Single Nucleotide Polymorphism",
+      "group": "FOUND"
+    },
+    {
+      "id": 24,
+      "label": "Insertion and Deletion",
+      "group": "FOUND"
+    },
+    {
+      "id": 25,
+      "label": "Structural Variant",
+      "group": "FOUND"
+    },
+    {
+      "id": 26,
+      "label": "Copy Number Variation",
+      "group": "FOUND"
+    },
+    {
+      "id": 27,
+      "label": "Epigenetics",
+      "group": "FOUND"
+    },
+    {
+      "id": 28,
+      "label": "DNA Methylation",
+      "group": "FOUND"
+    },
+    {
+      "id": 29,
+      "label": "Histone Modification",
+      "group": "FOUND"
+    },
+    {
+      "id": 30,
+      "label": "Central Dogma Exceptions",
+      "group": "FOUND"
+    },
+    {
+      "id": 31,
+      "label": "Biological Databases",
+      "group": "DBAS"
+    },
+    {
+      "id": 32,
+      "label": "NCBI",
+      "group": "DBAS"
+    },
+    {
+      "id": 33,
+      "label": "GenBank Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 34,
+      "label": "UniProt",
+      "group": "DBAS"
+    },
+    {
+      "id": 35,
+      "label": "Swiss-Prot",
+      "group": "DBAS"
+    },
+    {
+      "id": 36,
+      "label": "TrEMBL",
+      "group": "DBAS"
+    },
+    {
+      "id": 37,
+      "label": "Protein Data Bank",
+      "group": "DBAS"
+    },
+    {
+      "id": 38,
+      "label": "Ensembl",
+      "group": "DBAS"
+    },
+    {
+      "id": 39,
+      "label": "KEGG Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 40,
+      "label": "Reactome Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 41,
+      "label": "BioGRID Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 42,
+      "label": "STRING Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 43,
+      "label": "IntAct Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 44,
+      "label": "COSMIC Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 45,
+      "label": "Gene Ontology Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 46,
+      "label": "Disease Ontology Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 47,
+      "label": "Human Phenotype Ontology DB",
+      "group": "DBAS"
+    },
+    {
+      "id": 48,
+      "label": "BioCyc Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 49,
+      "label": "OMIM Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 50,
+      "label": "Hetionet Database",
+      "group": "DBAS"
+    },
+    {
+      "id": 51,
+      "label": "Database Cross-References",
+      "group": "DBAS"
+    },
+    {
+      "id": 52,
+      "label": "Programmatic Database Access",
+      "group": "DBAS"
+    },
+    {
+      "id": 53,
+      "label": "REST APIs for Biology",
+      "group": "DBAS"
+    },
+    {
+      "id": 54,
+      "label": "Batch Data Download",
+      "group": "DBAS"
+    },
+    {
+      "id": 55,
+      "label": "Data Provenance",
+      "group": "DBAS"
+    },
+    {
+      "id": 56,
+      "label": "FASTA Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 57,
+      "label": "FASTQ Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 58,
+      "label": "GenBank Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 59,
+      "label": "GFF3 Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 60,
+      "label": "OWL Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 61,
+      "label": "PDB File Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 62,
+      "label": "VCF Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 63,
+      "label": "SAM and BAM Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 64,
+      "label": "BED Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 65,
+      "label": "SBML Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 66,
+      "label": "BioPAX Format",
+      "group": "DFMT"
+    },
+    {
+      "id": 67,
+      "label": "CSV for Bioinformatics",
+      "group": "DFMT"
+    },
+    {
+      "id": 68,
+      "label": "JSON for Bioinformatics",
+      "group": "DFMT"
+    },
+    {
+      "id": 69,
+      "label": "Data Format Conversion",
+      "group": "DFMT"
+    },
+    {
+      "id": 70,
+      "label": "Data Quality Control",
+      "group": "DFMT"
+    },
+    {
+      "id": 71,
+      "label": "Graph Theory",
+      "group": "GRTH",
+      "shape": "box"
+    },
+    {
+      "id": 72,
+      "label": "Nodes and Edges",
+      "group": "GRTH"
+    },
+    {
+      "id": 73,
+      "label": "Directed Graphs",
+      "group": "GRTH"
+    },
+    {
+      "id": 74,
+      "label": "Undirected Graphs",
+      "group": "GRTH"
+    },
+    {
+      "id": 75,
+      "label": "Weighted Graphs",
+      "group": "GRTH"
+    },
+    {
+      "id": 76,
+      "label": "Bipartite Graphs",
+      "group": "GRTH"
+    },
+    {
+      "id": 77,
+      "label": "Labeled Property Graph",
+      "group": "GRTH"
+    },
+    {
+      "id": 78,
+      "label": "Multigraph",
+      "group": "GRTH"
+    },
+    {
+      "id": 79,
+      "label": "Hypergraph",
+      "group": "GRTH"
+    },
+    {
+      "id": 80,
+      "label": "Subgraph",
+      "group": "GRTH"
+    },
+    {
+      "id": 81,
+      "label": "Graph Properties",
+      "group": "GRTH"
+    },
+    {
+      "id": 82,
+      "label": "Degree Distribution",
+      "group": "GRTH"
+    },
+    {
+      "id": 83,
+      "label": "In-Degree",
+      "group": "GRTH"
+    },
+    {
+      "id": 84,
+      "label": "Out-Degree",
+      "group": "GRTH"
+    },
+    {
+      "id": 85,
+      "label": "Clustering Coefficient",
+      "group": "GRTH"
+    },
+    {
+      "id": 86,
+      "label": "Centrality Measures",
+      "group": "GRTH"
+    },
+    {
+      "id": 87,
+      "label": "Degree Centrality",
+      "group": "GRTH"
+    },
+    {
+      "id": 88,
+      "label": "Betweenness Centrality",
+      "group": "GRTH"
+    },
+    {
+      "id": 89,
+      "label": "Closeness Centrality",
+      "group": "GRTH"
+    },
+    {
+      "id": 90,
+      "label": "Eigenvector Centrality",
+      "group": "GRTH"
+    },
+    {
+      "id": 91,
+      "label": "PageRank",
+      "group": "GRTH"
+    },
+    {
+      "id": 92,
+      "label": "Connected Components",
+      "group": "GRTH"
+    },
+    {
+      "id": 93,
+      "label": "Strongly Connected Comp",
+      "group": "GRTH"
+    },
+    {
+      "id": 94,
+      "label": "Graph Traversal",
+      "group": "GRTH"
+    },
+    {
+      "id": 95,
+      "label": "Breadth-First Search",
+      "group": "GRTH"
+    },
+    {
+      "id": 96,
+      "label": "Depth-First Search",
+      "group": "GRTH"
+    },
+    {
+      "id": 97,
+      "label": "Shortest Path Algorithms",
+      "group": "GRTH"
+    },
+    {
+      "id": 98,
+      "label": "Dijkstra Algorithm",
+      "group": "GRTH"
+    },
+    {
+      "id": 99,
+      "label": "Graph Density",
+      "group": "GRTH"
+    },
+    {
+      "id": 100,
+      "label": "Graph Diameter",
+      "group": "GRTH"
+    },
+    {
+      "id": 101,
+      "label": "Scale-Free Networks",
+      "group": "GRTH"
+    },
+    {
+      "id": 102,
+      "label": "Small-World Networks",
+      "group": "GRTH"
+    },
+    {
+      "id": 103,
+      "label": "Power-Law Distribution",
+      "group": "GRTH"
+    },
+    {
+      "id": 104,
+      "label": "Random Graph Models",
+      "group": "GRTH"
+    },
+    {
+      "id": 105,
+      "label": "Erdos-Renyi Model",
+      "group": "GRTH"
+    },
+    {
+      "id": 106,
+      "label": "Barabasi-Albert Model",
+      "group": "GRTH"
+    },
+    {
+      "id": 107,
+      "label": "Network Motifs",
+      "group": "GRTH"
+    },
+    {
+      "id": 108,
+      "label": "Graph Isomorphism",
+      "group": "GRTH"
+    },
+    {
+      "id": 109,
+      "label": "Adjacency Matrix",
+      "group": "GRTH"
+    },
+    {
+      "id": 110,
+      "label": "Edge List Representation",
+      "group": "GRTH"
+    },
+    {
+      "id": 111,
+      "label": "Graph Database",
+      "group": "GRDB"
+    },
+    {
+      "id": 112,
+      "label": "Relational Database",
+      "group": "GRDB",
+      "shape": "box"
+    },
+    {
+      "id": 113,
+      "label": "Graph vs Relational Model",
+      "group": "GRDB"
+    },
+    {
+      "id": 114,
+      "label": "Neo4j",
+      "group": "GRDB"
+    },
+    {
+      "id": 115,
+      "label": "Memgraph",
+      "group": "GRDB"
+    },
+    {
+      "id": 116,
+      "label": "Cypher Query Language",
+      "group": "GRDB"
+    },
+    {
+      "id": 117,
+      "label": "GQL Query Language",
+      "group": "GRDB"
+    },
+    {
+      "id": 118,
+      "label": "MATCH Clause",
+      "group": "GRDB"
+    },
+    {
+      "id": 119,
+      "label": "WHERE Clause",
+      "group": "GRDB"
+    },
+    {
+      "id": 120,
+      "label": "RETURN Clause",
+      "group": "GRDB"
+    },
+    {
+      "id": 121,
+      "label": "CREATE Clause",
+      "group": "GRDB"
+    },
+    {
+      "id": 122,
+      "label": "MERGE Clause",
+      "group": "GRDB"
+    },
+    {
+      "id": 123,
+      "label": "Graph Pattern Matching",
+      "group": "GRDB"
+    },
+    {
+      "id": 124,
+      "label": "Variable-Length Paths",
+      "group": "GRDB"
+    },
+    {
+      "id": 125,
+      "label": "Path Queries",
+      "group": "GRDB"
+    },
+    {
+      "id": 126,
+      "label": "Aggregation in Cypher",
+      "group": "GRDB"
+    },
+    {
+      "id": 127,
+      "label": "Graph Schema Design",
+      "group": "GRDB"
+    },
+    {
+      "id": 128,
+      "label": "Node Labels",
+      "group": "GRDB"
+    },
+    {
+      "id": 129,
+      "label": "Relationship Types",
+      "group": "GRDB"
+    },
+    {
+      "id": 130,
+      "label": "Property Keys",
+      "group": "GRDB"
+    },
+    {
+      "id": 131,
+      "label": "Index and Constraints",
+      "group": "GRDB"
+    },
+    {
+      "id": 132,
+      "label": "RDF Triple Model",
+      "group": "GRDB"
+    },
+    {
+      "id": 133,
+      "label": "Subject-Predicate-Object",
+      "group": "GRDB"
+    },
+    {
+      "id": 134,
+      "label": "SPARQL Query Language",
+      "group": "GRDB"
+    },
+    {
+      "id": 135,
+      "label": "LPG vs RDF Comparison",
+      "group": "GRDB"
+    },
+    {
+      "id": 136,
+      "label": "Graph Data Loading",
+      "group": "GRDB"
+    },
+    {
+      "id": 137,
+      "label": "CSV Import to Graph DB",
+      "group": "GRDB"
+    },
+    {
+      "id": 138,
+      "label": "ETL for Graph Databases",
+      "group": "GRDB"
+    },
+    {
+      "id": 139,
+      "label": "Graph Query Optimization",
+      "group": "GRDB"
+    },
+    {
+      "id": 140,
+      "label": "Query Profiling",
+      "group": "GRDB"
+    },
+    {
+      "id": 141,
+      "label": "Distributed Graph Databases",
+      "group": "GRDB"
+    },
+    {
+      "id": 142,
+      "label": "Graph Partitioning",
+      "group": "GRDB"
+    },
+    {
+      "id": 143,
+      "label": "Graph Scalability",
+      "group": "GRDB"
+    },
+    {
+      "id": 144,
+      "label": "Graph Transactions",
+      "group": "GRDB"
+    },
+    {
+      "id": 145,
+      "label": "Graph Access Control",
+      "group": "GRDB"
+    },
+    {
+      "id": 146,
+      "label": "Sequence Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 147,
+      "label": "Pairwise Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 148,
+      "label": "Global Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 149,
+      "label": "Local Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 150,
+      "label": "Smith-Waterman Algorithm",
+      "group": "SEQA"
+    },
+    {
+      "id": 151,
+      "label": "Needleman-Wunsch Algorithm",
+      "group": "SEQA"
+    },
+    {
+      "id": 152,
+      "label": "Dynamic Programming",
+      "group": "SEQA",
+      "shape": "box"
+    },
+    {
+      "id": 153,
+      "label": "Scoring Matrices",
+      "group": "SEQA"
+    },
+    {
+      "id": 154,
+      "label": "BLOSUM Matrix",
+      "group": "SEQA"
+    },
+    {
+      "id": 155,
+      "label": "PAM Matrix",
+      "group": "SEQA"
+    },
+    {
+      "id": 156,
+      "label": "Substitution Model",
+      "group": "SEQA"
+    },
+    {
+      "id": 157,
+      "label": "Gap Penalties",
+      "group": "SEQA"
+    },
+    {
+      "id": 158,
+      "label": "Affine Gap Penalty",
+      "group": "SEQA"
+    },
+    {
+      "id": 159,
+      "label": "BLAST",
+      "group": "SEQA"
+    },
+    {
+      "id": 160,
+      "label": "BLAST E-Value",
+      "group": "SEQA"
+    },
+    {
+      "id": 161,
+      "label": "BLAST Heuristics",
+      "group": "SEQA"
+    },
+    {
+      "id": 162,
+      "label": "PSI-BLAST",
+      "group": "SEQA"
+    },
+    {
+      "id": 163,
+      "label": "Sequence Homology",
+      "group": "SEQA"
+    },
+    {
+      "id": 164,
+      "label": "Orthologs",
+      "group": "SEQA"
+    },
+    {
+      "id": 165,
+      "label": "Paralogs",
+      "group": "SEQA"
+    },
+    {
+      "id": 166,
+      "label": "Sequence Identity",
+      "group": "SEQA"
+    },
+    {
+      "id": 167,
+      "label": "Sequence Similarity",
+      "group": "SEQA"
+    },
+    {
+      "id": 168,
+      "label": "Sequence Similarity Network",
+      "group": "SEQA"
+    },
+    {
+      "id": 169,
+      "label": "Graph Model for Similarity",
+      "group": "GRDB"
+    },
+    {
+      "id": 170,
+      "label": "Multiple Sequence Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 171,
+      "label": "Clustal",
+      "group": "SEQA"
+    },
+    {
+      "id": 172,
+      "label": "MUSCLE Aligner",
+      "group": "SEQA"
+    },
+    {
+      "id": 173,
+      "label": "Progressive Alignment",
+      "group": "SEQA"
+    },
+    {
+      "id": 174,
+      "label": "Consensus Sequence",
+      "group": "SEQA"
+    },
+    {
+      "id": 175,
+      "label": "Sequence Profile",
+      "group": "SEQA"
+    },
+    {
+      "id": 176,
+      "label": "Hidden Markov Model",
+      "group": "SEQA",
+      "shape": "box"
+    },
+    {
+      "id": 177,
+      "label": "Profile HMM",
+      "group": "SEQA"
+    },
+    {
+      "id": 178,
+      "label": "Sequence Motif",
+      "group": "SEQA"
+    },
+    {
+      "id": 179,
+      "label": "Regular Expressions",
+      "group": "SEQA",
+      "shape": "box"
+    },
+    {
+      "id": 180,
+      "label": "Motif Discovery",
+      "group": "SEQA"
+    },
+    {
+      "id": 181,
+      "label": "Phylogenetic Tree",
+      "group": "PHYL"
+    },
+    {
+      "id": 182,
+      "label": "Phylogenetics",
+      "group": "PHYL"
+    },
+    {
+      "id": 183,
+      "label": "Molecular Phylogenetics",
+      "group": "PHYL"
+    },
+    {
+      "id": 184,
+      "label": "Distance Matrix",
+      "group": "PHYL"
+    },
+    {
+      "id": 185,
+      "label": "Neighbor-Joining Method",
+      "group": "PHYL"
+    },
+    {
+      "id": 186,
+      "label": "UPGMA Method",
+      "group": "PHYL"
+    },
+    {
+      "id": 187,
+      "label": "Maximum Parsimony",
+      "group": "PHYL"
+    },
+    {
+      "id": 188,
+      "label": "Maximum Likelihood Method",
+      "group": "PHYL"
+    },
+    {
+      "id": 189,
+      "label": "Bayesian Inference",
+      "group": "PHYL"
+    },
+    {
+      "id": 190,
+      "label": "Markov Chain Monte Carlo",
+      "group": "PHYL"
+    },
+    {
+      "id": 191,
+      "label": "Bootstrap Analysis",
+      "group": "PHYL"
+    },
+    {
+      "id": 192,
+      "label": "Branch Support Values",
+      "group": "PHYL"
+    },
+    {
+      "id": 193,
+      "label": "Molecular Clock",
+      "group": "PHYL"
+    },
+    {
+      "id": 194,
+      "label": "Substitution Rate",
+      "group": "PHYL"
+    },
+    {
+      "id": 195,
+      "label": "Trees as DAGs",
+      "group": "PHYL"
+    },
+    {
+      "id": 196,
+      "label": "Phylogenetic Networks",
+      "group": "PHYL"
+    },
+    {
+      "id": 197,
+      "label": "Reticulate Evolution",
+      "group": "PHYL"
+    },
+    {
+      "id": 198,
+      "label": "Horizontal Gene Transfer",
+      "group": "PHYL"
+    },
+    {
+      "id": 199,
+      "label": "Recombination",
+      "group": "PHYL"
+    },
+    {
+      "id": 200,
+      "label": "Incomplete Lineage Sorting",
+      "group": "PHYL"
+    },
+    {
+      "id": 201,
+      "label": "Graph Model for Evolution",
+      "group": "GRDB"
+    },
+    {
+      "id": 202,
+      "label": "Cladogram",
+      "group": "PHYL"
+    },
+    {
+      "id": 203,
+      "label": "Phylogram",
+      "group": "PHYL"
+    },
+    {
+      "id": 204,
+      "label": "Monophyletic Group",
+      "group": "PHYL"
+    },
+    {
+      "id": 205,
+      "label": "Paraphyletic Group",
+      "group": "PHYL"
+    },
+    {
+      "id": 206,
+      "label": "Outgroup",
+      "group": "PHYL"
+    },
+    {
+      "id": 207,
+      "label": "Rooted vs Unrooted Trees",
+      "group": "PHYL"
+    },
+    {
+      "id": 208,
+      "label": "Tree Topology Comparison",
+      "group": "PHYL"
+    },
+    {
+      "id": 209,
+      "label": "Robinson-Foulds Distance",
+      "group": "PHYL"
+    },
+    {
+      "id": 210,
+      "label": "Ancestral Reconstruction",
+      "group": "PHYL"
+    },
+    {
+      "id": 211,
+      "label": "Divergence Time Estimation",
+      "group": "PHYL"
+    },
+    {
+      "id": 212,
+      "label": "Gene Tree vs Species Tree",
+      "group": "PHYL"
+    },
+    {
+      "id": 213,
+      "label": "Coalescent Theory",
+      "group": "PHYL"
+    },
+    {
+      "id": 214,
+      "label": "Phylogenomics",
+      "group": "PHYL"
+    },
+    {
+      "id": 215,
+      "label": "Comparative Genomics",
+      "group": "PHYL"
+    },
+    {
+      "id": 216,
+      "label": "Primary Structure",
+      "group": "STRU"
+    },
+    {
+      "id": 217,
+      "label": "Secondary Structure",
+      "group": "STRU"
+    },
+    {
+      "id": 218,
+      "label": "Alpha Helix",
+      "group": "STRU"
+    },
+    {
+      "id": 219,
+      "label": "Beta Sheet",
+      "group": "STRU"
+    },
+    {
+      "id": 220,
+      "label": "Tertiary Structure",
+      "group": "STRU"
+    },
+    {
+      "id": 221,
+      "label": "Quaternary Structure",
+      "group": "STRU"
+    },
+    {
+      "id": 222,
+      "label": "Protein Folding",
+      "group": "STRU"
+    },
+    {
+      "id": 223,
+      "label": "Protein Folding Problem",
+      "group": "STRU"
+    },
+    {
+      "id": 224,
+      "label": "Homology Modeling",
+      "group": "STRU"
+    },
+    {
+      "id": 225,
+      "label": "Threading",
+      "group": "STRU"
+    },
+    {
+      "id": 226,
+      "label": "Ab Initio Prediction",
+      "group": "STRU"
+    },
+    {
+      "id": 227,
+      "label": "AlphaFold",
+      "group": "STRU"
+    },
+    {
+      "id": 228,
+      "label": "AlphaFold Database",
+      "group": "STRU"
+    },
+    {
+      "id": 229,
+      "label": "Protein Contact Map",
+      "group": "STRU"
+    },
+    {
+      "id": 230,
+      "label": "Contact Map as Graph",
+      "group": "STRU"
+    },
+    {
+      "id": 231,
+      "label": "Residue Interaction Network",
+      "group": "STRU"
+    },
+    {
+      "id": 232,
+      "label": "Graph Model for Contacts",
+      "group": "GRDB"
+    },
+    {
+      "id": 233,
+      "label": "Structural Alignment",
+      "group": "STRU"
+    },
+    {
+      "id": 234,
+      "label": "RMSD",
+      "group": "STRU"
+    },
+    {
+      "id": 235,
+      "label": "Protein Domain",
+      "group": "STRU"
+    },
+    {
+      "id": 236,
+      "label": "Domain Classification",
+      "group": "STRU"
+    },
+    {
+      "id": 237,
+      "label": "SCOP Database",
+      "group": "STRU"
+    },
+    {
+      "id": 238,
+      "label": "Pfam Database",
+      "group": "STRU"
+    },
+    {
+      "id": 239,
+      "label": "Protein Surface Analysis",
+      "group": "STRU"
+    },
+    {
+      "id": 240,
+      "label": "Binding Site Prediction",
+      "group": "STRU"
+    },
+    {
+      "id": 241,
+      "label": "Molecular Docking",
+      "group": "STRU"
+    },
+    {
+      "id": 242,
+      "label": "Ligand-Protein Interaction",
+      "group": "STRU"
+    },
+    {
+      "id": 243,
+      "label": "Drug-Likeness",
+      "group": "STRU"
+    },
+    {
+      "id": 244,
+      "label": "ADMET Properties",
+      "group": "STRU"
+    },
+    {
+      "id": 245,
+      "label": "Protein-Ligand Graph",
+      "group": "STRU"
+    },
+    {
+      "id": 246,
+      "label": "Molecular Fingerprints",
+      "group": "STRU"
+    },
+    {
+      "id": 247,
+      "label": "Chemical Similarity",
+      "group": "STRU"
+    },
+    {
+      "id": 248,
+      "label": "Structure-Activity Relation",
+      "group": "STRU"
+    },
+    {
+      "id": 249,
+      "label": "Protein Function Inference",
+      "group": "STRU"
+    },
+    {
+      "id": 250,
+      "label": "Structural Genomics",
+      "group": "STRU"
+    },
+    {
+      "id": 251,
+      "label": "Protein Interaction Network",
+      "group": "PPIS"
+    },
+    {
+      "id": 252,
+      "label": "Interactome",
+      "group": "PPIS"
+    },
+    {
+      "id": 253,
+      "label": "Yeast Two-Hybrid",
+      "group": "PPIS"
+    },
+    {
+      "id": 254,
+      "label": "Co-Immunoprecipitation",
+      "group": "PPIS"
+    },
+    {
+      "id": 255,
+      "label": "Affinity Purification MS",
+      "group": "PPIS"
+    },
+    {
+      "id": 256,
+      "label": "Cross-Linking Mass Spec",
+      "group": "PPIS"
+    },
+    {
+      "id": 257,
+      "label": "PPI Confidence Scoring",
+      "group": "PPIS"
+    },
+    {
+      "id": 258,
+      "label": "Binary vs Complex PPIs",
+      "group": "PPIS"
+    },
+    {
+      "id": 259,
+      "label": "Network Hubs",
+      "group": "PPIS"
+    },
+    {
+      "id": 260,
+      "label": "Network Bottlenecks",
+      "group": "PPIS"
+    },
+    {
+      "id": 261,
+      "label": "Network Modules",
+      "group": "PPIS"
+    },
+    {
+      "id": 262,
+      "label": "Graph Model for PPIs",
+      "group": "GRDB"
+    },
+    {
+      "id": 263,
+      "label": "Hub-and-Spoke Topology",
+      "group": "PPIS"
+    },
+    {
+      "id": 264,
+      "label": "Date Hubs vs Party Hubs",
+      "group": "PPIS"
+    },
+    {
+      "id": 265,
+      "label": "Essential Proteins",
+      "group": "PPIS"
+    },
+    {
+      "id": 266,
+      "label": "Protein Complex Detection",
+      "group": "PPIS"
+    },
+    {
+      "id": 267,
+      "label": "Clique Detection",
+      "group": "PPIS"
+    },
+    {
+      "id": 268,
+      "label": "Dense Subgraph Mining",
+      "group": "PPIS"
+    },
+    {
+      "id": 269,
+      "label": "Network Rewiring",
+      "group": "PPIS"
+    },
+    {
+      "id": 270,
+      "label": "Dynamic PPI Networks",
+      "group": "PPIS"
+    },
+    {
+      "id": 271,
+      "label": "Tissue-Specific PPIs",
+      "group": "PPIS"
+    },
+    {
+      "id": 272,
+      "label": "Host-Pathogen PPIs",
+      "group": "PPIS"
+    },
+    {
+      "id": 273,
+      "label": "Viral Interactome",
+      "group": "PPIS"
+    },
+    {
+      "id": 274,
+      "label": "PPI Prediction Methods",
+      "group": "PPIS"
+    },
+    {
+      "id": 275,
+      "label": "Interaction Domain Pairs",
+      "group": "PPIS"
+    },
+    {
+      "id": 276,
+      "label": "Co-Evolution Analysis",
+      "group": "PPIS"
+    },
+    {
+      "id": 277,
+      "label": "Network Alignment",
+      "group": "PPIS"
+    },
+    {
+      "id": 278,
+      "label": "Network Comparison",
+      "group": "PPIS"
+    },
+    {
+      "id": 279,
+      "label": "Graphlet Analysis",
+      "group": "PPIS"
+    },
+    {
+      "id": 280,
+      "label": "Network Centrality in PPIs",
+      "group": "PPIS"
+    },
+    {
+      "id": 281,
+      "label": "Genome Assembly",
+      "group": "GENO"
+    },
+    {
+      "id": 282,
+      "label": "De Bruijn Graph",
+      "group": "GENO"
+    },
+    {
+      "id": 283,
+      "label": "K-mer",
+      "group": "GENO"
+    },
+    {
+      "id": 284,
+      "label": "K-mer Spectrum",
+      "group": "GENO"
+    },
+    {
+      "id": 285,
+      "label": "Contig",
+      "group": "GENO"
+    },
+    {
+      "id": 286,
+      "label": "Scaffold",
+      "group": "GENO"
+    },
+    {
+      "id": 287,
+      "label": "N50 Metric",
+      "group": "GENO"
+    },
+    {
+      "id": 288,
+      "label": "Assembly Quality Metrics",
+      "group": "GENO"
+    },
+    {
+      "id": 289,
+      "label": "Reference Genome",
+      "group": "GENO"
+    },
+    {
+      "id": 290,
+      "label": "Reference Bias",
+      "group": "GENO"
+    },
+    {
+      "id": 291,
+      "label": "Pangenome",
+      "group": "GENO"
+    },
+    {
+      "id": 292,
+      "label": "Pangenome Graph",
+      "group": "GENO"
+    },
+    {
+      "id": 293,
+      "label": "Variation Graph",
+      "group": "GENO"
+    },
+    {
+      "id": 294,
+      "label": "VG Toolkit",
+      "group": "GENO"
+    },
+    {
+      "id": 295,
+      "label": "Graph Model for Variants",
+      "group": "GRDB"
+    },
+    {
+      "id": 296,
+      "label": "Read Mapping to Graphs",
+      "group": "GENO"
+    },
+    {
+      "id": 297,
+      "label": "Genome Annotation",
+      "group": "GENO"
+    },
+    {
+      "id": 298,
+      "label": "Gene Prediction",
+      "group": "GENO"
+    },
+    {
+      "id": 299,
+      "label": "Next-Gen Sequencing",
+      "group": "GENO"
+    },
+    {
+      "id": 300,
+      "label": "Short Reads",
+      "group": "GENO"
+    },
+    {
+      "id": 301,
+      "label": "Long Reads",
+      "group": "GENO"
+    },
+    {
+      "id": 302,
+      "label": "Sequencing Depth",
+      "group": "GENO"
+    },
+    {
+      "id": 303,
+      "label": "Coverage",
+      "group": "GENO"
+    },
+    {
+      "id": 304,
+      "label": "Variant Calling",
+      "group": "GENO"
+    },
+    {
+      "id": 305,
+      "label": "SNP Calling",
+      "group": "GENO"
+    },
+    {
+      "id": 306,
+      "label": "Structural Variant Calling",
+      "group": "GENO"
+    },
+    {
+      "id": 307,
+      "label": "Genotyping",
+      "group": "GENO"
+    },
+    {
+      "id": 308,
+      "label": "Haplotype",
+      "group": "GENO"
+    },
+    {
+      "id": 309,
+      "label": "Phasing",
+      "group": "GENO"
+    },
+    {
+      "id": 310,
+      "label": "Population Reference Graph",
+      "group": "GENO"
+    },
+    {
+      "id": 311,
+      "label": "Transcriptome",
+      "group": "TRNS"
+    },
+    {
+      "id": 312,
+      "label": "RNA-Seq Pipeline",
+      "group": "TRNS"
+    },
+    {
+      "id": 313,
+      "label": "Read Quality Trimming",
+      "group": "TRNS"
+    },
+    {
+      "id": 314,
+      "label": "Read Alignment",
+      "group": "TRNS"
+    },
+    {
+      "id": 315,
+      "label": "Transcript Quantification",
+      "group": "TRNS"
+    },
+    {
+      "id": 316,
+      "label": "Differential Expression",
+      "group": "TRNS"
+    },
+    {
+      "id": 317,
+      "label": "Fold Change",
+      "group": "TRNS"
+    },
+    {
+      "id": 318,
+      "label": "Statistical Testing for DE",
+      "group": "TRNS"
+    },
+    {
+      "id": 319,
+      "label": "False Discovery Rate",
+      "group": "TRNS"
+    },
+    {
+      "id": 320,
+      "label": "Transcription Factor",
+      "group": "TRNS"
+    },
+    {
+      "id": 321,
+      "label": "Promoter Region",
+      "group": "TRNS"
+    },
+    {
+      "id": 322,
+      "label": "Enhancer Region",
+      "group": "TRNS"
+    },
+    {
+      "id": 323,
+      "label": "Cis-Regulatory Element",
+      "group": "TRNS"
+    },
+    {
+      "id": 324,
+      "label": "Operon",
+      "group": "TRNS"
+    },
+    {
+      "id": 325,
+      "label": "Gene Regulatory Network",
+      "group": "TRNS"
+    },
+    {
+      "id": 326,
+      "label": "Co-Expression Network",
+      "group": "TRNS"
+    },
+    {
+      "id": 327,
+      "label": "WGCNA",
+      "group": "TRNS"
+    },
+    {
+      "id": 328,
+      "label": "ARACNE",
+      "group": "TRNS"
+    },
+    {
+      "id": 329,
+      "label": "GENIE3",
+      "group": "TRNS"
+    },
+    {
+      "id": 330,
+      "label": "Mutual Information",
+      "group": "TRNS",
+      "shape": "box"
+    },
+    {
+      "id": 331,
+      "label": "Network Inference Methods",
+      "group": "TRNS"
+    },
+    {
+      "id": 332,
+      "label": "Boolean Network Model",
+      "group": "TRNS"
+    },
+    {
+      "id": 333,
+      "label": "Bayesian Network Model",
+      "group": "TRNS"
+    },
+    {
+      "id": 334,
+      "label": "Graph Model for Regulation",
+      "group": "GRDB"
+    },
+    {
+      "id": 335,
+      "label": "Single-Cell RNA-Seq",
+      "group": "TRNS"
+    },
+    {
+      "id": 336,
+      "label": "Cell Type Clustering",
+      "group": "TRNS"
+    },
+    {
+      "id": 337,
+      "label": "Trajectory Analysis",
+      "group": "TRNS"
+    },
+    {
+      "id": 338,
+      "label": "Spatial Transcriptomics",
+      "group": "TRNS"
+    },
+    {
+      "id": 339,
+      "label": "Alternative Splicing",
+      "group": "TRNS"
+    },
+    {
+      "id": 340,
+      "label": "Non-Coding RNA",
+      "group": "TRNS"
+    },
+    {
+      "id": 341,
+      "label": "Metabolic Network",
+      "group": "PATH"
+    },
+    {
+      "id": 342,
+      "label": "Metabolite",
+      "group": "PATH"
+    },
+    {
+      "id": 343,
+      "label": "Enzyme",
+      "group": "PATH"
+    },
+    {
+      "id": 344,
+      "label": "Enzyme Kinetics",
+      "group": "PATH"
+    },
+    {
+      "id": 345,
+      "label": "Metabolic Pathway",
+      "group": "PATH"
+    },
+    {
+      "id": 346,
+      "label": "Bipartite Metabolic Graph",
+      "group": "PATH"
+    },
+    {
+      "id": 347,
+      "label": "KEGG Pathways",
+      "group": "PATH"
+    },
+    {
+      "id": 348,
+      "label": "Reactome Pathways",
+      "group": "PATH"
+    },
+    {
+      "id": 349,
+      "label": "BioCyc Pathways",
+      "group": "PATH"
+    },
+    {
+      "id": 350,
+      "label": "Flux Balance Analysis",
+      "group": "PATH"
+    },
+    {
+      "id": 351,
+      "label": "Constraint-Based Modeling",
+      "group": "PATH"
+    },
+    {
+      "id": 352,
+      "label": "Stoichiometric Matrix",
+      "group": "PATH"
+    },
+    {
+      "id": 353,
+      "label": "Objective Function",
+      "group": "PATH"
+    },
+    {
+      "id": 354,
+      "label": "Metabolic Flux",
+      "group": "PATH"
+    },
+    {
+      "id": 355,
+      "label": "Graph Model for Metabolism",
+      "group": "GRDB"
+    },
+    {
+      "id": 356,
+      "label": "Genome-Scale Model",
+      "group": "PATH"
+    },
+    {
+      "id": 357,
+      "label": "Essential Reaction",
+      "group": "PATH"
+    },
+    {
+      "id": 358,
+      "label": "Minimal Growth Medium",
+      "group": "PATH"
+    },
+    {
+      "id": 359,
+      "label": "Metabolic Engineering",
+      "group": "PATH"
+    },
+    {
+      "id": 360,
+      "label": "Synthetic Biology",
+      "group": "PATH"
+    },
+    {
+      "id": 361,
+      "label": "Pathway Enrichment",
+      "group": "PATH"
+    },
+    {
+      "id": 362,
+      "label": "Metabolomics",
+      "group": "PATH"
+    },
+    {
+      "id": 363,
+      "label": "Mass Spec for Metabolomics",
+      "group": "PATH"
+    },
+    {
+      "id": 364,
+      "label": "Metabolic Network Compare",
+      "group": "PATH"
+    },
+    {
+      "id": 365,
+      "label": "Metabolic Graph Alignment",
+      "group": "PATH"
+    },
+    {
+      "id": 366,
+      "label": "Cell Signaling Cascade",
+      "group": "PATH"
+    },
+    {
+      "id": 367,
+      "label": "Signal Transduction",
+      "group": "PATH"
+    },
+    {
+      "id": 368,
+      "label": "Receptor",
+      "group": "PATH"
+    },
+    {
+      "id": 369,
+      "label": "Kinase Cascade",
+      "group": "PATH"
+    },
+    {
+      "id": 370,
+      "label": "Second Messenger",
+      "group": "PATH"
+    },
+    {
+      "id": 371,
+      "label": "Directed Signaling Graph",
+      "group": "PATH"
+    },
+    {
+      "id": 372,
+      "label": "Feedback Loop",
+      "group": "PATH"
+    },
+    {
+      "id": 373,
+      "label": "Feed-Forward Loop",
+      "group": "PATH"
+    },
+    {
+      "id": 374,
+      "label": "Network Medicine",
+      "group": "PATH"
+    },
+    {
+      "id": 375,
+      "label": "Disease Module",
+      "group": "PATH"
+    },
+    {
+      "id": 376,
+      "label": "Network Proximity",
+      "group": "PATH"
+    },
+    {
+      "id": 377,
+      "label": "Guilt by Association",
+      "group": "PATH"
+    },
+    {
+      "id": 378,
+      "label": "Drug Target",
+      "group": "PATH"
+    },
+    {
+      "id": 379,
+      "label": "Drug Target Validation",
+      "group": "PATH"
+    },
+    {
+      "id": 380,
+      "label": "Drug Repurposing",
+      "group": "PATH"
+    },
+    {
+      "id": 381,
+      "label": "Drug-Target-Disease Graph",
+      "group": "PATH"
+    },
+    {
+      "id": 382,
+      "label": "Graph Model for Repurposing",
+      "group": "GRDB"
+    },
+    {
+      "id": 383,
+      "label": "Pharmacogenomics",
+      "group": "PATH"
+    },
+    {
+      "id": 384,
+      "label": "Cancer Driver Genes",
+      "group": "PATH"
+    },
+    {
+      "id": 385,
+      "label": "Tumor Suppressor Gene",
+      "group": "PATH"
+    },
+    {
+      "id": 386,
+      "label": "Oncogene",
+      "group": "PATH"
+    },
+    {
+      "id": 387,
+      "label": "Cancer Network Analysis",
+      "group": "PATH"
+    },
+    {
+      "id": 388,
+      "label": "Precision Medicine",
+      "group": "PATH"
+    },
+    {
+      "id": 389,
+      "label": "Biomarker Discovery",
+      "group": "PATH"
+    },
+    {
+      "id": 390,
+      "label": "Clinical Network Analysis",
+      "group": "PATH"
+    },
+    {
+      "id": 391,
+      "label": "Side Effect Prediction",
+      "group": "PATH"
+    },
+    {
+      "id": 392,
+      "label": "Drug-Drug Interaction Graph",
+      "group": "PATH"
+    },
+    {
+      "id": 393,
+      "label": "Adverse Event Network",
+      "group": "PATH"
+    },
+    {
+      "id": 394,
+      "label": "Comorbidity Network",
+      "group": "PATH"
+    },
+    {
+      "id": 395,
+      "label": "Disease Gene Prioritization",
+      "group": "PATH"
+    },
+    {
+      "id": 396,
+      "label": "Knowledge Graph",
+      "group": "KNOW"
+    },
+    {
+      "id": 397,
+      "label": "Biomedical Knowledge Graph",
+      "group": "KNOW"
+    },
+    {
+      "id": 398,
+      "label": "Gene Ontology",
+      "group": "KNOW"
+    },
+    {
+      "id": 399,
+      "label": "GO Molecular Function",
+      "group": "KNOW"
+    },
+    {
+      "id": 400,
+      "label": "GO Biological Process",
+      "group": "KNOW"
+    },
+    {
+      "id": 401,
+      "label": "GO Cellular Component",
+      "group": "KNOW"
+    },
+    {
+      "id": 402,
+      "label": "GO Term Enrichment",
+      "group": "KNOW"
+    },
+    {
+      "id": 403,
+      "label": "Disease Ontology",
+      "group": "KNOW"
+    },
+    {
+      "id": 404,
+      "label": "Human Phenotype Ontology",
+      "group": "KNOW"
+    },
+    {
+      "id": 405,
+      "label": "Ontology Structure",
+      "group": "KNOW"
+    },
+    {
+      "id": 406,
+      "label": "Ontology Reasoning",
+      "group": "KNOW"
+    },
+    {
+      "id": 407,
+      "label": "Semantic Similarity",
+      "group": "KNOW"
+    },
+    {
+      "id": 408,
+      "label": "Heterogeneous Data",
+      "group": "KNOW"
+    },
+    {
+      "id": 409,
+      "label": "Data Integration",
+      "group": "KNOW"
+    },
+    {
+      "id": 410,
+      "label": "Schema Mapping",
+      "group": "KNOW"
+    },
+    {
+      "id": 411,
+      "label": "Entity Resolution",
+      "group": "KNOW"
+    },
+    {
+      "id": 412,
+      "label": "Graph Embeddings",
+      "group": "KNOW"
+    },
+    {
+      "id": 413,
+      "label": "Node2Vec",
+      "group": "KNOW"
+    },
+    {
+      "id": 414,
+      "label": "TransE",
+      "group": "KNOW"
+    },
+    {
+      "id": 415,
+      "label": "Knowledge Graph Embedding",
+      "group": "KNOW"
+    },
+    {
+      "id": 416,
+      "label": "Link Prediction",
+      "group": "KNOW"
+    },
+    {
+      "id": 417,
+      "label": "Triple Classification",
+      "group": "KNOW"
+    },
+    {
+      "id": 418,
+      "label": "Relation Extraction",
+      "group": "KNOW"
+    },
+    {
+      "id": 419,
+      "label": "Named Entity Recognition",
+      "group": "KNOW"
+    },
+    {
+      "id": 420,
+      "label": "Text Mining for Biology",
+      "group": "KNOW"
+    },
+    {
+      "id": 421,
+      "label": "Graph Neural Networks",
+      "group": "KNOW"
+    },
+    {
+      "id": 422,
+      "label": "Message Passing",
+      "group": "KNOW"
+    },
+    {
+      "id": 423,
+      "label": "GNN for Molecules",
+      "group": "KNOW"
+    },
+    {
+      "id": 424,
+      "label": "Graph Model for Knowledge",
+      "group": "GRDB"
+    },
+    {
+      "id": 425,
+      "label": "Hetionet",
+      "group": "KNOW"
+    },
+    {
+      "id": 426,
+      "label": "Multi-Omics Integration",
+      "group": "KNOW"
+    },
+    {
+      "id": 427,
+      "label": "Genomics Layer",
+      "group": "KNOW"
+    },
+    {
+      "id": 428,
+      "label": "Transcriptomics Layer",
+      "group": "KNOW"
+    },
+    {
+      "id": 429,
+      "label": "Proteomics Layer",
+      "group": "KNOW"
+    },
+    {
+      "id": 430,
+      "label": "Metabolomics Layer",
+      "group": "KNOW"
+    },
+    {
+      "id": 431,
+      "label": "Unified Omics Graph",
+      "group": "KNOW"
+    },
+    {
+      "id": 432,
+      "label": "Graph Model for Multi-Omics",
+      "group": "GRDB"
+    },
+    {
+      "id": 433,
+      "label": "Community Detection",
+      "group": "GRTH"
+    },
+    {
+      "id": 434,
+      "label": "Louvain Algorithm",
+      "group": "GRTH"
+    },
+    {
+      "id": 435,
+      "label": "Leiden Algorithm",
+      "group": "GRTH"
+    },
+    {
+      "id": 436,
+      "label": "Modularity Score",
+      "group": "GRTH"
+    },
+    {
+      "id": 437,
+      "label": "Graph Clustering",
+      "group": "GRTH"
+    },
+    {
+      "id": 438,
+      "label": "Spectral Clustering",
+      "group": "GRTH"
+    },
+    {
+      "id": 439,
+      "label": "Graph Visualization",
+      "group": "GRTH"
+    },
+    {
+      "id": 440,
+      "label": "Vis-Network Library",
+      "group": "GRTH"
+    },
+    {
+      "id": 441,
+      "label": "Cytoscape Tool",
+      "group": "GRTH"
+    },
+    {
+      "id": 442,
+      "label": "Force-Directed Layout",
+      "group": "GRTH"
+    },
+    {
+      "id": 443,
+      "label": "Hierarchical Layout",
+      "group": "GRTH"
+    },
+    {
+      "id": 444,
+      "label": "Network Layout Algorithms",
+      "group": "GRTH"
+    },
+    {
+      "id": 445,
+      "label": "Patient Similarity Network",
+      "group": "KNOW"
+    },
+    {
+      "id": 446,
+      "label": "Clinical Data Graph",
+      "group": "KNOW"
+    },
+    {
+      "id": 447,
+      "label": "Survival Analysis",
+      "group": "KNOW"
+    },
+    {
+      "id": 448,
+      "label": "Patient Stratification",
+      "group": "KNOW"
+    },
+    {
+      "id": 449,
+      "label": "Network-Based Biomarkers",
+      "group": "KNOW"
+    },
+    {
+      "id": 450,
+      "label": "Python for Bioinformatics",
+      "group": "TOOL",
+      "shape": "box"
+    },
+    {
+      "id": 451,
+      "label": "Biopython",
+      "group": "TOOL"
+    },
+    {
+      "id": 452,
+      "label": "NetworkX",
+      "group": "TOOL"
+    },
+    {
+      "id": 453,
+      "label": "Pandas for Bioinformatics",
+      "group": "TOOL"
+    },
+    {
+      "id": 454,
+      "label": "Scikit-Learn",
+      "group": "TOOL"
+    },
+    {
+      "id": 455,
+      "label": "Jupyter Notebooks",
+      "group": "TOOL"
+    },
+    {
+      "id": 456,
+      "label": "Matplotlib",
+      "group": "TOOL"
+    },
+    {
+      "id": 457,
+      "label": "Seaborn",
+      "group": "TOOL"
+    },
+    {
+      "id": 458,
+      "label": "Neo4j Python Driver",
+      "group": "TOOL"
+    },
+    {
+      "id": 459,
+      "label": "Cytoscape API",
+      "group": "TOOL"
+    },
+    {
+      "id": 460,
+      "label": "Data Wrangling",
+      "group": "TOOL"
+    },
+    {
+      "id": 461,
+      "label": "Reproducible Analysis",
+      "group": "TOOL"
+    },
+    {
+      "id": 462,
+      "label": "Version Control for Science",
+      "group": "TOOL",
+      "shape": "box"
+    },
+    {
+      "id": 463,
+      "label": "Workflow Managers",
+      "group": "TOOL"
+    },
+    {
+      "id": 464,
+      "label": "Conda Environments",
+      "group": "TOOL"
+    },
+    {
+      "id": 465,
+      "label": "Capstone Project Design",
+      "group": "TOOL"
+    },
+    {
+      "id": 466,
+      "label": "Graph Data Model Design",
+      "group": "TOOL"
+    },
+    {
+      "id": 467,
+      "label": "Antibiotic Resistance Graph",
+      "group": "TOOL"
+    },
+    {
+      "id": 468,
+      "label": "Resistance Gene Network",
+      "group": "TOOL"
+    },
+    {
+      "id": 469,
+      "label": "Mobile Genetic Elements",
+      "group": "TOOL"
+    },
+    {
+      "id": 470,
+      "label": "Rare Disease Knowledge Graph",
+      "group": "TOOL"
+    },
+    {
+      "id": 471,
+      "label": "Phenotype-Gene Mapping",
+      "group": "TOOL"
+    },
+    {
+      "id": 472,
+      "label": "Metabolic Model Comparison",
+      "group": "TOOL"
+    },
+    {
+      "id": 473,
+      "label": "Cross-Species Graph Align",
+      "group": "TOOL"
+    },
+    {
+      "id": 474,
+      "label": "Protein Function Predict",
+      "group": "TOOL"
+    },
+    {
+      "id": 475,
+      "label": "GO Annotation Prediction",
+      "group": "TOOL"
+    },
+    {
+      "id": 476,
+      "label": "Multi-Omics Stratification",
+      "group": "TOOL"
+    },
+    {
+      "id": 477,
+      "label": "Patient Subgroup Discovery",
+      "group": "TOOL"
+    },
+    {
+      "id": 478,
+      "label": "Graph-Based Discovery",
+      "group": "TOOL"
+    },
+    {
+      "id": 479,
+      "label": "Bench to Bedside Pipeline",
+      "group": "TOOL"
+    },
+    {
+      "id": 480,
+      "label": "Future of Graph Bioinform",
+      "group": "TOOL"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 3
+    },
+    {
+      "from": 5,
+      "to": 3
+    },
+    {
+      "from": 6,
+      "to": 3
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 4
+    },
+    {
+      "from": 8,
+      "to": 5
+    },
+    {
+      "from": 9,
+      "to": 8
+    },
+    {
+      "from": 9,
+      "to": 18
+    },
+    {
+      "from": 10,
+      "to": 4
+    },
+    {
+      "from": 11,
+      "to": 10
+    },
+    {
+      "from": 12,
+      "to": 4
+    },
+    {
+      "from": 12,
+      "to": 5
+    },
+    {
+      "from": 13,
+      "to": 5
+    },
+    {
+      "from": 13,
+      "to": 6
+    },
+    {
+      "from": 13,
+      "to": 9
+    },
+    {
+      "from": 14,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 13
+    },
+    {
+      "from": 15,
+      "to": 4
+    },
+    {
+      "from": 15,
+      "to": 5
+    },
+    {
+      "from": 15,
+      "to": 6
+    },
+    {
+      "from": 16,
+      "to": 3
+    },
+    {
+      "from": 17,
+      "to": 1
+    },
+    {
+      "from": 18,
+      "to": 3
+    },
+    {
+      "from": 19,
+      "to": 10
+    },
+    {
+      "from": 19,
+      "to": 18
+    },
+    {
+      "from": 20,
+      "to": 4
+    },
+    {
+      "from": 20,
+      "to": 8
+    },
+    {
+      "from": 21,
+      "to": 4
+    },
+    {
+      "from": 21,
+      "to": 11
+    },
+    {
+      "from": 22,
+      "to": 4
+    },
+    {
+      "from": 22,
+      "to": 10
+    },
+    {
+      "from": 23,
+      "to": 22
+    },
+    {
+      "from": 24,
+      "to": 22
+    },
+    {
+      "from": 25,
+      "to": 22
+    },
+    {
+      "from": 25,
+      "to": 21
+    },
+    {
+      "from": 26,
+      "to": 25
+    },
+    {
+      "from": 27,
+      "to": 14
+    },
+    {
+      "from": 28,
+      "to": 27
+    },
+    {
+      "from": 28,
+      "to": 4
+    },
+    {
+      "from": 29,
+      "to": 27
+    },
+    {
+      "from": 29,
+      "to": 21
+    },
+    {
+      "from": 30,
+      "to": 3
+    },
+    {
+      "from": 30,
+      "to": 12
+    },
+    {
+      "from": 30,
+      "to": 13
+    },
+    {
+      "from": 31,
+      "to": 15
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 33,
+      "to": 32
+    },
+    {
+      "from": 34,
+      "to": 31
+    },
+    {
+      "from": 34,
+      "to": 6
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 34
+    },
+    {
+      "from": 37,
+      "to": 31
+    },
+    {
+      "from": 37,
+      "to": 6
+    },
+    {
+      "from": 38,
+      "to": 31
+    },
+    {
+      "from": 38,
+      "to": 11
+    },
+    {
+      "from": 39,
+      "to": 31
+    },
+    {
+      "from": 40,
+      "to": 31
+    },
+    {
+      "from": 41,
+      "to": 31
+    },
+    {
+      "from": 42,
+      "to": 31
+    },
+    {
+      "from": 43,
+      "to": 31
+    },
+    {
+      "from": 44,
+      "to": 31
+    },
+    {
+      "from": 44,
+      "to": 22
+    },
+    {
+      "from": 45,
+      "to": 31
+    },
+    {
+      "from": 45,
+      "to": 10
+    },
+    {
+      "from": 46,
+      "to": 31
+    },
+    {
+      "from": 47,
+      "to": 31
+    },
+    {
+      "from": 48,
+      "to": 31
+    },
+    {
+      "from": 49,
+      "to": 31
+    },
+    {
+      "from": 49,
+      "to": 22
+    },
+    {
+      "from": 50,
+      "to": 31
+    },
+    {
+      "from": 51,
+      "to": 31
+    },
+    {
+      "from": 52,
+      "to": 31
+    },
+    {
+      "from": 53,
+      "to": 52
+    },
+    {
+      "from": 54,
+      "to": 52
+    },
+    {
+      "from": 55,
+      "to": 31
+    },
+    {
+      "from": 56,
+      "to": 15
+    },
+    {
+      "from": 57,
+      "to": 56
+    },
+    {
+      "from": 58,
+      "to": 33
+    },
+    {
+      "from": 58,
+      "to": 56
+    },
+    {
+      "from": 59,
+      "to": 56
+    },
+    {
+      "from": 59,
+      "to": 10
+    },
+    {
+      "from": 60,
+      "to": 56
+    },
+    {
+      "from": 61,
+      "to": 37
+    },
+    {
+      "from": 61,
+      "to": 56
+    },
+    {
+      "from": 62,
+      "to": 56
+    },
+    {
+      "from": 62,
+      "to": 22
+    },
+    {
+      "from": 63,
+      "to": 56
+    },
+    {
+      "from": 64,
+      "to": 56
+    },
+    {
+      "from": 65,
+      "to": 56
+    },
+    {
+      "from": 66,
+      "to": 56
+    },
+    {
+      "from": 67,
+      "to": 56
+    },
+    {
+      "from": 68,
+      "to": 56
+    },
+    {
+      "from": 69,
+      "to": 56
+    },
+    {
+      "from": 70,
+      "to": 56
+    },
+    {
+      "from": 70,
+      "to": 57
+    },
+    {
+      "from": 72,
+      "to": 71
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 72
+    },
+    {
+      "from": 75,
+      "to": 72
+    },
+    {
+      "from": 76,
+      "to": 72
+    },
+    {
+      "from": 77,
+      "to": 72
+    },
+    {
+      "from": 78,
+      "to": 72
+    },
+    {
+      "from": 79,
+      "to": 72
+    },
+    {
+      "from": 80,
+      "to": 72
+    },
+    {
+      "from": 81,
+      "to": 72
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 83,
+      "to": 73
+    },
+    {
+      "from": 83,
+      "to": 82
+    },
+    {
+      "from": 84,
+      "to": 73
+    },
+    {
+      "from": 84,
+      "to": 82
+    },
+    {
+      "from": 85,
+      "to": 81
+    },
+    {
+      "from": 86,
+      "to": 81
+    },
+    {
+      "from": 87,
+      "to": 86
+    },
+    {
+      "from": 87,
+      "to": 82
+    },
+    {
+      "from": 88,
+      "to": 86
+    },
+    {
+      "from": 88,
+      "to": 97
+    },
+    {
+      "from": 89,
+      "to": 86
+    },
+    {
+      "from": 89,
+      "to": 97
+    },
+    {
+      "from": 90,
+      "to": 86
+    },
+    {
+      "from": 91,
+      "to": 73
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 92,
+      "to": 81
+    },
+    {
+      "from": 93,
+      "to": 73
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 72
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 96,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 94
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 98,
+      "to": 75
+    },
+    {
+      "from": 99,
+      "to": 81
+    },
+    {
+      "from": 100,
+      "to": 97
+    },
+    {
+      "from": 101,
+      "to": 82
+    },
+    {
+      "from": 101,
+      "to": 103
+    },
+    {
+      "from": 102,
+      "to": 85
+    },
+    {
+      "from": 102,
+      "to": 100
+    },
+    {
+      "from": 103,
+      "to": 82
+    },
+    {
+      "from": 104,
+      "to": 81
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 101
+    },
+    {
+      "from": 107,
+      "to": 80
+    },
+    {
+      "from": 107,
+      "to": 73
+    },
+    {
+      "from": 108,
+      "to": 72
+    },
+    {
+      "from": 109,
+      "to": 72
+    },
+    {
+      "from": 110,
+      "to": 72
+    },
+    {
+      "from": 111,
+      "to": 77
+    },
+    {
+      "from": 113,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 112
+    },
+    {
+      "from": 114,
+      "to": 111
+    },
+    {
+      "from": 115,
+      "to": 111
+    },
+    {
+      "from": 116,
+      "to": 114
+    },
+    {
+      "from": 117,
+      "to": 111
+    },
+    {
+      "from": 118,
+      "to": 116
+    },
+    {
+      "from": 119,
+      "to": 116
+    },
+    {
+      "from": 120,
+      "to": 116
+    },
+    {
+      "from": 121,
+      "to": 116
+    },
+    {
+      "from": 122,
+      "to": 116
+    },
+    {
+      "from": 123,
+      "to": 116
+    },
+    {
+      "from": 123,
+      "to": 118
+    },
+    {
+      "from": 124,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 123
+    },
+    {
+      "from": 125,
+      "to": 97
+    },
+    {
+      "from": 126,
+      "to": 120
+    },
+    {
+      "from": 127,
+      "to": 111
+    },
+    {
+      "from": 127,
+      "to": 77
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 127
+    },
+    {
+      "from": 130,
+      "to": 127
+    },
+    {
+      "from": 131,
+      "to": 127
+    },
+    {
+      "from": 132,
+      "to": 71
+    },
+    {
+      "from": 133,
+      "to": 132
+    },
+    {
+      "from": 134,
+      "to": 132
+    },
+    {
+      "from": 135,
+      "to": 77
+    },
+    {
+      "from": 135,
+      "to": 132
+    },
+    {
+      "from": 136,
+      "to": 111
+    },
+    {
+      "from": 136,
+      "to": 56
+    },
+    {
+      "from": 137,
+      "to": 136
+    },
+    {
+      "from": 137,
+      "to": 67
+    },
+    {
+      "from": 138,
+      "to": 136
+    },
+    {
+      "from": 139,
+      "to": 116
+    },
+    {
+      "from": 139,
+      "to": 140
+    },
+    {
+      "from": 140,
+      "to": 116
+    },
+    {
+      "from": 141,
+      "to": 111
+    },
+    {
+      "from": 141,
+      "to": 143
+    },
+    {
+      "from": 142,
+      "to": 141
+    },
+    {
+      "from": 143,
+      "to": 111
+    },
+    {
+      "from": 144,
+      "to": 111
+    },
+    {
+      "from": 145,
+      "to": 111
+    },
+    {
+      "from": 146,
+      "to": 15
+    },
+    {
+      "from": 147,
+      "to": 146
+    },
+    {
+      "from": 148,
+      "to": 147
+    },
+    {
+      "from": 149,
+      "to": 147
+    },
+    {
+      "from": 150,
+      "to": 149
+    },
+    {
+      "from": 150,
+      "to": 152
+    },
+    {
+      "from": 151,
+      "to": 148
+    },
+    {
+      "from": 151,
+      "to": 152
+    },
+    {
+      "from": 153,
+      "to": 146
+    },
+    {
+      "from": 154,
+      "to": 153
+    },
+    {
+      "from": 155,
+      "to": 153
+    },
+    {
+      "from": 156,
+      "to": 153
+    },
+    {
+      "from": 157,
+      "to": 146
+    },
+    {
+      "from": 158,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 149
+    },
+    {
+      "from": 159,
+      "to": 153
+    },
+    {
+      "from": 160,
+      "to": 159
+    },
+    {
+      "from": 161,
+      "to": 159
+    },
+    {
+      "from": 162,
+      "to": 159
+    },
+    {
+      "from": 162,
+      "to": 175
+    },
+    {
+      "from": 163,
+      "to": 146
+    },
+    {
+      "from": 164,
+      "to": 163
+    },
+    {
+      "from": 165,
+      "to": 163
+    },
+    {
+      "from": 166,
+      "to": 146
+    },
+    {
+      "from": 167,
+      "to": 146
+    },
+    {
+      "from": 167,
+      "to": 153
+    },
+    {
+      "from": 168,
+      "to": 167
+    },
+    {
+      "from": 168,
+      "to": 72
+    },
+    {
+      "from": 169,
+      "to": 168
+    },
+    {
+      "from": 169,
+      "to": 127
+    },
+    {
+      "from": 170,
+      "to": 146
+    },
+    {
+      "from": 171,
+      "to": 170
+    },
+    {
+      "from": 172,
+      "to": 170
+    },
+    {
+      "from": 173,
+      "to": 170
+    },
+    {
+      "from": 174,
+      "to": 170
+    },
+    {
+      "from": 175,
+      "to": 170
+    },
+    {
+      "from": 177,
+      "to": 176
+    },
+    {
+      "from": 177,
+      "to": 175
+    },
+    {
+      "from": 178,
+      "to": 174
+    },
+    {
+      "from": 180,
+      "to": 178
+    },
+    {
+      "from": 180,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 170
+    },
+    {
+      "from": 181,
+      "to": 73
+    },
+    {
+      "from": 182,
+      "to": 181
+    },
+    {
+      "from": 183,
+      "to": 182
+    },
+    {
+      "from": 183,
+      "to": 163
+    },
+    {
+      "from": 184,
+      "to": 167
+    },
+    {
+      "from": 185,
+      "to": 184
+    },
+    {
+      "from": 186,
+      "to": 184
+    },
+    {
+      "from": 187,
+      "to": 181
+    },
+    {
+      "from": 188,
+      "to": 181
+    },
+    {
+      "from": 188,
+      "to": 156
+    },
+    {
+      "from": 189,
+      "to": 181
+    },
+    {
+      "from": 190,
+      "to": 189
+    },
+    {
+      "from": 191,
+      "to": 181
+    },
+    {
+      "from": 192,
+      "to": 191
+    },
+    {
+      "from": 193,
+      "to": 194
+    },
+    {
+      "from": 194,
+      "to": 156
+    },
+    {
+      "from": 195,
+      "to": 181
+    },
+    {
+      "from": 195,
+      "to": 73
+    },
+    {
+      "from": 196,
+      "to": 181
+    },
+    {
+      "from": 196,
+      "to": 72
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 197
+    },
+    {
+      "from": 200,
+      "to": 212
+    },
+    {
+      "from": 201,
+      "to": 196
+    },
+    {
+      "from": 201,
+      "to": 127
+    },
+    {
+      "from": 202,
+      "to": 181
+    },
+    {
+      "from": 203,
+      "to": 181
+    },
+    {
+      "from": 204,
+      "to": 181
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 181
+    },
+    {
+      "from": 207,
+      "to": 181
+    },
+    {
+      "from": 208,
+      "to": 181
+    },
+    {
+      "from": 209,
+      "to": 208
+    },
+    {
+      "from": 210,
+      "to": 181
+    },
+    {
+      "from": 210,
+      "to": 189
+    },
+    {
+      "from": 211,
+      "to": 193
+    },
+    {
+      "from": 211,
+      "to": 188
+    },
+    {
+      "from": 212,
+      "to": 181
+    },
+    {
+      "from": 212,
+      "to": 10
+    },
+    {
+      "from": 213,
+      "to": 212
+    },
+    {
+      "from": 214,
+      "to": 182
+    },
+    {
+      "from": 214,
+      "to": 11
+    },
+    {
+      "from": 215,
+      "to": 214
+    },
+    {
+      "from": 215,
+      "to": 11
+    },
+    {
+      "from": 216,
+      "to": 7
+    },
+    {
+      "from": 217,
+      "to": 216
+    },
+    {
+      "from": 218,
+      "to": 217
+    },
+    {
+      "from": 219,
+      "to": 217
+    },
+    {
+      "from": 220,
+      "to": 217
+    },
+    {
+      "from": 221,
+      "to": 220
+    },
+    {
+      "from": 222,
+      "to": 220
+    },
+    {
+      "from": 223,
+      "to": 222
+    },
+    {
+      "from": 224,
+      "to": 163
+    },
+    {
+      "from": 224,
+      "to": 220
+    },
+    {
+      "from": 225,
+      "to": 220
+    },
+    {
+      "from": 226,
+      "to": 220
+    },
+    {
+      "from": 227,
+      "to": 222
+    },
+    {
+      "from": 227,
+      "to": 177
+    },
+    {
+      "from": 228,
+      "to": 227
+    },
+    {
+      "from": 229,
+      "to": 220
+    },
+    {
+      "from": 230,
+      "to": 229
+    },
+    {
+      "from": 230,
+      "to": 72
+    },
+    {
+      "from": 231,
+      "to": 230
+    },
+    {
+      "from": 232,
+      "to": 231
+    },
+    {
+      "from": 232,
+      "to": 127
+    },
+    {
+      "from": 233,
+      "to": 220
+    },
+    {
+      "from": 234,
+      "to": 233
+    },
+    {
+      "from": 235,
+      "to": 220
+    },
+    {
+      "from": 236,
+      "to": 235
+    },
+    {
+      "from": 237,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 236
+    },
+    {
+      "from": 238,
+      "to": 177
+    },
+    {
+      "from": 239,
+      "to": 220
+    },
+    {
+      "from": 240,
+      "to": 239
+    },
+    {
+      "from": 241,
+      "to": 240
+    },
+    {
+      "from": 241,
+      "to": 242
+    },
+    {
+      "from": 242,
+      "to": 6
+    },
+    {
+      "from": 243,
+      "to": 242
+    },
+    {
+      "from": 244,
+      "to": 243
+    },
+    {
+      "from": 245,
+      "to": 242
+    },
+    {
+      "from": 245,
+      "to": 72
+    },
+    {
+      "from": 246,
+      "to": 242
+    },
+    {
+      "from": 247,
+      "to": 246
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 249,
+      "to": 235
+    },
+    {
+      "from": 249,
+      "to": 163
+    },
+    {
+      "from": 250,
+      "to": 220
+    },
+    {
+      "from": 250,
+      "to": 11
+    },
+    {
+      "from": 251,
+      "to": 101
+    },
+    {
+      "from": 251,
+      "to": 72
+    },
+    {
+      "from": 252,
+      "to": 251
+    },
+    {
+      "from": 253,
+      "to": 251
+    },
+    {
+      "from": 254,
+      "to": 251
+    },
+    {
+      "from": 255,
+      "to": 251
+    },
+    {
+      "from": 256,
+      "to": 251
+    },
+    {
+      "from": 257,
+      "to": 251
+    },
+    {
+      "from": 258,
+      "to": 251
+    },
+    {
+      "from": 259,
+      "to": 251
+    },
+    {
+      "from": 259,
+      "to": 87
+    },
+    {
+      "from": 260,
+      "to": 251
+    },
+    {
+      "from": 260,
+      "to": 88
+    },
+    {
+      "from": 261,
+      "to": 251
+    },
+    {
+      "from": 261,
+      "to": 92
+    },
+    {
+      "from": 262,
+      "to": 251
+    },
+    {
+      "from": 262,
+      "to": 127
+    },
+    {
+      "from": 263,
+      "to": 259
+    },
+    {
+      "from": 264,
+      "to": 259
+    },
+    {
+      "from": 265,
+      "to": 259
+    },
+    {
+      "from": 265,
+      "to": 260
+    },
+    {
+      "from": 266,
+      "to": 261
+    },
+    {
+      "from": 267,
+      "to": 261
+    },
+    {
+      "from": 268,
+      "to": 261
+    },
+    {
+      "from": 268,
+      "to": 80
+    },
+    {
+      "from": 269,
+      "to": 251
+    },
+    {
+      "from": 270,
+      "to": 251
+    },
+    {
+      "from": 270,
+      "to": 269
+    },
+    {
+      "from": 271,
+      "to": 251
+    },
+    {
+      "from": 271,
+      "to": 14
+    },
+    {
+      "from": 272,
+      "to": 251
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 251
+    },
+    {
+      "from": 274,
+      "to": 176
+    },
+    {
+      "from": 275,
+      "to": 235
+    },
+    {
+      "from": 275,
+      "to": 251
+    },
+    {
+      "from": 276,
+      "to": 251
+    },
+    {
+      "from": 276,
+      "to": 167
+    },
+    {
+      "from": 277,
+      "to": 251
+    },
+    {
+      "from": 277,
+      "to": 108
+    },
+    {
+      "from": 278,
+      "to": 251
+    },
+    {
+      "from": 278,
+      "to": 277
+    },
+    {
+      "from": 279,
+      "to": 251
+    },
+    {
+      "from": 279,
+      "to": 107
+    },
+    {
+      "from": 280,
+      "to": 251
+    },
+    {
+      "from": 280,
+      "to": 86
+    },
+    {
+      "from": 281,
+      "to": 11
+    },
+    {
+      "from": 281,
+      "to": 15
+    },
+    {
+      "from": 282,
+      "to": 281
+    },
+    {
+      "from": 282,
+      "to": 72
+    },
+    {
+      "from": 283,
+      "to": 282
+    },
+    {
+      "from": 284,
+      "to": 283
+    },
+    {
+      "from": 285,
+      "to": 281
+    },
+    {
+      "from": 286,
+      "to": 285
+    },
+    {
+      "from": 287,
+      "to": 281
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 281
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 291,
+      "to": 289
+    },
+    {
+      "from": 292,
+      "to": 291
+    },
+    {
+      "from": 292,
+      "to": 72
+    },
+    {
+      "from": 293,
+      "to": 292
+    },
+    {
+      "from": 294,
+      "to": 293
+    },
+    {
+      "from": 295,
+      "to": 293
+    },
+    {
+      "from": 295,
+      "to": 127
+    },
+    {
+      "from": 296,
+      "to": 293
+    },
+    {
+      "from": 296,
+      "to": 63
+    },
+    {
+      "from": 297,
+      "to": 289
+    },
+    {
+      "from": 297,
+      "to": 10
+    },
+    {
+      "from": 298,
+      "to": 297
+    },
+    {
+      "from": 299,
+      "to": 15
+    },
+    {
+      "from": 300,
+      "to": 299
+    },
+    {
+      "from": 301,
+      "to": 299
+    },
+    {
+      "from": 302,
+      "to": 299
+    },
+    {
+      "from": 303,
+      "to": 302
+    },
+    {
+      "from": 304,
+      "to": 289
+    },
+    {
+      "from": 304,
+      "to": 62
+    },
+    {
+      "from": 305,
+      "to": 304
+    },
+    {
+      "from": 305,
+      "to": 23
+    },
+    {
+      "from": 306,
+      "to": 304
+    },
+    {
+      "from": 306,
+      "to": 25
+    },
+    {
+      "from": 307,
+      "to": 304
+    },
+    {
+      "from": 308,
+      "to": 307
+    },
+    {
+      "from": 309,
+      "to": 308
+    },
+    {
+      "from": 310,
+      "to": 292
+    },
+    {
+      "from": 310,
+      "to": 307
+    },
+    {
+      "from": 311,
+      "to": 14
+    },
+    {
+      "from": 311,
+      "to": 5
+    },
+    {
+      "from": 312,
+      "to": 311
+    },
+    {
+      "from": 312,
+      "to": 299
+    },
+    {
+      "from": 313,
+      "to": 312
+    },
+    {
+      "from": 313,
+      "to": 70
+    },
+    {
+      "from": 314,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 289
+    },
+    {
+      "from": 315,
+      "to": 314
+    },
+    {
+      "from": 316,
+      "to": 315
+    },
+    {
+      "from": 317,
+      "to": 316
+    },
+    {
+      "from": 318,
+      "to": 316
+    },
+    {
+      "from": 319,
+      "to": 318
+    },
+    {
+      "from": 320,
+      "to": 14
+    },
+    {
+      "from": 320,
+      "to": 4
+    },
+    {
+      "from": 321,
+      "to": 320
+    },
+    {
+      "from": 322,
+      "to": 320
+    },
+    {
+      "from": 323,
+      "to": 321
+    },
+    {
+      "from": 323,
+      "to": 322
+    },
+    {
+      "from": 324,
+      "to": 321
+    },
+    {
+      "from": 325,
+      "to": 320
+    },
+    {
+      "from": 325,
+      "to": 73
+    },
+    {
+      "from": 326,
+      "to": 316
+    },
+    {
+      "from": 326,
+      "to": 74
+    },
+    {
+      "from": 327,
+      "to": 326
+    },
+    {
+      "from": 328,
+      "to": 325
+    },
+    {
+      "from": 328,
+      "to": 330
+    },
+    {
+      "from": 329,
+      "to": 325
+    },
+    {
+      "from": 331,
+      "to": 325
+    },
+    {
+      "from": 331,
+      "to": 326
+    },
+    {
+      "from": 332,
+      "to": 325
+    },
+    {
+      "from": 333,
+      "to": 325
+    },
+    {
+      "from": 333,
+      "to": 189
+    },
+    {
+      "from": 334,
+      "to": 325
+    },
+    {
+      "from": 334,
+      "to": 127
+    },
+    {
+      "from": 335,
+      "to": 312
+    },
+    {
+      "from": 336,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 338,
+      "to": 335
+    },
+    {
+      "from": 339,
+      "to": 5
+    },
+    {
+      "from": 339,
+      "to": 12
+    },
+    {
+      "from": 340,
+      "to": 5
+    },
+    {
+      "from": 340,
+      "to": 12
+    },
+    {
+      "from": 341,
+      "to": 76
+    },
+    {
+      "from": 341,
+      "to": 73
+    },
+    {
+      "from": 342,
+      "to": 341
+    },
+    {
+      "from": 343,
+      "to": 341
+    },
+    {
+      "from": 343,
+      "to": 6
+    },
+    {
+      "from": 344,
+      "to": 343
+    },
+    {
+      "from": 345,
+      "to": 341
+    },
+    {
+      "from": 346,
+      "to": 341
+    },
+    {
+      "from": 346,
+      "to": 76
+    },
+    {
+      "from": 347,
+      "to": 39
+    },
+    {
+      "from": 347,
+      "to": 345
+    },
+    {
+      "from": 348,
+      "to": 40
+    },
+    {
+      "from": 348,
+      "to": 345
+    },
+    {
+      "from": 349,
+      "to": 48
+    },
+    {
+      "from": 349,
+      "to": 345
+    },
+    {
+      "from": 350,
+      "to": 341
+    },
+    {
+      "from": 350,
+      "to": 352
+    },
+    {
+      "from": 351,
+      "to": 350
+    },
+    {
+      "from": 352,
+      "to": 341
+    },
+    {
+      "from": 352,
+      "to": 109
+    },
+    {
+      "from": 353,
+      "to": 350
+    },
+    {
+      "from": 354,
+      "to": 350
+    },
+    {
+      "from": 355,
+      "to": 346
+    },
+    {
+      "from": 355,
+      "to": 127
+    },
+    {
+      "from": 356,
+      "to": 341
+    },
+    {
+      "from": 356,
+      "to": 11
+    },
+    {
+      "from": 357,
+      "to": 356
+    },
+    {
+      "from": 357,
+      "to": 350
+    },
+    {
+      "from": 358,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 356
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 345
+    },
+    {
+      "from": 361,
+      "to": 402
+    },
+    {
+      "from": 362,
+      "to": 342
+    },
+    {
+      "from": 363,
+      "to": 362
+    },
+    {
+      "from": 364,
+      "to": 341
+    },
+    {
+      "from": 364,
+      "to": 278
+    },
+    {
+      "from": 365,
+      "to": 364
+    },
+    {
+      "from": 365,
+      "to": 277
+    },
+    {
+      "from": 366,
+      "to": 73
+    },
+    {
+      "from": 366,
+      "to": 17
+    },
+    {
+      "from": 367,
+      "to": 366
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 369,
+      "to": 367
+    },
+    {
+      "from": 370,
+      "to": 367
+    },
+    {
+      "from": 371,
+      "to": 366
+    },
+    {
+      "from": 371,
+      "to": 73
+    },
+    {
+      "from": 372,
+      "to": 371
+    },
+    {
+      "from": 372,
+      "to": 107
+    },
+    {
+      "from": 373,
+      "to": 371
+    },
+    {
+      "from": 373,
+      "to": 107
+    },
+    {
+      "from": 374,
+      "to": 251
+    },
+    {
+      "from": 374,
+      "to": 375
+    },
+    {
+      "from": 375,
+      "to": 251
+    },
+    {
+      "from": 375,
+      "to": 261
+    },
+    {
+      "from": 376,
+      "to": 374
+    },
+    {
+      "from": 376,
+      "to": 97
+    },
+    {
+      "from": 377,
+      "to": 374
+    },
+    {
+      "from": 378,
+      "to": 374
+    },
+    {
+      "from": 378,
+      "to": 242
+    },
+    {
+      "from": 379,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 378
+    },
+    {
+      "from": 380,
+      "to": 416
+    },
+    {
+      "from": 381,
+      "to": 378
+    },
+    {
+      "from": 381,
+      "to": 73
+    },
+    {
+      "from": 382,
+      "to": 381
+    },
+    {
+      "from": 382,
+      "to": 127
+    },
+    {
+      "from": 383,
+      "to": 380
+    },
+    {
+      "from": 383,
+      "to": 14
+    },
+    {
+      "from": 384,
+      "to": 22
+    },
+    {
+      "from": 384,
+      "to": 44
+    },
+    {
+      "from": 385,
+      "to": 384
+    },
+    {
+      "from": 385,
+      "to": 10
+    },
+    {
+      "from": 386,
+      "to": 384
+    },
+    {
+      "from": 386,
+      "to": 10
+    },
+    {
+      "from": 387,
+      "to": 384
+    },
+    {
+      "from": 387,
+      "to": 251
+    },
+    {
+      "from": 388,
+      "to": 383
+    },
+    {
+      "from": 388,
+      "to": 374
+    },
+    {
+      "from": 389,
+      "to": 388
+    },
+    {
+      "from": 389,
+      "to": 316
+    },
+    {
+      "from": 390,
+      "to": 374
+    },
+    {
+      "from": 391,
+      "to": 380
+    },
+    {
+      "from": 392,
+      "to": 380
+    },
+    {
+      "from": 392,
+      "to": 73
+    },
+    {
+      "from": 393,
+      "to": 391
+    },
+    {
+      "from": 393,
+      "to": 72
+    },
+    {
+      "from": 394,
+      "to": 374
+    },
+    {
+      "from": 394,
+      "to": 72
+    },
+    {
+      "from": 395,
+      "to": 374
+    },
+    {
+      "from": 395,
+      "to": 377
+    },
+    {
+      "from": 396,
+      "to": 72
+    },
+    {
+      "from": 396,
+      "to": 408
+    },
+    {
+      "from": 397,
+      "to": 396
+    },
+    {
+      "from": 397,
+      "to": 31
+    },
+    {
+      "from": 398,
+      "to": 45
+    },
+    {
+      "from": 398,
+      "to": 405
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 398
+    },
+    {
+      "from": 401,
+      "to": 398
+    },
+    {
+      "from": 402,
+      "to": 398
+    },
+    {
+      "from": 403,
+      "to": 46
+    },
+    {
+      "from": 403,
+      "to": 405
+    },
+    {
+      "from": 404,
+      "to": 47
+    },
+    {
+      "from": 404,
+      "to": 405
+    },
+    {
+      "from": 405,
+      "to": 73
+    },
+    {
+      "from": 406,
+      "to": 405
+    },
+    {
+      "from": 407,
+      "to": 405
+    },
+    {
+      "from": 408,
+      "to": 31
+    },
+    {
+      "from": 409,
+      "to": 408
+    },
+    {
+      "from": 410,
+      "to": 409
+    },
+    {
+      "from": 411,
+      "to": 409
+    },
+    {
+      "from": 412,
+      "to": 396
+    },
+    {
+      "from": 413,
+      "to": 412
+    },
+    {
+      "from": 413,
+      "to": 94
+    },
+    {
+      "from": 414,
+      "to": 412
+    },
+    {
+      "from": 415,
+      "to": 412
+    },
+    {
+      "from": 415,
+      "to": 396
+    },
+    {
+      "from": 416,
+      "to": 412
+    },
+    {
+      "from": 417,
+      "to": 415
+    },
+    {
+      "from": 418,
+      "to": 420
+    },
+    {
+      "from": 419,
+      "to": 420
+    },
+    {
+      "from": 420,
+      "to": 31
+    },
+    {
+      "from": 421,
+      "to": 412
+    },
+    {
+      "from": 421,
+      "to": 72
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 242
+    },
+    {
+      "from": 424,
+      "to": 397
+    },
+    {
+      "from": 424,
+      "to": 127
+    },
+    {
+      "from": 425,
+      "to": 397
+    },
+    {
+      "from": 425,
+      "to": 50
+    },
+    {
+      "from": 426,
+      "to": 409
+    },
+    {
+      "from": 426,
+      "to": 431
+    },
+    {
+      "from": 427,
+      "to": 426
+    },
+    {
+      "from": 427,
+      "to": 11
+    },
+    {
+      "from": 428,
+      "to": 426
+    },
+    {
+      "from": 428,
+      "to": 311
+    },
+    {
+      "from": 429,
+      "to": 426
+    },
+    {
+      "from": 429,
+      "to": 251
+    },
+    {
+      "from": 430,
+      "to": 426
+    },
+    {
+      "from": 430,
+      "to": 362
+    },
+    {
+      "from": 431,
+      "to": 409
+    },
+    {
+      "from": 431,
+      "to": 72
+    },
+    {
+      "from": 432,
+      "to": 431
+    },
+    {
+      "from": 432,
+      "to": 127
+    },
+    {
+      "from": 433,
+      "to": 92
+    },
+    {
+      "from": 434,
+      "to": 433
+    },
+    {
+      "from": 435,
+      "to": 433
+    },
+    {
+      "from": 436,
+      "to": 433
+    },
+    {
+      "from": 437,
+      "to": 433
+    },
+    {
+      "from": 438,
+      "to": 437
+    },
+    {
+      "from": 438,
+      "to": 109
+    },
+    {
+      "from": 439,
+      "to": 72
+    },
+    {
+      "from": 440,
+      "to": 439
+    },
+    {
+      "from": 441,
+      "to": 439
+    },
+    {
+      "from": 442,
+      "to": 439
+    },
+    {
+      "from": 443,
+      "to": 439
+    },
+    {
+      "from": 444,
+      "to": 439
+    },
+    {
+      "from": 445,
+      "to": 426
+    },
+    {
+      "from": 445,
+      "to": 74
+    },
+    {
+      "from": 446,
+      "to": 445
+    },
+    {
+      "from": 447,
+      "to": 446
+    },
+    {
+      "from": 448,
+      "to": 445
+    },
+    {
+      "from": 448,
+      "to": 433
+    },
+    {
+      "from": 449,
+      "to": 448
+    },
+    {
+      "from": 449,
+      "to": 389
+    },
+    {
+      "from": 451,
+      "to": 450
+    },
+    {
+      "from": 451,
+      "to": 31
+    },
+    {
+      "from": 452,
+      "to": 450
+    },
+    {
+      "from": 452,
+      "to": 72
+    },
+    {
+      "from": 453,
+      "to": 450
+    },
+    {
+      "from": 454,
+      "to": 450
+    },
+    {
+      "from": 455,
+      "to": 450
+    },
+    {
+      "from": 456,
+      "to": 450
+    },
+    {
+      "from": 457,
+      "to": 456
+    },
+    {
+      "from": 458,
+      "to": 450
+    },
+    {
+      "from": 458,
+      "to": 114
+    },
+    {
+      "from": 459,
+      "to": 441
+    },
+    {
+      "from": 459,
+      "to": 450
+    },
+    {
+      "from": 460,
+      "to": 453
+    },
+    {
+      "from": 461,
+      "to": 455
+    },
+    {
+      "from": 461,
+      "to": 462
+    },
+    {
+      "from": 463,
+      "to": 461
+    },
+    {
+      "from": 464,
+      "to": 450
+    },
+    {
+      "from": 465,
+      "to": 466
+    },
+    {
+      "from": 466,
+      "to": 127
+    },
+    {
+      "from": 467,
+      "to": 397
+    },
+    {
+      "from": 467,
+      "to": 198
+    },
+    {
+      "from": 468,
+      "to": 467
+    },
+    {
+      "from": 469,
+      "to": 198
+    },
+    {
+      "from": 469,
+      "to": 467
+    },
+    {
+      "from": 470,
+      "to": 397
+    },
+    {
+      "from": 470,
+      "to": 404
+    },
+    {
+      "from": 471,
+      "to": 470
+    },
+    {
+      "from": 472,
+      "to": 356
+    },
+    {
+      "from": 472,
+      "to": 364
+    },
+    {
+      "from": 473,
+      "to": 472
+    },
+    {
+      "from": 473,
+      "to": 365
+    },
+    {
+      "from": 474,
+      "to": 412
+    },
+    {
+      "from": 474,
+      "to": 249
+    },
+    {
+      "from": 475,
+      "to": 474
+    },
+    {
+      "from": 475,
+      "to": 398
+    },
+    {
+      "from": 476,
+      "to": 448
+    },
+    {
+      "from": 476,
+      "to": 426
+    },
+    {
+      "from": 477,
+      "to": 476
+    },
+    {
+      "from": 477,
+      "to": 433
+    },
+    {
+      "from": 478,
+      "to": 416
+    },
+    {
+      "from": 478,
+      "to": 396
+    },
+    {
+      "from": 479,
+      "to": 388
+    },
+    {
+      "from": 479,
+      "to": 478
+    },
+    {
+      "from": 480,
+      "to": 478
+    }
+  ]
+}

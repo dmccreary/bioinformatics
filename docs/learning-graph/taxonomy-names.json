@@ -1,0 +1,16 @@
+{
+  "FOUND": "Foundation Concepts",
+  "DBAS": "Biological Databases",
+  "DFMT": "Data Formats",
+  "GRTH": "Graph Theory",
+  "GRDB": "Graph Databases",
+  "SEQA": "Sequence Analysis",
+  "PHYL": "Phylogenetics",
+  "STRU": "Structural Bioinformatics",
+  "PPIS": "Protein Interactions",
+  "GENO": "Genomics",
+  "TRNS": "Transcriptomics",
+  "PATH": "Pathways and Disease",
+  "KNOW": "Knowledge Graphs",
+  "TOOL": "Tools and Capstone"
+}
