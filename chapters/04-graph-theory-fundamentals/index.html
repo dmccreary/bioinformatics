@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Foundation in graph theory — node and edge types, centrality measures, traversal algorithms, and network models for bioinformatics">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>4. Graph Theory Fundamentals - Bioinformatics</title>
+        <title>Graph Theory Fundamentals - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="4. Graph Theory Fundamentals - Bioinformatics">
+        <meta property="og:title" content="Graph Theory Fundamentals - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Foundation in graph theory — node and edge types, centrality measures, traversal algorithms, and network models for bioinformatics">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/04-graph-theory-fundamentals/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="4. Graph Theory Fundamentals - Bioinformatics">
+        <meta name="twitter:title" content="Graph Theory Fundamentals - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Foundation in graph theory — node and edge types, centrality measures, traversal algorithms, and network models for bioinformatics">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/04-graph-theory-fundamentals/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              4. Graph Theory Fundamentals
+              Graph Theory Fundamentals
             
           </span>
         </div>
@@ -573,6 +573,450 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-graph-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Graph Theory?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-and-edges-the-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes and Edges: The Building Blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directed-and-undirected-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed and Undirected Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bipartite Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bipartite Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bipartite-graph-of-a-metabolic-sub-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bipartite Graph of a Metabolic Sub-network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labeled-property-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labeled Property Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multigraphs-and-hypergraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multigraphs and Hypergraphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subgraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subgraphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Representations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Representations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-list-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge List Representation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#degree-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Density
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-diameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Diameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-coefficient" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering Coefficient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connected Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centrality-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centrality Measures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Centrality Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#degree-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#betweenness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Betweenness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closeness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvector-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenvector Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank" class="md-nav__link">
+    <span class="md-ellipsis">
+      PageRank
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-traversal-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Traversal Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Traversal Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breadth-first-search-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadth-First Search (BFS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-first-search-dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth-First Search (DFS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Depth-First Search (DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bfs-vs-dfs-traversal-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: BFS vs DFS Traversal Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-graph-models-and-the-erdos-renyi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Graph Models and the Erdos-Renyi Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-free-networks-and-power-law-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scale-Free Networks and Power-Law Distributions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-barabasi-albert-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Barabasi-Albert Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-world-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small-World Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Small-World Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-network-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Network Model Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-motifs-and-graph-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs and Graph Isomorphism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Motifs and Graph Isomorphism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Isomorphism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-biological-network-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Biological Network Analysis Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1065,6 +1509,450 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-graph-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Graph Theory?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodes-and-edges-the-building-blocks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nodes and Edges: The Building Blocks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types-of-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Types of Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Types of Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#directed-and-undirected-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed and Undirected Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#weighted-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Weighted Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bipartite Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Bipartite Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bipartite-graph-of-a-metabolic-sub-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Bipartite Graph of a Metabolic Sub-network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#labeled-property-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Labeled Property Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multigraphs-and-hypergraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multigraphs and Hypergraphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subgraphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Subgraphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Representations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Representations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adjacency-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adjacency Matrix
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-list-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge List Representation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Properties
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Properties">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#degree-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-density" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Density
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-diameter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Diameter
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clustering-coefficient" class="md-nav__link">
+    <span class="md-ellipsis">
+      Clustering Coefficient
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connected-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Connected Components
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#centrality-measures" class="md-nav__link">
+    <span class="md-ellipsis">
+      Centrality Measures
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Centrality Measures">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#degree-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#betweenness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Betweenness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#closeness-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Closeness Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eigenvector-centrality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eigenvector Centrality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagerank" class="md-nav__link">
+    <span class="md-ellipsis">
+      PageRank
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-traversal-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Traversal Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Traversal Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#breadth-first-search-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Breadth-First Search (BFS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#depth-first-search-dfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Depth-First Search (DFS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Depth-First Search (DFS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-bfs-vs-dfs-traversal-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: BFS vs DFS Traversal Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shortest-path-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Shortest Path Algorithms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Shortest Path Algorithms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dijkstras-algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dijkstra's Algorithm
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#random-graph-models-and-the-erdos-renyi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random Graph Models and the Erdos-Renyi Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-free-networks-and-power-law-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scale-Free Networks and Power-Law Distributions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-barabasi-albert-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Barabasi-Albert Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#small-world-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Small-World Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Small-World Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-network-model-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Network Model Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-motifs-and-graph-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs and Graph Isomorphism
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Motifs and Graph Isomorphism">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-motifs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Motifs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-isomorphism" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Isomorphism
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-biological-network-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Biological Network Analysis Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1138,7 +2026,348 @@
 <h2 id="prerequisites">Prerequisites</h2>
 <p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+Graphs are everywhere in biology — from protein interaction networks to metabolic pathways, from phylogenetic trees to gene regulatory circuits. In this chapter, we build the mathematical vocabulary and algorithmic toolkit that will power every biological network analysis in the rest of this course. Let's connect the dots!</p>
+</div>
+<h2 id="what-is-graph-theory">What Is Graph Theory?</h2>
+<p>Graph theory is the branch of mathematics that studies structures made of objects and the connections between them. A <strong>graph</strong> <span class="arithmatex">\(G\)</span> is formally defined as an ordered pair <span class="arithmatex">\(G = (V, E)\)</span>, where <span class="arithmatex">\(V\)</span> is a set of <strong>nodes</strong> (also called vertices) and <span class="arithmatex">\(E\)</span> is a set of <strong>edges</strong> (also called links or arcs) that connect pairs of nodes. The field originated with Leonhard Euler's 1736 solution to the Konigsberg bridge problem — arguably the first theorem of topology — and has since become one of the most widely applied areas of discrete mathematics.</p>
+<p>In bioinformatics, graph theory provides the natural mathematical framework for modeling biological relationships. Proteins interact with other proteins, genes regulate other genes, metabolites flow through enzymatic reactions, and diseases share genetic risk factors. All of these relationships map directly to nodes and edges, which is why graph-based approaches have become central to modern computational biology.</p>
+<table>
+<thead>
+<tr>
+<th>Biological System</th>
+<th>Nodes</th>
+<th>Edges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protein-protein interaction (PPI) network</td>
+<td>Proteins</td>
+<td>Physical binding or co-complex membership</td>
+</tr>
+<tr>
+<td>Gene regulatory network</td>
+<td>Genes or transcription factors</td>
+<td>Regulatory activation or repression</td>
+</tr>
+<tr>
+<td>Metabolic network</td>
+<td>Metabolites and enzymes</td>
+<td>Biochemical reactions</td>
+</tr>
+<tr>
+<td>Phylogenetic tree</td>
+<td>Species or sequences</td>
+<td>Evolutionary descent</td>
+</tr>
+<tr>
+<td>Drug-target network</td>
+<td>Drugs and proteins</td>
+<td>Binding affinity</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nodes-and-edges-the-building-blocks">Nodes and Edges: The Building Blocks</h2>
+<p>Every graph is built from just two primitives: <strong>nodes</strong> and <strong>edges</strong>. A node represents an entity — a protein, a gene, a metabolite, a patient — and an edge represents a relationship between two entities. The simplest possible graph contains a single node and no edges; the simplest non-trivial graph contains two nodes joined by one edge.</p>
+<p>Edges can carry different semantics depending on the biological context. An edge in a PPI network might mean "these two proteins co-immunoprecipitated in a pull-down assay," while an edge in a knowledge graph might mean "this drug treats this disease." The meaning is determined by the domain, not by the mathematics — graph theory provides the structural analysis tools, and the biologist provides the interpretation.</p>
+<p>Formally, each edge <span class="arithmatex">\(e \in E\)</span> connects a pair of nodes. In an <strong>undirected graph</strong>, an edge is an unordered pair <span class="arithmatex">\(\{u, v\}\)</span>, meaning the relationship is symmetric — if protein A interacts with protein B, then protein B also interacts with protein A. In a <strong>directed graph</strong> (or digraph), an edge is an ordered pair <span class="arithmatex">\((u, v)\)</span>, indicating a directional relationship — gene A activates gene B, but that does not imply gene B activates gene A.</p>
+<h2 id="types-of-graphs">Types of Graphs</h2>
+<h3 id="directed-and-undirected-graphs">Directed and Undirected Graphs</h3>
+<p>The distinction between directed graphs and undirected graphs is fundamental. Gene regulatory networks are inherently directed: a transcription factor binds to a promoter and activates (or represses) a target gene. The regulatory signal flows in one direction. Protein-protein interaction networks, by contrast, are typically modeled as undirected because physical binding is mutual.</p>
+<p>In a directed graph, each node has two distinct degree counts. The <strong>in-degree</strong> of a node <span class="arithmatex">\(v\)</span> is the number of edges pointing toward <span class="arithmatex">\(v\)</span>, and the <strong>out-degree</strong> is the number of edges pointing away from <span class="arithmatex">\(v\)</span>. A node with high in-degree in a gene regulatory network is a gene that receives regulatory input from many transcription factors — a potential integration hub. A node with high out-degree is a master regulator that controls many downstream targets.</p>
+<div class="arithmatex">\[\text{deg}^{-}(v) = |\{(u, v) \in E\}| \qquad \text{deg}^{+}(v) = |\{(v, w) \in E\}|\]</div>
+<h3 id="weighted-graphs">Weighted Graphs</h3>
+<p>A <strong>weighted graph</strong> assigns a numerical value <span class="arithmatex">\(w(e)\)</span> to each edge <span class="arithmatex">\(e\)</span>. In bioinformatics, edge weights can represent interaction confidence scores (e.g., STRING database scores from 0 to 1000), binding affinities (dissociation constants), expression correlation coefficients, or evolutionary distances. Formally, a weighted graph is a triple <span class="arithmatex">\(G = (V, E, w)\)</span> where <span class="arithmatex">\(w: E \rightarrow \mathbb{R}\)</span>.</p>
+<p>Weights transform the topology of a graph into a quantitative landscape. Two proteins might both interact with a hub protein, but if one interaction has a confidence score of 0.95 and the other has a score of 0.3, their biological significance differs dramatically. Many graph algorithms — shortest path, minimum spanning tree, community detection — can exploit weight information to produce more biologically meaningful results.</p>
+<h3 id="bipartite-graphs">Bipartite Graphs</h3>
+<p>A <strong>bipartite graph</strong> is a graph whose nodes can be partitioned into two disjoint sets <span class="arithmatex">\(U\)</span> and <span class="arithmatex">\(W\)</span> such that every edge connects a node in <span class="arithmatex">\(U\)</span> to a node in <span class="arithmatex">\(W\)</span> — no edges exist within the same set. Metabolic networks provide a classic example: one partition contains metabolites and the other contains enzymes, with edges connecting each enzyme to the substrates it consumes and the products it generates.</p>
+<p>Other bioinformatics applications of bipartite graphs include:</p>
+<ul>
+<li><strong>Drug-target networks</strong> — drugs in one partition, protein targets in the other</li>
+<li><strong>Gene-disease association networks</strong> — genes in one partition, disease phenotypes in the other</li>
+<li><strong>Transcription factor-gene networks</strong> — TFs in one partition, target genes in the other</li>
+</ul>
+<h4 id="diagram-bipartite-graph-of-a-metabolic-sub-network">Diagram: Bipartite Graph of a Metabolic Sub-network</h4>
+<iframe src="../../sims/bipartite-metabolic/main.html" width="100%" height="450" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/bipartite-metabolic/main.html">View Bipartite Metabolic Network MicroSim Fullscreen</a></em></p>
+<details>
+<summary>About this MicroSim</summary>
+
+- sim-id: bipartite-metabolic
+- Library: p5.js
+- Status: Specified
+
+This interactive diagram shows a bipartite layout of a simplified glycolysis sub-network with enzyme nodes on one side and metabolite nodes on the other. Hover over nodes to highlight connected edges and partners.
+</details>
+
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Notice how bipartite graphs force us to separate node types. This constraint mirrors real biology — an enzyme is not a metabolite, and keeping them in distinct partitions prevents us from accidentally creating nonsensical enzyme-enzyme "reaction" edges. Structure enforces semantics!</p>
+</div>
+<h3 id="labeled-property-graphs">Labeled Property Graphs</h3>
+<p>A <strong>labeled property graph</strong> extends the basic graph model by attaching <strong>labels</strong> (type tags) and <strong>properties</strong> (key-value pairs) to both nodes and edges. This is the data model used by graph databases such as Neo4j and is particularly powerful for knowledge graphs in bioinformatics. A node might carry the label <code>Protein</code> with properties <code>{name: "TP53", organism: "Homo sapiens", length: 393}</code>, while an edge might carry the label <code>INTERACTS_WITH</code> with properties <code>{method: "yeast two-hybrid", confidence: 0.87}</code>.</p>
+<p>The labeled property graph model is more expressive than simple mathematical graphs because it can represent heterogeneous biological data — proteins, genes, diseases, drugs, pathways, and publications — in a single unified structure. This flexibility makes it the backbone of modern biomedical knowledge graphs such as Hetionet and the Monarch Initiative.</p>
+<h3 id="multigraphs-and-hypergraphs">Multigraphs and Hypergraphs</h3>
+<p>A <strong>multigraph</strong> allows multiple edges between the same pair of nodes. This is useful when two proteins interact through multiple distinct mechanisms — for example, one physical binding interaction and one phosphorylation event. Each edge represents a different type of relationship, and keeping them separate preserves biological detail that would be lost if we collapsed them into a single edge.</p>
+<p>A <strong>hypergraph</strong> generalizes the concept of an edge to connect any number of nodes simultaneously, not just pairs. A <strong>hyperedge</strong> <span class="arithmatex">\(e \subseteq V\)</span> can contain two, three, or more nodes. Protein complexes are a natural application: the ribosome is not a pairwise interaction — it is a multi-protein assembly that functions as a unit. Hypergraphs can represent such higher-order relationships directly, whereas standard graphs must approximate them using cliques (fully connected subgraphs).</p>
+<h3 id="subgraphs">Subgraphs</h3>
+<p>A <strong>subgraph</strong> <span class="arithmatex">\(G' = (V', E')\)</span> of a graph <span class="arithmatex">\(G = (V, E)\)</span> is a graph where <span class="arithmatex">\(V' \subseteq V\)</span> and <span class="arithmatex">\(E' \subseteq E\)</span>, with every edge in <span class="arithmatex">\(E'\)</span> connecting nodes that are both in <span class="arithmatex">\(V'\)</span>. Subgraph extraction is one of the most common operations in biological network analysis — for example, extracting the subnetwork of all proteins in a particular signaling pathway from a genome-wide PPI network, or isolating the metabolic subnetwork active in a specific tissue.</p>
+<h2 id="graph-representations">Graph Representations</h2>
+<p>How we store a graph in computer memory profoundly affects algorithm performance. Two standard representations dominate.</p>
+<h3 id="adjacency-matrix">Adjacency Matrix</h3>
+<p>An <strong>adjacency matrix</strong> <span class="arithmatex">\(A\)</span> for a graph with <span class="arithmatex">\(n\)</span> nodes is an <span class="arithmatex">\(n \times n\)</span> matrix where entry <span class="arithmatex">\(A_{ij} = 1\)</span> if there is an edge from node <span class="arithmatex">\(i\)</span> to node <span class="arithmatex">\(j\)</span>, and <span class="arithmatex">\(A_{ij} = 0\)</span> otherwise. For weighted graphs, <span class="arithmatex">\(A_{ij}\)</span> stores the edge weight instead of 1. The adjacency matrix for an undirected graph is always symmetric (<span class="arithmatex">\(A_{ij} = A_{ji}\)</span>).</p>
+<div class="arithmatex">\[A_{ij} = \begin{cases} w(i,j) &amp; \text{if } (i,j) \in E \\ 0 &amp; \text{otherwise} \end{cases}\]</div>
+<p>Adjacency matrices support constant-time edge lookup — checking whether two nodes are connected takes <span class="arithmatex">\(O(1)\)</span> time. However, they require <span class="arithmatex">\(O(n^2)\)</span> space regardless of how many edges exist, which is wasteful for sparse biological networks. A human PPI network has roughly 20,000 protein nodes but only about 300,000 known interactions — the adjacency matrix would contain 400 million entries, of which 99.85% are zeros.</p>
+<h3 id="edge-list-representation">Edge List Representation</h3>
+<p>An <strong>edge list</strong> stores the graph as a list of <span class="arithmatex">\((u, v)\)</span> pairs (or <span class="arithmatex">\((u, v, w)\)</span> triples for weighted graphs). This representation uses <span class="arithmatex">\(O(|E|)\)</span> space, making it efficient for sparse graphs. Edge lists are also the most common format in bioinformatics data files — the STRING database, BioGRID, and IntAct all distribute their interaction data as tab-separated edge lists.</p>
+<table>
+<thead>
+<tr>
+<th>Representation</th>
+<th>Space</th>
+<th>Edge Lookup</th>
+<th>Iterate Neighbors</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adjacency matrix</td>
+<td><span class="arithmatex">\(O(n^2)\)</span></td>
+<td><span class="arithmatex">\(O(1)\)</span></td>
+<td><span class="arithmatex">\(O(n)\)</span></td>
+<td>Dense graphs, matrix algorithms</td>
+</tr>
+<tr>
+<td>Edge list</td>
+<td><span class="arithmatex">\(O(m)\)</span></td>
+<td><span class="arithmatex">\(O(m)\)</span></td>
+<td><span class="arithmatex">\(O(m)\)</span></td>
+<td>Sparse graphs, file storage</td>
+</tr>
+<tr>
+<td>Adjacency list</td>
+<td><span class="arithmatex">\(O(n + m)\)</span></td>
+<td><span class="arithmatex">\(O(\text{deg}(v))\)</span></td>
+<td><span class="arithmatex">\(O(\text{deg}(v))\)</span></td>
+<td>General-purpose, most algorithms</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Follow the Edges!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+When working with biological networks, always check the sparsity first. Most biological networks are sparse (density below 1%), so adjacency lists or edge lists will save you orders of magnitude in memory compared to adjacency matrices. Reserve matrix representations for algorithms that specifically require them, such as spectral clustering or eigenvalue computations.</p>
+</div>
+<h2 id="graph-properties">Graph Properties</h2>
+<p>Several global properties characterize a graph's overall structure and are routinely reported in biological network studies.</p>
+<h3 id="degree-distribution">Degree Distribution</h3>
+<p>The <strong>degree distribution</strong> <span class="arithmatex">\(P(k)\)</span> gives the probability that a randomly chosen node has degree <span class="arithmatex">\(k\)</span>. It is one of the most informative summaries of network topology. To compute it, count the number of nodes with each degree value and normalize by the total number of nodes.</p>
+<div class="arithmatex">\[P(k) = \frac{|\{v \in V : \text{deg}(v) = k\}|}{|V|}\]</div>
+<p>Plotting the degree distribution on a log-log scale reveals whether the network follows a power-law distribution — a hallmark of scale-free networks that we will discuss later in this chapter.</p>
+<h3 id="graph-density">Graph Density</h3>
+<p><strong>Graph density</strong> measures how close a graph is to being complete (having all possible edges). For an undirected graph:</p>
+<div class="arithmatex">\[D = \frac{2|E|}{|V|(|V|-1)}\]</div>
+<p>For a directed graph, the factor of 2 is removed because edges <span class="arithmatex">\((u,v)\)</span> and <span class="arithmatex">\((v,u)\)</span> are distinct. Most biological networks have densities well below 0.01, meaning less than 1% of all possible edges are present.</p>
+<h3 id="graph-diameter">Graph Diameter</h3>
+<p>The <strong>graph diameter</strong> is the longest shortest path between any pair of nodes in a connected graph:</p>
+<div class="arithmatex">\[\text{diam}(G) = \max_{u,v \in V} d(u, v)\]</div>
+<p>where <span class="arithmatex">\(d(u,v)\)</span> is the length of the shortest path from <span class="arithmatex">\(u\)</span> to <span class="arithmatex">\(v\)</span>. Biological networks typically have small diameters relative to their size — a property known as the "small-world" effect. The human PPI network, with roughly 20,000 nodes, has an estimated diameter of only 10-12, meaning any two human proteins are separated by at most about a dozen interaction steps.</p>
+<h3 id="clustering-coefficient">Clustering Coefficient</h3>
+<p>The <strong>clustering coefficient</strong> of a node <span class="arithmatex">\(v\)</span> measures the fraction of <span class="arithmatex">\(v\)</span>'s neighbors that are also connected to each other. It captures the tendency for networks to form tightly-knit groups or "cliques."</p>
+<div class="arithmatex">\[C(v) = \frac{2 \cdot |\{(u,w) \in E : u, w \in N(v)\}|}{\text{deg}(v) \cdot (\text{deg}(v) - 1)}\]</div>
+<p>where <span class="arithmatex">\(N(v)\)</span> is the set of neighbors of <span class="arithmatex">\(v\)</span>. The global clustering coefficient is the average over all nodes. Biological networks typically have clustering coefficients much higher than random graphs of the same size and density — evidence that biology is organized into functional modules such as protein complexes and metabolic pathways.</p>
+<h3 id="connected-components">Connected Components</h3>
+<p>A <strong>connected component</strong> of an undirected graph is a maximal set of nodes such that there exists a path between every pair of nodes in the set. Most biological networks have one large connected component (the "giant component") containing the majority of nodes, plus several small isolated components. In a directed graph, <strong>strongly connected components</strong> are maximal subsets where every node is reachable from every other node following edge directions. Strongly connected components in gene regulatory networks can indicate feedback loops and oscillatory circuits.</p>
+<h2 id="centrality-measures">Centrality Measures</h2>
+<p>Centrality measures quantify the importance or influence of individual nodes within a graph. Different centrality definitions capture different notions of "importance," and choosing the right measure depends on the biological question.</p>
+<h3 id="degree-centrality">Degree Centrality</h3>
+<p><strong>Degree centrality</strong> is the simplest measure — it is simply the degree of a node normalized by the maximum possible degree:</p>
+<div class="arithmatex">\[C_D(v) = \frac{\text{deg}(v)}{|V| - 1}\]</div>
+<p>In a PPI network, high-degree proteins (called "hubs") tend to be essential genes. Deletion of hub proteins in yeast is more likely to be lethal than deletion of peripheral proteins, a finding known as the "centrality-lethality" hypothesis.</p>
+<h3 id="betweenness-centrality">Betweenness Centrality</h3>
+<p><strong>Betweenness centrality</strong> measures how often a node lies on the shortest path between other pairs of nodes:</p>
+<div class="arithmatex">\[C_B(v) = \sum_{s \neq v \neq t} \frac{\sigma_{st}(v)}{\sigma_{st}}\]</div>
+<p>where <span class="arithmatex">\(\sigma_{st}\)</span> is the total number of shortest paths from <span class="arithmatex">\(s\)</span> to <span class="arithmatex">\(t\)</span>, and <span class="arithmatex">\(\sigma_{st}(v)\)</span> is the number of those paths that pass through <span class="arithmatex">\(v\)</span>. Nodes with high betweenness centrality serve as bridges or bottlenecks in the network. In a metabolic network, a metabolite with high betweenness might be a critical intermediate that connects otherwise separate pathways — a potential drug target because disrupting it would fragment metabolic flow.</p>
+<h3 id="closeness-centrality">Closeness Centrality</h3>
+<p><strong>Closeness centrality</strong> measures how close a node is to all other nodes, defined as the reciprocal of the average shortest-path distance:</p>
+<div class="arithmatex">\[C_C(v) = \frac{|V| - 1}{\sum_{u \neq v} d(v, u)}\]</div>
+<p>Nodes with high closeness centrality can reach other nodes quickly. In a signaling network, a protein with high closeness can propagate a signal to the rest of the network in fewer steps.</p>
+<h3 id="eigenvector-centrality">Eigenvector Centrality</h3>
+<p><strong>Eigenvector centrality</strong> extends degree centrality by accounting for the importance of a node's neighbors. A node is important if it is connected to other important nodes. Formally, the eigenvector centrality <span class="arithmatex">\(x_v\)</span> of node <span class="arithmatex">\(v\)</span> is proportional to the sum of centralities of its neighbors:</p>
+<div class="arithmatex">\[x_v = \frac{1}{\lambda} \sum_{u \in N(v)} x_u\]</div>
+<p>where <span class="arithmatex">\(\lambda\)</span> is the largest eigenvalue of the adjacency matrix <span class="arithmatex">\(A\)</span>. In matrix notation, the centrality vector <span class="arithmatex">\(\mathbf{x}\)</span> satisfies <span class="arithmatex">\(A\mathbf{x} = \lambda \mathbf{x}\)</span>. This connects graph centrality to linear algebra — the centrality scores are the components of the dominant eigenvector of the adjacency matrix.</p>
+<h3 id="pagerank">PageRank</h3>
+<p><strong>PageRank</strong> is a variant of eigenvector centrality originally developed by Larry Page and Sergey Brin for ranking web pages. It works on directed graphs and includes a "damping factor" <span class="arithmatex">\(d\)</span> (typically 0.85) that models random jumps:</p>
+<div class="arithmatex">\[PR(v) = \frac{1-d}{|V|} + d \sum_{u \in N^{-}(v)} \frac{PR(u)}{\text{deg}^{+}(u)}\]</div>
+<p>In bioinformatics, PageRank has been applied to prioritize disease genes in gene-disease association networks, rank proteins by functional importance in directed signaling networks, and identify key metabolites in flux-balance models.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Each centrality measure answers a different biological question. Degree centrality asks "who has the most partners?" Betweenness asks "who controls the flow?" Closeness asks "who can spread signals fastest?" Eigenvector centrality asks "who knows the most important people?" Always choose the measure that matches your biological hypothesis.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>Centrality Measure</th>
+<th>What It Captures</th>
+<th>Biological Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Degree</td>
+<td>Number of direct connections</td>
+<td>Hub proteins in PPI networks</td>
+</tr>
+<tr>
+<td>Betweenness</td>
+<td>Control over information flow</td>
+<td>Metabolic bottleneck enzymes</td>
+</tr>
+<tr>
+<td>Closeness</td>
+<td>Efficiency of signal propagation</td>
+<td>Central signaling proteins</td>
+</tr>
+<tr>
+<td>Eigenvector</td>
+<td>Influence through high-status neighbors</td>
+<td>Core members of essential complexes</td>
+</tr>
+<tr>
+<td>PageRank</td>
+<td>Directional influence propagation</td>
+<td>Disease gene prioritization</td>
+</tr>
+</tbody>
+</table>
+<h2 id="graph-traversal-algorithms">Graph Traversal Algorithms</h2>
+<p><strong>Graph traversal</strong> refers to the systematic process of visiting every node in a graph exactly once. The two fundamental traversal strategies are breadth-first search and depth-first search, and they underpin many more sophisticated graph algorithms.</p>
+<h3 id="breadth-first-search-bfs">Breadth-First Search (BFS)</h3>
+<p><strong>Breadth-first search</strong> explores all neighbors of the current node before moving to the next level. Starting from a source node <span class="arithmatex">\(s\)</span>, BFS visits all nodes at distance 1, then all nodes at distance 2, and so on. It uses a queue (first-in, first-out) to maintain the exploration frontier.</p>
+<p>BFS is the standard algorithm for computing shortest paths in unweighted graphs. In bioinformatics, BFS can determine the minimum number of interaction steps between two proteins, identify all proteins within a given radius of a disease-associated protein, or enumerate connected components.</p>
+<p>The time complexity of BFS is <span class="arithmatex">\(O(|V| + |E|)\)</span>, which is optimal since every node and edge must be examined at least once.</p>
+<h3 id="depth-first-search-dfs">Depth-First Search (DFS)</h3>
+<p><strong>Depth-first search</strong> explores as far as possible along each branch before backtracking. Starting from a source node, DFS follows a path until it reaches a dead end, then backtracks to the most recent unexplored branch. It uses a stack (last-in, first-out) — either an explicit stack data structure or the implicit call stack of a recursive implementation.</p>
+<p>DFS is used for topological sorting of directed acyclic graphs, detecting cycles in regulatory networks, and finding strongly connected components (via Tarjan's or Kosaraju's algorithm). Its time complexity is also <span class="arithmatex">\(O(|V| + |E|)\)</span>.</p>
+<h4 id="diagram-bfs-vs-dfs-traversal-comparison">Diagram: BFS vs DFS Traversal Comparison</h4>
+<iframe src="../../sims/bfs-vs-dfs/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/bfs-vs-dfs/main.html">View BFS vs DFS Traversal MicroSim Fullscreen</a></em></p>
+<details>
+<summary>About this MicroSim</summary>
+
+- sim-id: bfs-vs-dfs
+- Library: p5.js
+- Status: Specified
+
+This side-by-side animation demonstrates BFS (left) and DFS (right) on the same graph. Nodes light up in traversal order so students can see how BFS expands layer by layer while DFS dives deep before backtracking. Controls allow stepping through one node at a time or running the animation continuously.
+</details>
+
+<h2 id="shortest-path-algorithms">Shortest Path Algorithms</h2>
+<p>Finding the shortest path between two nodes is one of the most fundamental graph problems. In unweighted graphs, BFS solves this in <span class="arithmatex">\(O(|V| + |E|)\)</span> time. For weighted graphs, specialized algorithms are required.</p>
+<h3 id="dijkstras-algorithm">Dijkstra's Algorithm</h3>
+<p>The <strong>Dijkstra algorithm</strong> finds the shortest path from a single source node to all other nodes in a weighted graph with non-negative edge weights. It maintains a priority queue of nodes sorted by their tentative distance from the source, and at each step it extracts the node with the smallest tentative distance and relaxes its outgoing edges.</p>
+<p>The time complexity with a binary heap is <span class="arithmatex">\(O((|V| + |E|) \log |V|)\)</span>. In bioinformatics, Dijkstra's algorithm is used to find the most reliable interaction path between two proteins (where edge weights represent interaction confidence), the shortest metabolic conversion route between two compounds, or the minimum evolutionary distance between species in a phylogenetic network.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out for Negative Weights!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+Dijkstra's algorithm does not work correctly with negative edge weights. If your biological network uses negative weights — for example, log-transformed probabilities where higher confidence yields more negative values — you must use the Bellman-Ford algorithm instead, which handles negative weights at the cost of higher time complexity: <span class="arithmatex">\(O(|V| \cdot |E|)\)</span>.</p>
+</div>
+<h2 id="network-models">Network Models</h2>
+<p>Real biological networks share characteristic structural properties that distinguish them from random graphs. Understanding these properties — and the models that generate them — is essential for interpreting biological network data and for generating realistic null models in statistical tests.</p>
+<h3 id="random-graph-models-and-the-erdos-renyi-model">Random Graph Models and the Erdos-Renyi Model</h3>
+<p>The <strong>Erdos-Renyi model</strong> <span class="arithmatex">\(G(n, p)\)</span> generates a random graph by connecting each pair of <span class="arithmatex">\(n\)</span> nodes independently with probability <span class="arithmatex">\(p\)</span>. This model produces graphs with a binomial degree distribution that approximates a Poisson distribution for large <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[P(k) \approx \frac{e^{-\langle k \rangle} \langle k \rangle^k}{k!}\]</div>
+<p>where <span class="arithmatex">\(\langle k \rangle = p(n-1)\)</span> is the expected degree. The Erdos-Renyi model serves as the simplest null model in network biology. When researchers discover a structural property in a biological network (such as high clustering), they compare it to the expected value in an Erdos-Renyi random graph of the same size and density to determine whether the property is statistically significant.</p>
+<p>Key properties of Erdos-Renyi random graphs include:</p>
+<ul>
+<li>A giant connected component emerges when <span class="arithmatex">\(p &gt; 1/n\)</span></li>
+<li>The degree distribution is homogeneous (most nodes have similar degree)</li>
+<li>The clustering coefficient equals <span class="arithmatex">\(p\)</span>, which is typically low</li>
+<li>The diameter scales as <span class="arithmatex">\(O(\log n)\)</span></li>
+</ul>
+<h3 id="scale-free-networks-and-power-law-distributions">Scale-Free Networks and Power-Law Distributions</h3>
+<p>Many biological networks exhibit a <strong>power-law degree distribution</strong>:</p>
+<div class="arithmatex">\[P(k) \sim k^{-\gamma}\]</div>
+<p>where <span class="arithmatex">\(\gamma\)</span> is typically between 2 and 3. This means most nodes have very few connections while a small number of "hubs" have extremely many. Networks with this property are called <strong>scale-free networks</strong> because the degree distribution has no characteristic scale — it looks the same at every level of magnification on a log-log plot.</p>
+<p>Scale-free networks have important biological implications. They are robust to random node failure (removing a random protein rarely disconnects the network) but vulnerable to targeted attack on hubs (removing hub proteins can fragment the network). This "robust yet fragile" property has consequences for drug targeting strategies — attacking hub proteins in a pathogen's PPI network may be an effective way to disrupt its biology.</p>
+<h3 id="the-barabasi-albert-model">The Barabasi-Albert Model</h3>
+<p>The <strong>Barabasi-Albert model</strong> explains how scale-free networks arise through two mechanisms: <strong>growth</strong> (new nodes are continuously added) and <strong>preferential attachment</strong> (new nodes are more likely to connect to existing nodes that already have many connections). The model starts with a small seed graph of <span class="arithmatex">\(m_0\)</span> nodes, and at each time step a new node is added with <span class="arithmatex">\(m\)</span> edges. The probability that a new edge connects to existing node <span class="arithmatex">\(v\)</span> is proportional to <span class="arithmatex">\(v\)</span>'s current degree:</p>
+<div class="arithmatex">\[P(v) = \frac{\text{deg}(v)}{\sum_{u \in V} \text{deg}(u)}\]</div>
+<p>This "rich get richer" mechanism produces power-law degree distributions with <span class="arithmatex">\(\gamma = 3\)</span>. In biological terms, preferential attachment models the observation that well-studied, highly connected proteins tend to acquire new interaction partners faster than peripheral proteins — partly because of genuine biological function (hub proteins participate in many processes) and partly because of study bias (well-known proteins are more frequently tested for interactions).</p>
+<h3 id="small-world-networks">Small-World Networks</h3>
+<p><strong>Small-world networks</strong> combine two properties: high clustering (like a regular lattice) and short average path length (like a random graph). The Watts-Strogatz model generates small-world networks by starting with a regular ring lattice and randomly rewiring a fraction of edges. Real biological networks are typically both scale-free and small-world, exhibiting power-law degree distributions, high clustering, and short diameters simultaneously.</p>
+<p>The small-world property has biological significance. In a metabolic network with the small-world property, any metabolite can be converted to any other metabolite through a small number of enzymatic steps. In a neural network, signals can propagate from any sensory neuron to any motor neuron through a small number of synaptic connections. This efficient information transfer may be a result of evolutionary optimization.</p>
+<h4 id="diagram-network-model-comparison">Diagram: Network Model Comparison</h4>
+<iframe src="../../sims/network-models/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/network-models/main.html">View Network Models Comparison MicroSim Fullscreen</a></em></p>
+<details>
+<summary>About this MicroSim</summary>
+
+- sim-id: network-models
+- Library: p5.js
+- Status: Specified
+
+This interactive visualization generates and displays three network types side-by-side: Erdos-Renyi random graph, Barabasi-Albert scale-free network, and Watts-Strogatz small-world network. Each panel shows the graph layout along with its degree distribution plotted on a log-log scale. Sliders control the parameters of each model.
+</details>
+
+<h2 id="network-motifs-and-graph-isomorphism">Network Motifs and Graph Isomorphism</h2>
+<h3 id="network-motifs">Network Motifs</h3>
+<p><strong>Network motifs</strong> are small subgraph patterns that occur significantly more often in a real network than in randomized versions of the same network. They are the "building blocks" of complex networks. In gene regulatory networks, the most common motifs include:</p>
+<ul>
+<li><strong>Feed-forward loop</strong> — a three-node pattern where node A regulates B and C, and B also regulates C</li>
+<li><strong>Bi-fan</strong> — two regulators that both control two target genes</li>
+<li><strong>Single-input module</strong> — one regulator controlling multiple targets</li>
+</ul>
+<p>Motifs are detected by exhaustively enumerating all subgraphs of a given size (typically 3 or 4 nodes), counting their frequencies, and comparing those frequencies to a null distribution obtained from randomized networks that preserve the degree sequence.</p>
+<h3 id="graph-isomorphism">Graph Isomorphism</h3>
+<p>Two graphs <span class="arithmatex">\(G_1 = (V_1, E_1)\)</span> and <span class="arithmatex">\(G_2 = (V_2, E_2)\)</span> are <strong>isomorphic</strong> if there exists a bijection <span class="arithmatex">\(f: V_1 \rightarrow V_2\)</span> such that <span class="arithmatex">\((u, v) \in E_1\)</span> if and only if <span class="arithmatex">\((f(u), f(v)) \in E_2\)</span>. In other words, the two graphs have identical structure — they differ only in how the nodes are labeled. Graph isomorphism testing is the computational core of motif detection: to count how many times a particular motif appears, the algorithm must determine whether each extracted subgraph matches the motif pattern.</p>
+<p>The general graph isomorphism problem has no known polynomial-time algorithm, but for the small subgraphs used in motif analysis (3-5 nodes), the search space is manageable. Tools such as mfinder, FANMOD, and the igraph library implement efficient subgraph enumeration and isomorphism testing for biological network motif analysis.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Network motifs bridge graph theory and systems biology. The feed-forward loop motif, for example, functions as a noise filter in gene regulation — the target gene C only turns on when both regulators A and B send a sustained signal, filtering out transient fluctuations. Structure predicts function!</p>
+</div>
+<h2 id="putting-it-all-together-a-biological-network-analysis-workflow">Putting It All Together: A Biological Network Analysis Workflow</h2>
+<p>A typical graph-based analysis in bioinformatics follows a common pipeline. This workflow integrates many of the concepts from this chapter.</p>
+<ol>
+<li><strong>Obtain interaction data</strong> — download edges from databases such as STRING, BioGRID, or IntAct (edge list representation)</li>
+<li><strong>Construct the graph</strong> — load edges into an adjacency list or graph database (labeled property graph for heterogeneous data)</li>
+<li><strong>Compute global properties</strong> — calculate density, diameter, degree distribution, and clustering coefficient</li>
+<li><strong>Identify important nodes</strong> — compute centrality measures (degree, betweenness, closeness, eigenvector, PageRank)</li>
+<li><strong>Detect modules</strong> — find connected components, strongly connected components, and communities</li>
+<li><strong>Search for motifs</strong> — enumerate network motifs and test for statistical enrichment</li>
+<li><strong>Compare to null models</strong> — generate Erdos-Renyi or degree-preserving random graphs and compare observed properties</li>
+<li><strong>Extract subnetworks</strong> — focus on biologically relevant subgraphs for detailed analysis</li>
+</ol>
+<p>This pipeline transforms raw interaction data into biological insights — identifying drug targets, predicting gene function, and discovering disease mechanisms.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Congratulations, Investigators!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have built a complete graph theory toolkit — from the basic vocabulary of nodes and edges all the way to network models and motif analysis. These fundamentals will power every biological network analysis in the chapters ahead. Now go forth and connect the dots!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A <strong>graph</strong> <span class="arithmatex">\(G = (V, E)\)</span> consists of nodes (vertices) and edges (links); this simple abstraction captures the structure of PPI networks, regulatory circuits, metabolic pathways, and knowledge graphs.</li>
+<li>Graphs can be <strong>directed</strong> or <strong>undirected</strong>, <strong>weighted</strong> or unweighted, <strong>bipartite</strong>, or enriched with labels and properties. Choosing the right graph type depends on the biology being modeled.</li>
+<li><strong>Labeled property graphs</strong> support heterogeneous node and edge types with key-value properties, making them ideal for biomedical knowledge graphs.</li>
+<li><strong>Multigraphs</strong> allow multiple edges between nodes; <strong>hypergraphs</strong> allow edges connecting more than two nodes (useful for protein complexes).</li>
+<li>The <strong>adjacency matrix</strong> supports fast edge lookup but is memory-intensive; <strong>edge lists</strong> and adjacency lists are more practical for sparse biological networks.</li>
+<li><strong>Degree distribution</strong>, <strong>density</strong>, <strong>diameter</strong>, and <strong>clustering coefficient</strong> are the core global properties reported in network biology studies.</li>
+<li><strong>Centrality measures</strong> — degree, betweenness, closeness, eigenvector, and PageRank — each capture a different dimension of node importance.</li>
+<li><strong>BFS</strong> and <strong>DFS</strong> are the two fundamental traversal algorithms; <strong>Dijkstra's algorithm</strong> extends shortest-path computation to weighted graphs.</li>
+<li>Most biological networks are <strong>scale-free</strong> (power-law degree distribution) and <strong>small-world</strong> (high clustering, short diameter).</li>
+<li>The <strong>Erdos-Renyi model</strong> generates random graphs for null hypothesis testing; the <strong>Barabasi-Albert model</strong> explains scale-free topology via preferential attachment.</li>
+<li><strong>Network motifs</strong> are recurring subgraph patterns that serve as functional building blocks in biological networks.</li>
+</ul>
 
 
 

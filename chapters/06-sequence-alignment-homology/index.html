@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Pairwise and multiple sequence alignment, BLAST, scoring matrices, HMMs, and sequence similarity networks">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>6. Sequence Alignment - Bioinformatics</title>
+        <title>Sequence Alignment and Homology - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="6. Sequence Alignment - Bioinformatics">
+        <meta property="og:title" content="Sequence Alignment and Homology - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Pairwise and multiple sequence alignment, BLAST, scoring matrices, HMMs, and sequence similarity networks">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/06-sequence-alignment-homology/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="6. Sequence Alignment - Bioinformatics">
+        <meta name="twitter:title" content="Sequence Alignment and Homology - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Pairwise and multiple sequence alignment, BLAST, scoring matrices, HMMs, and sequence similarity networks">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/06-sequence-alignment-homology/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              6. Sequence Alignment
+              Sequence Alignment and Homology
             
           </span>
         </div>
@@ -620,6 +620,306 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Sequence Alignment?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoring-matrices-and-substitution-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoring Matrices and Substitution Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scoring Matrices and Substitution Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-blosum-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLOSUM Family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pam-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      The PAM Family
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gap-penalties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gap Penalties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming-needleman-wunsch-and-smith-waterman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Programming: Needleman-Wunsch and Smith-Waterman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Programming: Needleman-Wunsch and Smith-Waterman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-alignment-with-needleman-wunsch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Alignment with Needleman-Wunsch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Worked Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-alignment-with-smith-waterman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Alignment with Smith-Waterman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Local Alignment with Smith-Waterman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-dynamic-programming-matrix-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Dynamic Programming Matrix Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blast-fast-database-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLAST: Fast Database Searching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BLAST: Fast Database Searching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-blast-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How BLAST Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blast-e-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLAST E-Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psi-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      PSI-BLAST
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-homology-orthologs-and-paralogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Homology, Orthologs, and Paralogs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-similarity-networks-and-graph-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Similarity Networks and Graph Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Similarity Networks and Graph Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sequence-similarity-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sequence Similarity Network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sequence Alignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Sequence Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muscle-aligner" class="md-nav__link">
+    <span class="md-ellipsis">
+      MUSCLE Aligner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consensus-sequences-and-sequence-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus Sequences and Sequence Profiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-markov-models-and-profile-hmms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Markov Models and Profile HMMs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hidden Markov Models and Profile HMMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-profile-hmm-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Profile HMM Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-motifs-and-motif-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Motifs and Motif Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Motifs and Motif Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representing-motifs-with-regular-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representing Motifs with Regular Expressions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-motif-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Motif Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-sequence-to-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Sequence to Network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1065,6 +1365,306 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Sequence Alignment?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scoring-matrices-and-substitution-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoring Matrices and Substitution Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Scoring Matrices and Substitution Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-blosum-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLOSUM Family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-pam-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      The PAM Family
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gap-penalties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gap Penalties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-programming-needleman-wunsch-and-smith-waterman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic Programming: Needleman-Wunsch and Smith-Waterman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Programming: Needleman-Wunsch and Smith-Waterman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#global-alignment-with-needleman-wunsch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Global Alignment with Needleman-Wunsch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Worked Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-alignment-with-smith-waterman" class="md-nav__link">
+    <span class="md-ellipsis">
+      Local Alignment with Smith-Waterman
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Local Alignment with Smith-Waterman">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-dynamic-programming-matrix-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Dynamic Programming Matrix Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blast-fast-database-searching" class="md-nav__link">
+    <span class="md-ellipsis">
+      BLAST: Fast Database Searching
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="BLAST: Fast Database Searching">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-blast-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      How BLAST Works
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-blast-e-value" class="md-nav__link">
+    <span class="md-ellipsis">
+      The BLAST E-Value
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#psi-blast" class="md-nav__link">
+    <span class="md-ellipsis">
+      PSI-BLAST
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-homology-orthologs-and-paralogs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Homology, Orthologs, and Paralogs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-similarity-networks-and-graph-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Similarity Networks and Graph Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Similarity Networks and Graph Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sequence-similarity-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Sequence Similarity Network
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiple-sequence-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Sequence Alignment
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Multiple Sequence Alignment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#progressive-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Progressive Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muscle-aligner" class="md-nav__link">
+    <span class="md-ellipsis">
+      MUSCLE Aligner
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consensus-sequences-and-sequence-profiles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Consensus Sequences and Sequence Profiles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hidden-markov-models-and-profile-hmms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hidden Markov Models and Profile HMMs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Hidden Markov Models and Profile HMMs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-profile-hmm-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Profile HMM Architecture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-motifs-and-motif-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sequence Motifs and Motif Discovery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sequence Motifs and Motif Discovery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#representing-motifs-with-regular-expressions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representing Motifs with Regular Expressions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computational-motif-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computational Motif Discovery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-sequence-to-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Sequence to Network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1137,7 +1737,419 @@
 <li><a href="../03-bioinformatics-data-formats/">Chapter 3: Bioinformatics Data Formats</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+How do we know whether two genes are related? How can we find the needle-in-a-haystack match for a new protein sequence inside a database of millions? The answer is <strong>sequence alignment</strong> — one of the most fundamental operations in all of bioinformatics. In this chapter we will build up from simple pairwise comparisons to powerful database searches, multiple alignments, and hidden Markov models, all while keeping our graph lens polished. Let's connect the dots!</p>
+</div>
+<h2 id="what-is-sequence-alignment">What Is Sequence Alignment?</h2>
+<p>Sequence alignment is the process of arranging two or more biological sequences — DNA, RNA, or protein — so that regions of similarity are placed in corresponding columns. The goal is to identify residues (nucleotides or amino acids) that may share a common evolutionary origin, a functional role, or a structural position. Alignment is the computational foundation upon which most downstream bioinformatics analyses rest: phylogenetic tree construction, protein structure prediction, functional annotation, and variant interpretation all begin with a good alignment.</p>
+<p>A pairwise alignment compares exactly two sequences. Consider the following toy protein sequences, each five residues long:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>Sequence A:  M  K  T  L  A
+Sequence B:  M  R  T  -  A
+</code></pre></div></td></tr></tbody></table></div>
+<p>The dash (<code>-</code>) in Sequence B represents a <strong>gap</strong> — a position where no residue in B corresponds to the residue in A. Gaps model insertions or deletions (collectively called "indels") that have occurred since the two sequences diverged from a common ancestor. The columns where both sequences contain a residue are called <strong>matched positions</strong>, and the alignment above has four matched columns and one gap column.</p>
+<p>Two questions immediately arise: which arrangement of gaps and matches is "best," and how do we search through the enormous number of possible arrangements efficiently? The answers involve <strong>scoring matrices</strong>, <strong>gap penalties</strong>, and an algorithmic technique called <strong>dynamic programming</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Alignment Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Match</td>
+<td>Identical residues in the same column</td>
+</tr>
+<tr>
+<td>Mismatch</td>
+<td>Different residues in the same column</td>
+</tr>
+<tr>
+<td>Gap</td>
+<td>A dash inserted opposite a residue</td>
+</tr>
+<tr>
+<td>Score</td>
+<td>Numerical value summarizing alignment quality</td>
+</tr>
+</tbody>
+</table>
+<h2 id="scoring-matrices-and-substitution-models">Scoring Matrices and Substitution Models</h2>
+<p>Before we can score an alignment we need a <strong>substitution model</strong> — a quantitative description of how likely each possible residue-to-residue change is over evolutionary time. In practice this model is encoded as a <strong>scoring matrix</strong>: a symmetric table that assigns a numerical score to every pair of residues.</p>
+<h3 id="the-blosum-family">The BLOSUM Family</h3>
+<p>The <strong>BLOSUM</strong> (BLOcks SUbstitution Matrix) family of matrices was derived by Steven and Jorja Henikoff in 1992 from conserved blocks found in multiply-aligned protein sequences. BLOSUM62, the most widely used variant, was constructed from alignments filtered so that no two sequences shared more than 62% identity. Higher-numbered BLOSUM matrices (e.g., BLOSUM80) are tuned for closely related sequences, while lower-numbered matrices (e.g., BLOSUM45) are better for distant relationships.</p>
+<h3 id="the-pam-family">The PAM Family</h3>
+<p>The <strong>PAM</strong> (Point Accepted Mutation) matrices, developed by Margaret Dayhoff in the 1970s, take the opposite approach: they estimate amino acid replacement probabilities over short evolutionary distances and then extrapolate to longer distances. PAM1 corresponds to one accepted mutation per 100 residues; PAM250, frequently used in practice, represents approximately 250 such steps. Despite their different derivation strategies, BLOSUM62 and PAM250 produce similar results for typical database searches.</p>
+<table>
+<thead>
+<tr>
+<th>Matrix</th>
+<th>Derivation</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BLOSUM62</td>
+<td>Observed substitutions in conserved blocks</td>
+<td>General-purpose protein searches</td>
+</tr>
+<tr>
+<td>BLOSUM80</td>
+<td>Blocks with up to 80% identity</td>
+<td>Closely related proteins</td>
+</tr>
+<tr>
+<td>BLOSUM45</td>
+<td>Blocks with up to 45% identity</td>
+<td>Distantly related proteins</td>
+</tr>
+<tr>
+<td>PAM250</td>
+<td>Extrapolated from PAM1</td>
+<td>Distant evolutionary comparisons</td>
+</tr>
+<tr>
+<td>PAM120</td>
+<td>Extrapolated from PAM1</td>
+<td>Moderate evolutionary distances</td>
+</tr>
+</tbody>
+</table>
+<p>For DNA sequences, scoring is simpler: a match typically receives a positive score (e.g., +1) and a mismatch receives a penalty (e.g., -1), although more sophisticated nucleotide substitution models exist for phylogenetics.</p>
+<p>To build intuition, consider specific BLOSUM62 entries. The score for (W, W) is +11 — tryptophan is so chemically distinctive that finding it conserved at the same position is strong evidence of shared ancestry. The score for (W, G) is -3, reflecting the rarity of replacing bulky tryptophan with tiny glycine. Each cell in the matrix encodes an evolutionary "price" derived from observed substitution frequencies.</p>
+<h2 id="gap-penalties">Gap Penalties</h2>
+<p>Gaps represent insertions or deletions, and because indels are relatively rare compared to substitutions, they should carry a penalty. The simplest model assigns a <strong>linear gap penalty</strong>: each gap position costs a fixed amount <span class="arithmatex">\(d\)</span>. The penalty for a gap of length <span class="arithmatex">\(g\)</span> is then:</p>
+<div class="arithmatex">\[P_{\text{linear}}(g) = g \cdot d\]</div>
+<p>However, empirical data show that, once an indel event begins, extending it by additional residues is more likely than starting a new one. This observation leads to the <strong>affine gap penalty</strong> model, which separates the cost of opening a gap from the cost of extending it:</p>
+<div class="arithmatex">\[P_{\text{affine}}(g) = d_{\text{open}} + (g - 1) \cdot d_{\text{extend}}\]</div>
+<p>Here <span class="arithmatex">\(d_{\text{open}}\)</span> is a large penalty for initiating the gap and <span class="arithmatex">\(d_{\text{extend}}\)</span> is a smaller penalty for each additional position. Typical values for protein alignment are <span class="arithmatex">\(d_{\text{open}} = -11\)</span> and <span class="arithmatex">\(d_{\text{extend}} = -1\)</span> (BLAST defaults). The affine model produces biologically more realistic alignments because it favors fewer, longer gaps over many short ones.</p>
+<h2 id="dynamic-programming-needleman-wunsch-and-smith-waterman">Dynamic Programming: Needleman-Wunsch and Smith-Waterman</h2>
+<p>Dynamic programming is an algorithmic strategy that solves a problem by breaking it into overlapping sub-problems, solving each sub-problem once, and storing the results in a table. It is the engine behind both the <strong>Needleman-Wunsch</strong> algorithm for global alignment and the <strong>Smith-Waterman</strong> algorithm for local alignment.</p>
+<h3 id="global-alignment-with-needleman-wunsch">Global Alignment with Needleman-Wunsch</h3>
+<p>The Needleman-Wunsch algorithm (1970) finds the optimal <strong>global alignment</strong> — the best end-to-end alignment of two complete sequences. Given sequences <span class="arithmatex">\(X\)</span> of length <span class="arithmatex">\(m\)</span> and <span class="arithmatex">\(Y\)</span> of length <span class="arithmatex">\(n\)</span>, we fill an <span class="arithmatex">\((m+1) \times (n+1)\)</span> matrix <span class="arithmatex">\(F\)</span> according to the recurrence:</p>
+<div class="arithmatex">\[F(i, j) = \max \begin{cases} F(i-1, j-1) + s(x_i, y_j) \\ F(i-1, j) + d \\ F(i, j-1) + d \end{cases}\]</div>
+<p>where <span class="arithmatex">\(s(x_i, y_j)\)</span> is the substitution score from the scoring matrix and <span class="arithmatex">\(d\)</span> is the gap penalty (a negative number). The boundary conditions are <span class="arithmatex">\(F(0,0) = 0\)</span>, <span class="arithmatex">\(F(i,0) = i \cdot d\)</span>, and <span class="arithmatex">\(F(0,j) = j \cdot d\)</span>. After filling the matrix, we <strong>traceback</strong> from <span class="arithmatex">\(F(m,n)\)</span> to <span class="arithmatex">\(F(0,0)\)</span>, following pointers that record which cell contributed the maximum at each step. The resulting path through the matrix defines the optimal alignment.</p>
+<h3 id="a-worked-example">A Worked Example</h3>
+<p>Align sequences <span class="arithmatex">\(X = \texttt{MKA}\)</span> and <span class="arithmatex">\(Y = \texttt{MA}\)</span> with match = +1, mismatch = -1, gap = -2.</p>
+<p><strong>Step 1 — Initialize boundaries:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>M</th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0</td>
+<td>-2</td>
+<td>-4</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>-2</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td>-4</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>-6</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 2 — Fill cells using the recurrence:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>M</th>
+<th>A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>0</td>
+<td>-2</td>
+<td>-4</td>
+</tr>
+<tr>
+<td><strong>M</strong></td>
+<td>-2</td>
+<td><strong>1</strong></td>
+<td>-1</td>
+</tr>
+<tr>
+<td><strong>K</strong></td>
+<td>-4</td>
+<td>-1</td>
+<td><strong>0</strong></td>
+</tr>
+<tr>
+<td><strong>A</strong></td>
+<td>-6</td>
+<td>-3</td>
+<td><strong>0</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Step 3 — Traceback from F(3,2) = 0:</strong></p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>X:  M  K  A
+Y:  M  -  A
+Score: 0  (match +1, gap -2, match +1)
+</code></pre></div></td></tr></tbody></table></div>
+<p>The algorithm runs in <span class="arithmatex">\(O(mn)\)</span> time and <span class="arithmatex">\(O(mn)\)</span> space, which is quadratic in the length of the sequences.</p>
+<h3 id="local-alignment-with-smith-waterman">Local Alignment with Smith-Waterman</h3>
+<p>The <strong>Smith-Waterman</strong> algorithm (1981) finds the best <strong>local alignment</strong> — the highest-scoring subsequence pair. It modifies Needleman-Wunsch in two critical ways:</p>
+<div class="arithmatex">\[F(i, j) = \max \begin{cases} 0 \\ F(i-1, j-1) + s(x_i, y_j) \\ F(i-1, j) + d \\ F(i, j-1) + d \end{cases}\]</div>
+<p>First, boundary values are all zero: <span class="arithmatex">\(F(i,0) = 0\)</span> and <span class="arithmatex">\(F(0,j) = 0\)</span>. Second, an extra option of 0 is included in the recurrence, meaning that a cell can "restart" the alignment whenever continuing would produce a negative score. The traceback begins at the cell with the highest value anywhere in the matrix and proceeds until a cell with value 0 is reached.</p>
+<p>Local alignment is the appropriate choice when you expect that only a portion of each sequence is related — for example, when searching for a conserved domain embedded in a much longer protein.</p>
+<h4 id="diagram-dynamic-programming-matrix-visualization">Diagram: Dynamic Programming Matrix Visualization</h4>
+<iframe src="../../sims/dp-alignment-matrix/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/dp-alignment-matrix/main.html">View DP Alignment Matrix MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: dp-alignment-matrix
+Library: p5.js
+Status: Specified
+
+An interactive visualization of the Needleman-Wunsch and Smith-Waterman dynamic programming matrices. Students can enter short sequences, adjust match/mismatch/gap scores, and watch the matrix fill step by step. The traceback path is highlighted in a contrasting color. A toggle switches between global and local alignment modes.
+</details>
+
+<h2 id="blast-fast-database-searching">BLAST: Fast Database Searching</h2>
+<p>While Smith-Waterman produces mathematically optimal local alignments, its <span class="arithmatex">\(O(mn)\)</span> runtime makes it impractical for searching entire databases containing billions of residues. The <strong>Basic Local Alignment Search Tool</strong> (BLAST), introduced by Altschul et al. in 1990, sacrifices a small amount of sensitivity for enormous speed gains through a set of <strong>BLAST heuristics</strong>.</p>
+<h3 id="how-blast-works">How BLAST Works</h3>
+<p>BLAST operates in three stages:</p>
+<ol>
+<li><strong>Seeding</strong> — The query sequence is broken into short overlapping "words" (default length 3 for proteins, 11 for DNA). For each word, BLAST identifies all similar words that score above a threshold <span class="arithmatex">\(T\)</span> when compared using the scoring matrix.</li>
+<li><strong>Extension</strong> — When a word hit is found in the database, BLAST extends the alignment in both directions, keeping a running score. Extension stops when the score drops below a threshold relative to the maximum observed so far.</li>
+<li><strong>Evaluation</strong> — High-scoring segment pairs (HSPs) that survive extension are evaluated statistically to determine significance.</li>
+</ol>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Olli's Insight</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Imagine searching for a book in a library. Smith-Waterman reads every page of every book to find the best match — thorough but slow. BLAST first scans the index for promising keywords, then only reads the pages around each hit. That is why BLAST can search millions of sequences in seconds!</p>
+</div>
+<h3 id="the-blast-e-value">The BLAST E-Value</h3>
+<p>The statistical significance of a BLAST hit is reported as an <strong>E-value</strong> (expect value). The E-value estimates the number of alignments with a score <span class="arithmatex">\(\geq S\)</span> that would be expected by chance when searching a database of size <span class="arithmatex">\(D\)</span>:</p>
+<div class="arithmatex">\[E = K \cdot m \cdot n \cdot e^{-\lambda S}\]</div>
+<p>Here <span class="arithmatex">\(m\)</span> is the query length, <span class="arithmatex">\(n\)</span> is the total database size, and <span class="arithmatex">\(K\)</span> and <span class="arithmatex">\(\lambda\)</span> are statistical parameters that depend on the scoring matrix and gap penalties. An E-value of <span class="arithmatex">\(10^{-5}\)</span> means that a match this good would occur by chance only once in 100,000 random searches. In practice, E-values below <span class="arithmatex">\(10^{-3}\)</span> are often considered significant, and values below <span class="arithmatex">\(10^{-10}\)</span> are strong evidence of biological relationship.</p>
+<h3 id="psi-blast">PSI-BLAST</h3>
+<p><strong>PSI-BLAST</strong> (Position-Specific Iterated BLAST) extends the standard BLAST approach to detect remote homologs that share very low sequence identity. In the first round, PSI-BLAST performs a standard search. It then constructs a <strong>sequence profile</strong> — a position-specific scoring matrix (PSSM) — from the significant hits, and uses that profile as the query for subsequent rounds. Each iteration can recruit additional distant homologs, refining the profile further. PSI-BLAST is particularly powerful for proteins that belong to large superfamilies with highly diverged members.</p>
+<h2 id="sequence-homology-orthologs-and-paralogs">Sequence Homology, Orthologs, and Paralogs</h2>
+<p><strong>Sequence homology</strong> is a qualitative statement: two sequences are either homologous (sharing a common ancestor) or they are not. Homology is not a matter of degree — it is an all-or-nothing assertion about evolutionary history. What varies quantitatively is <strong>sequence identity</strong> (the percentage of aligned positions with identical residues) and <strong>sequence similarity</strong> (a broader measure that includes biochemically conservative substitutions scored positively by the scoring matrix).</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Olli's Caution</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+A common mistake is saying "these sequences have 40% homology." Homology is not a percentage — either they share a common ancestor or they do not. The correct phrasing is "these sequences share 40% sequence identity" or "40% sequence similarity." Scientists will notice and correct you, so build good habits now!</p>
+</div>
+<p>Homologous sequences fall into two major categories based on how they diverged:</p>
+<ul>
+<li><strong>Orthologs</strong> are genes in different species that diverged through a <strong>speciation</strong> event. They typically retain the same function. For example, human hemoglobin beta and mouse hemoglobin beta are orthologs.</li>
+<li><strong>Paralogs</strong> are genes within the same species (or across species) that diverged through a <strong>gene duplication</strong> event. After duplication, one or both copies may acquire new functions (neofunctionalization) or divide the ancestral function (subfunctionalization). Human hemoglobin alpha and hemoglobin beta are paralogs.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Relationship</th>
+<th>Divergence Mechanism</th>
+<th>Functional Expectation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Orthologs</td>
+<td>Speciation</td>
+<td>Usually conserved</td>
+</tr>
+<tr>
+<td>Paralogs</td>
+<td>Gene duplication</td>
+<td>May diverge or specialize</td>
+</tr>
+</tbody>
+</table>
+<p>Understanding the distinction between orthologs and paralogs is essential for functional annotation: transferring a function from a well-studied ortholog is much safer than from a paralog, which may have evolved a different role.</p>
+<h2 id="sequence-similarity-networks-and-graph-models">Sequence Similarity Networks and Graph Models</h2>
+<p>The graph perspective that runs through this course applies naturally to sequence alignment results. A <strong>sequence similarity network</strong> (SSN) is an undirected graph where:</p>
+<ul>
+<li>Each <strong>node</strong> represents a protein (or gene) sequence</li>
+<li>Each <strong>edge</strong> connects two sequences whose pairwise alignment score exceeds a chosen threshold (often an E-value cutoff)</li>
+<li>Edges may be <strong>weighted</strong> by sequence identity, bit score, or negative log E-value</li>
+</ul>
+<p>This is a direct application of the <strong>graph model for similarity</strong>: any pairwise similarity measure can generate a graph by thresholding. At stringent thresholds (e.g., E-value &lt; <span class="arithmatex">\(10^{-50}\)</span>), edges connect only very similar sequences, and the network breaks into many small, tight clusters corresponding to protein families. As the threshold is relaxed, clusters merge, revealing broader superfamily relationships.</p>
+<h4 id="diagram-sequence-similarity-network">Diagram: Sequence Similarity Network</h4>
+<iframe src="../../sims/sequence-similarity-network/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/sequence-similarity-network/main.html">View Sequence Similarity Network MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: sequence-similarity-network
+Library: vis-network
+Status: Specified
+
+An interactive graph visualization of a sequence similarity network. Nodes represent protein sequences colored by functional family. Edges represent significant BLAST hits. A slider controls the E-value threshold: as the slider moves from stringent to relaxed, more edges appear and clusters merge. Node tooltips show sequence accession and function. The slight y-offset on edge labels ensures correct rendering on initial load.
+</details>
+
+<p>SSNs are analyzed using standard graph metrics: <strong>connected components</strong> identify potential protein families, <strong>clustering coefficients</strong> reveal internal cohesion, and <strong>betweenness centrality</strong> pinpoints sequences that bridge distinct functional groups. Tools such as the Enzyme Function Initiative's EFI-EST generate SSNs directly from BLAST results for visualization in Cytoscape.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Olli's Tip</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+When building a sequence similarity network, the choice of E-value threshold dramatically changes the graph topology. Start with a very stringent threshold and gradually relax it, watching how clusters merge. The threshold where biologically meaningful families first become visible is usually the most informative one for your analysis.</p>
+</div>
+<h2 id="multiple-sequence-alignment">Multiple Sequence Alignment</h2>
+<p>A <strong>multiple sequence alignment</strong> (MSA) extends pairwise alignment to three or more sequences simultaneously. The exact dynamic programming solution for <span class="arithmatex">\(k\)</span> sequences of length <span class="arithmatex">\(n\)</span> requires <span class="arithmatex">\(O(n^k)\)</span> time and space — exponential in the number of sequences — so practical MSA methods rely on heuristic strategies.</p>
+<h3 id="progressive-alignment">Progressive Alignment</h3>
+<p>The dominant heuristic is <strong>progressive alignment</strong>, used by both <strong>Clustal</strong> (ClustalW, Clustal Omega) and other tools. The algorithm proceeds in three steps:</p>
+<ol>
+<li>Compute pairwise alignments (or pairwise distances) for all sequence pairs</li>
+<li>Build a <strong>guide tree</strong> from the distance matrix using neighbor-joining or UPGMA</li>
+<li>Align sequences progressively following the guide tree, starting from the closest pair and adding sequences or groups one at a time</li>
+</ol>
+<p>The weakness of progressive alignment is its "greedy" nature: errors introduced early in the process propagate and cannot be corrected later. The guide tree quality directly affects the final MSA.</p>
+<h3 id="muscle-aligner">MUSCLE Aligner</h3>
+<p>The <strong>MUSCLE</strong> (MUltiple Sequence Comparison by Log-Expectation) aligner, developed by Robert Edgar in 2004, improves on progressive alignment by adding iterative refinement. After an initial progressive alignment, MUSCLE re-estimates the guide tree from the current alignment and re-aligns, repeating until convergence. This refinement step corrects many errors that pure progressive methods propagate.</p>
+<h3 id="consensus-sequences-and-sequence-profiles">Consensus Sequences and Sequence Profiles</h3>
+<p>Given an MSA, we can summarize the aligned columns in two ways:</p>
+<ul>
+<li>A <strong>consensus sequence</strong> records the most frequent residue at each position, sometimes using IUPAC ambiguity codes for columns without a clear winner</li>
+<li>A <strong>sequence profile</strong> (also called a position-specific scoring matrix, or PSSM) records the frequency of every residue at each column, providing a richer probabilistic description</li>
+</ul>
+<p>Sequence profiles capture information that a single consensus sequence cannot — for example, a position that tolerates leucine and isoleucine equally would collapse to a single residue in the consensus but remain fully informative in the profile.</p>
+<h2 id="hidden-markov-models-and-profile-hmms">Hidden Markov Models and Profile HMMs</h2>
+<p>A <strong>hidden Markov model</strong> (HMM) is a statistical model consisting of a set of hidden states connected by transition probabilities, where each state emits observable symbols according to an emission probability distribution. HMMs are widely used in speech recognition, natural language processing, and — critically for bioinformatics — sequence analysis.</p>
+<p>A <strong>profile HMM</strong> is a specialized HMM architecture designed to represent a multiple sequence alignment. It contains three types of states for each column of the MSA:</p>
+<ul>
+<li><strong>Match states</strong> — emit residues according to the observed frequencies in the alignment column</li>
+<li><strong>Insert states</strong> — emit residues to model insertions relative to the consensus</li>
+<li><strong>Delete states</strong> — "silent" states that produce no output, modeling positions where a sequence has a gap</li>
+</ul>
+<p>The transitions between match, insert, and delete states are learned from the training alignment. Profile HMMs capture both the residue preferences at each position (via emission probabilities) and the patterns of insertions and deletions (via transition probabilities), making them far more sensitive than simple sequence profiles for detecting remote homologs.</p>
+<p>The HMMER software suite (hmmbuild, hmmsearch, hmmscan) is the standard tool for building and searching with profile HMMs. The Pfam database of protein families is built entirely on profile HMMs, and each Pfam entry corresponds to a single profile HMM trained on a curated seed alignment.</p>
+<h4 id="diagram-profile-hmm-architecture">Diagram: Profile HMM Architecture</h4>
+<iframe src="../../sims/profile-hmm-architecture/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/profile-hmm-architecture/main.html">View Profile HMM Architecture MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: profile-hmm-architecture
+Library: vis-network
+Status: Specified
+
+An interactive node-link diagram showing the architecture of a profile HMM. Match states (large teal circles) form the backbone. Insert states (smaller green diamonds) loop off each match state. Delete states (gray triangles) provide skip paths. Transition arrows are weighted by probability. Clicking a match state displays its emission probability distribution as a bar chart. The slight y-offset on horizontal edges ensures correct label rendering on initial load.
+</details>
+
+<h2 id="sequence-motifs-and-motif-discovery">Sequence Motifs and Motif Discovery</h2>
+<p>A <strong>sequence motif</strong> is a short, recurring pattern in a set of related biological sequences that is presumed to have functional or structural significance. Motifs typically correspond to binding sites, catalytic residues, post-translational modification sites, or other conserved functional elements. They are shorter and more specific than the full-length patterns captured by profile HMMs.</p>
+<h3 id="representing-motifs-with-regular-expressions">Representing Motifs with Regular Expressions</h3>
+<p>One common way to describe a motif is with a <strong>regular expression</strong> — a compact pattern language that specifies which residues are allowed at each position. The PROSITE database uses a notation where:</p>
+<ul>
+<li><code>[AC]</code> means alanine or cysteine</li>
+<li><code>{P}</code> means any amino acid except proline</li>
+<li><code>x</code> means any amino acid</li>
+<li>A hyphen separates positions</li>
+</ul>
+<p>For example, the N-glycosylation motif is written as <code>N-{P}-[ST]-{P}</code>, meaning asparagine, then any residue except proline, then serine or threonine, then any residue except proline. Regular expressions are fast to search but limited in expressiveness — they cannot capture position-specific preferences or correlations between positions.</p>
+<h3 id="computational-motif-discovery">Computational Motif Discovery</h3>
+<p><strong>Motif discovery</strong> is the problem of finding unknown motifs in a set of unaligned sequences — for example, discovering the transcription factor binding site shared by a set of co-regulated promoters. Algorithms for motif discovery include:</p>
+<ul>
+<li><strong>MEME</strong> (Multiple Em for Motif Elicitation) — uses expectation-maximization to find probabilistic motifs</li>
+<li><strong>Gibbs sampling</strong> — a stochastic search method that iteratively refines motif positions</li>
+<li><strong>Word enumeration</strong> — exhaustive counting of short k-mers followed by statistical evaluation</li>
+</ul>
+<p>Discovered motifs are typically represented as <strong>position weight matrices</strong> (PWMs), which are closely related to the sequence profiles and profile HMMs discussed above. PWMs can be visualized as sequence logos, where the height of each letter at each position reflects its information content.</p>
+<table>
+<thead>
+<tr>
+<th>Motif Representation</th>
+<th>Expressiveness</th>
+<th>Speed</th>
+<th>Example Tool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regular expression</td>
+<td>Low (binary match)</td>
+<td>Very fast</td>
+<td>PROSITE scan</td>
+</tr>
+<tr>
+<td>Position weight matrix</td>
+<td>Medium (probabilistic)</td>
+<td>Fast</td>
+<td>MEME, FIMO</td>
+</tr>
+<tr>
+<td>Profile HMM</td>
+<td>High (insertion/deletion)</td>
+<td>Moderate</td>
+<td>HMMER</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Olli Connects the Dots</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli connects the dots"></a>
+Notice how the representations form a spectrum of increasing power: regular expressions capture only which residues are allowed, PWMs add frequency information, and profile HMMs additionally model insertions and deletions. Each step up the ladder costs more computation but detects more distant relationships. Choosing the right level depends on your question and your data.</p>
+</div>
+<h2 id="putting-it-all-together-from-sequence-to-network">Putting It All Together: From Sequence to Network</h2>
+<p>The concepts in this chapter form a coherent pipeline that connects raw sequences to rich graph structures:</p>
+<ol>
+<li><strong>Score</strong> — Choose a scoring matrix (BLOSUM, PAM) and gap penalty model (linear or affine) that match your evolutionary question</li>
+<li><strong>Align pairwise</strong> — Use Needleman-Wunsch for global or Smith-Waterman for local alignment; use BLAST or PSI-BLAST for large-scale database searches</li>
+<li><strong>Assess homology</strong> — Evaluate E-values and sequence identity; distinguish orthologs from paralogs</li>
+<li><strong>Build MSAs</strong> — Apply progressive alignment (Clustal, MUSCLE) to groups of related sequences</li>
+<li><strong>Model families</strong> — Construct profile HMMs from MSAs to sensitively detect remote family members</li>
+<li><strong>Discover motifs</strong> — Use MEME or Gibbs sampling to find conserved functional elements</li>
+<li><strong>Build graphs</strong> — Construct sequence similarity networks from BLAST results; analyze with graph algorithms to identify families, superfamilies, and bridging sequences</li>
+</ol>
+<p>Each step feeds into the next, and the final graph representation connects this chapter to the broader theme of the course: biological relationships are best understood as networks of connections.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work, Investigators!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have traveled from simple pairwise alignments all the way to hidden Markov models and sequence similarity networks. You now have the tools to compare sequences, detect evolutionary relationships, and represent those relationships as graphs. These skills will serve you throughout the rest of the course — in phylogenetics, structural bioinformatics, and protein interaction networks. Follow the edges!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Sequence alignment</strong> is the foundational operation in bioinformatics, arranging sequences to reveal evolutionary and functional relationships through matches, mismatches, and gaps.</li>
+<li><strong>Scoring matrices</strong> (BLOSUM, PAM) encode substitution models derived from evolutionary data, and the choice of matrix affects alignment sensitivity at different evolutionary distances.</li>
+<li><strong>Gap penalties</strong> — especially the affine gap model with separate open and extend costs — produce biologically realistic alignments by favoring fewer, longer indels.</li>
+<li><strong>Dynamic programming</strong> underlies both the Needleman-Wunsch (global) and Smith-Waterman (local) algorithms, guaranteeing optimal alignments in <span class="arithmatex">\(O(mn)\)</span> time.</li>
+<li><strong>BLAST</strong> trades a small amount of sensitivity for massive speed gains through seeding, extension, and statistical evaluation, making database-scale searches practical.</li>
+<li>The <strong>E-value</strong> quantifies statistical significance: lower E-values indicate stronger evidence that a match is not due to chance.</li>
+<li><strong>PSI-BLAST</strong> iteratively builds sequence profiles to detect remote homologs invisible to standard BLAST.</li>
+<li><strong>Homology</strong> is a binary assertion about shared ancestry; <strong>sequence identity</strong> and <strong>sequence similarity</strong> are the quantitative measures, not homology itself.</li>
+<li><strong>Orthologs</strong> (diverged by speciation) and <strong>paralogs</strong> (diverged by duplication) have different implications for functional inference.</li>
+<li><strong>Sequence similarity networks</strong> apply the graph model for similarity: nodes are sequences, edges are significant alignments, and graph algorithms reveal family structure.</li>
+<li><strong>Multiple sequence alignment</strong> via progressive methods (Clustal, MUSCLE) and iterative refinement captures patterns across many related sequences.</li>
+<li><strong>Consensus sequences</strong> summarize an MSA simply; <strong>sequence profiles</strong> (PSSMs) retain full probabilistic information.</li>
+<li><strong>Hidden Markov models</strong> — especially profile HMMs — are the most sensitive statistical framework for modeling sequence families, capturing position-specific residue preferences and indel patterns.</li>
+<li><strong>Sequence motifs</strong> can be represented as regular expressions, position weight matrices, or profile HMMs, with increasing power and computational cost.</li>
+<li><strong>Motif discovery</strong> algorithms (MEME, Gibbs sampling) find unknown conserved patterns in sets of unaligned sequences.</li>
+</ul>
 
 
 

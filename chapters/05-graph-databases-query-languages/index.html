@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Graph database technologies, Cypher and GQL query languages, RDF/SPARQL, schema design, and scalability for bioinformatics">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>5. Graph Databases and Queries - Bioinformatics</title>
+        <title>Graph Databases and Query Languages - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="5. Graph Databases and Queries - Bioinformatics">
+        <meta property="og:title" content="Graph Databases and Query Languages - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Graph database technologies, Cypher and GQL query languages, RDF/SPARQL, schema design, and scalability for bioinformatics">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/05-graph-databases-query-languages/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="5. Graph Databases and Queries - Bioinformatics">
+        <meta name="twitter:title" content="Graph Databases and Query Languages - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Graph database technologies, Cypher and GQL query languages, RDF/SPARQL, schema design, and scalability for bioinformatics">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/05-graph-databases-query-languages/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              5. Graph Databases and Queries
+              Graph Databases and Query Languages
             
           </span>
         </div>
@@ -594,6 +594,210 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Graph Databases?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-database-platforms-neo4j-and-memgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Database Platforms: Neo4j and Memgraph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cypher-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cypher Query Language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cypher Query Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-match-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MATCH Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The WHERE Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-return-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RETURN Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-create-and-merge-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      The CREATE and MERGE Clauses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-length-paths-and-path-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable-Length Paths and Path Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregation-in-cypher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregation in Cypher
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-schema-design-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Schema Design for Bioinformatics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Schema Design for Bioinformatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ppi-knowledge-graph-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: PPI Knowledge Graph Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-and-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index and Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf-and-sparql" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF and SPARQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDF and SPARQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lpg-vs-rdf-a-concrete-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      LPG vs RDF: A Concrete Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-data-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-query-optimization-and-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Query Optimization and Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-graph-databases-and-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Graph Databases and Scalability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributed Graph Databases and Scalability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-transactions-and-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Transactions and Access Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-bioinformatics-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Bioinformatics Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1065,6 +1269,210 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Graph Databases?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-database-platforms-neo4j-and-memgraph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Database Platforms: Neo4j and Memgraph
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-cypher-query-language" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Cypher Query Language
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Cypher Query Language">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-match-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The MATCH Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-where-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The WHERE Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-return-clause" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RETURN Clause
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-create-and-merge-clauses" class="md-nav__link">
+    <span class="md-ellipsis">
+      The CREATE and MERGE Clauses
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variable-length-paths-and-path-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Variable-Length Paths and Path Queries
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregation-in-cypher" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregation in Cypher
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-schema-design-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Schema Design for Bioinformatics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Schema Design for Bioinformatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-ppi-knowledge-graph-schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: PPI Knowledge Graph Schema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-and-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index and Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rdf-and-sparql" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDF and SPARQL
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="RDF and SPARQL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lpg-vs-rdf-a-concrete-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      LPG vs RDF: A Concrete Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-data-loading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Loading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-query-optimization-and-profiling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Query Optimization and Profiling
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributed-graph-databases-and-scalability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributed Graph Databases and Scalability
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributed Graph Databases and Scalability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-transactions-and-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Transactions and Access Control
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-a-bioinformatics-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: A Bioinformatics Workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1137,7 +1545,539 @@
 <li><a href="../04-graph-theory-fundamentals/">Chapter 4: Graph Theory Fundamentals</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+In the previous chapter we learned the mathematical language of graphs. Now it is time to put those graphs to work inside real databases that can store millions of biological entities and let us query them in milliseconds. From protein interaction networks to drug-target knowledge graphs, graph databases are transforming how bioinformaticians organize and explore data. Let's connect the dots!</p>
+</div>
+<h2 id="why-graph-databases">Why Graph Databases?</h2>
+<p>Bioinformatics data is fundamentally relational in a way that goes far beyond what the word "relational" means in traditional database theory. A protein interacts with other proteins, is encoded by a gene, participates in pathways, is implicated in diseases, and is targeted by drugs. Each of those statements is a relationship, and the biological questions we care about — "What pathways connect gene X to disease Y?" — require traversing chains of relationships.</p>
+<p>A <strong>relational database</strong> stores data in tables (relations) with rows and columns. Relationships between tables are represented through foreign keys and resolved at query time using JOIN operations. Relational databases such as PostgreSQL and MySQL excel at structured, tabular workloads and have served bioinformatics well for decades. The Ensembl genome browser, the UniProt protein knowledgebase, and many other foundational resources are built on relational backends.</p>
+<p>However, as the number of JOINs in a query grows, relational query performance degrades rapidly. A query asking "find all proteins within three interaction hops of TP53" requires a three-way self-join on an interaction table — an operation whose cost grows with the square or cube of the table size. This is precisely the kind of query bioinformaticians ask routinely.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Relational Database</th>
+<th>Graph Database</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct lookup by key</td>
+<td>Fast (indexed)</td>
+<td>Fast (indexed)</td>
+</tr>
+<tr>
+<td>One-hop relationship</td>
+<td>Fast (single JOIN)</td>
+<td>Fast (pointer chase)</td>
+</tr>
+<tr>
+<td>Multi-hop traversal (3-5 hops)</td>
+<td>Slow (multiple JOINs)</td>
+<td>Fast (index-free adjacency)</td>
+</tr>
+<tr>
+<td>Variable-length path queries</td>
+<td>Very difficult to express</td>
+<td>Native support</td>
+</tr>
+<tr>
+<td>Schema evolution</td>
+<td>Requires ALTER TABLE</td>
+<td>Flexible (schema-optional)</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>graph database</strong> stores data as nodes and edges natively. Instead of computing relationships at query time through JOINs, a graph database stores direct pointers from each node to its neighbors — a design principle called <strong>index-free adjacency</strong>. This means that traversing a relationship takes constant time regardless of the total size of the database, making multi-hop queries dramatically faster than their relational equivalents. This distinction between the <strong>graph vs relational model</strong> is the foundational motivation for adopting graph databases in bioinformatics.</p>
+<h2 id="graph-database-platforms-neo4j-and-memgraph">Graph Database Platforms: Neo4j and Memgraph</h2>
+<p>The two most widely used graph database platforms in the bioinformatics community are <strong>Neo4j</strong> and <strong>Memgraph</strong>. Both implement the labeled property graph (LPG) model introduced in the previous chapter, and both support the Cypher query language.</p>
+<p><strong>Neo4j</strong> is the most mature and widely adopted graph database. It was first released in 2007 and has become the de facto standard for graph data management. Neo4j stores data on disk using a custom storage engine optimized for graph traversal. It provides a rich ecosystem including the Neo4j Browser for visual exploration, the Neo4j Desktop application, and the APOC (Awesome Procedures on Cypher) library that extends the query language with hundreds of utility functions. Many major bioinformatics knowledge graphs — including Hetionet, the Drug Repurposing Knowledge Graph, and several implementations of the Monarch Initiative data — use Neo4j as their backend.</p>
+<p><strong>Memgraph</strong> is an in-memory graph database that prioritizes query speed for real-time analytical workloads. Because Memgraph holds the entire graph in RAM, it can execute traversals significantly faster than disk-based systems for datasets that fit in memory. Memgraph is fully compatible with the Cypher query language and provides a streaming data integration layer through Apache Kafka connectors. For bioinformatics workflows that require low-latency interactive exploration — such as a web application that lets researchers explore a PPI network on demand — Memgraph offers a compelling alternative to Neo4j.</p>
+<p>Both platforms support ACID <strong>graph transactions</strong>, meaning that concurrent reads and writes are isolated from each other and durable in the event of a crash. This property is essential for any production bioinformatics system where multiple users or automated pipelines may be updating the graph simultaneously.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+When choosing between Neo4j and Memgraph, consider your dataset size and query patterns. If your graph fits in RAM and you need sub-millisecond traversal times, Memgraph shines. If you need a mature ecosystem with extensive plugin libraries and community support, Neo4j is the safer choice. Both speak Cypher, so migrating queries between them is straightforward.</p>
+</div>
+<h2 id="the-cypher-query-language">The Cypher Query Language</h2>
+<p><strong>Cypher</strong> is a declarative, pattern-matching query language designed specifically for graph databases. Cypher was originally developed by Neo4j and has since been adopted as the basis for the <strong>GQL (Graph Query Language)</strong> standard, which was ratified by ISO in 2024 as ISO/IEC 39075. GQL extends Cypher with additional features for schema management and multi-graph queries, but the core syntax is the same. Learning Cypher today means learning the foundation of the international standard for graph querying.</p>
+<p>Cypher's central design idea is that queries are written as ASCII-art patterns that visually resemble the graph structures they describe. Nodes are written in parentheses <code>()</code>, relationships are written as arrows <code>--&gt;</code> or <code>--</code>, and both can carry labels, types, and property filters. This visual syntax makes Cypher remarkably readable compared to SQL for graph-shaped queries.</p>
+<h3 id="the-match-clause">The MATCH Clause</h3>
+<p>The <strong>MATCH clause</strong> is the starting point for almost every Cypher read query. It specifies a graph pattern, and the database engine finds all subgraphs in the data that match that pattern. This process is called <strong>graph pattern matching</strong>.</p>
+<p>To find all genes in the database:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>To find all proteins that interact with the tumor suppressor TP53:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">organism</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>In this query, <code>(p1:Protein {name: 'TP53'})</code> matches a node with the <strong>node label</strong> <code>Protein</code> and the <strong>property key</strong> <code>name</code> equal to <code>'TP53'</code>. The arrow <code>-[:INTERACTS_WITH]-&gt;</code> matches an edge with the <strong>relationship type</strong> <code>INTERACTS_WITH</code>. The variable names <code>p1</code> and <code>p2</code> are bindings that let us refer to the matched elements later in the query.</p>
+<h3 id="the-where-clause">The WHERE Clause</h3>
+<p>The <strong>WHERE clause</strong> adds filtering conditions beyond what the pattern itself specifies. You can filter on property values, compare properties between nodes, or use string-matching functions.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">ASSOCIATED_WITH</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Disease</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="n">CONTAINS</span><span class="w"> </span><span class="s">'cancer'</span><span class="w"> </span><span class="n">AND</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">chromosome</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'17'</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The WHERE clause can also filter on structural properties such as the existence of a relationship:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">HAS_STRUCTURE</span><span class="o">]-&gt;</span><span class="p">(:</span><span class="n">PDBStructure</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">proteins_without_structures</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="the-return-clause">The RETURN Clause</h3>
+<p>The <strong>RETURN clause</strong> specifies what the query should output. It can return entire nodes, individual properties, computed expressions, or aggregations.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="o">-[</span><span class="n">r</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">organism</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'Homo sapiens'</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">source</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">target</span><span class="p">,</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">confidence</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">score</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">confidence</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="m">20</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="the-create-and-merge-clauses">The CREATE and MERGE Clauses</h3>
+<p>The <strong>CREATE clause</strong> adds new nodes and relationships to the graph. It always creates new elements, even if identical ones already exist.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'BRCA1'</span><span class="p">,</span><span class="w"> </span><span class="n">chromosome</span><span class="p">:</span><span class="w"> </span><span class="s">'17'</span><span class="p">,</span><span class="w"> </span><span class="n">organism</span><span class="p">:</span><span class="w"> </span><span class="s">'Homo sapiens'</span><span class="p">})</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Disease</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'Breast Cancer'</span><span class="p">,</span><span class="w"> </span><span class="n">doid</span><span class="p">:</span><span class="w"> </span><span class="s">'DOID:1612'</span><span class="p">})</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">ASSOCIATED_WITH</span><span class="w"> </span><span class="p">{</span><span class="n">source</span><span class="p">:</span><span class="w"> </span><span class="s">'DisGeNET'</span><span class="p">,</span><span class="w"> </span><span class="n">score</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="p">.</span><span class="m">95</span><span class="p">}</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The <strong>MERGE clause</strong> is a conditional create: it first checks whether the specified pattern already exists, and only creates it if it does not. MERGE is essential for idempotent data loading pipelines where the same import script might run multiple times.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MERGE</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'BRCA1'</span><span class="p">})</span>
+<span class="k">ON</span><span class="w"> </span><span class="k">CREATE</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">chromosome</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'17'</span><span class="p">,</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">organism</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'Homo sapiens'</span>
+<span class="k">ON</span><span class="w"> </span><span class="k">MATCH</span><span class="w"> </span><span class="k">SET</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">last_updated</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">datetime</span><span class="p">()</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The distinction between CREATE and MERGE is critical for building reliable <strong>ETL (Extract, Transform, Load) pipelines for graph databases</strong>. CREATE is faster but risks duplicates; MERGE is safer but requires unique property combinations to function correctly.</p>
+<h3 id="variable-length-paths-and-path-queries">Variable-Length Paths and Path Queries</h3>
+<p>One of Cypher's most powerful features is its native support for <strong>variable-length paths</strong> and <strong>path queries</strong>. To find all proteins reachable from TP53 within three interaction hops:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="p">*</span><span class="m">1</span><span class="p">..</span><span class="m">3</span><span class="o">]-</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">hops</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">hops</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The syntax <code>[:INTERACTS_WITH*1..3]</code> means "follow between 1 and 3 INTERACTS_WITH edges." This is the query that would require multiple self-joins in a relational database but is expressed naturally and executed efficiently in a graph database.</p>
+<p>Path queries can also find shortest paths between two nodes:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">shortestPath</span><span class="p">(</span>
+<span class="w">  </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'BRCA1'</span><span class="p">})</span><span class="o">-[</span><span class="p">*..</span><span class="m">6</span><span class="o">]-</span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Disease</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'Alzheimer disease'</span><span class="p">})</span>
+<span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="o">[</span><span class="n">node</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="n">nodes</span><span class="p">(</span><span class="n">path</span><span class="p">)</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="n">labels</span><span class="p">(</span><span class="n">node</span><span class="p">)</span><span class="o">[</span><span class="m">0</span><span class="o">]</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="s">': '</span><span class="w"> </span><span class="err">+</span><span class="w"> </span><span class="n">node</span><span class="p">.</span><span class="n">name</span><span class="o">]</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">path_labels</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>This query finds the shortest path of up to six hops between the BRCA1 gene and Alzheimer disease through any relationship type — a classic knowledge graph exploration pattern.</p>
+<h3 id="aggregation-in-cypher">Aggregation in Cypher</h3>
+<p><strong>Aggregation in Cypher</strong> works similarly to SQL's GROUP BY but is implicit: any non-aggregated column in the RETURN clause automatically becomes a grouping key.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-</span><span class="p">(</span><span class="n">neighbor</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">organism</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">'Homo sapiens'</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">(</span><span class="n">neighbor</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">degree</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">degree</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="m">10</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>This query computes the degree of each human protein in the interaction network and returns the ten most connected hub proteins. Common aggregation functions include <code>count()</code>, <code>sum()</code>, <code>avg()</code>, <code>min()</code>, <code>max()</code>, and <code>collect()</code> (which gathers values into a list).</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Follow the Edges!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Notice how Cypher's ASCII-art syntax makes patterns visually intuitive. The query <code>(a)-[:INTERACTS_WITH]-&gt;(b)</code> looks like the graph it describes. This visual correspondence is one of the main reasons Cypher has become the dominant graph query language — it reduces the cognitive load of writing and reading graph queries.</p>
+</div>
+<h2 id="graph-schema-design-for-bioinformatics">Graph Schema Design for Bioinformatics</h2>
+<p>Although graph databases are often described as "schema-free," effective use of a graph database requires careful <strong>graph schema design</strong>. The schema defines what <strong>node labels</strong>, <strong>relationship types</strong>, and <strong>property keys</strong> exist in the graph, and how they relate to each other. A well-designed schema makes queries simpler, faster, and less error-prone.</p>
+<p>Consider designing a schema for a protein-protein interaction (PPI) knowledge graph. The core entities are proteins, genes, diseases, drugs, pathways, and organisms. Each entity type becomes a node label, and the biological relationships between them become relationship types.</p>
+<h4 id="diagram-ppi-knowledge-graph-schema">Diagram: PPI Knowledge Graph Schema</h4>
+<iframe src="../../sims/ppi-knowledge-graph-schema/main.html" width="100%" height="480px" scrolling="no" style="overflow: hidden; border: 1px solid #ccc; border-radius: 8px;"></iframe>
+
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: ppi-knowledge-graph-schema
+Library: vis-network
+Status: Specified
+
+Node labels: Protein, Gene, Disease, Drug, Pathway, Organism.
+Relationship types: INTERACTS_WITH (Protein-Protein), ENCODED_BY (Protein-Gene), ASSOCIATED_WITH (Gene-Disease), TREATS (Drug-Disease), TARGETS (Drug-Protein), PARTICIPATES_IN (Protein-Pathway), BELONGS_TO (Protein-Organism).
+
+</details>
+
+<p>The schema below formalizes the node labels, relationship types, and key properties:</p>
+<table>
+<thead>
+<tr>
+<th>Node Label</th>
+<th>Key Properties</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protein</td>
+<td>name, uniprot_id, organism</td>
+<td>A protein or protein isoform</td>
+</tr>
+<tr>
+<td>Gene</td>
+<td>name, ensembl_id, chromosome</td>
+<td>A gene locus</td>
+</tr>
+<tr>
+<td>Disease</td>
+<td>name, doid, category</td>
+<td>A disease or phenotype</td>
+</tr>
+<tr>
+<td>Drug</td>
+<td>name, drugbank_id, status</td>
+<td>A pharmaceutical compound</td>
+</tr>
+<tr>
+<td>Pathway</td>
+<td>name, reactome_id</td>
+<td>A biological pathway</td>
+</tr>
+<tr>
+<td>Organism</td>
+<td>name, taxon_id</td>
+<td>A species or strain</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Relationship Type</th>
+<th>From</th>
+<th>To</th>
+<th>Key Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INTERACTS_WITH</td>
+<td>Protein</td>
+<td>Protein</td>
+<td>confidence, detection_method, source</td>
+</tr>
+<tr>
+<td>ENCODED_BY</td>
+<td>Protein</td>
+<td>Gene</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ASSOCIATED_WITH</td>
+<td>Gene</td>
+<td>Disease</td>
+<td>score, source, pmid</td>
+</tr>
+<tr>
+<td>TREATS</td>
+<td>Drug</td>
+<td>Disease</td>
+<td>phase, approval_status</td>
+</tr>
+<tr>
+<td>TARGETS</td>
+<td>Drug</td>
+<td>Protein</td>
+<td>action, affinity_nM</td>
+</tr>
+<tr>
+<td>PARTICIPATES_IN</td>
+<td>Protein</td>
+<td>Pathway</td>
+<td>evidence_code</td>
+</tr>
+<tr>
+<td>BELONGS_TO</td>
+<td>Protein</td>
+<td>Organism</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="index-and-constraints">Index and Constraints</h3>
+<p>To ensure data integrity and query performance, graph databases support <strong>indexes and constraints</strong>. A uniqueness constraint guarantees that no two nodes with the same label share the same value for a given property, and it automatically creates an index on that property.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">gene_name_unique</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">protein_uniprot_unique</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">uniprot_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Disease</span><span class="p">)</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Indexes on frequently filtered properties — such as protein names, gene symbols, and disease identifiers — can reduce query execution times by orders of magnitude. Without an index, a MATCH query must scan every node of a given label; with an index, it performs a direct lookup.</p>
+<h2 id="rdf-and-sparql">RDF and SPARQL</h2>
+<p>While the labeled property graph (LPG) model used by Neo4j and Memgraph stores rich properties on nodes and edges, an alternative graph data model called the <strong>RDF (Resource Description Framework) triple model</strong> takes a different approach. In RDF, all information is represented as <strong>subject-predicate-object</strong> triples, where each element is identified by a URI (Uniform Resource Identifier).</p>
+<p>For example, the statement "BRCA1 is associated with breast cancer" becomes:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://identifiers.org/hgnc/BRCA1&gt;
+  &lt;http://purl.obolibrary.org/obo/RO_0002200&gt;
+    &lt;http://purl.obolibrary.org/obo/DOID_1612&gt; .
+</code></pre></div></td></tr></tbody></table></div>
+<p>Each triple is a single statement of fact. Properties that would be stored on a node in an LPG — such as a protein's molecular weight — become additional triples in RDF:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>&lt;http://identifiers.org/uniprot/P38398&gt;
+  &lt;http://purl.obolibrary.org/obo/has_mass&gt;
+    "207721"^^xsd:integer .
+</code></pre></div></td></tr></tbody></table></div>
+<p>The <strong>SPARQL query language</strong> is the W3C standard for querying RDF data. SPARQL syntax resembles both SQL and Cypher, using triple patterns that are matched against the RDF store:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">SELECT</span> <span class="nv">?gene</span> <span class="nv">?disease</span>
+<span class="k">WHERE</span> <span class="p">{</span>
+  <span class="nv">?gene</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/SO_0000704&gt;</span> <span class="p">.</span>
+  <span class="nv">?gene</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/RO_0002200&gt;</span> <span class="nv">?disease</span> <span class="p">.</span>
+  <span class="nv">?disease</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"breast cancer"</span> <span class="p">.</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Major bioinformatics RDF resources include UniProt (which provides a SPARQL endpoint at sparql.uniprot.org), the EBI RDF Platform, and the Bio2RDF project that converts dozens of biological databases into interlinked RDF.</p>
+<h3 id="lpg-vs-rdf-a-concrete-comparison">LPG vs RDF: A Concrete Comparison</h3>
+<p>The <strong>LPG vs RDF comparison</strong> is an important architectural decision for any bioinformatics project. Consider representing a protein interaction with an experimental confidence score.</p>
+<p>In the <strong>LPG model</strong> (Cypher):</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">,</span><span class="w"> </span><span class="n">uniprot_id</span><span class="p">:</span><span class="w"> </span><span class="s">'P04637'</span><span class="p">})</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'MDM2'</span><span class="p">,</span><span class="w"> </span><span class="n">uniprot_id</span><span class="p">:</span><span class="w"> </span><span class="s">'Q00987'</span><span class="p">})</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="w"> </span><span class="p">{</span><span class="n">confidence</span><span class="p">:</span><span class="w"> </span><span class="m">0</span><span class="p">.</span><span class="m">95</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="p">:</span><span class="w"> </span><span class="s">'co-IP'</span><span class="p">,</span><span class="w"> </span><span class="n">pmid</span><span class="p">:</span><span class="w"> </span><span class="m">28854362</span><span class="p">}</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The confidence score, detection method, and literature reference are stored directly as properties on the relationship edge. This is concise and queryable.</p>
+<p>In the <strong>RDF model</strong>, edges cannot carry properties. To attach metadata to a relationship, you must use a technique called reification — creating an intermediate node that represents the relationship itself:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>_:interaction1 rdf:type :ProteinInteraction .
+_:interaction1 :hasParticipant &lt;uniprot:P04637&gt; .
+_:interaction1 :hasParticipant &lt;uniprot:Q00987&gt; .
+_:interaction1 :hasConfidence "0.95"^^xsd:float .
+_:interaction1 :detectionMethod "co-IP" .
+_:interaction1 :hasPMID "28854362" .
+</code></pre></div></td></tr></tbody></table></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>LPG (Neo4j/Memgraph)</th>
+<th>RDF (Triple Store)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data model</td>
+<td>Nodes + edges with properties</td>
+<td>Subject-predicate-object triples</td>
+</tr>
+<tr>
+<td>Edge properties</td>
+<td>Native support</td>
+<td>Requires reification</td>
+</tr>
+<tr>
+<td>Schema</td>
+<td>Flexible, optional</td>
+<td>Ontology-driven (OWL/RDFS)</td>
+</tr>
+<tr>
+<td>Query language</td>
+<td>Cypher / GQL</td>
+<td>SPARQL</td>
+</tr>
+<tr>
+<td>Federated queries</td>
+<td>Limited</td>
+<td>Native (SPARQL SERVICE)</td>
+</tr>
+<tr>
+<td>Standardization</td>
+<td>GQL (ISO 2024)</td>
+<td>W3C standard since 2008</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Traversal-heavy analytics</td>
+<td>Semantic interoperability</td>
+</tr>
+</tbody>
+</table>
+<p>For most bioinformatics applications that involve traversal-heavy queries — pathway analysis, network medicine, drug repurposing — the LPG model with Cypher is the more practical choice. For applications that require semantic interoperability across multiple institutions and ontologies — such as the FAIR data sharing initiatives — RDF and SPARQL remain the gold standard.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Olli's Tip</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+You do not have to choose one model permanently. Tools like Neosemantics (n10s) allow Neo4j to import and export RDF data, giving you LPG traversal performance with RDF interoperability. Many modern bioinformatics projects use a hybrid approach.</p>
+</div>
+<h2 id="graph-data-loading">Graph Data Loading</h2>
+<p>Getting biological data into a graph database is one of the most time-consuming steps in any bioinformatics graph project. The process of <strong>graph data loading</strong> typically involves three phases that mirror a traditional <strong>ETL (Extract, Transform, Load) for graph databases</strong> pipeline.</p>
+<p><strong>Extract.</strong> Biological data arrives in many formats: tab-separated files from STRING, XML from UniProt, JSON from the Ensembl REST API, OBO format from the Gene Ontology. The extraction phase downloads and parses these diverse sources.</p>
+<p><strong>Transform.</strong> The transformation phase maps source data to the target graph schema. This includes resolving identifier conflicts (UniProt ID vs. gene symbol vs. Ensembl ID), normalizing property values, and deduplicating records.</p>
+<p><strong>Load.</strong> The load phase writes the transformed data into the graph database. For Neo4j, the most common approach is <strong>CSV import to graph DB</strong> using the <code>LOAD CSV</code> command:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Load proteins from a CSV file</span>
+<span class="n">LOAD</span><span class="w"> </span><span class="n">CSV</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">HEADERS</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="s">'file:///proteins.csv'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">row</span>
+<span class="k">MERGE</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">uniprot_id</span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">uniprot_id</span><span class="p">})</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+<span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">organism</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">organism</span><span class="p">,</span>
+<span class="w">    </span><span class="n">p</span><span class="p">.</span><span class="n">sequence_length</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">toInteger</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">length</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Load interactions from a CSV file</span>
+<span class="n">LOAD</span><span class="w"> </span><span class="n">CSV</span><span class="w"> </span><span class="k">WITH</span><span class="w"> </span><span class="n">HEADERS</span><span class="w"> </span><span class="n">FROM</span><span class="w"> </span><span class="s">'file:///interactions.csv'</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">row</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">uniprot_id</span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">protein1</span><span class="p">})</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="w"> </span><span class="p">{</span><span class="n">uniprot_id</span><span class="p">:</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">protein2</span><span class="p">})</span>
+<span class="k">MERGE</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">)</span><span class="o">-[</span><span class="n">r</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">r</span><span class="p">.</span><span class="n">confidence</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">toFloat</span><span class="p">(</span><span class="n">row</span><span class="p">.</span><span class="n">combined_score</span><span class="p">),</span>
+<span class="w">    </span><span class="n">r</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">row</span><span class="p">.</span><span class="n">source_database</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>For large-scale imports (millions of nodes and edges), Neo4j provides the <code>neo4j-admin import</code> tool, which bypasses the transactional engine and writes directly to the storage files. This tool can load billions of relationships in minutes rather than hours but requires the database to be offline during the import.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+Always create uniqueness constraints and indexes <strong>before</strong> loading data, not after. Loading millions of nodes without an index on the MERGE property causes quadratic lookup times — a common mistake that can turn a ten-minute import into a ten-hour ordeal.</p>
+</div>
+<h2 id="graph-query-optimization-and-profiling">Graph Query Optimization and Profiling</h2>
+<p>Writing correct Cypher queries is one skill; writing efficient Cypher queries is another. <strong>Graph query optimization</strong> involves structuring queries so that the database engine can execute them with minimal work.</p>
+<p>The most important optimization principle is to <strong>start from the most selective pattern</strong>. If your query involves a rare node (e.g., a specific gene) and a common node (e.g., any protein), begin the MATCH pattern with the rare node. The database engine anchors the pattern match on the starting node and expands outward, so starting from a selective anchor dramatically reduces the search space.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Good: starts from the specific gene (selective anchor)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">ENCODED_BY</span><span class="o">]-</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-</span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">name</span>
+
+<span class="c1">// Bad: starts from all proteins (large scan)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">p2</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">INTERACTS_WITH</span><span class="o">]-</span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">ENCODED_BY</span><span class="o">]-</span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">})</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">p2</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p><strong>Query profiling</strong> is the tool that makes optimization evidence-based rather than guesswork. Both Neo4j and Memgraph support the <code>PROFILE</code> and <code>EXPLAIN</code> prefixes:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="n">PROFILE</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'TP53'</span><span class="p">})</span><span class="o">-[</span><span class="p">:</span><span class="n">ASSOCIATED_WITH</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Disease</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">name</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>The <code>PROFILE</code> command executes the query and returns a detailed execution plan showing how many database hits each operator performed. The <code>EXPLAIN</code> command shows the planned execution strategy without actually running the query. Key metrics to examine include:</p>
+<ul>
+<li><strong>DbHits</strong>: The number of storage-level operations. Lower is better.</li>
+<li><strong>Rows</strong>: The number of intermediate result rows at each step. A sudden explosion in rows indicates a combinatorial blowup.</li>
+<li><strong>Estimated Rows</strong>: The planner's estimate; a large discrepancy between estimated and actual rows suggests stale statistics.</li>
+</ul>
+<h2 id="distributed-graph-databases-and-scalability">Distributed Graph Databases and Scalability</h2>
+<p>As biological knowledge graphs grow to billions of edges — the full STRING database contains over 20 billion scored protein interactions across all organisms — the question of <strong>graph scalability</strong> becomes critical. A single-server graph database eventually runs out of memory or disk bandwidth, requiring a <strong>distributed graph databases</strong> architecture.</p>
+<p><strong>Graph partitioning</strong> is the fundamental challenge of distributed graph databases. Unlike relational tables, which can be split by row ranges or hash values with relatively little cross-partition communication, graphs have dense interconnections that resist clean partitioning. If two highly connected proteins end up on different servers, every traversal between them requires a network round-trip, dramatically increasing query latency.</p>
+<p>Common partitioning strategies include:</p>
+<ul>
+<li><strong>Hash partitioning</strong>: Assigns nodes to partitions based on a hash of their identifier. Simple but ignores graph structure, leading to many cross-partition edges.</li>
+<li><strong>Label-based partitioning</strong>: Places all nodes of a given label on the same partition. Works well when queries tend to stay within a label (e.g., protein-protein queries), but fails for cross-label traversals.</li>
+<li><strong>Community-based partitioning</strong>: Uses graph clustering algorithms to identify densely connected communities and keeps each community on the same partition. This minimizes cross-partition edges but requires an expensive preprocessing step.</li>
+</ul>
+<p>Neo4j addresses scalability through its <strong>Fabric</strong> architecture, which allows queries to span multiple databases. Memgraph is designed for vertical scaling — fitting larger graphs into the memory of a single large server — but is adding distributed features in recent releases.</p>
+<h3 id="graph-transactions-and-access-control">Graph Transactions and Access Control</h3>
+<p>Production graph databases must support robust <strong>graph transactions</strong> with ACID properties (Atomicity, Consistency, Isolation, Durability). In a bioinformatics context, transactions ensure that a multi-step data import — creating a protein node, linking it to its gene, and adding its pathway memberships — either completes entirely or rolls back entirely, leaving the database in a consistent state.</p>
+<p><strong>Graph access control</strong> governs who can read, write, and administer the graph. Neo4j Enterprise Edition provides role-based access control (RBAC) that can restrict access at the level of the entire database, specific node labels, or even individual properties. For example, a clinical bioinformatics graph might allow all users to read protein interactions but restrict patient genotype data to authorized clinicians:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Grant read access to the Protein label for all analysts</span>
+<span class="n">GRANT</span><span class="w"> </span><span class="n">READ</span><span class="w"> </span><span class="p">{*}</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="n">GRAPH</span><span class="w"> </span><span class="n">biology</span><span class="w"> </span><span class="n">NODES</span><span class="w"> </span><span class="n">Protein</span><span class="w"> </span><span class="n">TO</span><span class="w"> </span><span class="n">analyst_role</span><span class="p">;</span>
+
+<span class="c1">// Restrict Patient nodes to clinical staff only</span>
+<span class="n">GRANT</span><span class="w"> </span><span class="n">READ</span><span class="w"> </span><span class="p">{*}</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="n">GRAPH</span><span class="w"> </span><span class="n">biology</span><span class="w"> </span><span class="n">NODES</span><span class="w"> </span><span class="n">Patient</span><span class="w"> </span><span class="n">TO</span><span class="w"> </span><span class="n">clinical_role</span><span class="p">;</span>
+<span class="n">DENY</span><span class="w"> </span><span class="n">READ</span><span class="w"> </span><span class="p">{*}</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="n">GRAPH</span><span class="w"> </span><span class="n">biology</span><span class="w"> </span><span class="n">NODES</span><span class="w"> </span><span class="n">Patient</span><span class="w"> </span><span class="n">TO</span><span class="w"> </span><span class="n">analyst_role</span><span class="p">;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>These access control features are essential for bioinformatics applications that handle protected health information (PHI) or other sensitive data subject to regulatory requirements such as HIPAA.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Graph databases bring together ideas from several fields: database theory gives us transactions and query optimization, graph theory gives us traversal algorithms and centrality measures, and distributed systems gives us partitioning and replication strategies. The power of a graph database comes from combining all three in a single, purpose-built system.</p>
+</div>
+<h2 id="putting-it-all-together-a-bioinformatics-workflow">Putting It All Together: A Bioinformatics Workflow</h2>
+<p>To see how these concepts work in concert, consider a realistic bioinformatics workflow: building a drug repurposing knowledge graph. The goal is to find existing drugs that might treat a new disease by identifying shared molecular mechanisms.</p>
+<p><strong>Step 1: Design the schema.</strong> Define node labels (Drug, Protein, Gene, Disease, Pathway) and relationship types (TARGETS, INTERACTS_WITH, ASSOCIATED_WITH, PARTICIPATES_IN, TREATS).</p>
+<p><strong>Step 2: Create constraints and indexes.</strong></p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">d</span><span class="p">:</span><span class="n">Drug</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">d</span><span class="p">.</span><span class="n">drugbank_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="n">uniprot_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">g</span><span class="p">.</span><span class="n">ensembl_id</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="n">CONSTRAINT</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">dis</span><span class="p">:</span><span class="n">Disease</span><span class="p">)</span><span class="w"> </span><span class="n">REQUIRE</span><span class="w"> </span><span class="n">dis</span><span class="p">.</span><span class="n">doid</span><span class="w"> </span><span class="k">IS</span><span class="w"> </span><span class="k">UNIQUE</span><span class="p">;</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+<span class="k">CREATE</span><span class="w"> </span><span class="k">INDEX</span><span class="w"> </span><span class="n">FOR</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">:</span><span class="n">Gene</span><span class="p">)</span><span class="w"> </span><span class="n">ON</span><span class="w"> </span><span class="p">(</span><span class="n">g</span><span class="p">.</span><span class="n">name</span><span class="p">);</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p><strong>Step 3: Load data from CSV files</strong> using LOAD CSV with MERGE to handle re-runs safely.</p>
+<p><strong>Step 4: Query for drug repurposing candidates.</strong></p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">existing_drug</span><span class="p">:</span><span class="n">Drug</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">TREATS</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">known_disease</span><span class="p">:</span><span class="n">Disease</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">:</span><span class="w"> </span><span class="s">'Rheumatoid Arthritis'</span><span class="p">})</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">existing_drug</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">TARGETS</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">shared_target</span><span class="p">:</span><span class="n">Protein</span><span class="p">)</span>
+<span class="k">MATCH</span><span class="w"> </span><span class="p">(</span><span class="n">shared_target</span><span class="p">)</span><span class="o">&lt;-[</span><span class="p">:</span><span class="n">TARGETS</span><span class="o">]-</span><span class="p">(</span><span class="n">candidate_drug</span><span class="p">:</span><span class="n">Drug</span><span class="p">)</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="p">(</span><span class="n">candidate_drug</span><span class="p">)</span><span class="o">-[</span><span class="p">:</span><span class="n">TREATS</span><span class="o">]-&gt;</span><span class="p">(</span><span class="n">known_disease</span><span class="p">)</span>
+<span class="k">RETURN</span><span class="w"> </span><span class="n">candidate_drug</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">repurposing_candidate</span><span class="p">,</span>
+<span class="w">       </span><span class="n">shared_target</span><span class="p">.</span><span class="n">name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">shared_protein_target</span><span class="p">,</span>
+<span class="w">       </span><span class="n">count</span><span class="p">(*)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">shared_targets</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">shared_targets</span><span class="w"> </span><span class="k">DESC</span>
+<span class="k">LIMIT</span><span class="w"> </span><span class="m">10</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>This query finds drugs that share protein targets with known rheumatoid arthritis treatments but are not themselves approved for rheumatoid arthritis — identifying them as repurposing candidates. In a relational database, this query would require at least four JOIN operations across large tables. In Cypher, it reads almost like natural language.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work, Explorers!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You now have the tools to store biological networks in graph databases, query them with Cypher, and scale them to handle the enormous datasets that modern bioinformatics demands. In the coming chapters, we will build on these skills to construct biomedical knowledge graphs, run graph algorithms, and apply graph machine learning to real biological problems. Onwards!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li>A <strong>graph database</strong> stores data as nodes and edges with index-free adjacency, enabling fast multi-hop traversals that would require expensive JOINs in a relational database.</li>
+<li><strong>Neo4j</strong> (disk-based, mature ecosystem) and <strong>Memgraph</strong> (in-memory, low latency) are the two leading graph database platforms for bioinformatics, and both support the <strong>Cypher query language</strong>.</li>
+<li><strong>GQL</strong> (ISO/IEC 39075) is the new international standard for graph queries, based on Cypher syntax.</li>
+<li>Cypher's core clauses — <strong>MATCH</strong>, <strong>WHERE</strong>, <strong>RETURN</strong>, <strong>CREATE</strong>, and <strong>MERGE</strong> — provide a complete vocabulary for reading and writing graph data using intuitive ASCII-art <strong>graph pattern matching</strong>.</li>
+<li><strong>Variable-length paths</strong> and <strong>path queries</strong> are Cypher's killer feature for bioinformatics, enabling multi-hop exploration of biological networks in a single query.</li>
+<li>Effective <strong>graph schema design</strong> defines <strong>node labels</strong>, <strong>relationship types</strong>, and <strong>property keys</strong> that model biological entities and their relationships, supported by <strong>indexes and constraints</strong> for performance and data integrity.</li>
+<li>The <strong>RDF triple model</strong> represents data as <strong>subject-predicate-object</strong> triples queried with <strong>SPARQL</strong>, offering strong semantic interoperability at the cost of verbose representation. The <strong>LPG model</strong> offers native edge properties and faster traversal performance.</li>
+<li><strong>Graph data loading</strong> follows an <strong>ETL</strong> pattern: extract from biological data sources, transform to the target schema, and load via <strong>CSV import</strong> or bulk import tools. Always create indexes before loading.</li>
+<li><strong>Graph query optimization</strong> relies on selective anchoring and <strong>query profiling</strong> with PROFILE/EXPLAIN to minimize database hits.</li>
+<li><strong>Graph scalability</strong> for billion-edge biological networks requires <strong>distributed graph databases</strong> with careful <strong>graph partitioning</strong> strategies, robust <strong>graph transactions</strong>, and fine-grained <strong>graph access control</strong>.</li>
+</ul>
 
 
 

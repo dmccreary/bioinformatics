@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Phylogenetic tree construction, evolutionary models, phylogenetic networks, and graph representations of evolution">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>7. Phylogenetics - Bioinformatics</title>
+        <title>Phylogenetics and Evolutionary Graphs - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="7. Phylogenetics - Bioinformatics">
+        <meta property="og:title" content="Phylogenetics and Evolutionary Graphs - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Phylogenetic tree construction, evolutionary models, phylogenetic networks, and graph representations of evolution">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/07-phylogenetics-evolutionary-graphs/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="7. Phylogenetics - Bioinformatics">
+        <meta name="twitter:title" content="Phylogenetics and Evolutionary Graphs - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Phylogenetic tree construction, evolutionary models, phylogenetic networks, and graph representations of evolution">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/07-phylogenetics-evolutionary-graphs/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Phylogenetics
+              Phylogenetics and Evolutionary Graphs
             
           </span>
         </div>
@@ -641,6 +641,267 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-phylogenetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Phylogenetics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees-as-graphs-rooted-unrooted-and-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees as Graphs: Rooted, Unrooted, and DAGs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees as Graphs: Rooted, Unrooted, and DAGs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trees-as-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees as DAGs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees as DAGs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rooted-and-unrooted-phylogenetic-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Rooted and Unrooted Phylogenetic Trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taxonomic-groups-monophyletic-and-paraphyletic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taxonomic Groups: Monophyletic and Paraphyletic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-based-tree-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distance-Based Tree Construction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance-Based Tree Construction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-upgma-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UPGMA Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-neighbor-joining-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Neighbor-Joining Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substitution-models-and-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substitution Models and Rates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-based-methods-maximum-parsimony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character-Based Methods: Maximum Parsimony
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-likelihood-and-bayesian-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Likelihood and Bayesian Inference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maximum Likelihood and Bayesian Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-likelihood-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Likelihood Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Inference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-confidence-bootstrap-analysis-and-branch-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessing Confidence: Bootstrap Analysis and Branch Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-tree-topologies-robinson-foulds-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Tree Topologies: Robinson-Foulds Distance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ancestral-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ancestral Reconstruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-molecular-clock-and-divergence-time-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Molecular Clock and Divergence Time Estimation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-trees-species-trees-and-coalescent-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Trees, Species Trees, and Coalescent Theory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene Trees, Species Trees, and Coalescent Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gene-tree-vs-species-tree-discordance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Gene Tree vs Species Tree Discordance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-trees-phylogenetic-networks-and-reticulate-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond Trees: Phylogenetic Networks and Reticulate Evolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beyond Trees: Phylogenetic Networks and Reticulate Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-phylogenetic-network-with-reticulation-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Phylogenetic Network with Reticulation Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phylogenomics-and-comparative-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phylogenomics and Comparative Genomics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-connection-sars-cov-2-variant-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study Connection: SARS-CoV-2 Variant Tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-graph-model-for-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Graph Model for Evolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1065,6 +1326,267 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-phylogenetics" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is Phylogenetics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trees-as-graphs-rooted-unrooted-and-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees as Graphs: Rooted, Unrooted, and DAGs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees as Graphs: Rooted, Unrooted, and DAGs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trees-as-dags" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trees as DAGs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trees as DAGs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rooted-and-unrooted-phylogenetic-trees" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Rooted and Unrooted Phylogenetic Trees
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taxonomic-groups-monophyletic-and-paraphyletic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Taxonomic Groups: Monophyletic and Paraphyletic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-based-tree-construction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distance-Based Tree Construction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distance-Based Tree Construction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-upgma-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The UPGMA Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-neighbor-joining-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Neighbor-Joining Method
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#substitution-models-and-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substitution Models and Rates
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#character-based-methods-maximum-parsimony" class="md-nav__link">
+    <span class="md-ellipsis">
+      Character-Based Methods: Maximum Parsimony
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maximum-likelihood-and-bayesian-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Likelihood and Bayesian Inference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Maximum Likelihood and Bayesian Inference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#maximum-likelihood-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maximum Likelihood Method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Inference
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessing-confidence-bootstrap-analysis-and-branch-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assessing Confidence: Bootstrap Analysis and Branch Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparing-tree-topologies-robinson-foulds-distance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Tree Topologies: Robinson-Foulds Distance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ancestral-reconstruction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ancestral Reconstruction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-molecular-clock-and-divergence-time-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Molecular Clock and Divergence Time Estimation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-trees-species-trees-and-coalescent-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Trees, Species Trees, and Coalescent Theory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gene Trees, Species Trees, and Coalescent Theory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-gene-tree-vs-species-tree-discordance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Gene Tree vs Species Tree Discordance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-trees-phylogenetic-networks-and-reticulate-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Beyond Trees: Phylogenetic Networks and Reticulate Evolution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Beyond Trees: Phylogenetic Networks and Reticulate Evolution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-phylogenetic-network-with-reticulation-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Phylogenetic Network with Reticulation Events
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#phylogenomics-and-comparative-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Phylogenomics and Comparative Genomics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#case-study-connection-sars-cov-2-variant-tracking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study Connection: SARS-CoV-2 Variant Tracking
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-the-graph-model-for-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: The Graph Model for Evolution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1137,7 +1659,325 @@
 <li><a href="../06-sequence-alignment-homology/">Chapter 6: Sequence Alignment and Homology</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+Every living organism on Earth shares a common ancestor, and the history of life can be drawn as a vast branching tree. But how do we reconstruct that tree from the molecular data we have today? In this chapter we will learn how phylogenetic trees are built, evaluated, and extended into networks when evolution does not follow a simple branching pattern. We will see that trees are a special kind of directed acyclic graph — and that when evolution gets complicated, we need the full power of graph theory to represent it. Let's connect the dots!</p>
+</div>
+<h2 id="what-is-phylogenetics">What Is Phylogenetics?</h2>
+<p><strong>Phylogenetics</strong> is the study of evolutionary relationships among organisms, genes, or other biological entities. Its central goal is to reconstruct the branching history of life — the pattern of ancestor-descendant relationships — from observable data. A <strong>phylogenetic tree</strong> is the graphical representation of that history: a connected, acyclic graph in which terminal nodes (leaves) represent extant or sampled organisms, internal nodes represent hypothetical ancestors, and edges (branches) represent lineages connecting ancestors to descendants.</p>
+<p>Classical phylogenetics relied on morphological characters — skeletal features, flower structures, embryonic development patterns — to infer relationships. <strong>Molecular phylogenetics</strong> revolutionized the field by using DNA, RNA, or protein sequences as the primary data source. Because molecular sequences evolve at measurable rates and can be compared quantitatively through alignment, they provide a rich and objective basis for tree reconstruction. Today, molecular data dominate phylogenetic analysis, and the methods we discuss in this chapter apply primarily to sequences, though the principles extend to any character data.</p>
+<p>Phylogenetics is not merely an academic exercise in classification. It has urgent practical applications: tracking the emergence and spread of pathogen variants, identifying the origins of zoonotic diseases, guiding conservation efforts for endangered species, and reconstructing the evolutionary history of gene families to predict protein function. As we will see in Case Study 1 of this course, phylogenetic analysis of SARS-CoV-2 genomic sequences was indispensable for identifying new variants of concern, tracing transmission chains, and monitoring the global spread of the pandemic in near-real time.</p>
+<h2 id="trees-as-graphs-rooted-unrooted-and-dags">Trees as Graphs: Rooted, Unrooted, and DAGs</h2>
+<p>Before diving into construction methods, we must understand the graph-theoretic properties of phylogenetic trees. From the perspective of Chapter 4, a phylogenetic tree is an <strong>acyclic connected graph</strong> — in other words, a tree in the graph theory sense. But the biological interpretation imposes additional structure.</p>
+<p>A <strong>rooted tree</strong> has a single designated node representing the most recent common ancestor (MRCA) of all taxa in the study. Edges are implicitly directed away from the root, giving the tree a temporal orientation: the root is the oldest point, and leaves represent the present. A <strong>rooted vs unrooted tree</strong> distinction is fundamental: an <strong>unrooted tree</strong> specifies only the topology of relationships (which taxa group together) without indicating the direction of evolution. An unrooted tree with <span class="arithmatex">\(n\)</span> leaves has <span class="arithmatex">\(n - 1\)</span> internal nodes and <span class="arithmatex">\(2n - 3\)</span> edges, while the rooted version has <span class="arithmatex">\(n - 1\)</span> internal nodes plus the root and <span class="arithmatex">\(2n - 2\)</span> edges.</p>
+<p>To convert an unrooted tree into a rooted one, we must identify a root position. The most common strategy is to include an <strong>outgroup</strong> — a taxon known to be more distantly related to all other taxa in the study than they are to each other. The branch connecting the outgroup to the rest of the tree defines the root position. Alternative rooting methods include midpoint rooting (placing the root at the midpoint of the longest path) and molecular clock rooting (using rate constancy to locate the root).</p>
+<h3 id="trees-as-dags">Trees as DAGs</h3>
+<p>Rooted phylogenetic trees are a special case of <strong>directed acyclic graphs</strong> (DAGs). Each edge points from ancestor to descendant, cycles are impossible (a descendant cannot also be its own ancestor), and there is a single source node (the root) from which all other nodes are reachable. Recognizing <strong>trees as DAGs</strong> connects phylogenetics directly to the graph framework of this course and opens the door to algorithms from graph theory: topological sorting, tree traversal, lowest common ancestor queries, and DAG shortest-path computations all apply directly to phylogenetic trees.</p>
+<table>
+<thead>
+<tr>
+<th>Tree Type</th>
+<th>Distinguishing Feature</th>
+<th>Graph Property</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rooted tree</td>
+<td>Designated root (MRCA)</td>
+<td>DAG with single source</td>
+</tr>
+<tr>
+<td>Unrooted tree</td>
+<td>No root; topology only</td>
+<td>Undirected acyclic connected graph</td>
+</tr>
+<tr>
+<td>Cladogram</td>
+<td>Branch lengths not meaningful</td>
+<td>Topology-only tree</td>
+</tr>
+<tr>
+<td>Phylogram</td>
+<td>Branch lengths proportional to change</td>
+<td>Weighted tree</td>
+</tr>
+</tbody>
+</table>
+<p>A <strong>cladogram</strong> displays only the branching pattern — all branches may be drawn the same length — and is used when only the topology matters. A <strong>phylogram</strong> draws branch lengths proportional to the amount of evolutionary change (e.g., substitutions per site), providing information about both topology and the tempo of evolution.</p>
+<h4 id="diagram-rooted-and-unrooted-phylogenetic-trees">Diagram: Rooted and Unrooted Phylogenetic Trees</h4>
+<iframe src="../../sims/phylogenetic-tree-types/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/phylogenetic-tree-types/main.html">View Phylogenetic Tree Types MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: phylogenetic-tree-types
+Library: p5.js
+Status: Specified
+
+An interactive visualization showing the same set of taxa displayed as a rooted cladogram, a rooted phylogram, and an unrooted tree. Students can drag taxa to different positions, re-root the tree by clicking on branches, and toggle between cladogram and phylogram views. The outgroup is highlighted in a distinct color. A sidebar explains the graph-theoretic properties of each representation.
+</details>
+
+<h2 id="taxonomic-groups-monophyletic-and-paraphyletic">Taxonomic Groups: Monophyletic and Paraphyletic</h2>
+<p>When we carve a phylogenetic tree into groups, the validity of those groups depends on whether they reflect the complete evolutionary history. A <strong>monophyletic group</strong> (also called a clade) consists of an ancestor and all of its descendants — it is a complete subtree rooted at an internal node. Monophyletic groups are the gold standard of biological classification: mammals, birds, and flowering plants are each monophyletic.</p>
+<p>A <strong>paraphyletic group</strong> includes an ancestor and some but not all of its descendants. The classic example is "reptiles": the traditional class Reptilia excludes birds, even though birds are descended from within the reptilian lineage. Paraphyletic groups are defined by the exclusion of one or more subclades and are generally considered artificial by modern systematists.</p>
+<p>Recognizing monophyly and paraphyly is a graph operation: given a rooted tree, a set of leaf nodes <span class="arithmatex">\(S\)</span> is monophyletic if the lowest common ancestor of <span class="arithmatex">\(S\)</span> has no descendants outside <span class="arithmatex">\(S\)</span>. This can be checked efficiently using lowest common ancestor algorithms on the tree (DAG) structure.</p>
+<h2 id="distance-based-tree-construction">Distance-Based Tree Construction</h2>
+<p>The simplest approach to building a phylogenetic tree starts with a <strong>distance matrix</strong> — a symmetric matrix <span class="arithmatex">\(D\)</span> where entry <span class="arithmatex">\(D_{ij}\)</span> records the evolutionary distance between taxa <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span>. Distances are typically estimated from pairwise sequence alignments using a substitution model that corrects for multiple substitutions at the same site (see Substitution Models below). Once we have <span class="arithmatex">\(D\)</span>, we need an algorithm to construct a tree whose branch lengths reproduce those distances as faithfully as possible.</p>
+<h3 id="the-upgma-method">The UPGMA Method</h3>
+<p>The <strong>UPGMA</strong> (Unweighted Pair Group Method with Arithmetic Mean) algorithm is the simplest distance-based method. It operates by iterative clustering:</p>
+<ol>
+<li>Start with each taxon as its own cluster</li>
+<li>Find the pair of clusters <span class="arithmatex">\((i, j)\)</span> with the smallest distance <span class="arithmatex">\(D_{ij}\)</span></li>
+<li>Merge <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> into a new cluster <span class="arithmatex">\(k\)</span>, setting the branch length from <span class="arithmatex">\(k\)</span> to each child at <span class="arithmatex">\(D_{ij}/2\)</span></li>
+<li>Update distances from <span class="arithmatex">\(k\)</span> to all remaining clusters using the arithmetic mean:</li>
+</ol>
+<div class="arithmatex">\[D_{k,m} = \frac{|C_i| \cdot D_{i,m} + |C_j| \cdot D_{j,m}}{|C_i| + |C_j|}\]</div>
+<p>where <span class="arithmatex">\(|C_i|\)</span> and <span class="arithmatex">\(|C_j|\)</span> are the sizes of the merged clusters.</p>
+<ol>
+<li>Repeat until only one cluster remains</li>
+</ol>
+<p>UPGMA assumes a <strong>molecular clock</strong> — that all lineages evolve at the same constant rate. When this assumption holds, the tree is ultrametric (all root-to-tip distances are equal) and UPGMA recovers the correct topology. When rates vary across lineages, which is the norm in real data, UPGMA can produce incorrect trees.</p>
+<h3 id="the-neighbor-joining-method">The Neighbor-Joining Method</h3>
+<p>The <strong>neighbor-joining method</strong> (Saitou and Nei, 1987) removes the molecular clock assumption and is the most widely used distance-based algorithm. Instead of joining the closest pair, it identifies the pair of taxa whose joining minimizes the total branch length of the resulting tree. The algorithm computes a corrected distance:</p>
+<div class="arithmatex">\[Q_{ij} = (n - 2) \cdot D_{ij} - \sum_{k} D_{ik} - \sum_{k} D_{jk}\]</div>
+<p>where <span class="arithmatex">\(n\)</span> is the current number of taxa. The pair <span class="arithmatex">\((i, j)\)</span> with the smallest <span class="arithmatex">\(Q_{ij}\)</span> is joined. Branch lengths from the new internal node <span class="arithmatex">\(u\)</span> to <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> are:</p>
+<div class="arithmatex">\[d_{iu} = \frac{D_{ij}}{2} + \frac{1}{2(n-2)} \left( \sum_{k} D_{ik} - \sum_{k} D_{jk} \right)\]</div>
+<div class="arithmatex">\[d_{ju} = D_{ij} - d_{iu}\]</div>
+<p>Distances from <span class="arithmatex">\(u\)</span> to all remaining taxa are updated as:</p>
+<div class="arithmatex">\[D_{um} = \frac{D_{im} + D_{jm} - D_{ij}}{2}\]</div>
+<p>Neighbor-joining runs in <span class="arithmatex">\(O(n^3)\)</span> time and produces an unrooted tree. It handles rate variation across lineages and is remarkably accurate when the distance estimates are good, making it the workhorse algorithm for quick tree construction.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Olli's Insight</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Think of UPGMA as assuming every lineage walks at the same steady pace — a molecular clock ticking uniformly. Neighbor-joining drops that assumption and asks a subtler question: which pair, when joined, produces the most parsimonious total tree? That flexibility is why neighbor-joining works well even when evolutionary rates differ wildly across lineages.</p>
+</div>
+<h2 id="substitution-models-and-rates">Substitution Models and Rates</h2>
+<p>All tree-building methods depend on accurate estimates of evolutionary distance, and those estimates require a <strong>substitution model</strong> — a mathematical description of how nucleotides or amino acids change over time. The simplest DNA model, the Jukes-Cantor model (JC69), assumes all substitutions are equally likely. The corrected distance under JC69 is:</p>
+<div class="arithmatex">\[d = -\frac{3}{4} \ln\left(1 - \frac{4}{3} p\right)\]</div>
+<p>where <span class="arithmatex">\(p\)</span> is the observed proportion of differing sites. The correction accounts for <strong>multiple hits</strong>: the fact that a site may have changed more than once, obscuring the true number of substitutions.</p>
+<p>More realistic models relax the equal-rates assumption. The Kimura two-parameter model (K80) distinguishes transitions (purine-to-purine or pyrimidine-to-pyrimidine) from transversions (purine-to-pyrimidine or vice versa). The General Time-Reversible (GTR) model allows all six substitution types to have different rates and permits unequal base frequencies. GTR with gamma-distributed rate variation across sites (GTR+<span class="arithmatex">\(\Gamma\)</span>) and a proportion of invariable sites (GTR+<span class="arithmatex">\(\Gamma\)</span>+I) is the most commonly used model in modern phylogenomics.</p>
+<p>The <strong>substitution rate</strong> — the number of substitutions per site per unit time — varies among genes, among sites within a gene, and among lineages. Estimating and accommodating this variation is central to accurate phylogenetic inference. The concept of a <strong>molecular clock</strong>, first proposed by Zuckerkandl and Pauling in 1962, posits that substitutions accumulate at a roughly constant rate over time. A strict molecular clock is rarely supported by data, but relaxed clock models that allow rate variation among lineages are the basis of modern <strong>divergence time estimation</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Parameters</th>
+<th>Assumptions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JC69</td>
+<td>0 (1 rate)</td>
+<td>Equal base frequencies, equal substitution rates</td>
+</tr>
+<tr>
+<td>K80</td>
+<td>1 (ti/tv ratio)</td>
+<td>Equal base frequencies, transitions differ from transversions</td>
+</tr>
+<tr>
+<td>HKY85</td>
+<td>4 (ti/tv + 3 base freq)</td>
+<td>Unequal base frequencies, two rate classes</td>
+</tr>
+<tr>
+<td>GTR</td>
+<td>8 (6 rates + 3 base freq)</td>
+<td>Unequal base frequencies, all rates differ</td>
+</tr>
+<tr>
+<td>GTR+<span class="arithmatex">\(\Gamma\)</span>+I</td>
+<td>10</td>
+<td>GTR plus rate variation and invariable sites</td>
+</tr>
+</tbody>
+</table>
+<h2 id="character-based-methods-maximum-parsimony">Character-Based Methods: Maximum Parsimony</h2>
+<p>Unlike distance methods, which reduce sequence data to a single number per pair, <strong>character-based methods</strong> use the full alignment column by column. <strong>Maximum parsimony</strong> seeks the tree that requires the fewest evolutionary changes (substitutions) to explain the observed data. For each candidate tree topology, parsimony counts the minimum number of changes needed at each alignment column using the Fitch or Sankoff algorithm, and sums across all columns. The tree with the smallest total is the most parsimonious.</p>
+<p>Parsimony is intuitive and makes no assumptions about substitution rates, but it has well-known limitations. When some lineages evolve much faster than others, parsimony can be misled by <strong>long-branch attraction</strong> — the tendency to group rapidly evolving lineages together regardless of their true relationships. For this reason, parsimony has largely been supplanted by model-based methods for serious phylogenetic analysis, though it remains useful for closely related sequences and as a conceptual starting point.</p>
+<h2 id="maximum-likelihood-and-bayesian-inference">Maximum Likelihood and Bayesian Inference</h2>
+<h3 id="maximum-likelihood-method">Maximum Likelihood Method</h3>
+<p>The <strong>maximum likelihood method</strong> (Felsenstein, 1981) evaluates each candidate tree by computing the probability of observing the alignment data <span class="arithmatex">\(D\)</span> given the tree topology <span class="arithmatex">\(T\)</span>, branch lengths <span class="arithmatex">\(\mathbf{b}\)</span>, and substitution model parameters <span class="arithmatex">\(\theta\)</span>:</p>
+<div class="arithmatex">\[L(T, \mathbf{b}, \theta) = P(D \mid T, \mathbf{b}, \theta) = \prod_{i=1}^{N} P(D_i \mid T, \mathbf{b}, \theta)\]</div>
+<p>where <span class="arithmatex">\(N\)</span> is the number of alignment columns and independence across sites is assumed. For a single column, the likelihood is computed by summing over all possible ancestral state assignments at internal nodes, using the substitution model to calculate transition probabilities along each branch. Felsenstein's pruning algorithm computes this sum efficiently in <span class="arithmatex">\(O(n \cdot k^2)\)</span> time per column, where <span class="arithmatex">\(n\)</span> is the number of taxa and <span class="arithmatex">\(k\)</span> is the alphabet size.</p>
+<p>The tree with the highest likelihood is preferred. Because the number of possible tree topologies grows super-exponentially — there are <span class="arithmatex">\((2n-5)!!\)</span> unrooted trees for <span class="arithmatex">\(n\)</span> taxa — exhaustive search is impossible for more than about 15 taxa. Heuristic search strategies (nearest-neighbor interchange, subtree pruning and regrafting, tree bisection and reconnection) explore tree space efficiently. Software tools such as RAxML and IQ-TREE implement highly optimized ML searches.</p>
+<h3 id="bayesian-inference">Bayesian Inference</h3>
+<p><strong>Bayesian inference</strong> approaches phylogenetics from the opposite direction: instead of finding the single best tree, it estimates the posterior probability distribution over trees. By Bayes' theorem:</p>
+<div class="arithmatex">\[P(T, \mathbf{b}, \theta \mid D) = \frac{P(D \mid T, \mathbf{b}, \theta) \cdot P(T, \mathbf{b}, \theta)}{P(D)}\]</div>
+<p>The numerator is the product of the likelihood (same as in ML) and the prior probability of the tree, branch lengths, and model parameters. The denominator <span class="arithmatex">\(P(D)\)</span> is a normalizing constant obtained by integrating over all possible trees and parameters — an integral that is analytically intractable.</p>
+<p><strong>Markov chain Monte Carlo</strong> (MCMC) provides the computational solution. An MCMC sampler constructs a Markov chain whose stationary distribution is the desired posterior. At each step, the chain proposes a small modification to the current tree (e.g., a branch swap or a slight change in branch length), accepts or rejects the proposal based on the Metropolis-Hastings criterion, and records the current state. After a sufficient burn-in period, the sampled trees approximate the posterior distribution. The fraction of sampled trees containing a given clade is the posterior probability of that clade — a natural measure of <strong>branch support values</strong>.</p>
+<p>MrBayes and BEAST are the most widely used Bayesian phylogenetics software packages. BEAST is particularly powerful for <strong>divergence time estimation</strong> because it integrates relaxed molecular clock models, fossil calibration points, and tip-dating (using the known sampling times of sequences, as in viral phylogenomics) into a single coherent framework.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Olli's Insight</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Maximum likelihood asks: "What single tree best explains my data?" Bayesian inference asks: "Given my data, how confident should I be in each possible tree?" The Bayesian approach naturally provides uncertainty estimates (posterior probabilities), while ML requires separate procedures like bootstrap analysis to assess confidence. Both are model-based, and both vastly outperform parsimony when evolutionary rates are heterogeneous.</p>
+</div>
+<h2 id="assessing-confidence-bootstrap-analysis-and-branch-support">Assessing Confidence: Bootstrap Analysis and Branch Support</h2>
+<p>A phylogenetic tree is a hypothesis, and like any hypothesis it requires a measure of confidence. <strong>Bootstrap analysis</strong> (Felsenstein, 1985) is the most common frequentist approach. The procedure is:</p>
+<ol>
+<li>Create a pseudoreplicate dataset by sampling alignment columns with replacement (same number of columns as the original)</li>
+<li>Build a tree from the pseudoreplicate using the same method</li>
+<li>Repeat steps 1-2 many times (typically 100-1000 replicates)</li>
+<li>For each clade in the original tree, count the fraction of bootstrap trees that contain that clade</li>
+</ol>
+<p>This fraction is the <strong>bootstrap support value</strong>. Values above 70% are generally considered moderate support, and values above 95% are strong support. Bootstrap values are not true probabilities, but they correlate well with the probability that the clade is correct.</p>
+<p><strong>Branch support values</strong> can also come from Bayesian posterior probabilities (discussed above), approximate likelihood ratio tests (aLRT), or the SH-aLRT implemented in IQ-TREE. Each method has different statistical properties, and it is common to report multiple support measures on the same tree.</p>
+<h2 id="comparing-tree-topologies-robinson-foulds-distance">Comparing Tree Topologies: Robinson-Foulds Distance</h2>
+<p>When different methods, data sets, or parameter choices produce different trees, we need a way to quantify how different those trees are. <strong>Tree topology comparison</strong> is formalized through metrics defined on the space of all possible tree topologies.</p>
+<p>The <strong>Robinson-Foulds distance</strong> (RF distance) is the most widely used metric. Given two unrooted trees <span class="arithmatex">\(T_1\)</span> and <span class="arithmatex">\(T_2\)</span> on the same set of taxa, each internal edge defines a bipartition (split) of the taxa into two groups. The RF distance counts the number of bipartitions that appear in one tree but not the other:</p>
+<div class="arithmatex">\[d_{RF}(T_1, T_2) = |S_1 \triangle S_2|\]</div>
+<p>where <span class="arithmatex">\(S_1\)</span> and <span class="arithmatex">\(S_2\)</span> are the sets of bipartitions and <span class="arithmatex">\(\triangle\)</span> denotes the symmetric difference. The RF distance ranges from 0 (identical topologies) to <span class="arithmatex">\(2(n-3)\)</span> for unrooted binary trees with <span class="arithmatex">\(n\)</span> leaves. It can be computed in <span class="arithmatex">\(O(n)\)</span> time and is implemented in most phylogenetic software packages.</p>
+<p>The RF distance has limitations: it treats all topological differences equally, whether they involve deep splits or shallow ones, and it can be overly sensitive to minor rearrangements near weakly supported nodes. Weighted variants and alternative metrics (e.g., quartet distance, geodesic distance in tree space) address some of these issues.</p>
+<h2 id="ancestral-reconstruction">Ancestral Reconstruction</h2>
+<p><strong>Ancestral reconstruction</strong> is the inference of character states (nucleotides, amino acids, or other traits) at internal nodes of a phylogenetic tree. Given a tree topology, branch lengths, and the observed states at the leaves, we can estimate the most likely ancestral states using either parsimony (Fitch algorithm) or maximum likelihood (marginal reconstruction).</p>
+<p>ML ancestral reconstruction assigns to each internal node the state that maximizes the likelihood of the observed data at the leaves, given the substitution model. This approach is preferable to parsimony when branch lengths are informative, because it accounts for the probability of multiple changes along long branches. Ancestral reconstruction is used to study the evolution of protein function (e.g., resurrecting ancestral proteins in the laboratory), to infer ancestral geographic ranges in phylogeography, and to reconstruct ancestral viral sequences for vaccine design.</p>
+<h2 id="the-molecular-clock-and-divergence-time-estimation">The Molecular Clock and Divergence Time Estimation</h2>
+<p>The <strong>molecular clock</strong> hypothesis states that molecular sequences evolve at a constant rate over time, so the amount of sequence divergence between two lineages is proportional to the time since their most recent common ancestor. Under a strict clock, we can estimate <strong>divergence times</strong> by calibrating the rate with fossil data or other geological events.</p>
+<p>A strict molecular clock is rarely supported across diverse taxa — rates vary among lineages due to differences in generation time, population size, mutation rate, and selection pressure. Modern analyses therefore use <strong>relaxed clock models</strong> that allow rates to vary across branches while sharing information through a hierarchical prior distribution. The uncorrelated lognormal (UCLN) model and the autocorrelated rates model are the most common choices.</p>
+<p><strong>Divergence time estimation</strong> in practice integrates the tree topology, branch lengths, substitution model, clock model, and calibration data (fossil constraints, biogeographic events, or known sampling dates) within a Bayesian framework. BEAST is the leading software for this task, and it was instrumental in estimating the timing of SARS-CoV-2 emergence and the divergence dates of major variant lineages during the COVID-19 pandemic.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Olli's Tip</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+When you see a dated phylogenetic tree of SARS-CoV-2 variants in a news article, that tree was almost certainly built using Bayesian inference in BEAST with a relaxed molecular clock. The known collection dates of viral samples serve as tip calibrations — telling the clock when each leaf was sampled — and the software estimates the substitution rate and ancestral divergence times simultaneously. This is phylogenomics in real-time public health action!</p>
+</div>
+<h2 id="gene-trees-species-trees-and-coalescent-theory">Gene Trees, Species Trees, and Coalescent Theory</h2>
+<p>A fundamental complication in phylogenetics is that different genes can have different evolutionary histories. The <strong>gene tree vs species tree</strong> distinction arises because the tree traced by a particular gene locus may not match the tree relating the species that carry those genes. Three biological processes cause this discordance.</p>
+<p><strong>Incomplete lineage sorting</strong> (ILS) occurs when ancestral polymorphisms persist through multiple speciation events. If the time between successive speciations is short relative to the ancestral population size, alleles may "sort" differently from the species branching order. ILS is governed by <strong>coalescent theory</strong> — the mathematical framework that traces gene copies backward in time to their most recent common ancestor within a population. Under the multispecies coalescent model, gene tree topologies are drawn from a probability distribution determined by the species tree and its population size parameters.</p>
+<p><strong>Horizontal gene transfer</strong> (HGT) is the movement of genetic material between organisms by mechanisms other than vertical inheritance — for example, conjugation in bacteria, viral transduction, or uptake of environmental DNA. HGT is pervasive in prokaryotes and means that bacterial "species trees" are not strictly trees at all; the evolutionary history of bacteria is better described as a network.</p>
+<p><strong>Recombination</strong> shuffles genetic material within a single locus, creating mosaic sequences whose different regions have different evolutionary histories. Recombination is common in viruses (including SARS-CoV-2 and influenza), sexually reproducing eukaryotes, and bacteria that undergo homologous recombination.</p>
+<table>
+<thead>
+<tr>
+<th>Source of Discordance</th>
+<th>Mechanism</th>
+<th>Most Affected Taxa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incomplete lineage sorting</td>
+<td>Ancestral polymorphism</td>
+<td>Rapid radiations</td>
+</tr>
+<tr>
+<td>Horizontal gene transfer</td>
+<td>Non-vertical DNA movement</td>
+<td>Prokaryotes</td>
+</tr>
+<tr>
+<td>Recombination</td>
+<td>Within-locus shuffling</td>
+<td>Viruses, bacteria, sexual eukaryotes</td>
+</tr>
+</tbody>
+</table>
+<p>Modern methods for estimating species trees in the presence of gene tree discordance include summary methods (ASTRAL, which finds the species tree maximizing the number of shared quartets with gene trees), full Bayesian multispecies coalescent methods (*BEAST), and concatenation with coalescent-aware models. These methods are essential for accurate species-level phylogenetics in groups with rapid radiations or short internodes.</p>
+<h4 id="diagram-gene-tree-vs-species-tree-discordance">Diagram: Gene Tree vs Species Tree Discordance</h4>
+<iframe src="../../sims/gene-tree-species-tree/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/gene-tree-species-tree/main.html">View Gene Tree vs Species Tree MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: gene-tree-species-tree
+Library: p5.js
+Status: Specified
+
+An interactive visualization showing a species tree (drawn as a wide translucent tube) with one or more gene trees embedded inside it. Students can adjust the population size of ancestral species (wider tubes allow more ILS) and watch how gene tree topologies change relative to the species tree. A toggle demonstrates horizontal gene transfer events as edges crossing between species tubes. Color-coded gene lineages trace back to their coalescent events within ancestral populations.
+</details>
+
+<h2 id="beyond-trees-phylogenetic-networks-and-reticulate-evolution">Beyond Trees: Phylogenetic Networks and Reticulate Evolution</h2>
+<p>When evolution does not follow a simple bifurcating pattern — because of horizontal gene transfer, recombination, or hybridization — a tree is no longer an adequate representation. <strong>Reticulate evolution</strong> refers to any process that creates network-like, rather than tree-like, evolutionary relationships. In these cases, we need <strong>phylogenetic networks</strong>: graph structures that generalize trees by allowing nodes with more than one parent.</p>
+<p>A phylogenetic network is a directed acyclic graph (DAG) in which:</p>
+<ul>
+<li>Leaf nodes represent extant taxa</li>
+<li>Internal nodes with one parent (tree nodes) represent standard speciation events</li>
+<li>Internal nodes with two or more parents (reticulation nodes) represent hybridization, HGT, or recombination events</li>
+<li>The root represents the most recent common ancestor of all taxa</li>
+</ul>
+<p>This is the <strong>graph model for evolution</strong> in its most general form. When all internal nodes have exactly one parent, the network reduces to a tree. The number and placement of reticulation nodes quantify the degree to which the evolutionary history departs from a simple branching pattern.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Olli's Caution</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+Be careful not to force a tree onto data that are fundamentally network-like. If you build a tree from bacterial genomes that have undergone extensive horizontal gene transfer, the resulting tree will be misleading — different genes will support contradictory topologies, and no single tree will be correct. When you see widespread gene tree discordance, consider whether a phylogenetic network is a more appropriate model.</p>
+</div>
+<p>Several classes of phylogenetic networks exist. <strong>Split networks</strong> (computed by tools like SplitsTree) display conflicting signals in the data without committing to a specific evolutionary scenario — they are exploratory rather than explanatory. <strong>Explicit hybridization networks</strong> model specific reticulation events and can be inferred using methods that minimize the number of reticulation nodes needed to reconcile a set of gene trees (e.g., Dendroscope, PhyloNet). The computational complexity of network inference is substantially higher than tree inference, and the field is an active area of research.</p>
+<h4 id="diagram-phylogenetic-network-with-reticulation-events">Diagram: Phylogenetic Network with Reticulation Events</h4>
+<iframe src="../../sims/phylogenetic-network/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/phylogenetic-network/main.html">View Phylogenetic Network MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: phylogenetic-network
+Library: vis-network
+Status: Specified
+
+An interactive phylogenetic network visualization. Tree edges are drawn in teal; reticulation edges (representing HGT or hybridization events) are drawn in orange with directional arrows. Students can toggle reticulation events on and off to see how the network simplifies to a tree. Node tooltips explain whether each internal node is a tree node (speciation) or a reticulation node (HGT/hybridization). The slight y-offset on horizontal edges ensures correct label rendering on initial load.
+</details>
+
+<h2 id="phylogenomics-and-comparative-genomics">Phylogenomics and Comparative Genomics</h2>
+<p><strong>Phylogenomics</strong> extends phylogenetic analysis from individual genes to entire genomes. Rather than building a tree from a single gene alignment, phylogenomics uses hundreds or thousands of genes simultaneously, providing far greater statistical power to resolve difficult nodes. Two main strategies exist:</p>
+<ul>
+<li><strong>Concatenation</strong> (supermatrix): all gene alignments are joined end-to-end into a single large alignment, and a tree is inferred from the concatenated data. This approach is straightforward but assumes a single underlying tree for all genes.</li>
+<li><strong>Coalescent-based</strong> (supertree): individual gene trees are estimated first, and then a species tree is inferred from the distribution of gene trees using methods like ASTRAL or *BEAST. This approach accounts for gene tree discordance due to ILS but requires accurate individual gene trees.</li>
+</ul>
+<p>Phylogenomics has resolved many long-standing debates in systematics — for example, confirming that turtles are the sister group of archosaurs (birds + crocodilians) rather than of lepidosaurs (lizards + snakes), and placing the root of the eukaryotic tree of life.</p>
+<p><strong>Comparative genomics</strong> uses phylogenetic context to compare genome content, gene order, regulatory elements, and other features across species. By mapping genomic features onto a phylogenetic tree, we can infer when genes were gained or lost, when regulatory elements evolved, and how genome architecture has changed over evolutionary time. Comparative genomics depends on accurate phylogenies and is thus deeply intertwined with the tree-building methods discussed throughout this chapter.</p>
+<h2 id="case-study-connection-sars-cov-2-variant-tracking">Case Study Connection: SARS-CoV-2 Variant Tracking</h2>
+<p>The SARS-CoV-2 pandemic provided a dramatic real-time demonstration of phylogenetics in action. As viral genomes were sequenced from patients around the world and deposited in databases like GISAID, phylogenetic trees were rebuilt daily to track the emergence and spread of new lineages. The Nextstrain platform (nextstrain.org) provides an interactive phylogenetic visualization that integrates genomic, geographic, and temporal data.</p>
+<p>Key phylogenetic insights from the pandemic include:</p>
+<ul>
+<li><strong>Variant identification</strong>: Lineages with distinct mutation profiles (Alpha, Delta, Omicron) were identified as monophyletic clades on the global phylogenetic tree</li>
+<li><strong>Divergence time estimation</strong>: Bayesian analysis with BEAST estimated when each variant emerged, often weeks before clinical detection</li>
+<li><strong>Transmission tracking</strong>: Local phylogenetic analyses distinguished imported cases from community transmission</li>
+<li><strong>Recombination detection</strong>: Phylogenetic network methods detected recombinant lineages (e.g., XBB) where two Omicron sublineages recombined to create a mosaic genome</li>
+</ul>
+<p>This case study illustrates every major concept in this chapter: tree construction, molecular clock analysis, gene tree discordance (due to recombination), and the need for network models when reticulate evolution is at play.</p>
+<h2 id="putting-it-all-together-the-graph-model-for-evolution">Putting It All Together: The Graph Model for Evolution</h2>
+<p>The methods in this chapter form a coherent framework in which evolutionary relationships are modeled as graphs of increasing complexity:</p>
+<ol>
+<li><strong>Align sequences</strong> — Use the methods from Chapter 6 to produce pairwise or multiple sequence alignments</li>
+<li><strong>Estimate distances</strong> — Apply substitution models (JC69, GTR) to compute evolutionary distances and populate a distance matrix</li>
+<li><strong>Build trees</strong> — Use neighbor-joining for quick exploration, maximum likelihood for rigorous hypothesis testing, or Bayesian inference for full posterior distributions with divergence time estimates</li>
+<li><strong>Assess support</strong> — Apply bootstrap analysis or examine posterior probabilities to quantify confidence in each clade</li>
+<li><strong>Compare topologies</strong> — Use Robinson-Foulds distance to quantify differences between trees from different genes or methods</li>
+<li><strong>Reconstruct ancestors</strong> — Infer ancestral states at internal nodes for functional or evolutionary studies</li>
+<li><strong>Detect discordance</strong> — Compare gene trees to the species tree; apply coalescent theory to model incomplete lineage sorting</li>
+<li><strong>Extend to networks</strong> — When horizontal gene transfer, recombination, or hybridization are detected, move from tree models to phylogenetic network models</li>
+<li><strong>Scale to genomes</strong> — Use phylogenomic methods (concatenation or coalescent-based) for genome-scale analyses and comparative genomics</li>
+</ol>
+<p>At every step, the underlying representation is a graph — from simple undirected trees to rooted DAGs to fully reticulated networks. The <strong>graph model for evolution</strong> is the unifying theme: evolution is a process that creates connections, and graph theory provides the language to describe and analyze those connections.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Outstanding Work, Investigators!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have journeyed from simple distance matrices to phylogenetic networks that capture the full complexity of evolution. You now understand how trees are built, evaluated, compared, and extended when evolution refuses to follow a simple branching pattern. These tools will serve you throughout the rest of the course — when we study protein interaction networks, regulatory networks, and knowledge graphs, the graph-theoretic thinking you developed here will keep paying dividends. Follow the edges!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ul>
+<li><strong>Phylogenetics</strong> reconstructs evolutionary relationships from molecular data, producing trees that are both biological hypotheses and graph-theoretic objects.</li>
+<li><strong>Phylogenetic trees</strong> are acyclic connected graphs; rooted trees are directed acyclic graphs (DAGs) with a single source representing the most recent common ancestor.</li>
+<li><strong>Rooted vs unrooted trees</strong> differ in whether the direction of evolution is specified; an outgroup is the standard method for rooting.</li>
+<li><strong>Cladograms</strong> show topology only, while <strong>phylograms</strong> encode branch lengths proportional to evolutionary change.</li>
+<li><strong>Monophyletic groups</strong> (clades) include an ancestor and all its descendants; <strong>paraphyletic groups</strong> exclude some descendants and are considered artificial.</li>
+<li><strong>Distance matrix</strong> methods (UPGMA, neighbor-joining) build trees from pairwise distances; neighbor-joining does not assume a molecular clock and is the most widely used distance method.</li>
+<li><strong>Substitution models</strong> (JC69, K80, GTR) correct for multiple hits and are essential for accurate distance estimation and likelihood computation.</li>
+<li><strong>Maximum parsimony</strong> minimizes total evolutionary changes but is susceptible to long-branch attraction.</li>
+<li>The <strong>maximum likelihood method</strong> evaluates trees by computing the probability of the data given the tree, model, and parameters; it is the current standard for rigorous tree inference.</li>
+<li><strong>Bayesian inference</strong> with MCMC sampling provides posterior probability distributions over trees and naturally quantifies uncertainty through branch support values.</li>
+<li><strong>Bootstrap analysis</strong> generates confidence measures by resampling alignment columns; values above 70% indicate moderate support.</li>
+<li>The <strong>Robinson-Foulds distance</strong> quantifies topological differences between trees using the symmetric difference of their bipartition sets.</li>
+<li><strong>Ancestral reconstruction</strong> infers character states at internal nodes using parsimony or maximum likelihood.</li>
+<li>The <strong>molecular clock</strong> and relaxed clock models enable <strong>divergence time estimation</strong> when calibrated with fossil or sampling-date data.</li>
+<li><strong>Gene tree vs species tree</strong> discordance arises from incomplete lineage sorting, horizontal gene transfer, and recombination; <strong>coalescent theory</strong> provides the mathematical framework for modeling ILS.</li>
+<li><strong>Phylogenetic networks</strong> generalize trees to directed acyclic graphs with reticulation nodes, accommodating <strong>reticulate evolution</strong> including HGT, recombination, and hybridization.</li>
+<li><strong>Phylogenomics</strong> scales phylogenetic analysis to whole genomes using concatenation or coalescent-based approaches; <strong>comparative genomics</strong> uses phylogenetic context to study genome evolution.</li>
+<li>The <strong>graph model for evolution</strong> unifies all these representations: simple trees, rooted DAGs, and reticulated networks are points on a spectrum of graph complexity that mirrors the complexity of evolutionary history itself.</li>
+</ul>
 
 
 

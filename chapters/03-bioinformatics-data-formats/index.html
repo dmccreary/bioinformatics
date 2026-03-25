@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Standard file formats for bioinformatics — FASTA, FASTQ, GenBank, GFF3, VCF, SAM/BAM, PDB, and more">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>3. Bioinformatics Data Formats - Bioinformatics</title>
+        <title>Bioinformatics Data Formats - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="3. Bioinformatics Data Formats - Bioinformatics">
+        <meta property="og:title" content="Bioinformatics Data Formats - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Standard file formats for bioinformatics — FASTA, FASTQ, GenBank, GFF3, VCF, SAM/BAM, PDB, and more">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/03-bioinformatics-data-formats/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="3. Bioinformatics Data Formats - Bioinformatics">
+        <meta name="twitter:title" content="Bioinformatics Data Formats - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Standard file formats for bioinformatics — FASTA, FASTQ, GenBank, GFF3, VCF, SAM/BAM, PDB, and more">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/03-bioinformatics-data-formats/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3. Bioinformatics Data Formats
+              Bioinformatics Data Formats
             
           </span>
         </div>
@@ -552,6 +552,228 @@
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
       Prerequisites
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#why-data-formats-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Data Formats Matter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fasta-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      FASTA Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      FASTQ Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genbank-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GenBank Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gff3-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GFF3 Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bed-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      BED Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vcf-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCF Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam-and-bam-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAM and BAM Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdb-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDB File Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-and-ontology-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway and Ontology Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway and Ontology Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sbml-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SBML Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biopax-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      BioPAX Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWL Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-formats-csv-and-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      General-Purpose Formats: CSV and JSON
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General-Purpose Formats: CSV and JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-format-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-for-sequencing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control for Sequencing Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control for Sequencing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-fastq-quality-control-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: FASTQ Quality Control Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-for-alignments-and-variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control for Alignments and Variants
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
     </span>
   </a>
   
@@ -1065,6 +1287,228 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-data-formats-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Data Formats Matter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fasta-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      FASTA Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastq-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      FASTQ Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#genbank-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GenBank Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gff3-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      GFF3 Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bed-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      BED Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vcf-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      VCF Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sam-and-bam-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SAM and BAM Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pdb-file-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      PDB File Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-and-ontology-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway and Ontology Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway and Ontology Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sbml-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      SBML Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#biopax-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      BioPAX Format
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#owl-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      OWL Format
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-purpose-formats-csv-and-json" class="md-nav__link">
+    <span class="md-ellipsis">
+      General-Purpose Formats: CSV and JSON
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="General-Purpose Formats: CSV and JSON">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      CSV for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#json-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-format-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Format Conversion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-quality-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Quality Control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Quality Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-for-sequencing-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control for Sequencing Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quality Control for Sequencing Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-fastq-quality-control-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: FASTQ Quality Control Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quality-control-for-alignments-and-variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quality Control for Alignments and Variants
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1116,7 +1560,798 @@
 <li><a href="../01-foundations-molecular-biology/">Chapter 1: Foundations of Molecular Biology</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+In Chapter 2 we explored the databases that store biological data. Now we need to understand the languages those databases speak — the file formats that encode sequences, annotations, variants, structures, and pathways. Mastering these formats is essential because every bioinformatics pipeline begins by reading data in one format and often ends by writing results in another. Let's connect the dots between raw data and the structured files that carry it!</p>
+</div>
+<h2 id="why-data-formats-matter">Why Data Formats Matter</h2>
+<p>Bioinformatics is fundamentally a data science, and data must be structured before it can be analyzed. A DNA sequence is just a string of characters until it is wrapped in a format that records its name, its source organism, its quality scores, and its position in a genome. The file formats covered in this chapter are the shared conventions that allow sequencing instruments, alignment tools, variant callers, structure viewers, and pathway analysis programs to exchange information reliably.</p>
+<p>Choosing the wrong format — or misunderstanding the one you have — leads to silent errors that can invalidate an entire analysis. A quality score misinterpreted by one encoding offset will produce incorrect variant calls. A GFF3 file parsed as GFF2 will scramble gene models. A VCF file missing its header lines will be rejected by every downstream tool. Understanding data formats is not glamorous work, but it is the foundation on which all reliable bioinformatics rests.</p>
+<p>The formats in this chapter fall into several broad categories:</p>
+<ul>
+<li><strong>Sequence formats</strong> — store nucleotide or amino acid sequences (FASTA, FASTQ, GenBank)</li>
+<li><strong>Annotation formats</strong> — describe features on a reference sequence (GFF3, BED)</li>
+<li><strong>Alignment formats</strong> — record how reads map to a reference genome (SAM, BAM)</li>
+<li><strong>Variant formats</strong> — catalog genetic differences relative to a reference (VCF)</li>
+<li><strong>Structure formats</strong> — represent three-dimensional atomic coordinates (PDB)</li>
+<li><strong>Pathway and ontology formats</strong> — encode biological networks and controlled vocabularies (SBML, BioPAX, OWL)</li>
+<li><strong>General-purpose formats</strong> — tabular and hierarchical data exchange (CSV, JSON)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Formats</th>
+<th>Typical File Size</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequence</td>
+<td>FASTA, FASTQ, GenBank</td>
+<td>KB to hundreds of GB</td>
+</tr>
+<tr>
+<td>Annotation</td>
+<td>GFF3, BED</td>
+<td>KB to hundreds of MB</td>
+</tr>
+<tr>
+<td>Alignment</td>
+<td>SAM, BAM</td>
+<td>GB to TB</td>
+</tr>
+<tr>
+<td>Variant</td>
+<td>VCF</td>
+<td>MB to GB</td>
+</tr>
+<tr>
+<td>Structure</td>
+<td>PDB/mmCIF</td>
+<td>KB to tens of MB</td>
+</tr>
+<tr>
+<td>Pathway/Ontology</td>
+<td>SBML, BioPAX, OWL</td>
+<td>KB to hundreds of MB</td>
+</tr>
+<tr>
+<td>General-purpose</td>
+<td>CSV, JSON</td>
+<td>Variable</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fasta-format">FASTA Format</h2>
+<p>The FASTA Format is the simplest and most widely used sequence format in bioinformatics. Originally developed for the FASTA sequence alignment program in 1985, it has become the universal plain-text format for nucleotide and amino acid sequences. Nearly every bioinformatics tool accepts FASTA input, and nearly every sequence database can export FASTA output.</p>
+<p>A FASTA file consists of one or more sequence records. Each record has two parts: a header line beginning with <code>&gt;</code> followed by a description, and one or more lines of sequence characters. There is no fixed line length, but 60 or 80 characters per line is conventional.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span>
+<span class="normal">9</span></pre></div></td><td class="code"><div><pre><span></span><code>&gt;NM_007294.4 Homo sapiens BRCA1 DNA repair associated (BRCA1), mRNA
+ATGGATTTATCTGCTCTTCGCGTTGAAGAAGTACAAAATGTCATTAATGCTATGCAGAAA
+ATCTTAGAGTGTCCCATCTGTCTGGAGTTGATCAAGGAACCTGTCTCCACAAAGTGTGAC
+CACATATTTTGCAAATTTTGCATGCTGAAACTTCTCAACCAGAAGAAAGGGCCTTCACAG
+TGTCCTTTATGTAAGAATGATATAACCAAAAGGAGCCTACAAGAAAGTACGAGATTTAGTC
+&gt;P04637 TP53_HUMAN Cellular tumor antigen p53
+MEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDDIEQWFTEDPGP
+DEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQKTYPQGLNGTVNLPGRNSFEV
+RVCACPGRDRRTEEENLHETTITMTQALPDEEMSGQLQNLVKQLPADNNKTHTCPVQALKP
+</code></pre></div></td></tr></tbody></table></div>
+<p>Key characteristics of the FASTA Format include:</p>
+<ul>
+<li>The <code>&gt;</code> character must be the first character on the header line</li>
+<li>Everything after <code>&gt;</code> on the header line is the sequence description (no enforced structure, though database-specific conventions exist)</li>
+<li>Sequence lines contain only valid characters: <code>A</code>, <code>C</code>, <code>G</code>, <code>T</code>, <code>N</code> for DNA; the 20 standard amino acid one-letter codes for protein</li>
+<li>Blank lines between records are permitted but not required</li>
+<li>The format carries no quality information — it records the sequence and nothing more</li>
+</ul>
+<p>FASTA is appropriate when you need a clean, portable representation of one or more sequences. It is the input format for BLAST searches, multiple sequence alignment programs like Clustal Omega and MAFFT, and genome assembly tools. However, because FASTA lacks quality scores, it is not suitable for representing raw sequencing reads — that role belongs to FASTQ.</p>
+<h2 id="fastq-format">FASTQ Format</h2>
+<p>The FASTQ Format extends FASTA by adding per-base quality scores, making it the standard format for raw sequencing data from Illumina, PacBio, Oxford Nanopore, and other platforms. Every sequencing run produces FASTQ files, and they are typically the first files you encounter in any genomics pipeline.</p>
+<p>A FASTQ record contains exactly four lines:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>@SRR123456.1 HWI-ST1234:100:C1234ACXX:1:1101:1234:2045 length=150
+ATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCGATCG
++
+IIIIIIIIIIIIIIIIIHHHHHGGGGFFFDDDCCCCBBBBBAAA@@@@?????
+</code></pre></div></td></tr></tbody></table></div>
+<p>The four lines encode:</p>
+<ol>
+<li><strong>Header line</strong> — begins with <code>@</code>, contains a sequence identifier and optional description</li>
+<li><strong>Sequence line</strong> — the nucleotide sequence (same characters as FASTA)</li>
+<li><strong>Separator line</strong> — a <code>+</code> character, optionally followed by a repeat of the identifier</li>
+<li><strong>Quality line</strong> — ASCII-encoded quality scores, one character per base, same length as the sequence line</li>
+</ol>
+<p>The quality scores use the Phred scale, where the quality value <span class="arithmatex">\(Q\)</span> relates to the probability of an incorrect base call <span class="arithmatex">\(P\)</span> by:</p>
+<div class="arithmatex">\[Q = -10 \cdot \log_{10}(P)\]</div>
+<p>A Phred score of 20 means a 1 in 100 chance of error (99% accuracy), while a score of 30 means a 1 in 1,000 chance (99.9% accuracy). Modern Illumina instruments routinely produce reads with average quality scores above 30.</p>
+<table>
+<thead>
+<tr>
+<th>Phred Score</th>
+<th>Error Probability</th>
+<th>Accuracy</th>
+<th>ASCII (Phred+33)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>1 in 10</td>
+<td>90%</td>
+<td><code>+</code></td>
+</tr>
+<tr>
+<td>20</td>
+<td>1 in 100</td>
+<td>99%</td>
+<td><code>5</code></td>
+</tr>
+<tr>
+<td>30</td>
+<td>1 in 1,000</td>
+<td>99.9%</td>
+<td><code>?</code></td>
+</tr>
+<tr>
+<td>40</td>
+<td>1 in 10,000</td>
+<td>99.99%</td>
+<td><code>I</code></td>
+</tr>
+</tbody>
+</table>
+<p>The ASCII encoding adds an offset to the Phred score to produce a printable character. The current standard (Sanger/Illumina 1.8+) uses an offset of 33, so a Phred score of 30 is encoded as ASCII character 63, which is <code>?</code>. Older Illumina pipelines (versions 1.3 through 1.7) used an offset of 64 — a source of many historic bugs in bioinformatics pipelines.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli thinking"></a>
+Notice how FASTQ builds on FASTA by adding exactly one new dimension — quality. This layered design is a pattern you will see throughout bioinformatics formats. Simple formats capture the essentials, and more complex formats extend them with additional metadata. When you encounter a new format, ask yourself: what information does this format add beyond what simpler formats already capture?</p>
+</div>
+<h2 id="genbank-format">GenBank Format</h2>
+<p>The GenBank Format is the richly annotated flat-file format used by NCBI's GenBank database. While FASTA stores only the sequence and FASTQ adds quality scores, GenBank records contain comprehensive metadata including the organism, references to published literature, feature annotations (coding sequences, regulatory regions, variation sites), and cross-references to other databases.</p>
+<p>A simplified GenBank record looks like this:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span></pre></div></td><td class="code"><div><pre><span></span><code>LOCUS       NM_007294               7088 bp    mRNA    linear   PRI 15-JAN-2026
+DEFINITION  Homo sapiens BRCA1 DNA repair associated (BRCA1), mRNA.
+ACCESSION   NM_007294
+VERSION     NM_007294.4
+KEYWORDS    RefSeq.
+SOURCE      Homo sapiens (human)
+  ORGANISM  Homo sapiens
+            Eukaryota; Metazoa; Chordata; Mammalia; Primates; Hominidae; Homo.
+REFERENCE   1
+  AUTHORS   Miki,Y., Swensen,J., Shattuck-Eidens,D., ...
+  TITLE     A strong candidate for the breast and ovarian cancer ...
+  JOURNAL   Science 266 (5182), 66-71 (1994)
+   PUBMED   7545954
+FEATURES             Location/Qualifiers
+     source          1..7088
+                     /organism="Homo sapiens"
+                     /mol_type="mRNA"
+     gene            1..7088
+                     /gene="BRCA1"
+     CDS             120..5711
+                     /gene="BRCA1"
+                     /protein_id="NP_009225.1"
+                     /translation="MDLSALREER..."
+ORIGIN
+        1 atggatttat ctgctcttcg cgttgaagaa gtacaaaatg tcattaatgc tatgcagaaa
+       61 atcttagagt gtcccatctg tctggagttg atcaaggaac ctgtctccac aaagtgtgac
+//
+</code></pre></div></td></tr></tbody></table></div>
+<p>The major sections of a GenBank record are:</p>
+<ul>
+<li><strong>LOCUS</strong> — sequence name, length, molecule type, topology, division, and date</li>
+<li><strong>DEFINITION</strong> — a brief description of the sequence</li>
+<li><strong>ACCESSION / VERSION</strong> — the stable identifier and its version number</li>
+<li><strong>FEATURES</strong> — the annotation table, where each feature has a type (gene, CDS, mRNA, etc.), a location on the sequence, and qualifier key-value pairs</li>
+<li><strong>ORIGIN</strong> — the nucleotide sequence itself, numbered by position</li>
+<li><strong>//</strong> — the record terminator</li>
+</ul>
+<p>GenBank format is essential for understanding annotated reference sequences. When you download a gene from NCBI, the GenBank record tells you not just the sequence but where the coding sequence starts and ends, what protein it encodes, and which papers first described it.</p>
+<h2 id="gff3-format">GFF3 Format</h2>
+<p>The GFF3 Format (Generic Feature Format version 3) is a tab-delimited text format for describing features on a reference sequence — genes, exons, regulatory elements, binding sites, and any other genomic annotation. GFF3 is the standard output of genome annotation pipelines and the input to genome browsers and downstream analysis tools.</p>
+<p>Each line in a GFF3 file contains nine tab-separated columns:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>##gff-version 3
+chr1    HAVANA  gene    11869   14409   .   +   .   ID=ENSG00000223972;Name=DDX11L1;biotype=transcribed_unprocessed_pseudogene
+chr1    HAVANA  mRNA    11869   14409   .   +   .   ID=ENST00000456328;Parent=ENSG00000223972;Name=DDX11L1-201
+chr1    HAVANA  exon    11869   12227   .   +   .   ID=exon1;Parent=ENST00000456328
+chr1    HAVANA  exon    12613   12721   .   +   .   ID=exon2;Parent=ENST00000456328
+chr1    HAVANA  exon    13221   14409   .   +   .   ID=exon3;Parent=ENST00000456328
+</code></pre></div></td></tr></tbody></table></div>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>seqid</td>
+<td>Chromosome or scaffold name</td>
+</tr>
+<tr>
+<td>2</td>
+<td>source</td>
+<td>Program or database that generated the feature</td>
+</tr>
+<tr>
+<td>3</td>
+<td>type</td>
+<td>Feature type (gene, mRNA, exon, CDS, etc.)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>start</td>
+<td>Start position (1-based, inclusive)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>end</td>
+<td>End position (1-based, inclusive)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>score</td>
+<td>Numerical score (or <code>.</code> if not applicable)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>strand</td>
+<td><code>+</code> (forward), <code>-</code> (reverse), or <code>.</code> (unstranded)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>phase</td>
+<td>For CDS features: 0, 1, or 2 (reading frame offset)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>attributes</td>
+<td>Semicolon-separated key=value pairs (ID, Name, Parent, etc.)</td>
+</tr>
+</tbody>
+</table>
+<p>The critical innovation of GFF3 over earlier formats is the Parent attribute, which creates hierarchical relationships: a gene contains mRNAs, each mRNA contains exons and CDS features. This parent-child structure forms a directed acyclic graph that mirrors the biological reality of gene structure.</p>
+<h2 id="bed-format">BED Format</h2>
+<p>The BED Format (Browser Extensible Data) is a simpler, more compact alternative to GFF3 for representing genomic intervals. Originally designed for the UCSC Genome Browser, BED has become a widely used format for any analysis that works with genomic regions — peak calling in ChIP-seq, defining target regions for exome capture, and specifying intervals for coverage analysis.</p>
+<p>A BED file is tab-delimited with a minimum of three columns and up to twelve optional columns:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code>chr7    127471196   127472363   Pos1    0   +   127471196   127472363   255,0,0
+chr7    127472363   127473530   Pos2    0   +   127472363   127473530   255,0,0
+chr7    127473530   127474697   Pos3    0   +   127473530   127474697   255,0,0
+</code></pre></div></td></tr></tbody></table></div>
+<p>The first three columns are required:</p>
+<ul>
+<li><strong>chrom</strong> — chromosome name</li>
+<li><strong>chromStart</strong> — start position (0-based)</li>
+<li><strong>chromEnd</strong> — end position (exclusive)</li>
+</ul>
+<p>A crucial difference between BED and GFF3 is coordinate convention. BED uses zero-based, half-open coordinates (the start is inclusive and the end is exclusive), while GFF3 uses one-based, fully closed coordinates (both start and end are inclusive). A feature from position 100 to 200 is written as <code>100  200</code> in BED but <code>101  200</code> in GFF3. This difference is one of the most common sources of off-by-one errors in bioinformatics, and tools like bedtools and UCSC liftOver are designed with BED conventions in mind.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+The difference between zero-based half-open (BED) and one-based fully closed (GFF3) coordinates causes more subtle bugs than almost any other issue in genomics. When converting between formats, always adjust coordinates explicitly. A feature at BED coordinates <code>chr1  99  200</code> corresponds to GFF3 coordinates <code>chr1  100  200</code>. Off-by-one errors here can shift every variant call, every exon boundary, and every peak summit in your analysis.</p>
+</div>
+<h2 id="vcf-format">VCF Format</h2>
+<p>The VCF Format (Variant Call Format) is the standard for representing genetic variants — single nucleotide polymorphisms (SNPs), insertions, deletions, and structural variants — relative to a reference genome. VCF is the output of variant calling pipelines like GATK, DeepVariant, and bcftools, and the input to variant annotation, filtering, and association analysis tools.</p>
+<p>A VCF file has three sections: meta-information lines (beginning with <code>##</code>), a header line (beginning with <code>#</code>), and data lines:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code>##fileformat=VCFv4.3
+##INFO=&lt;ID=DP,Number=1,Type=Integer,Description="Total Depth"&gt;
+##FORMAT=&lt;ID=GT,Number=1,Type=String,Description="Genotype"&gt;
+##FORMAT=&lt;ID=GQ,Number=1,Type=Integer,Description="Genotype Quality"&gt;
+#CHROM  POS ID  REF ALT QUAL    FILTER  INFO    FORMAT  Sample1
+chr17   43094464    rs80357713  G   A   99  PASS    DP=45   GT:GQ   0/1:99
+chr17   43091434    rs1799950   G   A   85  PASS    DP=38   GT:GQ   1/1:85
+</code></pre></div></td></tr></tbody></table></div>
+<p>The eight fixed columns are:</p>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CHROM</td>
+<td>Chromosome</td>
+</tr>
+<tr>
+<td>POS</td>
+<td>1-based position of the variant</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>Variant identifier (e.g., rsID from dbSNP)</td>
+</tr>
+<tr>
+<td>REF</td>
+<td>Reference allele</td>
+</tr>
+<tr>
+<td>ALT</td>
+<td>Alternate allele(s), comma-separated if multiallelic</td>
+</tr>
+<tr>
+<td>QUAL</td>
+<td>Phred-scaled quality score for the variant call</td>
+</tr>
+<tr>
+<td>FILTER</td>
+<td><code>PASS</code> or a list of filters that the variant failed</td>
+</tr>
+<tr>
+<td>INFO</td>
+<td>Semicolon-separated key=value annotations</td>
+</tr>
+</tbody>
+</table>
+<p>After the fixed columns, VCF files for multi-sample studies include a FORMAT column defining per-sample fields, followed by one column per sample. The genotype field <code>GT</code> uses <code>0</code> for the reference allele and <code>1</code>, <code>2</code>, etc. for alternate alleles, separated by <code>/</code> (unphased) or <code>|</code> (phased). Thus <code>0/1</code> indicates a heterozygous call, <code>1/1</code> a homozygous alternate, and <code>0/0</code> a homozygous reference.</p>
+<h2 id="sam-and-bam-format">SAM and BAM Format</h2>
+<p>The SAM and BAM Format pair represents sequence alignments — the result of mapping sequencing reads to a reference genome. SAM (Sequence Alignment/Map) is the human-readable text format, while BAM is its binary, compressed equivalent. In practice, most pipelines produce BAM files because they are 3-5 times smaller than SAM and support random access through index files (BAI).</p>
+<p>A SAM file begins with an optional header section (lines starting with <code>@</code>) followed by alignment records, one per line with eleven mandatory tab-separated fields:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>@HD VN:1.6  SO:coordinate
+@SQ SN:chr17    LN:83257441
+@RG ID:sample1  SM:Sample1  PL:ILLUMINA
+read001 99  chr17   43094464    60  150M    =   43094614    300 ATCGATCG... IIIIIIII... NM:i:1  MD:Z:75G74
+read002 147 chr17   43094614    60  150M    =   43094464    -300    GCTAGCTA... HHHHHHHH... NM:i:0  MD:Z:150
+</code></pre></div></td></tr></tbody></table></div>
+<p>Key SAM fields include:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>QNAME</td>
+<td>Read name</td>
+</tr>
+<tr>
+<td>2</td>
+<td>FLAG</td>
+<td>Bitwise flag encoding read properties (paired, mapped, strand, etc.)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>RNAME</td>
+<td>Reference sequence name (chromosome)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>POS</td>
+<td>1-based leftmost mapping position</td>
+</tr>
+<tr>
+<td>5</td>
+<td>MAPQ</td>
+<td>Mapping quality (Phred-scaled)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CIGAR</td>
+<td>Compact representation of the alignment (e.g., <code>150M</code> = 150 matches)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>SEQ</td>
+<td>Read sequence</td>
+</tr>
+<tr>
+<td>11</td>
+<td>QUAL</td>
+<td>Base quality string (same encoding as FASTQ)</td>
+</tr>
+</tbody>
+</table>
+<p>The FLAG field is a bitwise integer where each bit indicates a property of the read. For example, flag 99 = 64 + 32 + 2 + 1, meaning the read is paired (1), properly paired (2), the mate is reverse strand (32), and this is the first read in the pair (64). Decoding flags is essential for filtering alignments — tools like <code>samtools view -f</code> and <code>samtools view -F</code> use flag values to include or exclude reads.</p>
+<p>The CIGAR string encodes the alignment structure compactly. Common operations include <code>M</code> (match or mismatch), <code>I</code> (insertion to the reference), <code>D</code> (deletion from the reference), <code>S</code> (soft clipping), and <code>N</code> (skipped region, used for spliced alignments in RNA-seq). A CIGAR of <code>50M2I48M</code> means 50 aligned bases, a 2-base insertion, then 48 more aligned bases.</p>
+<h2 id="pdb-file-format">PDB File Format</h2>
+<p>The PDB File Format stores three-dimensional atomic coordinates of biological macromolecules — proteins, nucleic acids, and their complexes with small-molecule ligands. Originally developed for the Protein Data Bank in the 1970s, the fixed-column-width PDB format has been largely superseded by the more flexible mmCIF (macromolecular Crystallographic Information File) format for new depositions. However, PDB format files remain widely used and understood.</p>
+<p>A PDB file contains several record types, but the most important for structural analysis are ATOM and HETATM records:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>HEADER    DNA BINDING PROTEIN                     23-JAN-07   2P53
+ATOM      1  N   MET A   1      27.340  24.430   2.614  1.00  9.67           N
+ATOM      2  CA  MET A   1      26.266  25.413   2.842  1.00 10.38           C
+ATOM      3  C   MET A   1      26.913  26.639   3.531  1.00  9.62           C
+ATOM      4  O   MET A   1      27.886  26.463   4.263  1.00  9.62           O
+HETATM 2001  ZN  ZN  A 301      19.452  28.153  15.230  1.00 14.52          ZN
+</code></pre></div></td></tr></tbody></table></div>
+<p>Each ATOM record specifies:</p>
+<ul>
+<li><strong>Atom serial number</strong> — sequential counter</li>
+<li><strong>Atom name</strong> — e.g., CA for alpha carbon, N for backbone nitrogen</li>
+<li><strong>Residue name</strong> — three-letter amino acid code (MET, ALA, etc.) or nucleotide code</li>
+<li><strong>Chain identifier</strong> — letter designating the polypeptide or nucleic acid chain</li>
+<li><strong>Residue sequence number</strong> — position in the chain</li>
+<li><strong>X, Y, Z coordinates</strong> — in Angstroms</li>
+<li><strong>Occupancy and B-factor</strong> — measures of atomic position certainty</li>
+</ul>
+<p>The PDB format uses fixed column positions — the X coordinate always occupies columns 31-38, for example. This rigid structure makes parsing straightforward but limits extensibility, which is why the community has moved toward mmCIF for new depositions. Structural analysis tools like PyMOL, ChimeraX, and Biopython's PDB parser can read both formats.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli thinking"></a>
+Notice the chain identifier in PDB files — a single letter that tells you which polypeptide chain each atom belongs to. When a PDB structure contains multiple protein chains, these chain identifiers define the subunits of a complex. In protein interaction network analysis, a co-crystal structure with chains A and B provides direct structural evidence for a physical interaction between those two proteins. The PDB format thus encodes graph edges (interactions) implicitly through chain co-occurrence in a single structure file.</p>
+</div>
+<h2 id="pathway-and-ontology-formats">Pathway and Ontology Formats</h2>
+<p>Biological knowledge extends beyond sequences and structures to encompass metabolic pathways, signaling networks, and controlled vocabularies. Three XML-based formats dominate this space: SBML, BioPAX, and OWL.</p>
+<h3 id="sbml-format">SBML Format</h3>
+<p>The SBML Format (Systems Biology Markup Language) is an XML-based format for representing computational models of biological processes, particularly metabolic and signaling networks. SBML encodes species (molecules), reactions (transformations), compartments (cellular locations), and mathematical rate laws that govern reaction kinetics.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;model</span><span class="w"> </span><span class="na">id=</span><span class="s">"glycolysis"</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;listOfCompartments&gt;</span>
+<span class="w">    </span><span class="nt">&lt;compartment</span><span class="w"> </span><span class="na">id=</span><span class="s">"cytoplasm"</span><span class="w"> </span><span class="na">size=</span><span class="s">"1"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/listOfCompartments&gt;</span>
+<span class="w">  </span><span class="nt">&lt;listOfSpecies&gt;</span>
+<span class="w">    </span><span class="nt">&lt;species</span><span class="w"> </span><span class="na">id=</span><span class="s">"glucose"</span><span class="w"> </span><span class="na">compartment=</span><span class="s">"cytoplasm"</span><span class="w"> </span><span class="na">initialConcentration=</span><span class="s">"5.0"</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;species</span><span class="w"> </span><span class="na">id=</span><span class="s">"G6P"</span><span class="w"> </span><span class="na">compartment=</span><span class="s">"cytoplasm"</span><span class="w"> </span><span class="na">initialConcentration=</span><span class="s">"0.0"</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/listOfSpecies&gt;</span>
+<span class="w">  </span><span class="nt">&lt;listOfReactions&gt;</span>
+<span class="w">    </span><span class="nt">&lt;reaction</span><span class="w"> </span><span class="na">id=</span><span class="s">"hexokinase"</span><span class="w"> </span><span class="na">reversible=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;listOfReactants&gt;</span>
+<span class="w">        </span><span class="nt">&lt;speciesReference</span><span class="w"> </span><span class="na">species=</span><span class="s">"glucose"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/listOfReactants&gt;</span>
+<span class="w">      </span><span class="nt">&lt;listOfProducts&gt;</span>
+<span class="w">        </span><span class="nt">&lt;speciesReference</span><span class="w"> </span><span class="na">species=</span><span class="s">"G6P"</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/listOfProducts&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/reaction&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/listOfReactions&gt;</span>
+<span class="nt">&lt;/model&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>SBML is the standard exchange format for systems biology models. Repositories like BioModels and the BioCyc database distribute models in SBML format, and simulation tools like COPASI and CellDesigner read and write SBML natively. From a graph perspective, an SBML model defines a bipartite graph: species nodes are connected to reaction nodes by reactant and product edges.</p>
+<h3 id="biopax-format">BioPAX Format</h3>
+<p>The BioPAX Format (Biological Pathway Exchange) is an OWL-based ontology and data format designed specifically for exchanging biological pathway data between databases. While SBML focuses on quantitative simulation, BioPAX focuses on qualitative representation of pathway knowledge — which molecules participate in which reactions, what controls those reactions, and how pathways connect.</p>
+<p>BioPAX defines a class hierarchy of biological entities (Protein, SmallMolecule, Complex, Gene) and interactions (BiochemicalReaction, Catalysis, Control, Transport). Pathway databases like Reactome, KEGG, and BioCyc export their data in BioPAX format, making it possible to integrate pathway knowledge from multiple sources into a single network.</p>
+<p>BioPAX uses three levels of increasing complexity:</p>
+<ul>
+<li><strong>Level 1</strong> — metabolic pathways only</li>
+<li><strong>Level 2</strong> — adds molecular interactions and gene regulation</li>
+<li><strong>Level 3</strong> — adds genetic interactions, molecular location, and generics</li>
+</ul>
+<h3 id="owl-format">OWL Format</h3>
+<p>The OWL Format (Web Ontology Language) is not specific to bioinformatics but is the foundation for many biological ontologies. OWL is a W3C standard for defining ontologies — formal descriptions of concepts, their properties, and the relationships between them. The Gene Ontology, Disease Ontology, Human Phenotype Ontology, and BioPAX itself are all expressed in OWL.</p>
+<p>An OWL ontology defines classes (concepts), properties (relationships between concepts), and individuals (instances of classes). OWL supports logical axioms such as class subsumption (is-a relationships), property restrictions (all values must come from a given class), and equivalence (two classes have exactly the same members). These axioms enable automated reasoning — an OWL reasoner can infer new relationships that are logically implied but not explicitly stated.</p>
+<p>In bioinformatics, OWL is important because it provides the formal underpinning for knowledge graphs. When you represent gene functions using GO terms, diseases using DO terms, and phenotypes using HPO terms, you are working with OWL ontologies that define how those terms relate to each other in a directed acyclic graph.</p>
+<h2 id="general-purpose-formats-csv-and-json">General-Purpose Formats: CSV and JSON</h2>
+<p>Not all bioinformatics data fits neatly into domain-specific formats. Many analysis results, metadata tables, and intermediate files use general-purpose formats.</p>
+<h3 id="csv-for-bioinformatics">CSV for Bioinformatics</h3>
+<p>CSV for Bioinformatics (Comma-Separated Values, or its tab-separated variant TSV) is the workhorse format for tabular data. Gene expression matrices, differential expression results, annotation tables, sample metadata, and many database downloads arrive as CSV or TSV files.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>gene_id,gene_name,log2fc,pvalue,padj
+ENSG00000141510,TP53,2.34,1.2e-15,3.6e-12
+ENSG00000012048,BRCA1,-1.87,4.5e-10,8.1e-07
+ENSG00000139618,BRCA2,-0.95,2.3e-06,1.8e-03
+</code></pre></div></td></tr></tbody></table></div>
+<p>Best practices for CSV in bioinformatics include:</p>
+<ul>
+<li>Use TSV (tab-delimited) rather than CSV when field values may contain commas (e.g., gene descriptions)</li>
+<li>Always include a header row with column names</li>
+<li>Use consistent missing value codes (<code>NA</code>, not empty cells or mixed representations)</li>
+<li>Quote fields that contain delimiter characters</li>
+<li>Store genomic coordinates with explicit column names indicating the coordinate system (0-based or 1-based)</li>
+</ul>
+<h3 id="json-for-bioinformatics">JSON for Bioinformatics</h3>
+<p>JSON for Bioinformatics (JavaScript Object Notation) has become increasingly important as biological databases shift from flat files to web APIs. REST API responses from NCBI, UniProt, Ensembl, and other databases are typically returned in JSON format. JSON's hierarchical structure makes it well-suited for representing nested biological data — a gene with multiple transcripts, each containing multiple exons, maps naturally to nested JSON objects.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"gene_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ENSG00000141510"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"TP53"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"biotype"</span><span class="p">:</span><span class="w"> </span><span class="s2">"protein_coding"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"transcripts"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"transcript_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ENST00000269305"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"is_canonical"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"exons"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">7571720</span><span class="p">,</span><span class="w"> </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">7571865</span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="nt">"start"</span><span class="p">:</span><span class="w"> </span><span class="mi">7573927</span><span class="p">,</span><span class="w"> </span><span class="nt">"end"</span><span class="p">:</span><span class="w"> </span><span class="mi">7574033</span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>JSON is human-readable, well-supported by every programming language, and handles heterogeneous data structures that would be awkward in tabular formats. However, JSON files are larger than equivalent binary formats, and parsing large JSON files (tens of gigabytes) can be memory-intensive. For very large datasets, line-delimited JSON (JSONL), where each line is an independent JSON object, offers a good compromise between structure and scalability.</p>
+<h2 id="data-format-conversion">Data Format Conversion</h2>
+<p>Real bioinformatics pipelines rarely use a single format from start to finish. Data Format Conversion — translating data from one format to another — is one of the most common tasks in day-to-day bioinformatics work. Every conversion requires understanding the source format, the target format, and what information may be lost or gained in translation.</p>
+<p>Common conversion scenarios include:</p>
+<table>
+<thead>
+<tr>
+<th>From</th>
+<th>To</th>
+<th>Tool(s)</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FASTQ</td>
+<td>FASTA</td>
+<td>seqtk, awk</td>
+<td>Discards quality scores</td>
+</tr>
+<tr>
+<td>SAM</td>
+<td>BAM</td>
+<td>samtools view</td>
+<td>Lossless binary compression</td>
+</tr>
+<tr>
+<td>BAM</td>
+<td>FASTQ</td>
+<td>samtools fastq, bedtools</td>
+<td>Extracts reads from alignments</td>
+</tr>
+<tr>
+<td>GFF3</td>
+<td>BED</td>
+<td>gff2bed (BEDOPS)</td>
+<td>Adjusts coordinate system (1-based to 0-based)</td>
+</tr>
+<tr>
+<td>BED</td>
+<td>GFF3</td>
+<td>bed2gff</td>
+<td>Adjusts coordinate system (0-based to 1-based)</td>
+</tr>
+<tr>
+<td>GenBank</td>
+<td>FASTA</td>
+<td>BioPython, seqret (EMBOSS)</td>
+<td>Extracts sequence only</td>
+</tr>
+<tr>
+<td>GenBank</td>
+<td>GFF3</td>
+<td>bp_genbank2gff3 (BioPerl)</td>
+<td>Extracts feature annotations</td>
+</tr>
+<tr>
+<td>VCF</td>
+<td>TSV</td>
+<td>bcftools query</td>
+<td>Custom column extraction</td>
+</tr>
+<tr>
+<td>PDB</td>
+<td>mmCIF</td>
+<td>gemmi, BioPython</td>
+<td>Modern structure format</td>
+</tr>
+<tr>
+<td>SBML</td>
+<td>BioPAX</td>
+<td>Specialized converters</td>
+<td>May lose quantitative details</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Pro Tip from Olli</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+Before writing your own format conversion script, check whether a well-tested tool already exists. samtools, bedtools, bcftools, seqtk, and BioPython handle the vast majority of common conversions. These tools have been used by thousands of researchers and handle edge cases (malformed records, missing fields, encoding differences) that a quick custom script will miss. Only write custom parsers when you have a genuinely unusual format.</p>
+</div>
+<p>Key principles for reliable format conversion:</p>
+<ol>
+<li><strong>Validate before converting</strong> — check that the input file conforms to its format specification before feeding it to a converter</li>
+<li><strong>Understand coordinate systems</strong> — always verify whether positions are 0-based or 1-based, and whether intervals are half-open or closed</li>
+<li><strong>Check for information loss</strong> — converting from a richer format to a simpler one (e.g., GenBank to FASTA) necessarily discards information; make sure you do not need what is lost</li>
+<li><strong>Preserve metadata</strong> — when possible, carry forward sample names, quality metrics, and provenance information through each conversion step</li>
+<li><strong>Verify round-trip fidelity</strong> — if you convert from A to B and back to A, the result should match the original (when the formats have comparable expressiveness)</li>
+</ol>
+<h2 id="data-quality-control">Data Quality Control</h2>
+<p>Data Quality Control encompasses the practices and tools used to assess, filter, and improve the quality of bioinformatics data before analysis. Quality control is not a single step but a continuous process applied at every stage of a pipeline — from raw sequencing reads through final variant calls or expression estimates.</p>
+<h3 id="quality-control-for-sequencing-data">Quality Control for Sequencing Data</h3>
+<p>The most common quality control step in bioinformatics is assessing raw FASTQ files with tools like FastQC and MultiQC. FastQC produces a series of diagnostic plots for each FASTQ file.</p>
+<p>Key quality metrics for sequencing data include:</p>
+<ul>
+<li><strong>Per-base quality scores</strong> — quality should remain high (above Phred 20-30) across the read length; a drop at the 3' end is common and may require trimming</li>
+<li><strong>Per-sequence quality distribution</strong> — the majority of reads should have high average quality</li>
+<li><strong>Sequence content</strong> — base composition should be roughly uniform (for whole-genome data) or match expected patterns (for targeted sequencing)</li>
+<li><strong>GC content</strong> — the distribution should match the expected GC content of the organism; bimodal distributions suggest contamination</li>
+<li><strong>Adapter content</strong> — sequencing adapters should be removed by trimming tools (Trimmomatic, fastp, cutadapt) before alignment</li>
+<li><strong>Duplication levels</strong> — high duplication rates may indicate PCR amplification bias or low library complexity</li>
+</ul>
+<h4 id="diagram-fastq-quality-control-pipeline">Diagram: FASTQ Quality Control Pipeline</h4>
+<iframe src="../../sims/fastq-qc-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Diagram Specification</summary>
+<ul>
+<li><strong>Sim ID</strong>: fastq-qc-pipeline</li>
+<li><strong>Library</strong>: vis-network</li>
+<li><strong>Status</strong>: Specified</li>
+</ul>
+<p>This interactive flowchart diagram shows the steps in a FASTQ quality control pipeline as a directed graph. Nodes represent processing steps (Raw FASTQ, FastQC Assessment, Adapter Trimming, Quality Trimming, Length Filtering, Clean FASTQ, MultiQC Report). Edges are directed arrows showing the data flow. Decision nodes indicate pass/fail quality checks. Color coding: input/output nodes in blue, QC assessment nodes in green, trimming/filtering nodes in orange, decision nodes in yellow. Layout is top-to-bottom to show pipeline flow.</p>
+<p>Note: Apply slight y-offset (from 480 to 490) for any horizontal edges to avoid the vis-network label rendering bug.</p>
+</details>
+<h3 id="quality-control-for-alignments-and-variants">Quality Control for Alignments and Variants</h3>
+<p>Quality control extends beyond raw reads to every downstream data product:</p>
+<ul>
+<li><strong>Alignment QC</strong> — samtools flagstat and Picard CollectAlignmentSummaryMetrics report mapping rates, duplicate rates, and insert size distributions for BAM files</li>
+<li><strong>Variant QC</strong> — bcftools stats reports variant counts by type (SNP, indel), transition/transversion ratios (<span class="arithmatex">\(Ti/Tv\)</span> ratio should be approximately 2.0-2.1 for whole-genome SNPs in humans), and heterozygosity rates</li>
+<li><strong>Annotation QC</strong> — checking that GFF3 files have valid parent-child relationships, that all feature types are from controlled vocabularies, and that coordinates fall within chromosome boundaries</li>
+</ul>
+<p>A robust quality control strategy follows a consistent pattern:</p>
+<ol>
+<li><strong>Assess</strong> — run diagnostic tools and generate quality reports</li>
+<li><strong>Evaluate</strong> — compare metrics against known thresholds and expectations</li>
+<li><strong>Filter or correct</strong> — trim low-quality bases, remove adapter sequences, mark duplicates, or exclude failed samples</li>
+<li><strong>Re-assess</strong> — verify that filtering improved data quality without excessive data loss</li>
+<li><strong>Document</strong> — record all QC parameters, thresholds, and tool versions for reproducibility</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Pipeline Stage</th>
+<th>QC Tools</th>
+<th>Key Metrics</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raw reads (FASTQ)</td>
+<td>FastQC, MultiQC</td>
+<td>Per-base quality, adapter content, GC distribution</td>
+</tr>
+<tr>
+<td>Alignment (BAM)</td>
+<td>samtools flagstat, Picard</td>
+<td>Mapping rate, duplicate rate, insert size</td>
+</tr>
+<tr>
+<td>Variants (VCF)</td>
+<td>bcftools stats, VariantQC</td>
+<td>Ti/Tv ratio, het/hom ratio, call rate</td>
+</tr>
+<tr>
+<td>Annotations (GFF3)</td>
+<td>GenomeTools gff3validator</td>
+<td>Parent-child integrity, valid feature types</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work, Investigators!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You now speak the languages of bioinformatics data! From the simplicity of FASTA to the complexity of SBML and BioPAX, you understand the formats that carry sequences, qualities, annotations, variants, structures, and pathways through analysis pipelines. More importantly, you know that converting between these formats, validating their contents, and controlling data quality are skills just as critical as running the analysis itself. In the chapters ahead, we will put these formats to work — reading them, writing them, and building graphs from the relationships they encode. Onward!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ol>
+<li>
+<p><strong>FASTA</strong> is the simplest sequence format, storing only a header and a sequence. It is universally accepted but carries no quality information.</p>
+</li>
+<li>
+<p><strong>FASTQ</strong> extends FASTA with per-base Phred quality scores, making it the standard format for raw sequencing reads. The quality encoding (<span class="arithmatex">\(Q = -10 \cdot \log_{10}(P)\)</span>) quantifies base-call confidence.</p>
+</li>
+<li>
+<p><strong>GenBank</strong> format provides richly annotated sequence records including organism metadata, literature references, feature annotations, and cross-references to other databases.</p>
+</li>
+<li>
+<p><strong>GFF3</strong> is the standard tab-delimited format for genomic annotations, using 1-based fully closed coordinates and Parent attributes to define hierarchical gene models.</p>
+</li>
+<li>
+<p><strong>BED</strong> format uses 0-based half-open coordinates for genomic intervals — the coordinate difference from GFF3 is a persistent source of off-by-one errors.</p>
+</li>
+<li>
+<p><strong>VCF</strong> is the standard format for genetic variant representation, encoding SNPs, insertions, deletions, and structural variants relative to a reference genome with per-sample genotype information.</p>
+</li>
+<li>
+<p><strong>SAM/BAM</strong> files store sequence alignments, with BAM providing compressed binary storage and random access. The FLAG field and CIGAR string are essential for interpreting alignment records.</p>
+</li>
+<li>
+<p><strong>PDB</strong> format stores three-dimensional atomic coordinates of biological macromolecules using fixed-column-width records, with chain identifiers that implicitly encode protein complex composition.</p>
+</li>
+<li>
+<p><strong>SBML</strong> encodes quantitative systems biology models (species, reactions, kinetics), while <strong>BioPAX</strong> encodes qualitative pathway knowledge (interactions, regulations, pathway membership).</p>
+</li>
+<li>
+<p><strong>OWL</strong> provides the formal ontology framework underlying Gene Ontology, Disease Ontology, and other controlled vocabularies that structure biological knowledge as directed acyclic graphs.</p>
+</li>
+<li>
+<p><strong>CSV/TSV</strong> and <strong>JSON</strong> serve as general-purpose formats for tabular data and hierarchical API responses, respectively, complementing the domain-specific formats.</p>
+</li>
+<li>
+<p><strong>Data format conversion</strong> requires understanding coordinate systems, information content differences, and the availability of validated tools like samtools, bedtools, bcftools, and BioPython.</p>
+</li>
+<li>
+<p><strong>Data quality control</strong> is a continuous process applied at every pipeline stage — from raw read assessment (FastQC) through alignment QC (samtools flagstat) to variant QC (bcftools stats) — and must be documented for reproducibility.</p>
+</li>
+</ol>
 
 
 
