@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Gene Ontology, knowledge graph construction, graph embeddings, link prediction, GNNs, and text mining for biology">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>14. Knowledge Graphs - Bioinformatics</title>
+        <title>Biomedical Knowledge Graphs and Ontologies - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="14. Knowledge Graphs - Bioinformatics">
+        <meta property="og:title" content="Biomedical Knowledge Graphs and Ontologies - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Gene Ontology, knowledge graph construction, graph embeddings, link prediction, GNNs, and text mining for biology">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/14-knowledge-graphs-ontologies/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="14. Knowledge Graphs - Bioinformatics">
+        <meta name="twitter:title" content="Biomedical Knowledge Graphs and Ontologies - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Gene Ontology, knowledge graph construction, graph embeddings, link prediction, GNNs, and text mining for biology">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/14-knowledge-graphs-ontologies/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14. Knowledge Graphs
+              Biomedical Knowledge Graphs and Ontologies
             
           </span>
         </div>
@@ -788,6 +788,270 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-a-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Knowledge Graph?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is a Knowledge Graph?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-biomedical-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a Biomedical Knowledge Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologies-the-backbone-of-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontologies: The Backbone of Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ontologies: The Backbone of Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gene-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gene Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go-term-enrichment-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      GO Term Enrichment Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-and-phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease and Phenotype Ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-reasoning-and-semantic-similarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology Reasoning and Semantic Similarity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-knowledge-graphs-from-heterogeneous-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Knowledge Graphs from Heterogeneous Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Knowledge Graphs from Heterogeneous Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-knowledge-graph-construction-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Knowledge Graph Construction Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-hetionet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Hetionet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-embeddings-for-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Embeddings for Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Embeddings for Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node2vec-random-walks-on-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node2Vec: Random Walks on Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Node2Vec: Random Walks on Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-node2vec-biased-random-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Node2Vec Biased Random Walk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transe-translating-embeddings-for-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TransE: Translating Embeddings for Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-prediction-and-triple-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link Prediction and Triple Classification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-mining-for-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Mining for Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Mining for Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-mining-pipeline-for-knowledge-graph-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Mining Pipeline for Knowledge Graph Population
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-neural-networks-for-biomedical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Neural Networks for Biomedical Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Neural Networks for Biomedical Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-message-passing-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Message Passing Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnns-for-molecular-property-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNNs for Molecular Property Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnns-for-knowledge-graph-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNNs for Knowledge Graph Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-ontology-to-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Ontology to Prediction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: From Ontology to Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-integrated-knowledge-graph-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Integrated Knowledge Graph Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -871,6 +1135,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -920,6 +1188,30 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -933,7 +1225,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -948,6 +1240,26 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1065,6 +1377,270 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#what-is-a-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Knowledge Graph?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What Is a Knowledge Graph?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-anatomy-of-a-biomedical-knowledge-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Anatomy of a Biomedical Knowledge Graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ontologies-the-backbone-of-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontologies: The Backbone of Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ontologies: The Backbone of Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-gene-ontology" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Gene Ontology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#go-term-enrichment-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      GO Term Enrichment Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#disease-and-phenotype-ontologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease and Phenotype Ontologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology-reasoning-and-semantic-similarity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ontology Reasoning and Semantic Similarity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-knowledge-graphs-from-heterogeneous-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building Knowledge Graphs from Heterogeneous Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Building Knowledge Graphs from Heterogeneous Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-knowledge-graph-construction-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Knowledge Graph Construction Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-study-hetionet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Study: Hetionet
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-embeddings-for-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Embeddings for Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Embeddings for Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node2vec-random-walks-on-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node2Vec: Random Walks on Graphs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Node2Vec: Random Walks on Graphs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-node2vec-biased-random-walk" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Node2Vec Biased Random Walk
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transe-translating-embeddings-for-knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      TransE: Translating Embeddings for Knowledge Graphs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#link-prediction-and-triple-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Link Prediction and Triple Classification
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-mining-for-biomedical-knowledge" class="md-nav__link">
+    <span class="md-ellipsis">
+      Text Mining for Biomedical Knowledge
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Text Mining for Biomedical Knowledge">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-text-mining-pipeline-for-knowledge-graph-population" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Text Mining Pipeline for Knowledge Graph Population
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-neural-networks-for-biomedical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Neural Networks for Biomedical Applications
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Neural Networks for Biomedical Applications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-message-passing-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Message Passing Framework
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnns-for-molecular-property-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNNs for Molecular Property Prediction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gnns-for-knowledge-graph-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      GNNs for Knowledge Graph Reasoning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-ontology-to-prediction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Ontology to Prediction
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Putting It All Together: From Ontology to Prediction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-integrated-knowledge-graph-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Integrated Knowledge Graph Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1134,7 +1710,354 @@
 <li><a href="../08-structural-bioinformatics/">Chapter 8: Structural Bioinformatics and Molecular Interactions</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+Throughout this course we have modeled sequences as graphs, phylogenies as trees, protein interactions as networks, and metabolic reactions as hypergraphs. Now we bring all of those representations together inside a single unified structure: the <strong>knowledge graph</strong>. In this chapter we will explore how biomedical ontologies give meaning to nodes and edges, how graph embeddings compress vast networks into learnable vectors, and how graph neural networks predict molecular properties. This is the capstone of our graph journey -- let's connect the dots!</p>
+</div>
+<h2 id="what-is-a-knowledge-graph">What Is a Knowledge Graph?</h2>
+<p>A <strong>knowledge graph</strong> is a directed, labeled multigraph in which nodes represent real-world entities and edges represent typed relationships between them. Every edge is stored as a triple <span class="arithmatex">\((h, r, t)\)</span> where <span class="arithmatex">\(h\)</span> is the head entity, <span class="arithmatex">\(r\)</span> is the relation type, and <span class="arithmatex">\(t\)</span> is the tail entity. For example, the triple (TP53, associated_with, Li-Fraumeni syndrome) states that the gene TP53 is associated with a specific cancer predisposition syndrome. Because entities and relations carry explicit types and labels, knowledge graphs are inherently semantic: they encode not just structure but meaning.</p>
+<p>A <strong>biomedical knowledge graph</strong> specializes this framework by drawing its entities from the life sciences -- genes, proteins, diseases, drugs, pathways, anatomical structures, and phenotypes -- and its relations from curated biological databases and the scientific literature. Biomedical knowledge graphs are distinguished by their extreme heterogeneity: a single graph may contain dozens of node types and hundreds of edge types. This heterogeneity is a strength, because it allows a single query to traverse from a drug to its protein target, through a signaling pathway (Chapter 13), into a disease module, and out to a clinical phenotype -- all within one connected structure.</p>
+<h4 id="diagram-anatomy-of-a-biomedical-knowledge-graph">Diagram: Anatomy of a Biomedical Knowledge Graph</h4>
+<iframe src="../../sims/biomedical-kg-anatomy/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/biomedical-kg-anatomy/main.html">View Biomedical Knowledge Graph Anatomy MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: biomedical-kg-anatomy
+Library: vis-network
+Status: Specified
+
+A heterogeneous graph with color-coded node types: genes (blue), diseases (red), drugs (green), phenotypes (orange), and GO terms (purple). Edges are labeled with relation types such as "targets," "associated_with," "treats," and "annotated_to." A legend maps colors to entity types.
+</details>
+
+<p>The idea of a <strong>graph model for knowledge</strong> is not new -- semantic web technologies like RDF and OWL have used triples for decades -- but the explosion of biomedical data has made knowledge graphs indispensable for modern bioinformatics. Where traditional relational databases require rigid schemas and expensive JOIN operations to connect disparate tables (Chapter 5), knowledge graphs store relationships as first-class citizens, making multi-hop queries natural and efficient.</p>
+<h2 id="ontologies-the-backbone-of-biomedical-knowledge">Ontologies: The Backbone of Biomedical Knowledge</h2>
+<p>An ontology is a formal specification of a shared conceptualization. In practice, a biomedical ontology defines a controlled vocabulary of terms, organizes those terms into a hierarchy, and specifies the logical relationships among them. The <strong>ontology structure</strong> of most biomedical ontologies is a directed acyclic graph (DAG), not a simple tree, because a single term can have multiple parents. For example, the Gene Ontology term "cell adhesion" is a child of both "biological adhesion" and "cellular process."</p>
+<h3 id="the-gene-ontology">The Gene Ontology</h3>
+<p>The <strong>Gene Ontology</strong> (GO) is the most widely used ontology in bioinformatics. It provides a structured vocabulary for describing gene and protein function across all organisms. GO is organized into three independent sub-ontologies, each capturing a different dimension of function:</p>
+<ul>
+<li>
+<p><strong>GO Molecular Function</strong> describes the elemental activities of a gene product at the biochemical level -- what a protein does in isolation. Examples include "protein kinase activity," "DNA binding," and "ATP hydrolase activity." A molecular function term answers the question "what does this protein do?"</p>
+</li>
+<li>
+<p><strong>GO Biological Process</strong> describes the larger biological objectives accomplished by ordered assemblies of molecular functions. Examples include "apoptotic process," "signal transduction," and "DNA repair." A biological process term answers the question "why does the cell need this activity?"</p>
+</li>
+<li>
+<p><strong>GO Cellular Component</strong> describes the subcellular location or macromolecular complex where a gene product performs its function. Examples include "nucleus," "mitochondrial inner membrane," and "proteasome complex." A cellular component term answers the question "where in the cell does this happen?"</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Sub-Ontology</th>
+<th>Question Answered</th>
+<th>Example Terms</th>
+<th>Approximate Term Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Molecular Function</td>
+<td>What does it do?</td>
+<td>Kinase activity, DNA binding</td>
+<td>~12,000</td>
+</tr>
+<tr>
+<td>Biological Process</td>
+<td>Why is it needed?</td>
+<td>Apoptosis, DNA repair</td>
+<td>~30,000</td>
+</tr>
+<tr>
+<td>Cellular Component</td>
+<td>Where does it act?</td>
+<td>Nucleus, ribosome</td>
+<td>~4,500</td>
+</tr>
+</tbody>
+</table>
+<p>Each GO annotation links a gene product to a GO term together with an evidence code indicating the type of experimental or computational support. Evidence codes range from IDA (Inferred from Direct Assay) for high-confidence experimental results to IEA (Inferred from Electronic Annotation) for automated predictions. The combination of a structured vocabulary, a DAG hierarchy, and evidence-backed annotations makes GO an extraordinarily powerful resource for functional analysis.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Think About It: Why a DAG Instead of a Tree?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+If GO used a strict tree structure, every term could have only one parent, and we would lose crucial biological nuance. "Glucose transport" is both a "carbohydrate transport" and a "sugar import" -- forcing a single-parent hierarchy would require us to choose one, losing the other relationship. The DAG structure lets biology, not data-modeling convenience, dictate the hierarchy.</p>
+</div>
+<h3 id="go-term-enrichment-analysis">GO Term Enrichment Analysis</h3>
+<p><strong>GO term enrichment</strong> analysis determines whether a set of genes (for example, the differentially expressed genes from a transcriptomics experiment in Chapter 11) is statistically enriched for particular GO terms compared to a background gene set. The standard statistical test is the hypergeometric test. Given a universe of <span class="arithmatex">\(N\)</span> genes, of which <span class="arithmatex">\(K\)</span> are annotated to a specific GO term, and a query set of <span class="arithmatex">\(n\)</span> genes, of which <span class="arithmatex">\(k\)</span> are annotated to the term, the probability of observing <span class="arithmatex">\(k\)</span> or more annotated genes by chance is:</p>
+<div class="arithmatex">\[P(X \geq k) = 1 - \sum_{i=0}^{k-1} \frac{\binom{K}{i}\binom{N-K}{n-i}}{\binom{N}{n}}\]</div>
+<p>A small <span class="arithmatex">\(p\)</span>-value indicates that the GO term is significantly overrepresented in the query set. Because thousands of GO terms are tested simultaneously, multiple testing correction (typically Benjamini-Hochberg false discovery rate) is essential. GO enrichment analysis bridges the gap between a list of genes and biological interpretation -- it answers the question "what processes are these genes collectively involved in?"</p>
+<h3 id="disease-and-phenotype-ontologies">Disease and Phenotype Ontologies</h3>
+<p>Beyond GO, several ontologies capture disease and phenotypic knowledge. The <strong>Disease Ontology</strong> (DO) provides a hierarchical classification of human diseases organized by etiology, anatomical site, and clinical presentation. DO terms link diseases to their genetic basis, enabling queries such as "find all genes associated with autoimmune diseases" by traversing the ontology DAG from a broad category to its children.</p>
+<p>The <strong>Human Phenotype Ontology</strong> (HPO) describes the clinical phenotypes -- observable signs and symptoms -- associated with human genetic diseases. HPO is particularly valuable for rare disease diagnosis (Capstone Project 2) because it allows clinicians to encode a patient's phenotypic profile as a set of HPO terms and then compute the similarity between that profile and known disease phenotype profiles using graph-based metrics.</p>
+<h3 id="ontology-reasoning-and-semantic-similarity">Ontology Reasoning and Semantic Similarity</h3>
+<p><strong>Ontology reasoning</strong> exploits the logical structure of the DAG to infer implicit knowledge from explicit annotations. The most common reasoning rule is the "true path rule": if a gene product is annotated to a GO term, it is implicitly annotated to all ancestor terms as well. This propagation allows enrichment analyses to capture broad functional themes even when individual annotations are very specific.</p>
+<p><strong>Semantic similarity</strong> quantifies how closely related two ontology terms (or two genes) are based on their positions in the DAG. The information content (IC) of a term <span class="arithmatex">\(t\)</span> is defined as <span class="arithmatex">\(IC(t) = -\log p(t)\)</span>, where <span class="arithmatex">\(p(t)\)</span> is the frequency of annotations to <span class="arithmatex">\(t\)</span> and its descendants. The Resnik similarity between two terms is the IC of their most informative common ancestor (MICA):</p>
+<div class="arithmatex">\[sim_{Resnik}(t_1, t_2) = IC(MICA(t_1, t_2))\]</div>
+<p>Higher IC values correspond to more specific (and therefore more informative) shared ancestors. Semantic similarity is the computational backbone of phenotype-driven disease diagnosis, where a patient's HPO term set is compared against all known disease profiles to generate a ranked list of candidate diagnoses.</p>
+<h2 id="building-knowledge-graphs-from-heterogeneous-data">Building Knowledge Graphs from Heterogeneous Data</h2>
+<p>Real-world biomedical data is scattered across hundreds of databases, each with its own schema, identifier system, and update cycle. Constructing a biomedical knowledge graph requires integrating this <strong>heterogeneous data</strong> into a unified graph structure -- a process that involves three major challenges: schema mapping, entity resolution, and data integration.</p>
+<p><strong>Schema mapping</strong> is the process of aligning the data models of different source databases so that their entities and relationships can be represented in a common graph schema. For example, one database might store protein-disease associations as a two-column table with UniProt IDs and OMIM disease IDs, while another stores them as RDF triples with Entrez Gene IDs and Disease Ontology IDs. Schema mapping defines how these different representations correspond to the same edge type in the target knowledge graph.</p>
+<p><strong>Entity resolution</strong> (also called record linkage or entity disambiguation) identifies when different identifiers or names in different databases refer to the same real-world entity. The gene TP53 may appear as "P53_HUMAN" in UniProt, "7157" in Entrez Gene, and "ENSG00000141510" in Ensembl. Entity resolution maps all of these to a single canonical node in the knowledge graph. Cross-reference databases like UniProt ID mapping and the HUGO Gene Nomenclature Committee (HGNC) provide curated mappings that facilitate this process.</p>
+<p><strong>Data integration</strong> is the overarching process of combining schema-mapped, entity-resolved data from multiple sources into a single coherent knowledge graph. A typical biomedical knowledge graph integration pipeline extracts triples from each source database, normalizes identifiers, resolves conflicts (such as contradictory interaction directions), assigns confidence scores, and loads the resulting triples into a graph database for querying.</p>
+<h4 id="diagram-knowledge-graph-construction-pipeline">Diagram: Knowledge Graph Construction Pipeline</h4>
+<iframe src="../../sims/kg-construction-pipeline/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/kg-construction-pipeline/main.html">View Knowledge Graph Construction Pipeline MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: kg-construction-pipeline
+Library: vis-network
+Status: Specified
+
+A left-to-right flowchart showing multiple source databases (UniProt, OMIM, DrugBank, GO) feeding into extraction nodes, then schema mapping, entity resolution, and data integration steps, ending with a single unified knowledge graph node. Arrows are labeled with the transformation at each stage.
+</details>
+
+<div class="admonition mascot-tip">
+<p class="admonition-title">Tip: Start with Established Knowledge Graphs</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+Building a biomedical knowledge graph from scratch is a massive engineering effort. Before starting your own, investigate whether an existing resource meets your needs. Hetionet, the Monarch Initiative, the Biological Expression Language (BEL), and the Open Biological and Biomedical Ontology (OBO) Foundry all provide curated, ready-to-use knowledge graphs and ontologies.</p>
+</div>
+<h3 id="case-study-hetionet">Case Study: Hetionet</h3>
+<p><strong>Hetionet</strong> is an open-source biomedical knowledge graph that integrates data from 29 public databases into a single heterogeneous network. It contains 47,031 nodes of 11 types (genes, compounds, diseases, anatomies, pathways, biological processes, cellular components, molecular functions, side effects, pharmacologic classes, and symptoms) and 2,250,197 edges of 24 types. Hetionet was specifically designed to support drug repurposing through systematic exploration of the paths connecting compounds to diseases (Case Study 2).</p>
+<p>The power of Hetionet lies in its ability to encode indirect relationships. A drug may not directly treat a particular disease, but Hetionet can reveal that the drug targets a protein that participates in a biological process that is disrupted in the disease. By extracting and scoring all such metapaths -- sequences of edge types connecting a compound to a disease -- researchers identified novel drug repurposing candidates that were subsequently validated in independent datasets.</p>
+<table>
+<thead>
+<tr>
+<th>Hetionet Feature</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nodes</td>
+<td>47,031</td>
+</tr>
+<tr>
+<td>Node types</td>
+<td>11</td>
+</tr>
+<tr>
+<td>Edges</td>
+<td>2,250,197</td>
+</tr>
+<tr>
+<td>Edge types</td>
+<td>24</td>
+</tr>
+<tr>
+<td>Source databases</td>
+<td>29</td>
+</tr>
+<tr>
+<td>Primary application</td>
+<td>Drug repurposing</td>
+</tr>
+</tbody>
+</table>
+<h2 id="graph-embeddings-for-biomedical-knowledge">Graph Embeddings for Biomedical Knowledge</h2>
+<p>The knowledge graphs we have been discussing may contain millions of nodes and edges. To make this information accessible to machine learning algorithms, we need to compress the graph structure into dense, low-dimensional vectors -- a process called <strong>graph embeddings</strong>. Each node (and sometimes each edge) is mapped to a vector in <span class="arithmatex">\(\mathbb{R}^d\)</span> such that the geometric relationships between vectors reflect the topological relationships in the graph. Once nodes are embedded, standard machine learning algorithms can perform tasks like link prediction, node classification, and clustering.</p>
+<h3 id="node2vec-random-walks-on-graphs">Node2Vec: Random Walks on Graphs</h3>
+<p><strong>Node2Vec</strong> extends the word2vec idea from natural language processing to graphs. Just as word2vec learns word embeddings from sequences of words in sentences, Node2Vec learns node embeddings from sequences of nodes generated by random walks on the graph. The key innovation is the use of biased random walks that interpolate between breadth-first search (BFS) and depth-first search (DFS) exploration strategies.</p>
+<p>Given a random walk that has just traversed edge <span class="arithmatex">\((t, v)\)</span> and is now at node <span class="arithmatex">\(v\)</span>, the probability of transitioning to a neighbor <span class="arithmatex">\(x\)</span> of <span class="arithmatex">\(v\)</span> is:</p>
+<div class="arithmatex">\[P(c_i = x \mid c_{i-1} = v) = \frac{\alpha_{pq}(t, x) \cdot w_{vx}}{Z}\]</div>
+<p>where <span class="arithmatex">\(w_{vx}\)</span> is the edge weight, <span class="arithmatex">\(Z\)</span> is a normalizing constant, and <span class="arithmatex">\(\alpha_{pq}\)</span> is the search bias defined as:</p>
+<div class="arithmatex">\[\alpha_{pq}(t, x) = \begin{cases} \frac{1}{p} &amp; \text{if } d_{tx} = 0 \\ 1 &amp; \text{if } d_{tx} = 1 \\ \frac{1}{q} &amp; \text{if } d_{tx} = 2 \end{cases}\]</div>
+<p>Here <span class="arithmatex">\(d_{tx}\)</span> is the shortest-path distance between the previous node <span class="arithmatex">\(t\)</span> and the candidate next node <span class="arithmatex">\(x\)</span>. The return parameter <span class="arithmatex">\(p\)</span> controls the likelihood of immediately revisiting the previous node (low <span class="arithmatex">\(p\)</span> encourages backtracking), while the in-out parameter <span class="arithmatex">\(q\)</span> governs whether the walk explores the local neighborhood (high <span class="arithmatex">\(q\)</span>, BFS-like) or ventures further away (low <span class="arithmatex">\(q\)</span>, DFS-like). BFS-like walks capture structural equivalence (nodes that play similar roles), while DFS-like walks capture homophily (nodes in the same community). In a biomedical knowledge graph, tuning <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\(q\)</span> allows Node2Vec to learn embeddings that emphasize either local functional similarity or global pathway membership.</p>
+<h4 id="diagram-node2vec-biased-random-walk">Diagram: Node2Vec Biased Random Walk</h4>
+<iframe src="../../sims/node2vec-random-walk/main.html" width="100%" height="540" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/node2vec-random-walk/main.html">View Node2Vec Random Walk MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: node2vec-random-walk
+Library: p5.js
+Status: Specified
+
+An animated graph with nodes and edges. A walker (highlighted circle) moves step by step along a random walk. At each step, candidate neighbors are shown with their transition probabilities labeled as 1/p, 1, or 1/q depending on their distance to the previous node. Sliders control p and q values and the animation shows how walk behavior changes.
+</details>
+
+<h3 id="transe-translating-embeddings-for-knowledge-graphs">TransE: Translating Embeddings for Knowledge Graphs</h3>
+<p>While Node2Vec treats the graph as homogeneous (ignoring edge types), <strong>knowledge graph embedding</strong> methods explicitly model the different relation types. <strong>TransE</strong> is the foundational model in this family. Its core idea is elegant: if a triple <span class="arithmatex">\((h, r, t)\)</span> holds, then the embedding of the head entity plus the embedding of the relation should be close to the embedding of the tail entity:</p>
+<div class="arithmatex">\[\mathbf{h} + \mathbf{r} \approx \mathbf{t}\]</div>
+<p>The scoring function measures how well a triple satisfies this translation constraint:</p>
+<div class="arithmatex">\[f(h, r, t) = -\|\mathbf{h} + \mathbf{r} - \mathbf{t}\|_{L_1 \text{ or } L_2}\]</div>
+<p>Higher scores (less negative) indicate more plausible triples. TransE is trained by minimizing a margin-based ranking loss that pushes the score of true triples above the score of corrupted (false) triples:</p>
+<div class="arithmatex">\[\mathcal{L} = \sum_{(h,r,t) \in S} \sum_{(h',r,t') \in S'} \max(0, \gamma + f(h',r,t') - f(h,r,t))\]</div>
+<p>where <span class="arithmatex">\(S\)</span> is the set of observed triples, <span class="arithmatex">\(S'\)</span> is the set of corrupted triples (generated by replacing <span class="arithmatex">\(h\)</span> or <span class="arithmatex">\(t\)</span> with a random entity), and <span class="arithmatex">\(\gamma\)</span> is the margin hyperparameter. TransE works well for one-to-one relations but struggles with one-to-many and many-to-many relations (for example, "gene -- participates_in -- pathway" where many genes participate in the same pathway). Extensions such as TransR, RotatE, and ComplEx address these limitations by using more expressive transformation functions.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Think About It: Why Does Translation Work for Relations?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+Consider the analogy from word embeddings: "king" - "man" + "woman" <span class="arithmatex">\(\approx\)</span> "queen." The vector from "man" to "king" is approximately the same as the vector from "woman" to "queen." TransE applies the same logic: the relation vector <span class="arithmatex">\(\mathbf{r}\)</span> for "treats" should translate any drug entity close to the disease it treats. Relations become directional offsets in embedding space.</p>
+</div>
+<h2 id="link-prediction-and-triple-classification">Link Prediction and Triple Classification</h2>
+<p>Once entities and relations are embedded, the most powerful downstream task is <strong>link prediction</strong>: given a head entity and a relation, predict the most likely tail entity, or vice versa. In a biomedical knowledge graph, link prediction can answer questions like "which diseases might drug X treat?" or "which genes might be associated with disease Y?" -- questions that are central to drug repurposing (Case Study 2) and rare disease diagnosis (Capstone Project 2).</p>
+<p>Link prediction works by scoring all candidate triples and ranking them. For a query <span class="arithmatex">\((h, r, ?)\)</span>, the model computes <span class="arithmatex">\(f(h, r, t')\)</span> for every candidate entity <span class="arithmatex">\(t'\)</span> and returns the top-ranked candidates. Standard evaluation metrics include Mean Reciprocal Rank (MRR) and Hits@K (the fraction of true tail entities that appear in the top <span class="arithmatex">\(K\)</span> predictions).</p>
+<p><strong>Triple classification</strong> is a related task that determines whether a given triple <span class="arithmatex">\((h, r, t)\)</span> is true or false. A threshold <span class="arithmatex">\(\delta_r\)</span> is learned for each relation type: if <span class="arithmatex">\(f(h, r, t) &gt; \delta_r\)</span>, the triple is classified as positive. Triple classification is useful for validating computationally predicted interactions -- for example, determining whether a predicted gene-disease association is likely to be real.</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Input</th>
+<th>Output</th>
+<th>Biomedical Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Link prediction</td>
+<td><span class="arithmatex">\((h, r, ?)\)</span> or <span class="arithmatex">\((?, r, t)\)</span></td>
+<td>Ranked entity list</td>
+<td>Drug repurposing, gene-disease discovery</td>
+</tr>
+<tr>
+<td>Triple classification</td>
+<td><span class="arithmatex">\((h, r, t)\)</span></td>
+<td>True / False</td>
+<td>Interaction validation</td>
+</tr>
+<tr>
+<td>Relation extraction</td>
+<td>Entity pair + text</td>
+<td>Relation type</td>
+<td>Literature curation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="text-mining-for-biomedical-knowledge">Text Mining for Biomedical Knowledge</h2>
+<p>A large fraction of biomedical knowledge exists only in unstructured text -- the 36 million abstracts in PubMed and millions of full-text articles. <strong>Text mining for biology</strong> extracts structured information from this text and adds it to knowledge graphs, ensuring that the latest findings are captured even before they appear in curated databases.</p>
+<p>The text mining pipeline begins with <strong>named entity recognition</strong> (NER), the task of identifying mentions of biomedical entities (genes, diseases, drugs, mutations) in text. Modern biomedical NER systems use transformer-based language models (such as BioBERT and PubMedBERT) fine-tuned on annotated corpora. Given the sentence "Mutations in BRCA1 are associated with hereditary breast cancer," a NER system would identify "BRCA1" as a gene and "hereditary breast cancer" as a disease.</p>
+<p>After entities are identified, <strong>relation extraction</strong> determines the semantic relationship between pairs of entities mentioned in the same sentence or document. In our example, the system would extract the triple (BRCA1, associated_with, hereditary breast cancer). Relation extraction models are typically trained on curated datasets of known biomedical relationships and can be formulated as sequence classification tasks using the same transformer architectures.</p>
+<h4 id="diagram-text-mining-pipeline-for-knowledge-graph-population">Diagram: Text Mining Pipeline for Knowledge Graph Population</h4>
+<iframe src="../../sims/text-mining-pipeline/main.html" width="100%" height="500" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/text-mining-pipeline/main.html">View Text Mining Pipeline MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: text-mining-pipeline
+Library: vis-network
+Status: Specified
+
+A left-to-right flowchart showing a PubMed abstract as input, followed by NER (with highlighted entity spans), relation extraction (with labeled arcs between entities), and finally new triples being added to a knowledge graph. Color-coded entity types match the knowledge graph node colors.
+</details>
+
+<p>The combination of NER and relation extraction enables large-scale automated knowledge graph construction. The PubTator system, for example, has annotated over 36 million PubMed abstracts with gene, disease, chemical, mutation, and species mentions, providing a rich source of candidate triples for knowledge graph expansion. However, automated extraction introduces noise, so confidence scores and human validation remain essential quality controls.</p>
+<h2 id="graph-neural-networks-for-biomedical-applications">Graph Neural Networks for Biomedical Applications</h2>
+<p>While graph embeddings like Node2Vec and TransE learn static vectors for each node, <strong>graph neural networks</strong> (GNNs) learn dynamic representations that incorporate both node features and graph structure through a process called <strong>message passing</strong>. GNNs have become the state-of-the-art approach for molecular property prediction, drug discovery, and knowledge graph reasoning.</p>
+<h3 id="the-message-passing-framework">The Message Passing Framework</h3>
+<p>In a GNN, each node <span class="arithmatex">\(v\)</span> maintains a feature vector <span class="arithmatex">\(\mathbf{h}_v\)</span> that is iteratively updated by aggregating information from its neighbors. At each layer <span class="arithmatex">\(l\)</span>, the message passing update consists of three steps:</p>
+<div class="arithmatex">\[\mathbf{m}_v^{(l)} = \text{AGGREGATE}\left(\left\{\mathbf{h}_u^{(l-1)} : u \in \mathcal{N}(v)\right\}\right)\]</div>
+<div class="arithmatex">\[\mathbf{h}_v^{(l)} = \text{UPDATE}\left(\mathbf{h}_v^{(l-1)}, \mathbf{m}_v^{(l)}\right)\]</div>
+<p>The AGGREGATE function collects messages from all neighbors <span class="arithmatex">\(\mathcal{N}(v)\)</span> of node <span class="arithmatex">\(v\)</span>, and the UPDATE function combines the aggregated message with the node's current representation. Common choices for AGGREGATE include sum, mean, and max pooling; the UPDATE function is typically a neural network layer with a nonlinear activation. After <span class="arithmatex">\(L\)</span> layers of message passing, each node's representation encodes information from its <span class="arithmatex">\(L\)</span>-hop neighborhood in the graph.</p>
+<p>This framework directly connects to the graph concepts we studied in Chapter 4: the neighborhood <span class="arithmatex">\(\mathcal{N}(v)\)</span> is the set of adjacent nodes in the adjacency list, and <span class="arithmatex">\(L\)</span> layers of message passing correspond to exploring the <span class="arithmatex">\(L\)</span>-hop ego graph around each node.</p>
+<h3 id="gnns-for-molecular-property-prediction">GNNs for Molecular Property Prediction</h3>
+<p>One of the most successful applications of GNNs in bioinformatics is <strong>GNN for molecules</strong>. A molecule is naturally represented as a graph where atoms are nodes and chemical bonds are edges. Node features encode atomic properties (element type, degree, charge, aromaticity) and edge features encode bond properties (single, double, triple, aromatic). A GNN processes this molecular graph through several message passing layers, producing atom-level representations that are then pooled into a single molecular representation for property prediction.</p>
+<div class="arithmatex">\[\mathbf{h}_{\text{mol}} = \text{READOUT}\left(\left\{\mathbf{h}_v^{(L)} : v \in V\right\}\right)\]</div>
+<p>The READOUT function (often sum or attention-weighted pooling) produces a fixed-size vector regardless of molecular size. This molecular embedding can then be fed into a classifier or regressor to predict properties such as solubility, toxicity, binding affinity, or blood-brain barrier permeability. Unlike traditional molecular fingerprints (Chapter 8), GNN-learned representations are task-specific and can capture subtle structural features that fixed fingerprints miss.</p>
+<table>
+<thead>
+<tr>
+<th>GNN Architecture</th>
+<th>AGGREGATE</th>
+<th>Key Innovation</th>
+<th>Biomedical Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GCN</td>
+<td>Normalized mean</td>
+<td>Spectral convolution</td>
+<td>Protein function prediction</td>
+</tr>
+<tr>
+<td>GAT</td>
+<td>Attention-weighted sum</td>
+<td>Learned attention weights</td>
+<td>Drug-target interaction</td>
+</tr>
+<tr>
+<td>MPNN</td>
+<td>Edge-conditioned sum</td>
+<td>Edge feature integration</td>
+<td>Molecular property prediction</td>
+</tr>
+<tr>
+<td>SchNet</td>
+<td>Continuous filter</td>
+<td>3D distance encoding</td>
+<td>Binding energy prediction</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out: Over-Smoothing in Deep GNNs</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+Stacking too many message passing layers causes all node representations to converge to the same vector -- a phenomenon called over-smoothing. In practice, most molecular GNNs use only 3-5 layers. If your task requires capturing long-range interactions, consider skip connections, virtual nodes, or transformer-based architectures instead of simply adding more layers.</p>
+</div>
+<h3 id="gnns-for-knowledge-graph-reasoning">GNNs for Knowledge Graph Reasoning</h3>
+<p>GNNs can also be applied directly to knowledge graphs for link prediction and node classification. Relational Graph Convolutional Networks (R-GCNs) extend the message passing framework to heterogeneous graphs by using different weight matrices for different relation types:</p>
+<div class="arithmatex">\[\mathbf{h}_v^{(l)} = \sigma\left(\sum_{r \in \mathcal{R}} \sum_{u \in \mathcal{N}_r(v)} \frac{1}{|\mathcal{N}_r(v)|} \mathbf{W}_r^{(l)} \mathbf{h}_u^{(l-1)} + \mathbf{W}_0^{(l)} \mathbf{h}_v^{(l-1)}\right)\]</div>
+<p>where <span class="arithmatex">\(\mathcal{R}\)</span> is the set of relation types, <span class="arithmatex">\(\mathcal{N}_r(v)\)</span> is the set of neighbors connected to <span class="arithmatex">\(v\)</span> via relation <span class="arithmatex">\(r\)</span>, and <span class="arithmatex">\(\mathbf{W}_r^{(l)}\)</span> is the relation-specific weight matrix at layer <span class="arithmatex">\(l\)</span>. This formulation allows the GNN to learn different aggregation patterns for different types of biological relationships -- treating a "targets" edge differently from an "associated_with" edge.</p>
+<h2 id="putting-it-all-together-from-ontology-to-prediction">Putting It All Together: From Ontology to Prediction</h2>
+<p>The concepts in this chapter form a complete computational pipeline for biomedical discovery. Ontologies (GO, DO, HPO) provide the semantic framework that defines what entities and relationships mean. Data integration techniques (schema mapping, entity resolution) construct knowledge graphs from heterogeneous sources. Graph embedding methods (Node2Vec, TransE) compress these graphs into machine-learnable representations. Link prediction and triple classification leverage those embeddings to generate novel hypotheses. Text mining expands the knowledge graph with the latest findings from the literature. And GNNs provide the most expressive framework for learning from both graph structure and node features simultaneously.</p>
+<h4 id="diagram-integrated-knowledge-graph-pipeline">Diagram: Integrated Knowledge Graph Pipeline</h4>
+<iframe src="../../sims/kg-integrated-pipeline/main.html" width="100%" height="600" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/kg-integrated-pipeline/main.html">View Integrated Knowledge Graph Pipeline MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: kg-integrated-pipeline
+Library: vis-network
+Status: Specified
+
+A comprehensive flowchart showing the full pipeline: ontologies and databases at the top feeding into a knowledge graph construction layer, then branching into three paths -- graph embeddings (Node2Vec, TransE), GNNs (message passing), and text mining (NER, relation extraction). All three paths converge on downstream tasks: link prediction, drug repurposing, and disease diagnosis. Arrows labeled with data flow descriptions.
+</details>
+
+<p>This pipeline is the engine behind both Case Study 2 (drug repurposing with Hetionet) and Capstone Project 2 (rare disease diagnosis). In Case Study 2, researchers used Hetionet's knowledge graph structure, extracted metapath features, and trained classifiers to predict novel compound-disease treatment pairs. In Capstone Project 2, students build a diagnosis system that encodes patient phenotypes as HPO terms, computes semantic similarity against known disease profiles, and uses link prediction on a knowledge graph to prioritize candidate disease genes. Both applications demonstrate how the graph concepts from every chapter in this course -- from basic graph theory (Chapter 4) and graph databases (Chapter 5) through protein interaction networks (Chapter 9), regulatory networks (Chapter 11), metabolic networks (Chapter 12), and signaling networks (Chapter 13) -- converge in the knowledge graph framework.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Congratulations, Investigators!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have now seen how every graph concept in this course connects to a single, powerful framework: the biomedical knowledge graph. From DAG-structured ontologies to biased random walks, from translation-based embeddings to message-passing neural networks, you have the tools to model, integrate, and reason over the full complexity of biological knowledge. Follow the edges -- they lead everywhere!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ol>
+<li>
+<p>A <strong>knowledge graph</strong> stores biomedical information as typed triples <span class="arithmatex">\((h, r, t)\)</span>, unifying genes, diseases, drugs, and pathways in a single queryable structure.</p>
+</li>
+<li>
+<p>The <strong>Gene Ontology</strong> organizes gene function into three sub-ontologies (Molecular Function, Biological Process, Cellular Component) structured as DAGs, enabling GO term enrichment analysis via the hypergeometric test.</p>
+</li>
+<li>
+<p><strong>Disease Ontology</strong> and <strong>Human Phenotype Ontology</strong> provide structured vocabularies for diseases and clinical phenotypes, supporting semantic similarity computation for phenotype-driven diagnosis.</p>
+</li>
+<li>
+<p>Building knowledge graphs from <strong>heterogeneous data</strong> requires <strong>schema mapping</strong>, <strong>entity resolution</strong>, and careful <strong>data integration</strong> across dozens of source databases.</p>
+</li>
+<li>
+<p><strong>Node2Vec</strong> generates node embeddings through biased random walks controlled by parameters <span class="arithmatex">\(p\)</span> (return) and <span class="arithmatex">\(q\)</span> (in-out), interpolating between BFS and DFS exploration strategies.</p>
+</li>
+<li>
+<p><strong>TransE</strong> embeds knowledge graph triples using the translation principle <span class="arithmatex">\(\mathbf{h} + \mathbf{r} \approx \mathbf{t}\)</span>, enabling <strong>link prediction</strong> and <strong>triple classification</strong> for hypothesis generation.</p>
+</li>
+<li>
+<p><strong>Text mining</strong> combines <strong>named entity recognition</strong> and <strong>relation extraction</strong> to populate knowledge graphs from the biomedical literature at scale.</p>
+</li>
+<li>
+<p><strong>Graph neural networks</strong> use <strong>message passing</strong> to learn node representations that incorporate both features and local graph structure, with powerful applications to <strong>molecular property prediction</strong>.</p>
+</li>
+<li>
+<p><strong>Hetionet</strong> demonstrates the practical power of biomedical knowledge graphs, integrating 29 databases and 24 edge types to support systematic drug repurposing.</p>
+</li>
+<li>
+<p>This chapter's concepts form a complete pipeline -- from ontology design through graph construction, embedding, and prediction -- that serves as the capstone of the graph-based approach to bioinformatics developed throughout this course.</p>
+</li>
+</ol>
 
 
 

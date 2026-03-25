@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Python bioinformatics ecosystem, reproducible analysis, and capstone project design with graph data models">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>16. Python Tools and Capstone - Bioinformatics</title>
+        <title>Python Tools and Capstone Projects - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="16. Python Tools and Capstone - Bioinformatics">
+        <meta property="og:title" content="Python Tools and Capstone Projects - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Python bioinformatics ecosystem, reproducible analysis, and capstone project design with graph data models">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/16-python-tools-capstone/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="16. Python Tools and Capstone - Bioinformatics">
+        <meta name="twitter:title" content="Python Tools and Capstone Projects - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Python bioinformatics ecosystem, reproducible analysis, and capstone project design with graph data models">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/16-python-tools-capstone/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              16. Python Tools and Capstone
+              Python Tools and Capstone Projects
             
           </span>
         </div>
@@ -830,6 +830,294 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-python-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Python for Bioinformatics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-libraries-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Libraries in Detail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Libraries in Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biopython-sequences-structures-and-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biopython: Sequences, Structures, and Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networkx-graph-construction-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      NetworkX: Graph Construction and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas-for-bioinformatics-data-wrangling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandas for Bioinformatics Data Wrangling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn-machine-learning-on-graph-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scikit-Learn: Machine Learning on Graph Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neo4j-python-driver-querying-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neo4j Python Driver: Querying Graph Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-matplotlib-seaborn-and-cytoscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization: Matplotlib, Seaborn, and Cytoscape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebooks-for-interactive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebooks for Interactive Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-analysis-in-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Analysis in Bioinformatics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducible Analysis in Bioinformatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-control-for-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control for Science
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Environments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-project-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Project Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Project Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-data-model-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Model Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Data Model Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-graph-data-model-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Graph Data Model Design Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-six-capstone-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Six Capstone Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Six Capstone Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-1-antibiotic-resistance-gene-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 1: Antibiotic Resistance Gene Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-2-rare-disease-diagnosis-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 2: Rare Disease Diagnosis Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-3-metabolic-model-comparison-across-organisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 3: Metabolic Model Comparison Across Organisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-4-protein-function-prediction-with-graph-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 4: Protein Function Prediction with Graph Embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-5-multi-omics-patient-stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 5: Multi-Omics Patient Stratification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-6-custom-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 6: Custom Project
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-bench-to-bedside-the-graph-based-discovery-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Bench to Bedside: The Graph-Based Discovery Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Bench to Bedside: The Graph-Based Discovery Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-graph-based-discovery-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Graph-Based Discovery Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-directions-in-graph-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Directions in Graph Bioinformatics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -857,6 +1145,10 @@
       
         
           
+        
+      
+        
+      
         
       
         
@@ -920,6 +1212,30 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -933,7 +1249,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -948,6 +1264,26 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1065,6 +1401,294 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#why-python-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Python for Bioinformatics?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#core-libraries-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Libraries in Detail
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Core Libraries in Detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#biopython-sequences-structures-and-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Biopython: Sequences, Structures, and Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#networkx-graph-construction-and-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      NetworkX: Graph Construction and Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandas-for-bioinformatics-data-wrangling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pandas for Bioinformatics Data Wrangling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scikit-learn-machine-learning-on-graph-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scikit-Learn: Machine Learning on Graph Features
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#neo4j-python-driver-querying-graph-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Neo4j Python Driver: Querying Graph Databases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualization-matplotlib-seaborn-and-cytoscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization: Matplotlib, Seaborn, and Cytoscape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter-notebooks-for-interactive-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebooks for Interactive Analysis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproducible-analysis-in-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reproducible Analysis in Bioinformatics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Reproducible Analysis in Bioinformatics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#version-control-for-science" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version Control for Science
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Environments
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workflow-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow Managers
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#capstone-project-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capstone Project Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Capstone Project Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-data-model-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Data Model Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Data Model Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-graph-data-model-design-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Graph Data Model Design Process
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-six-capstone-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Six Capstone Projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Six Capstone Projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-1-antibiotic-resistance-gene-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 1: Antibiotic Resistance Gene Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-2-rare-disease-diagnosis-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 2: Rare Disease Diagnosis Assistant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-3-metabolic-model-comparison-across-organisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 3: Metabolic Model Comparison Across Organisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-4-protein-function-prediction-with-graph-embeddings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 4: Protein Function Prediction with Graph Embeddings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-5-multi-omics-patient-stratification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 5: Multi-Omics Patient Stratification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-6-custom-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project 6: Custom Project
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-bench-to-bedside-the-graph-based-discovery-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Bench to Bedside: The Graph-Based Discovery Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Bench to Bedside: The Graph-Based Discovery Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-graph-based-discovery-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Graph-Based Discovery Pipeline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-directions-in-graph-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Future Directions in Graph Bioinformatics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#course-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Course Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1133,7 +1757,663 @@
 <li><a href="../14-knowledge-graphs-ontologies/">Chapter 14: Biomedical Knowledge Graphs and Ontologies</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome Back, Explorers! Let's Connect the Dots One Last Time!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+We have traveled an extraordinary journey together — from the molecular foundations of life through sequence alignment, phylogenetics, structural biology, interaction networks, metabolic pathways, knowledge graphs, and multi-omics integration. In this final chapter, we bring everything together. You will build your own Python toolkit, learn professional practices for reproducible science, and design a capstone project that applies graph-based bioinformatics to a real-world problem. Let's connect the dots!</p>
+</div>
+<h2 id="why-python-for-bioinformatics">Why Python for Bioinformatics?</h2>
+<p>Python has become the dominant programming language in bioinformatics and computational biology. Its readable syntax, vast ecosystem of scientific libraries, and strong community support make it an ideal choice for researchers who need to move quickly from data acquisition to analysis to publication. Unlike compiled languages such as C++ or Java, Python allows rapid prototyping — you can download a dataset, parse it, build a graph, compute centrality measures, and produce a publication-quality figure in a single Jupyter notebook session.</p>
+<p>The Python for bioinformatics ecosystem rests on several pillars. General-purpose scientific libraries — NumPy for numerical computing, SciPy for optimization and statistics — provide the mathematical foundation. Domain-specific libraries — Biopython for sequence analysis, NetworkX for graph algorithms — supply bioinformatics-aware data structures and methods. Visualization libraries — Matplotlib and Seaborn — turn results into figures. And integration libraries — the Neo4j Python driver, the Cytoscape API — connect your analysis to external databases and visualization platforms.</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Domain</th>
+<th>Key Capabilities</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Biopython</td>
+<td>Sequence analysis</td>
+<td>FASTA/GenBank parsing, BLAST queries, phylogenetics</td>
+</tr>
+<tr>
+<td>NetworkX</td>
+<td>Graph algorithms</td>
+<td>Graph construction, centrality, community detection</td>
+</tr>
+<tr>
+<td>pandas</td>
+<td>Data wrangling</td>
+<td>DataFrames, merging, filtering, aggregation</td>
+</tr>
+<tr>
+<td>scikit-learn</td>
+<td>Machine learning</td>
+<td>Classification, clustering, dimensionality reduction</td>
+</tr>
+<tr>
+<td>Matplotlib</td>
+<td>Visualization</td>
+<td>Line plots, scatter plots, heatmaps</td>
+</tr>
+<tr>
+<td>Seaborn</td>
+<td>Statistical visualization</td>
+<td>Distribution plots, pair plots, clustermaps</td>
+</tr>
+<tr>
+<td>Neo4j Python driver</td>
+<td>Graph database</td>
+<td>Cypher queries, transaction management</td>
+</tr>
+<tr>
+<td>py4cytoscape</td>
+<td>Network visualization</td>
+<td>Programmatic Cytoscape control</td>
+</tr>
+</tbody>
+</table>
+<h2 id="core-libraries-in-detail">Core Libraries in Detail</h2>
+<h3 id="biopython-sequences-structures-and-databases">Biopython: Sequences, Structures, and Databases</h3>
+<p>Biopython is the foundational library for biological sequence analysis in Python. It provides parsers for every major bioinformatics file format (FASTA, GenBank, PDB, FASTQ), interfaces to NCBI Entrez databases, and modules for sequence alignment, phylogenetic tree construction, and structural biology. When you need to retrieve a protein sequence from UniProt, align it against a reference, and extract conserved domains, Biopython handles the entire workflow.</p>
+<p>The following example demonstrates fetching a sequence from NCBI, parsing it, and extracting basic information:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">Bio</span> <span class="kn">import</span> <span class="n">SeqIO</span><span class="p">,</span> <span class="n">Entrez</span>
+
+<span class="c1"># Always identify yourself to NCBI</span>
+<span class="n">Entrez</span><span class="o">.</span><span class="n">email</span> <span class="o">=</span> <span class="s2">"student@university.edu"</span>
+
+<span class="c1"># Fetch the BRCA1 mRNA sequence from NCBI</span>
+<span class="n">handle</span> <span class="o">=</span> <span class="n">Entrez</span><span class="o">.</span><span class="n">efetch</span><span class="p">(</span><span class="n">db</span><span class="o">=</span><span class="s2">"nucleotide"</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s2">"NM_007294.4"</span><span class="p">,</span>
+                       <span class="n">rettype</span><span class="o">=</span><span class="s2">"gb"</span><span class="p">,</span> <span class="n">retmode</span><span class="o">=</span><span class="s2">"text"</span><span class="p">)</span>
+<span class="n">record</span> <span class="o">=</span> <span class="n">SeqIO</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="s2">"genbank"</span><span class="p">)</span>
+<span class="n">handle</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"ID: </span><span class="si">{</span><span class="n">record</span><span class="o">.</span><span class="n">id</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Description: </span><span class="si">{</span><span class="n">record</span><span class="o">.</span><span class="n">description</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Sequence length: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">record</span><span class="o">.</span><span class="n">seq</span><span class="p">)</span><span class="si">}</span><span class="s2"> bp"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"First 60 bases: </span><span class="si">{</span><span class="n">record</span><span class="o">.</span><span class="n">seq</span><span class="p">[:</span><span class="mi">60</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Extract all coded protein features</span>
+<span class="k">for</span> <span class="n">feature</span> <span class="ow">in</span> <span class="n">record</span><span class="o">.</span><span class="n">features</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">feature</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s2">"CDS"</span><span class="p">:</span>
+        <span class="n">protein_id</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">qualifiers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"protein_id"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"N/A"</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">product</span> <span class="o">=</span> <span class="n">feature</span><span class="o">.</span><span class="n">qualifiers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"product"</span><span class="p">,</span> <span class="p">[</span><span class="s2">"N/A"</span><span class="p">])[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Protein: </span><span class="si">{</span><span class="n">protein_id</span><span class="si">}</span><span class="s2"> — </span><span class="si">{</span><span class="n">product</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Biopython also provides BLAST wrappers for local and remote searches, making it straightforward to build sequence similarity networks. You can submit a query sequence, parse the XML results, and construct edges between sequences whose alignment scores exceed a threshold — the same sequence similarity networks we explored in Chapter 6.</p>
+<h3 id="networkx-graph-construction-and-analysis">NetworkX: Graph Construction and Analysis</h3>
+<p>NetworkX is the standard Python library for creating, manipulating, and analyzing graphs. Throughout this course, we have used NetworkX to build protein interaction networks, gene regulatory graphs, and metabolic pathway models. Its strength lies in its simple, Pythonic API: nodes can be any hashable object, edges carry arbitrary attribute dictionaries, and hundreds of built-in algorithms cover everything from shortest paths to community detection.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+
+<span class="c1"># Build a small protein interaction network</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+
+<span class="c1"># Add proteins as nodes with attributes</span>
+<span class="n">proteins</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"BRCA1"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"function"</span><span class="p">:</span> <span class="s2">"DNA repair"</span><span class="p">,</span> <span class="s2">"degree_ppi"</span><span class="p">:</span> <span class="mi">142</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"TP53"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"function"</span><span class="p">:</span> <span class="s2">"tumor suppressor"</span><span class="p">,</span> <span class="s2">"degree_ppi"</span><span class="p">:</span> <span class="mi">238</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"ATM"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"function"</span><span class="p">:</span> <span class="s2">"DNA damage sensor"</span><span class="p">,</span> <span class="s2">"degree_ppi"</span><span class="p">:</span> <span class="mi">97</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"CHEK2"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"function"</span><span class="p">:</span> <span class="s2">"cell cycle checkpoint"</span><span class="p">,</span> <span class="s2">"degree_ppi"</span><span class="p">:</span> <span class="mi">64</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"RAD51"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"function"</span><span class="p">:</span> <span class="s2">"homologous recombination"</span><span class="p">,</span> <span class="s2">"degree_ppi"</span><span class="p">:</span> <span class="mi">58</span><span class="p">}),</span>
+<span class="p">]</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">proteins</span><span class="p">)</span>
+
+<span class="c1"># Add interactions with confidence scores</span>
+<span class="n">interactions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span><span class="s2">"BRCA1"</span><span class="p">,</span> <span class="s2">"TP53"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.95</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"STRING"</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"BRCA1"</span><span class="p">,</span> <span class="s2">"ATM"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.91</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"BioGRID"</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"BRCA1"</span><span class="p">,</span> <span class="s2">"RAD51"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.97</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"IntAct"</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"TP53"</span><span class="p">,</span> <span class="s2">"ATM"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.89</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"STRING"</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"TP53"</span><span class="p">,</span> <span class="s2">"CHEK2"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.93</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"STRING"</span><span class="p">}),</span>
+    <span class="p">(</span><span class="s2">"ATM"</span><span class="p">,</span> <span class="s2">"CHEK2"</span><span class="p">,</span> <span class="p">{</span><span class="s2">"score"</span><span class="p">:</span> <span class="mf">0.96</span><span class="p">,</span> <span class="s2">"source"</span><span class="p">:</span> <span class="s2">"BioGRID"</span><span class="p">}),</span>
+<span class="p">]</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">(</span><span class="n">interactions</span><span class="p">)</span>
+
+<span class="c1"># Compute centrality measures</span>
+<span class="n">betweenness</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">betweenness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">protein</span><span class="p">,</span> <span class="n">bc</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">betweenness</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span>
+                          <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">protein</span><span class="si">}</span><span class="s2">: betweenness = </span><span class="si">{</span><span class="n">bc</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>NetworkX also integrates with visualization tools. You can export graphs to formats readable by Cytoscape, Gephi, or vis-network, or use the built-in drawing functions with Matplotlib for quick inspection.</p>
+<h3 id="pandas-for-bioinformatics-data-wrangling">Pandas for Bioinformatics Data Wrangling</h3>
+<p>Pandas provides the DataFrame abstraction that underpins nearly all data wrangling in Python bioinformatics. Biological datasets arrive in heterogeneous formats — TSV files from differential expression tools, CSV exports from proteomics platforms, JSON responses from REST APIs. Pandas unifies these into a common tabular structure where columns can hold mixed types, missing values are handled gracefully, and powerful group-by and merge operations make it easy to combine data from multiple sources.</p>
+<p>A typical bioinformatics data wrangling task involves merging gene expression data with protein interaction data to create a weighted network:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Load differential expression results</span>
+<span class="n">de_genes</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"deseq2_results.csv"</span><span class="p">)</span>
+<span class="n">de_genes</span> <span class="o">=</span> <span class="n">de_genes</span><span class="p">[</span><span class="n">de_genes</span><span class="p">[</span><span class="s2">"padj"</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">]</span>  <span class="c1"># Filter significant</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Significant DE genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">de_genes</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Load protein interactions from STRING</span>
+<span class="n">interactions</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"string_interactions.tsv"</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\t</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Merge to keep only interactions between DE genes</span>
+<span class="n">de_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">de_genes</span><span class="p">[</span><span class="s2">"gene_symbol"</span><span class="p">])</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">interactions</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">interactions</span><span class="p">[</span><span class="s2">"protein1"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">de_set</span><span class="p">))</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">interactions</span><span class="p">[</span><span class="s2">"protein2"</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">de_set</span><span class="p">))</span>
+<span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Interactions between DE genes: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="c1"># Build a NetworkX graph from the filtered DataFrame</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_pandas_edgelist</span><span class="p">(</span>
+    <span class="n">filtered</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"protein1"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"protein2"</span><span class="p">,</span>
+    <span class="n">edge_attr</span><span class="o">=</span><span class="p">[</span><span class="s2">"combined_score"</span><span class="p">]</span>
+<span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">The DataFrame-to-Graph Pipeline</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli thinking"></a>
+Notice the pattern here: load tabular data with pandas, filter and transform it, then convert to a NetworkX graph for topological analysis. This DataFrame-to-graph pipeline is one of the most common workflows in graph-based bioinformatics. Master it, and you can turn almost any biological dataset into a network in minutes.</p>
+</div>
+<h3 id="scikit-learn-machine-learning-on-graph-features">Scikit-Learn: Machine Learning on Graph Features</h3>
+<p>Scikit-learn is Python's general-purpose machine learning library. In bioinformatics, it is used for classification (predicting protein function from network features), clustering (grouping patients by expression profiles), and dimensionality reduction (visualizing high-dimensional omics data in two dimensions). When combined with graph-derived features — centrality measures, graph embeddings, community labels — scikit-learn becomes a powerful tool for graph-based discovery.</p>
+<p>A common pattern is to extract features from a graph and use them to train a classifier:</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Extract graph features for each protein node</span>
+<span class="n">features</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">():</span>
+    <span class="n">features</span><span class="o">.</span><span class="n">append</span><span class="p">([</span>
+        <span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">node</span><span class="p">),</span>
+        <span class="n">nx</span><span class="o">.</span><span class="n">betweenness_centrality</span><span class="p">(</span><span class="n">G</span><span class="p">)[</span><span class="n">node</span><span class="p">],</span>
+        <span class="n">nx</span><span class="o">.</span><span class="n">clustering</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">node</span><span class="p">),</span>
+    <span class="p">])</span>
+    <span class="c1"># Label: 1 if known cancer gene, 0 otherwise</span>
+    <span class="n">labels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">1</span> <span class="k">if</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">cancer_genes</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+<span class="c1"># Train and evaluate with cross-validation</span>
+<span class="n">clf</span> <span class="o">=</span> <span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">clf</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s2">"f1"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Mean F1 score: </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> (+/- </span><span class="si">{</span><span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2">)"</span><span class="p">)</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="neo4j-python-driver-querying-graph-databases">Neo4j Python Driver: Querying Graph Databases</h3>
+<p>The Neo4j Python driver provides a direct connection from your Python analysis environment to a Neo4j graph database. This is essential for capstone projects where the dataset is too large for in-memory analysis with NetworkX, or where you need the query power of Cypher to express complex traversal patterns. The driver supports parameterized queries, transaction management, and result streaming.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span> <span class="nn">neo4j</span> <span class="kn">import</span> <span class="n">GraphDatabase</span>
+
+<span class="c1"># Connect to the Neo4j instance</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">GraphDatabase</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span>
+    <span class="s2">"bolt://localhost:7687"</span><span class="p">,</span>
+    <span class="n">auth</span><span class="o">=</span><span class="p">(</span><span class="s2">"neo4j"</span><span class="p">,</span> <span class="s2">"password"</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">find_resistance_paths</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span> <span class="n">antibiotic_name</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">"""Find resistance gene transfer pathways for a given antibiotic."""</span>
+    <span class="n">query</span> <span class="o">=</span> <span class="s2">"""</span>
+<span class="s2">    MATCH path = (a:Antibiotic {name: $antibiotic})&lt;-[:CONFERS_RESISTANCE_TO]-</span>
+<span class="s2">                 (g:ResistanceGene)-[:CARRIED_BY]-&gt;(m:MobileElement)</span>
+<span class="s2">                 -[:FOUND_IN]-&gt;(s:Species)</span>
+<span class="s2">    RETURN g.name AS gene, m.type AS element,</span>
+<span class="s2">           s.name AS species, length(path) AS hops</span>
+<span class="s2">    ORDER BY hops</span>
+<span class="s2">    LIMIT 20</span>
+<span class="s2">    """</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">tx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">antibiotic</span><span class="o">=</span><span class="n">antibiotic_name</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">[</span><span class="nb">dict</span><span class="p">(</span><span class="n">record</span><span class="p">)</span> <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">result</span><span class="p">]</span>
+
+<span class="k">with</span> <span class="n">driver</span><span class="o">.</span><span class="n">session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+    <span class="n">paths</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">execute_read</span><span class="p">(</span><span class="n">find_resistance_paths</span><span class="p">,</span> <span class="s2">"tetracycline"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'gene'</span><span class="p">]</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'element'</span><span class="p">]</span><span class="si">}</span><span class="s2"> → </span><span class="si">{</span><span class="n">p</span><span class="p">[</span><span class="s1">'species'</span><span class="p">]</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+<span class="n">driver</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div></td></tr></tbody></table></div>
+<h3 id="visualization-matplotlib-seaborn-and-cytoscape">Visualization: Matplotlib, Seaborn, and Cytoscape</h3>
+<p>Effective visualization is critical for communicating bioinformatics results. Matplotlib is the low-level workhorse — it produces any plot type imaginable, from simple line charts to complex multi-panel figures. Seaborn builds on Matplotlib to provide statistically-oriented plots (violin plots, clustermaps, pair plots) with attractive default styling. Together, they handle the static figure needs of any bioinformatics publication.</p>
+<p>For interactive network visualization, the Cytoscape API (accessed via the py4cytoscape library) allows you to programmatically control the Cytoscape desktop application from Python. You can send a NetworkX graph to Cytoscape, apply layout algorithms, style nodes by expression level, and export publication-quality SVG figures — all without touching the GUI.</p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Strengths</th>
+<th>Best For</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Matplotlib</td>
+<td>Full control, any plot type</td>
+<td>Publication figures, custom layouts</td>
+</tr>
+<tr>
+<td>Seaborn</td>
+<td>Statistical plots, beautiful defaults</td>
+<td>Heatmaps, distributions, pair plots</td>
+</tr>
+<tr>
+<td>Cytoscape API</td>
+<td>Interactive network layouts</td>
+<td>Large network exploration, styled exports</td>
+</tr>
+<tr>
+<td>vis-network</td>
+<td>Web-based, JavaScript</td>
+<td>Embedding networks in web pages</td>
+</tr>
+</tbody>
+</table>
+<h2 id="jupyter-notebooks-for-interactive-analysis">Jupyter Notebooks for Interactive Analysis</h2>
+<p>Jupyter Notebooks have become the standard environment for interactive bioinformatics analysis. A notebook interleaves executable code cells, Markdown text, mathematical equations, and inline figures into a single document that serves simultaneously as a lab notebook, a report, and a reproducible script. For this course, every lab assignment and many capstone deliverables are submitted as Jupyter notebooks.</p>
+<p>The notebook format encourages literate programming — explaining your reasoning alongside the code that implements it. When you document why you chose a particular significance threshold, how you handled missing values, or what biological interpretation you assign to a network cluster, you create a record that your future self and your collaborators can understand months or years later.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Notebook Best Practices</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+Always restart your kernel and run all cells from top to bottom before submitting a notebook. A notebook that only works when cells are executed in a non-linear order is not reproducible. Use the "Restart &amp; Run All" command as your final check.</p>
+</div>
+<h2 id="reproducible-analysis-in-bioinformatics">Reproducible Analysis in Bioinformatics</h2>
+<p>Reproducibility is the cornerstone of scientific credibility. In computational bioinformatics, reproducible analysis means that another researcher — or your future self — can re-execute your analysis from raw data to final figures and obtain identical results. This requires managing three things: code, data, and environment.</p>
+<h3 id="version-control-for-science">Version Control for Science</h3>
+<p>Version control with Git tracks every change to your analysis code, configuration files, and documentation. For scientific work, Git provides an audit trail showing exactly what code produced a given result. GitHub and GitLab add collaboration features — pull requests, issue tracking, and continuous integration — that are increasingly used by bioinformatics research groups.</p>
+<p>Key practices for version control in science include:</p>
+<ul>
+<li>Commit early and often, with descriptive messages</li>
+<li>Use branches for experimental analyses that might not work out</li>
+<li>Tag releases that correspond to manuscript submissions or revisions</li>
+<li>Store large data files in specialized systems (Git LFS, DVC, or Zenodo) rather than in the repository itself</li>
+<li>Include a <code>README.md</code> that documents how to reproduce the analysis</li>
+</ul>
+<h3 id="conda-environments">Conda Environments</h3>
+<p>Conda environments solve the "it works on my machine" problem. A conda environment file specifies every package and its exact version, ensuring that your analysis runs identically on any machine. This is particularly important in bioinformatics, where different tools may require conflicting dependencies.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># environment.yml — reproducible bioinformatics environment</span>
+<span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioinfo-capstone</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conda-forge</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bioconda</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">defaults</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">python=3.11.7</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">biopython=1.83</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">networkx=3.2.1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pandas=2.1.4</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">scikit-learn=1.3.2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">matplotlib=3.8.2</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">seaborn=0.13.1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">jupyter=1.0.0</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">neo4j-python-driver=5.15.0</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">snakemake=8.4.1</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pip</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">py4cytoscape==1.9.0</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Create the environment with <code>conda env create -f environment.yml</code> and activate it with <code>conda activate bioinfo-capstone</code>. Share the file in your Git repository so that anyone can recreate your exact setup.</p>
+<h3 id="workflow-managers">Workflow Managers</h3>
+<p>For complex analyses involving many steps — downloading data, quality control, alignment, quantification, network construction, statistical testing — manual execution is error-prone and unreproducible. Workflow managers such as Snakemake and Nextflow define analysis pipelines as directed acyclic graphs (DAGs) of rules. Each rule specifies its inputs, outputs, and the command to run. The workflow manager automatically determines execution order, parallelizes independent steps, and skips steps whose outputs are already up to date.</p>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Snakefile — simplified bioinformatics pipeline</span>
+<span class="n">rule</span> <span class="nb">all</span><span class="p">:</span>
+    <span class="nb">input</span><span class="p">:</span> <span class="s2">"results/network_analysis.html"</span>
+
+<span class="n">rule</span> <span class="n">download_interactions</span><span class="p">:</span>
+    <span class="n">output</span><span class="p">:</span> <span class="s2">"data/string_interactions.tsv"</span>
+    <span class="n">shell</span><span class="p">:</span> <span class="s2">"wget -O </span><span class="si">{output}</span><span class="s2"> 'https://string-db.org/api/tsv/network?identifiers=BRCA1</span><span class="si">%0d</span><span class="s2">TP53&amp;species=9606'"</span>
+
+<span class="n">rule</span> <span class="n">build_network</span><span class="p">:</span>
+    <span class="nb">input</span><span class="p">:</span> <span class="s2">"data/string_interactions.tsv"</span>
+    <span class="n">output</span><span class="p">:</span> <span class="s2">"results/network.graphml"</span>
+    <span class="n">script</span><span class="p">:</span> <span class="s2">"scripts/build_network.py"</span>
+
+<span class="n">rule</span> <span class="n">analyze_network</span><span class="p">:</span>
+    <span class="nb">input</span><span class="p">:</span> <span class="s2">"results/network.graphml"</span>
+    <span class="n">output</span><span class="p">:</span> <span class="s2">"results/network_analysis.html"</span>
+    <span class="n">notebook</span><span class="p">:</span> <span class="s2">"notebooks/network_analysis.ipynb"</span>
+</code></pre></div></td></tr></tbody></table></div>
+<p>Notice how the workflow itself is a graph — rules are nodes and data dependencies are edges. This is not a coincidence. The same graph-theoretic thinking that drives our biological analyses also governs how we organize computational work.</p>
+<h2 id="capstone-project-design">Capstone Project Design</h2>
+<p>The capstone project is the culmination of this course. It requires you to identify a bioinformatics problem, design an appropriate graph data model, implement a working analysis, and communicate your results. The project demonstrates that you can apply graph-based bioinformatics methods to a real-world question independently.</p>
+<h3 id="graph-data-model-design">Graph Data Model Design</h3>
+<p>Every capstone begins with a graph data model. The model specifies what entities become nodes, what relationships become edges, and what properties attach to each. A well-designed graph data model captures the biological domain faithfully while remaining queryable and computationally tractable.</p>
+<p>The design process follows these steps:</p>
+<ol>
+<li><strong>Identify entities</strong> — What are the biological objects in your domain? Genes, proteins, diseases, drugs, organisms, pathways?</li>
+<li><strong>Define relationships</strong> — How do these entities interact? What directional or weighted connections exist?</li>
+<li><strong>Assign properties</strong> — What metadata does each node and edge carry? Confidence scores, experimental evidence, tissue specificity?</li>
+<li><strong>Validate against queries</strong> — Can your model answer the biological questions you care about? Write candidate Cypher queries before loading data.</li>
+<li><strong>Iterate</strong> — Refine the model as you encounter real data and discover edge cases.</li>
+</ol>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Think Before You Code</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli thinking"></a>
+The most common mistake in capstone projects is jumping straight into code without designing the graph data model first. Spend a full day sketching your node types, relationship types, and properties on paper or a whiteboard. A solid data model makes every downstream step — data loading, querying, analysis — dramatically easier.</p>
+</div>
+<h4 id="diagram-graph-data-model-design-process">Diagram: Graph Data Model Design Process</h4>
+<iframe src="../../sims/graph-data-model-design/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Graph Data Model Design Process</summary>
+<p><strong>sim-id:</strong> graph-data-model-design
+<strong>Library:</strong> vis-network
+<strong>Status:</strong> Specified</p>
+<p>A flowchart showing the iterative process of graph data model design: Identify Entities, Define Relationships, Assign Properties, Validate Against Queries, and Iterate. Each step is a node connected by directed edges, with a feedback loop from Iterate back to Identify Entities.</p>
+</details>
+<h2 id="the-six-capstone-projects">The Six Capstone Projects</h2>
+<p>The following sections describe the six capstone projects offered in this course. Each includes the biological motivation, the graph data model, key analyses, and the expected deliverables.</p>
+<h3 id="project-1-antibiotic-resistance-gene-network">Project 1: Antibiotic Resistance Gene Network</h3>
+<p>The global spread of antibiotic resistance is one of the most urgent public health threats of the twenty-first century. Resistance genes move between bacterial species via mobile genetic elements — plasmids, transposons, and integrons — creating a complex network of horizontal gene transfer. Understanding this network is essential for predicting how resistance will spread and for designing interventions.</p>
+<p>In this project, you build an antibiotic resistance graph that links resistance genes, mobile genetic elements, bacterial species, and antibiotic compounds. The graph data model uses four node types:</p>
+<ul>
+<li><strong>ResistanceGene</strong> — properties: gene name, gene family, mechanism (efflux, target modification, enzymatic inactivation)</li>
+<li><strong>MobileElement</strong> — properties: type (plasmid, transposon, integron), size, incompatibility group</li>
+<li><strong>Species</strong> — properties: species name, gram stain, pathogenicity</li>
+<li><strong>Antibiotic</strong> — properties: drug name, class, mechanism of action</li>
+</ul>
+<p>Edges capture four relationship types: <code>CONFERS_RESISTANCE_TO</code> (gene to antibiotic), <code>CARRIED_BY</code> (gene to mobile element), <code>TRANSFERRED_VIA</code> (between species through a mobile element), and <code>FOUND_IN_SPECIES</code> (gene to species). Each edge carries properties for evidence type (experimental, computational) and confidence score.</p>
+<p>The resistance gene network analysis includes identifying the most promiscuous mobile elements (those carrying the most resistance genes across the widest range of species), detecting clusters of co-transferred resistance genes, and predicting which currently susceptible species are at highest risk based on graph proximity to known resistance carriers.</p>
+<h3 id="project-2-rare-disease-diagnosis-assistant">Project 2: Rare Disease Diagnosis Assistant</h3>
+<p>Rare diseases collectively affect over 300 million people worldwide, yet the average time to diagnosis exceeds four years. Many rare diseases are caused by single-gene mutations, and their phenotypic presentations overlap with more common conditions. A rare disease knowledge graph that connects phenotypes, genes, variants, and diseases can dramatically accelerate the diagnostic process.</p>
+<p>This project constructs a knowledge graph using the Human Phenotype Ontology (HPO) for phenotype terms, OMIM and Orphanet for disease entries, and ClinVar for variant-disease associations. The phenotype-gene mapping relationships are central to the diagnostic algorithm: given a set of patient phenotypes, the system traverses the graph to find genes associated with those phenotypes, then identifies diseases associated with those genes, ranking candidates by the number of matching phenotype connections.</p>
+<p>The graph data model includes:</p>
+<ul>
+<li><strong>Phenotype</strong> nodes (HPO terms) with properties for name, category, and frequency</li>
+<li><strong>Gene</strong> nodes with properties for symbol, chromosomal location, and inheritance pattern</li>
+<li><strong>Variant</strong> nodes with properties for genomic position, consequence type, and pathogenicity classification</li>
+<li><strong>Disease</strong> nodes (OMIM/Orphanet) with properties for name, prevalence, and age of onset</li>
+</ul>
+<p>Edges include <code>ASSOCIATED_WITH</code> (phenotype to gene), <code>CAUSES</code> (variant to disease), <code>VARIANT_OF</code> (variant to gene), and <code>PHENOTYPE_OF</code> (phenotype to disease), each carrying frequency, severity, and source database properties.</p>
+<h3 id="project-3-metabolic-model-comparison-across-organisms">Project 3: Metabolic Model Comparison Across Organisms</h3>
+<p>Genome-scale metabolic models reconstruct the complete set of biochemical reactions in an organism, enabling predictions about growth, nutrient requirements, and metabolic engineering targets. Comparing metabolic models across related organisms reveals conserved core metabolism, lineage-specific adaptations, and potential drug targets in pathogens.</p>
+<p>This metabolic model comparison project loads genome-scale metabolic models for three related organisms (for example, <em>E. coli</em>, <em>S. typhimurium</em>, and <em>K. pneumoniae</em>) into a graph database. The graph uses a bipartite structure with metabolite nodes and reaction nodes connected by <code>SUBSTRATE_OF</code> and <code>PRODUCT_OF</code> edges. Reaction nodes link to enzyme nodes via <code>CATALYZED_BY</code> edges and to gene nodes via <code>ENCODED_BY</code> edges. An <code>organism</code> property on each reaction enables cross-species graph alignment — identifying reactions present in all three organisms, reactions unique to one species, and reactions with conserved topology but different gene content.</p>
+<p>The analysis includes computing Jaccard similarity between organism-specific subgraphs, identifying essential reactions through graph-based flux balance analysis proxies, and visualizing metabolic differences as differential subgraph overlays.</p>
+<h3 id="project-4-protein-function-prediction-with-graph-embeddings">Project 4: Protein Function Prediction with Graph Embeddings</h3>
+<p>Many proteins in sequence databases lack experimental functional annotations. Protein function prediction uses the principle of "guilt by association" — proteins that interact with annotated proteins are likely to share similar functions. This project takes that principle further by generating graph embeddings from a protein interaction network and using them as features in a machine learning classifier to predict Gene Ontology (GO) annotations.</p>
+<p>The graph data model consists of protein nodes with properties for species, sequence length, and known GO annotations. Interaction edges carry experimental method, confidence score, and source database. GO term nodes form a separate directed acyclic graph (DAG) subgraph connected to proteins via <code>ANNOTATED_WITH</code> edges. The GO annotation prediction task is formulated as a multi-label classification problem: given a protein's embedding vector, predict which GO terms should be assigned.</p>
+<p>The workflow proceeds in three stages:</p>
+<ol>
+<li><strong>Embedding generation</strong> — Use node2vec or GraphSAGE to learn low-dimensional vector representations of protein nodes that capture network neighborhood structure</li>
+<li><strong>Feature engineering</strong> — Combine graph embeddings with sequence-derived features (length, amino acid composition) in a pandas DataFrame</li>
+<li><strong>Classification</strong> — Train a scikit-learn random forest or gradient boosting classifier with cross-validation, evaluating with precision, recall, and F1 on held-out GO labels</li>
+</ol>
+<h3 id="project-5-multi-omics-patient-stratification">Project 5: Multi-Omics Patient Stratification</h3>
+<p>Cancer is not a single disease but a collection of molecularly distinct subtypes. Multi-omics stratification integrates transcriptomic and proteomic data from a cancer cohort to construct a patient similarity network, then applies community detection algorithms to discover patient subgroups that may respond differently to treatment.</p>
+<p>The graph data model centers on patient nodes with clinical metadata (tumor stage, survival time, treatment regimen). Gene and protein nodes connect to patients via weighted <code>EXPRESSED_IN</code> edges derived from normalized expression values. Patient-to-patient similarity edges are computed from multi-omics profiles using cosine similarity or Pearson correlation, with the similarity score stored as an edge property.</p>
+<p>Patient subgroup discovery proceeds through these steps:</p>
+<ol>
+<li>Construct the patient similarity network by computing pairwise similarity across all omics layers</li>
+<li>Apply community detection (Louvain or Leiden algorithm via NetworkX) to identify patient clusters</li>
+<li>Correlate discovered clusters with clinical outcomes using survival analysis</li>
+<li>Identify the molecular features (genes, proteins) that distinguish each subgroup using differential expression analysis</li>
+</ol>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Graphs Reveal What Tables Hide</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli thinking"></a>
+The power of the patient similarity network approach is that it captures relationships between patients that are invisible in a standard expression matrix. Two patients might have very different individual gene expression profiles but cluster together in the network because their overall molecular signatures are similar. This is graph-based discovery in action.</p>
+</div>
+<h3 id="project-6-custom-project">Project 6: Custom Project</h3>
+<p>Students who wish to pursue a bioinformatics problem of personal or professional interest may propose a custom capstone project with instructor approval. The proposal, due by Week 5, must include a labeled property graph schema diagram showing node types, relationship types, and key properties, along with a justification for why a graph model is the appropriate representation for the chosen problem.</p>
+<h2 id="from-bench-to-bedside-the-graph-based-discovery-pipeline">From Bench to Bedside: The Graph-Based Discovery Pipeline</h2>
+<p>Regardless of which capstone project you choose, the underlying workflow follows a common bench to bedside pipeline pattern:</p>
+<ol>
+<li><strong>Data acquisition</strong> — Retrieve biological data from public databases using Biopython and REST APIs</li>
+<li><strong>Data wrangling</strong> — Clean, filter, merge, and transform data using pandas</li>
+<li><strong>Graph construction</strong> — Build a graph data model and load data into NetworkX or Neo4j</li>
+<li><strong>Graph analysis</strong> — Compute topological features, run community detection, generate embeddings</li>
+<li><strong>Machine learning</strong> — Use graph-derived features with scikit-learn for prediction or classification</li>
+<li><strong>Visualization</strong> — Produce figures with Matplotlib/Seaborn and interactive network views with Cytoscape or vis-network</li>
+<li><strong>Interpretation</strong> — Map computational results back to biological hypotheses</li>
+<li><strong>Communication</strong> — Document the analysis in Jupyter notebooks and present findings</li>
+</ol>
+<p>This pipeline is not specific to any single project — it is the general pattern for graph-based bioinformatics research. Whether you are predicting antibiotic resistance spread, diagnosing rare diseases, or stratifying cancer patients, you are executing variations of this same pipeline.</p>
+<h4 id="diagram-graph-based-discovery-pipeline">Diagram: Graph-Based Discovery Pipeline</h4>
+<iframe src="../../sims/graph-discovery-pipeline/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Graph-Based Discovery Pipeline</summary>
+<p><strong>sim-id:</strong> graph-discovery-pipeline
+<strong>Library:</strong> vis-network
+<strong>Status:</strong> Specified</p>
+<p>A directed acyclic graph showing the eight stages of the bench-to-bedside pipeline: Data Acquisition, Data Wrangling, Graph Construction, Graph Analysis, Machine Learning, Visualization, Interpretation, and Communication. Edges show data flow between stages, with feedback loops from Interpretation back to Graph Analysis and Data Wrangling.</p>
+</details>
+<h2 id="future-directions-in-graph-bioinformatics">Future Directions in Graph Bioinformatics</h2>
+<p>The future of graph bioinformatics is shaped by three converging trends: the explosion of biological data, the maturation of graph computing infrastructure, and the emergence of graph-aware machine learning methods.</p>
+<p><strong>Graph neural networks (GNNs)</strong> are rapidly becoming the method of choice for molecular property prediction, drug-target interaction modeling, and protein structure analysis. GNN architectures such as Graph Convolutional Networks, Graph Attention Networks, and Message Passing Neural Networks learn representations that respect the topology of biological graphs, often outperforming methods that ignore structural context. As GNN frameworks (PyTorch Geometric, DGL) become more accessible, we can expect graph-based deep learning to become a standard tool in the bioinformatician's repertoire.</p>
+<p><strong>Federated and privacy-preserving graph analytics</strong> will address one of the greatest barriers to biomedical discovery: data silos. Hospital systems, research institutions, and pharmaceutical companies each hold valuable patient data that cannot be freely shared due to privacy regulations. Federated graph learning allows models to be trained across distributed knowledge graphs without centralizing sensitive data, enabling multi-institutional studies at unprecedented scale.</p>
+<p><strong>Scalable graph databases and cloud-native graph platforms</strong> will handle the petabyte-scale biological graphs that are now emerging. Projects such as the Earth BioGenome Project, the UK Biobank, and the All of Us Research Program are generating datasets with billions of nodes and edges. Distributed graph databases, GPU-accelerated graph analytics, and cloud-native graph services will make it possible to query and analyze these datasets interactively.</p>
+<table>
+<thead>
+<tr>
+<th>Trend</th>
+<th>Impact on Bioinformatics</th>
+<th>Timeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Graph Neural Networks</td>
+<td>Molecular prediction, drug discovery</td>
+<td>Mainstream now</td>
+</tr>
+<tr>
+<td>Federated Graph Learning</td>
+<td>Multi-institutional studies</td>
+<td>2-5 years</td>
+</tr>
+<tr>
+<td>Scalable Cloud Graph Platforms</td>
+<td>Petabyte-scale biological graphs</td>
+<td>2-3 years</td>
+</tr>
+<tr>
+<td>Multimodal Knowledge Graphs</td>
+<td>Integration of text, images, sequences</td>
+<td>3-5 years</td>
+</tr>
+<tr>
+<td>Foundation Models on Graphs</td>
+<td>Pre-trained models for biology</td>
+<td>3-7 years</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Stay Critical</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+New methods are exciting, but always ask: does a graph-based approach genuinely add value for this problem, or would a simpler tabular method work just as well? The best bioinformaticians choose the right tool for the question, not the most fashionable one. Graph methods shine when relationships matter — when the connections between entities carry as much information as the entities themselves.</p>
+</div>
+<h2 id="course-synthesis">Course Synthesis</h2>
+<p>This chapter — and this course — has traced a single thread: biological data is inherently relational, and graph-based methods capture that relational structure in ways that tabular and sequence-only approaches cannot.</p>
+<p>In <strong>Module 1</strong>, we established the molecular foundations and learned that biological entities — genes, proteins, metabolites, diseases — are connected by a dense web of interactions. We saw that graph theory provides the mathematical language for these connections, and that graph databases provide the storage and query infrastructure.</p>
+<p>In <strong>Modules 2 and 3</strong>, we applied graph thinking to sequences and structures. Sequence similarity networks replaced pairwise BLAST searches with a global view of homology relationships. Phylogenetic trees became directed acyclic graphs that model evolutionary history. Protein contact maps and residue interaction networks turned three-dimensional structures into analyzable graphs.</p>
+<p>In <strong>Modules 4 and 5</strong>, we scaled up to systems-level biology. Gene regulatory networks, metabolic pathway graphs, and signaling cascades as directed graphs revealed the organizational principles of cellular life. Network medicine showed how disease modules in protein interaction networks can guide drug repurposing.</p>
+<p>In <strong>Module 6</strong>, we integrated everything. Knowledge graphs brought together heterogeneous data sources — ontologies, experimental results, clinical records — into unified structures queryable by a single language. Multi-omics integration showed how graphs can bridge the gap between different measurement technologies.</p>
+<p>And in this final chapter, we assembled the practical toolkit — Python libraries, reproducible workflows, and capstone project designs — that enables you to apply these methods to new problems. The capstone projects are not endpoints but starting points. Each one opens into an active area of research where graph-based bioinformatics is making real contributions to human health.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Congratulations, Explorers!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have completed the entire course! From DNA structure to knowledge graphs, from sequence alignment to multi-omics integration, you now have the conceptual foundations and practical skills to tackle real bioinformatics problems with graph-based methods. As you go forward — whether into graduate research, industry, or clinical informatics — remember: biological data is connected, and graphs are the natural language of those connections. Keep connecting the dots!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ol>
+<li>
+<p><strong>Python is the lingua franca of bioinformatics</strong> — Biopython, NetworkX, pandas, scikit-learn, Matplotlib, Seaborn, and the Neo4j driver form an integrated ecosystem for graph-based biological analysis.</p>
+</li>
+<li>
+<p><strong>The DataFrame-to-graph pipeline is a universal pattern</strong> — Load data with pandas, filter and transform, convert to NetworkX or load into Neo4j, analyze with graph algorithms, and visualize results.</p>
+</li>
+<li>
+<p><strong>Reproducibility requires three pillars</strong> — Version control (Git) for code, conda environments for dependencies, and workflow managers (Snakemake) for execution order.</p>
+</li>
+<li>
+<p><strong>Graph data model design precedes implementation</strong> — Identify entities, define relationships, assign properties, and validate against queries before writing any analysis code.</p>
+</li>
+<li>
+<p><strong>Six capstone projects span the breadth of graph bioinformatics</strong> — Antibiotic resistance networks, rare disease knowledge graphs, metabolic model comparison, protein function prediction with graph embeddings, multi-omics patient stratification, and custom projects.</p>
+</li>
+<li>
+<p><strong>The bench-to-bedside pipeline generalizes across all projects</strong> — Data acquisition, wrangling, graph construction, analysis, machine learning, visualization, interpretation, and communication.</p>
+</li>
+<li>
+<p><strong>The future of graph bioinformatics</strong> lies in graph neural networks, federated learning, scalable cloud platforms, and multimodal knowledge graphs — but the fundamentals of graph thinking will remain constant.</p>
+</li>
+<li>
+<p><strong>Choose the right tool for the question</strong> — Graph methods are most powerful when relationships between entities carry as much information as the entities themselves. Always evaluate whether a graph approach adds genuine value.</p>
+</li>
+</ol>
 
 
 

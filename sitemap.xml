@@ -17,6 +17,10 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/glossary/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/license/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
@@ -101,6 +105,14 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/learning-graph/book-metrics/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/learning-graph/chapter-metrics/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/learning-graph/concept-list/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
@@ -133,11 +145,47 @@
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/prompts/02-learning-graph/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/prompts/03-generate-chapter-content/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/prompts/05-microsim-json-specs/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/central-dogma-exceptions/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/central-dogma-flow/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/codon-table-explorer/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/sims/graph-viewer/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/mutation-types-explorer/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/sims/prokaryote-vs-eukaryote/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/protein-structure-levels/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
     <url>
@@ -146,6 +194,14 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/sims/shared-libs/plan/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/stories/</loc>
+         <lastmod>2026-03-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/stories/list-of-possible-stories/</loc>
          <lastmod>2026-03-25</lastmod>
     </url>
 </urlset>

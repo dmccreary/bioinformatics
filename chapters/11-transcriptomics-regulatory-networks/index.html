@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="RNA-seq analysis, differential expression, co-expression networks, regulatory network inference, and single-cell transcriptomics">
       
       
         <meta name="author" content="Dan McCreary">
@@ -23,7 +23,7 @@
     
     
       
-        <title>11. Transcriptomics - Bioinformatics</title>
+        <title>Transcriptomics and Gene Regulatory Networks - Bioinformatics</title>
       
     
     
@@ -62,9 +62,9 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="11. Transcriptomics - Bioinformatics">
+        <meta property="og:title" content="Transcriptomics and Gene Regulatory Networks - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="RNA-seq analysis, differential expression, co-expression networks, regulatory network inference, and single-cell transcriptomics">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/11-transcriptomics-regulatory-networks/index.png">
       
@@ -78,9 +78,9 @@
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="11. Transcriptomics - Bioinformatics">
+        <meta name="twitter:title" content="Transcriptomics and Gene Regulatory Networks - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="RNA-seq analysis, differential expression, co-expression networks, regulatory network inference, and single-cell transcriptomics">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/chapters/11-transcriptomics-regulatory-networks/index.png">
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              11. Transcriptomics
+              Transcriptomics and Gene Regulatory Networks
             
           </span>
         </div>
@@ -725,6 +725,420 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-transcriptome" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Transcriptome
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Transcriptome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-transcriptome-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Transcriptome Landscape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rna-seq-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RNA-Seq Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The RNA-Seq Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-preparation-and-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Preparation and Sequencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-quality-trimming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Quality Trimming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcript-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcript Quantification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcript Quantification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rna-seq-pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: RNA-Seq Pipeline Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differential Expression Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Differential Expression Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fold-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fold Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-testing-for-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Testing for Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-discovery-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      False Discovery Rate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="False Discovery Rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-volcano-plot-for-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Volcano Plot for Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transcriptional-regulation-the-molecular-machinery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcriptional Regulation: The Molecular Machinery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcriptional Regulation: The Molecular Machinery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcription-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcription Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promoter-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoter Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancer-regions-and-cis-regulatory-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancer Regions and Cis-Regulatory Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-regulatory-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Regulatory Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#co-expression-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-Expression Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Co-Expression Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wgcna" class="md-nav__link">
+    <span class="md-ellipsis">
+      WGCNA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-inference-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Inference Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Inference Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aracne" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARACNE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie3" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENIE3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-network-inference-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Network Inference Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Network Inference Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-co-expression-network-and-module-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Co-Expression Network and Module Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-models-for-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Models for Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Models for Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Model Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-and-spatial-transcriptomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-Cell and Spatial Transcriptomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell and Spatial Transcriptomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-cell-rna-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-Cell RNA-Seq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-type-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell Type Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trajectory Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trajectory Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-single-cell-clustering-and-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Single-Cell Clustering and Trajectory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-transcriptomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Transcriptomics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-expression-to-regulatory-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Expression to Regulatory Insight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -871,6 +1285,10 @@
       
         
       
+        
+      
+        
+      
     
     
     
@@ -920,6 +1338,30 @@
           
         
       
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
     
     
     
@@ -933,7 +1375,7 @@
         
   
   
-    <a href="../../sims/graph-viewer/" class="md-nav__link">
+    <a href="../../sims/" class="md-nav__link">
       
   
   <span class="md-ellipsis">
@@ -948,6 +1390,26 @@
   
 
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1065,6 +1527,420 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#the-transcriptome" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Transcriptome
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Transcriptome">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-the-transcriptome-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: The Transcriptome Landscape
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-rna-seq-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      The RNA-Seq Pipeline
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The RNA-Seq Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-preparation-and-sequencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Preparation and Sequencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-quality-trimming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Quality Trimming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-alignment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Alignment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transcript-quantification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcript Quantification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcript Quantification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-rna-seq-pipeline-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: RNA-Seq Pipeline Overview
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differential-expression-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Differential Expression Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Differential Expression Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fold-change" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fold Change
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-testing-for-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Testing for Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#false-discovery-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      False Discovery Rate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="False Discovery Rate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-volcano-plot-for-differential-expression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Volcano Plot for Differential Expression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transcriptional-regulation-the-molecular-machinery" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcriptional Regulation: The Molecular Machinery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Transcriptional Regulation: The Molecular Machinery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#transcription-factors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transcription Factors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#promoter-regions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Promoter Regions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhancer-regions-and-cis-regulatory-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhancer Regions and Cis-Regulatory Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gene-regulatory-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gene Regulatory Networks
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#co-expression-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-Expression Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Co-Expression Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#wgcna" class="md-nav__link">
+    <span class="md-ellipsis">
+      WGCNA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-inference-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Inference Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Inference Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aracne" class="md-nav__link">
+    <span class="md-ellipsis">
+      ARACNE
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#genie3" class="md-nav__link">
+    <span class="md-ellipsis">
+      GENIE3
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparing-network-inference-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparing Network Inference Methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comparing Network Inference Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-co-expression-network-and-module-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Co-Expression Network and Module Detection
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graph-models-for-regulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Models for Regulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph Models for Regulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Boolean Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesian-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayesian Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-model-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Model Summary
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-cell-and-spatial-transcriptomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-Cell and Spatial Transcriptomics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Single-Cell and Spatial Transcriptomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#single-cell-rna-seq" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single-Cell RNA-Seq
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cell-type-clustering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cell Type Clustering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trajectory Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trajectory Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-single-cell-clustering-and-trajectory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Single-Cell Clustering and Trajectory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spatial-transcriptomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Spatial Transcriptomics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putting-it-all-together-from-expression-to-regulatory-insight" class="md-nav__link">
+    <span class="md-ellipsis">
+      Putting It All Together: From Expression to Regulatory Insight
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1133,7 +2009,286 @@
 <li><a href="../10-genome-assembly-variation-graphs/">Chapter 10: Genome Assembly and Variation Graphs</a></li>
 </ul>
 <hr>
-<p>TODO: Generate Chapter Content</p>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Explorers! Let's Connect the Dots!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/welcome.png" data-desc-position="bottom"><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Olli welcomes you"></a>
+Every cell in your body carries essentially the same genome, yet a neuron looks and behaves nothing like a white blood cell. The secret lies in which genes are turned on, turned off, and turned up or down — the <strong>transcriptome</strong>. In this chapter we will trace RNA from its birth at a promoter to its measurement by sequencing, learn how to identify genes that change between conditions, and then build the graph structures — co-expression networks and gene regulatory networks — that reveal how thousands of genes coordinate their activity. Let's connect the dots!</p>
+</div>
+<h2 id="the-transcriptome">The Transcriptome</h2>
+<p>The <strong>transcriptome</strong> is the complete set of RNA molecules present in a cell, tissue, or organism at a specific moment in time. Unlike the genome, which is essentially fixed, the transcriptome is dynamic: it shifts in response to developmental signals, environmental stress, disease, and even the time of day. Measuring the transcriptome gives us a snapshot of gene activity and, by extension, a window into cell function.</p>
+<p>RNA comes in many forms. Messenger RNA (mRNA) carries protein-coding information and is the primary target of most transcriptomic studies. However, cells also produce a rich repertoire of <strong>non-coding RNA</strong> species — ribosomal RNA (rRNA), transfer RNA (tRNA), microRNAs (miRNAs), long non-coding RNAs (lncRNAs), and circular RNAs (circRNAs) — that regulate gene expression at multiple levels. A single gene can also produce multiple transcript variants through <strong>alternative splicing</strong>, in which different combinations of exons are joined together to produce distinct mRNAs from the same genomic locus. In humans, over 95% of multi-exon genes undergo alternative splicing, vastly expanding the functional diversity of the proteome.</p>
+<h4 id="diagram-the-transcriptome-landscape">Diagram: The Transcriptome Landscape</h4>
+<iframe src="../../sims/transcriptome-landscape/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/transcriptome-landscape/main.html">View Transcriptome Landscape MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: transcriptome-landscape
+Library: p5.js
+Status: Specified
+
+An interactive diagram showing a cell with its nucleus, depicting DNA being transcribed into various RNA types (mRNA, miRNA, lncRNA, rRNA). Arrows show mRNA export to the cytoplasm for translation. Alternative splicing is depicted with an exon-intron gene model where different exon combinations produce different transcript isoforms. Users can click on each RNA type for a brief description.
+</details>
+
+<h2 id="the-rna-seq-pipeline">The RNA-Seq Pipeline</h2>
+<p><strong>RNA-Seq</strong> (RNA sequencing) is the dominant technology for measuring transcriptomes at scale. An <strong>RNA-Seq pipeline</strong> is the sequence of computational steps that transforms raw sequencing reads into biologically meaningful gene expression estimates. Understanding each stage is essential for producing reliable results.</p>
+<h3 id="sample-preparation-and-sequencing">Sample Preparation and Sequencing</h3>
+<p>The wet-lab portion begins with RNA extraction, followed by selection of the RNA population of interest (typically poly-A selection for mRNA or ribosomal depletion for total RNA). The selected RNA is reverse-transcribed into complementary DNA (cDNA), fragmented, ligated with sequencing adapters, and loaded onto a sequencing instrument. The result is tens of millions of short reads, typically 50 to 150 base pairs in length.</p>
+<h3 id="read-quality-trimming">Read Quality Trimming</h3>
+<p>Raw reads contain adapter sequences, low-quality bases near the 3' end, and occasional sequencing artifacts. <strong>Read quality trimming</strong> removes these contaminants to improve downstream alignment accuracy. Tools such as Trimmomatic, fastp, and Cutadapt scan each read, clip adapter sequences, trim bases below a quality threshold (commonly Phred score &lt; 20), and discard reads that fall below a minimum length after trimming. Quality reports generated by FastQC before and after trimming provide visual confirmation that the cleaning step was effective.</p>
+<h3 id="read-alignment">Read Alignment</h3>
+<p>After trimming, reads must be mapped back to a reference genome or transcriptome. <strong>Read alignment</strong> for RNA-Seq differs from genomic alignment because reads frequently span exon-exon junctions. Splice-aware aligners such as STAR and HISAT2 use a two-pass strategy: they first align reads that map contiguously and then use the discovered splice junctions to guide alignment of junction-spanning reads. The output is a BAM file containing the genomic coordinates of every aligned read.</p>
+<h3 id="transcript-quantification">Transcript Quantification</h3>
+<p><strong>Transcript quantification</strong> converts aligned reads into expression estimates — typically counts of reads assigned to each gene or transcript. Tools like featureCounts and HTSeq count the number of reads overlapping annotated gene models. An alternative family of methods — Salmon and kallisto — bypasses genome alignment entirely, instead using lightweight pseudo-alignment directly to the transcriptome to estimate transcript-level abundances at high speed. The resulting count matrix, with genes in rows and samples in columns, is the starting point for all downstream statistical analysis.</p>
+<h4 id="diagram-rna-seq-pipeline-overview">Diagram: RNA-Seq Pipeline Overview</h4>
+<iframe src="../../sims/rnaseq-pipeline/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/rnaseq-pipeline/main.html">View RNA-Seq Pipeline MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: rnaseq-pipeline
+Library: p5.js
+Status: Specified
+
+An animated flowchart showing the RNA-Seq pipeline stages: RNA extraction, library preparation, sequencing, quality trimming, read alignment (with splice-aware mapping illustrated), and transcript quantification. Reads flow through each stage as small colored rectangles. Clicking a stage highlights it and displays tools commonly used at that step (e.g., fastp, STAR, featureCounts). A final panel shows a simplified gene-by-sample count matrix.
+</details>
+
+<h2 id="differential-expression-analysis">Differential Expression Analysis</h2>
+<p>The central question in most RNA-Seq experiments is: which genes change their expression levels between experimental conditions? <strong>Differential expression</strong> (DE) analysis provides a statistical framework for answering this question while accounting for biological variability and the massive multiple-testing burden of testing thousands of genes simultaneously.</p>
+<h3 id="fold-change">Fold Change</h3>
+<p>The simplest measure of expression change is the <strong>fold change</strong> (FC), defined as the ratio of mean expression between two conditions:</p>
+<div class="arithmatex">\[\text{FC} = \frac{\bar{x}_{\text{treatment}}}{\bar{x}_{\text{control}}}\]</div>
+<p>Because fold change is asymmetric (up-regulation gives values above 1 while down-regulation gives values between 0 and 1), bioinformaticians typically use the log2 fold change:</p>
+<div class="arithmatex">\[\log_2(\text{FC}) = \log_2\!\left(\frac{\bar{x}_{\text{treatment}}}{\bar{x}_{\text{control}}}\right)\]</div>
+<p>A <span class="arithmatex">\(\log_2(\text{FC})\)</span> of 1 means the gene is expressed at twice the level in the treatment group; a value of <span class="arithmatex">\(-1\)</span> means it is expressed at half the level. Log2 fold change treats up- and down-regulation symmetrically and is the standard axis in volcano plots and MA plots.</p>
+<h3 id="statistical-testing-for-differential-expression">Statistical Testing for Differential Expression</h3>
+<p>Fold change alone is insufficient because it ignores variance. A gene with a large fold change but enormous variability across replicates may not be genuinely differentially expressed. <strong>Statistical testing for DE</strong> therefore models the count distribution and estimates per-gene dispersion. DESeq2 and edgeR, the two most widely used tools, model RNA-Seq counts with a negative binomial distribution:</p>
+<div class="arithmatex">\[K_{ij} \sim \text{NB}(\mu_{ij}, \alpha_i)\]</div>
+<p>where <span class="arithmatex">\(K_{ij}\)</span> is the count for gene <span class="arithmatex">\(i\)</span> in sample <span class="arithmatex">\(j\)</span>, <span class="arithmatex">\(\mu_{ij}\)</span> is the expected count, and <span class="arithmatex">\(\alpha_i\)</span> is the gene-specific dispersion parameter. Both tools use empirical Bayes shrinkage to borrow information across genes when estimating dispersion, which stabilizes estimates when the number of replicates is small (as is common in biological experiments).</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link? Why Not Just Use a T-Test?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+RNA-Seq counts are not normally distributed — they follow a discrete, skewed distribution with mean-variance coupling (genes with higher expression have higher variance). The negative binomial model captures this relationship, making DESeq2 and edgeR far more appropriate than a standard t-test for count data. Using the wrong statistical model inflates false positives and can lead to misleading biological conclusions.</p>
+</div>
+<h3 id="false-discovery-rate">False Discovery Rate</h3>
+<p>When testing 20,000 genes simultaneously, even a modest per-gene error rate produces hundreds of false positives. The <strong>false discovery rate</strong> (FDR) controls the expected proportion of false positives among all genes called significant. The Benjamini-Hochberg procedure is the standard method: it ranks all <span class="arithmatex">\(m\)</span> p-values from smallest to largest and finds the largest rank <span class="arithmatex">\(k\)</span> for which:</p>
+<div class="arithmatex">\[p_{(k)} \leq \frac{k}{m} \cdot q\]</div>
+<p>where <span class="arithmatex">\(q\)</span> is the desired FDR threshold (typically 0.05). All genes with rank <span class="arithmatex">\(\leq k\)</span> are declared significant. The adjusted p-value (or q-value) for each gene represents the minimum FDR at which that gene would be called significant. In practice, a gene is considered differentially expressed if its adjusted p-value is below 0.05 and its absolute <span class="arithmatex">\(\log_2(\text{FC})\)</span> exceeds a biologically meaningful threshold (often 1.0).</p>
+<h4 id="diagram-volcano-plot-for-differential-expression">Diagram: Volcano Plot for Differential Expression</h4>
+<iframe src="../../sims/volcano-plot/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/volcano-plot/main.html">View Volcano Plot MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: volcano-plot
+Library: p5.js
+Status: Specified
+
+An interactive volcano plot with log2 fold change on the x-axis and negative log10 adjusted p-value on the y-axis. Simulated gene data points are colored by significance: gray for non-significant, blue for significant fold change only, red for significant by both fold change and FDR thresholds. Sliders allow the user to adjust the fold change and FDR cutoffs and watch the coloring update in real time. Hovering over a point shows a gene name tooltip.
+</details>
+
+<h2 id="transcriptional-regulation-the-molecular-machinery">Transcriptional Regulation: The Molecular Machinery</h2>
+<p>Before we can model gene regulatory networks, we need to understand the molecular players. Gene expression is controlled at the transcriptional level by a set of DNA elements and protein factors that together determine when, where, and how strongly a gene is transcribed.</p>
+<h3 id="transcription-factors">Transcription Factors</h3>
+<p>A <strong>transcription factor</strong> (TF) is a protein that binds to specific DNA sequences to activate or repress transcription of a target gene. The human genome encodes roughly 1,600 transcription factors, each recognizing a characteristic sequence motif of 6 to 20 base pairs. TFs work combinatorially: the expression of a gene typically depends on the presence and activity of multiple TFs, creating a complex regulatory logic that can be modeled as a directed graph.</p>
+<h3 id="promoter-regions">Promoter Regions</h3>
+<p>The <strong>promoter region</strong> is the stretch of DNA immediately upstream of a gene's transcription start site (TSS), typically spanning a few hundred base pairs. Core promoter elements — such as the TATA box, the initiator element (Inr), and CpG islands — recruit the general transcription machinery (RNA polymerase II and its associated factors). Proximal promoter elements, located within a few hundred base pairs of the TSS, bind specific transcription factors that modulate the rate of transcription.</p>
+<h3 id="enhancer-regions-and-cis-regulatory-elements">Enhancer Regions and Cis-Regulatory Elements</h3>
+<p>An <strong>enhancer region</strong> is a distal regulatory sequence that can increase transcription of a target gene from thousands or even millions of base pairs away. Enhancers function by looping through three-dimensional chromatin architecture to physically contact the promoter, bringing their bound transcription factors into proximity with the transcription machinery. Both promoters and enhancers are examples of <strong>cis-regulatory elements</strong> — DNA sequences that regulate gene expression from the same chromosome. The identification of active enhancers through chromatin accessibility assays (ATAC-seq) and histone modification profiling (ChIP-seq for H3K27ac) is a major area of functional genomics research.</p>
+<h3 id="operons">Operons</h3>
+<p>In prokaryotes, genes involved in the same metabolic pathway are often organized into <strong>operons</strong> — clusters of genes transcribed as a single polycistronic mRNA from a shared promoter. The lac operon in <em>Escherichia coli</em>, which controls lactose metabolism, is the classic example: a single promoter drives transcription of three structural genes (<em>lacZ</em>, <em>lacY</em>, <em>lacA</em>), and a repressor protein bound to an operator sequence blocks transcription in the absence of lactose. Operons represent a compact, elegant form of gene regulation that simplifies the regulatory network by coupling the expression of functionally related genes.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Follow the Edges!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/tip.png" data-desc-position="bottom"><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Olli has a tip"></a>
+When reading the literature, pay attention to the distinction between <strong>cis</strong>-regulatory elements (on the same chromosome as the target gene) and <strong>trans</strong>-acting factors (proteins like transcription factors that are encoded elsewhere in the genome but act upon the target). This cis/trans distinction maps directly onto graph modeling: cis elements are attributes of the target node, while trans factors create edges between regulator and target.</p>
+</div>
+<h2 id="gene-regulatory-networks">Gene Regulatory Networks</h2>
+<p>A <strong>gene regulatory network</strong> (GRN) is a directed graph <span class="arithmatex">\(G = (V, E)\)</span> in which nodes represent genes (or their protein products) and directed edges represent regulatory relationships — activation or repression. If transcription factor A activates gene B, the GRN contains a directed edge <span class="arithmatex">\(A \rightarrow B\)</span> with a positive sign; if A represses B, the edge carries a negative sign. GRNs capture the wiring diagram of transcriptional control and are essential for understanding how cells make decisions, differentiate, and respond to stimuli.</p>
+<p>GRNs exhibit several characteristic structural features. <strong>Feed-forward loops</strong>, in which a TF regulates a target both directly and indirectly through an intermediate TF, are statistically enriched compared to random networks and serve as signal-processing modules. <strong>Autoregulatory loops</strong>, where a TF regulates its own transcription, provide stability or bistability depending on whether the feedback is positive or negative. The global topology of GRNs tends to be scale-free, with a small number of master regulators (hubs) controlling large portions of the network.</p>
+<h2 id="co-expression-networks">Co-Expression Networks</h2>
+<p>A <strong>co-expression network</strong> is an undirected weighted graph in which nodes represent genes and edges connect genes whose expression profiles are correlated across a set of samples. Unlike GRNs, co-expression networks do not imply direct regulatory relationships — two genes may be co-expressed because they share a common regulator, participate in the same pathway, or respond to the same environmental signal. Nevertheless, the principle of "guilt by association" makes co-expression networks powerful tools for predicting gene function and identifying functional modules.</p>
+<p>The construction of a co-expression network begins with a gene expression matrix (genes <span class="arithmatex">\(\times\)</span> samples). For every pair of genes, a similarity measure — typically Pearson correlation — is computed. The resulting similarity matrix is then converted into an adjacency matrix by applying either a hard threshold (setting edges to 0 or 1 based on a correlation cutoff) or a soft threshold that preserves continuous edge weights.</p>
+<h3 id="wgcna">WGCNA</h3>
+<p><strong>Weighted Gene Co-expression Network Analysis</strong> (WGCNA) is the most widely used method for building and analyzing co-expression networks. WGCNA applies a soft-thresholding power <span class="arithmatex">\(\beta\)</span> to the absolute correlation to construct a weighted adjacency:</p>
+<div class="arithmatex">\[a_{ij} = |\text{cor}(x_i, x_j)|^{\beta}\]</div>
+<p>The power <span class="arithmatex">\(\beta\)</span> is chosen to approximate a scale-free network topology (typically by selecting the lowest <span class="arithmatex">\(\beta\)</span> for which the scale-free fit index <span class="arithmatex">\(R^2\)</span> exceeds 0.8). WGCNA then computes a topological overlap matrix (TOM), which measures not only the direct connection between two genes but also the similarity of their connection patterns to all other genes. Hierarchical clustering of the TOM distance matrix identifies modules of tightly co-expressed genes, which are summarized by their first principal component (the module eigengene). These modules can then be correlated with clinical traits or experimental variables to identify biologically relevant gene sets.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What's the Link? Why Soft Thresholding?</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/thinking.png" data-desc-position="bottom"><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Olli is thinking"></a>
+A hard threshold forces you to make an arbitrary binary decision — two genes are either connected or not. Soft thresholding preserves the continuous nature of correlation while suppressing weak, likely noisy connections. The power function acts like a magnifying glass: strong correlations remain close to 1 while weak correlations are pushed toward 0. This produces a network that better reflects the biological hierarchy of regulatory relationships.</p>
+</div>
+<h2 id="network-inference-methods">Network Inference Methods</h2>
+<p>Inferring the structure of regulatory networks from gene expression data alone is one of the grand challenges of systems biology. Multiple computational approaches exist, each with distinct assumptions, strengths, and limitations. Three of the most influential <strong>network inference methods</strong> are WGCNA (described above), ARACNE, and GENIE3.</p>
+<h3 id="aracne">ARACNE</h3>
+<p><strong>ARACNE</strong> (Algorithm for the Reconstruction of Accurate Cellular Networks) infers regulatory interactions using <strong>mutual information</strong> (MI), an information-theoretic measure of statistical dependence between two random variables. Unlike Pearson correlation, mutual information captures nonlinear relationships. For two genes <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> with joint probability distribution <span class="arithmatex">\(p(x, y)\)</span>:</p>
+<div class="arithmatex">\[I(X; Y) = \sum_{x} \sum_{y} p(x, y) \log_2 \frac{p(x, y)}{p(x) \cdot p(y)}\]</div>
+<p>Mutual information equals zero if and only if <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> are statistically independent. ARACNE first computes pairwise MI for all gene pairs, then applies the <strong>data processing inequality</strong> (DPI) to remove indirect interactions. The DPI states that for a chain <span class="arithmatex">\(X \rightarrow Z \rightarrow Y\)</span>, the mutual information between the endpoints cannot exceed the mutual information of either direct link: <span class="arithmatex">\(I(X; Y) \leq \min(I(X; Z), I(Z; Y))\)</span>. By examining every triplet and removing the weakest edge, ARACNE prunes indirect edges and produces a sparser, more accurate network.</p>
+<h3 id="genie3">GENIE3</h3>
+<p><strong>GENIE3</strong> (Gene Network Inference with Ensemble of trees) frames network inference as a set of regression problems. For each gene <span class="arithmatex">\(j\)</span>, GENIE3 trains a random forest to predict the expression of gene <span class="arithmatex">\(j\)</span> from the expression of all other genes. The importance of each predictor gene <span class="arithmatex">\(i\)</span> in the random forest model for gene <span class="arithmatex">\(j\)</span> is taken as a measure of the regulatory strength of the edge <span class="arithmatex">\(i \rightarrow j\)</span>. Aggregating importance scores across all <span class="arithmatex">\(n\)</span> regression problems produces a complete ranked list of putative regulatory interactions. GENIE3 won the DREAM4 In Silico Multifactorial challenge and remains a top-performing method across benchmarks.</p>
+<h3 id="comparing-network-inference-methods">Comparing Network Inference Methods</h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>WGCNA</th>
+<th>ARACNE</th>
+<th>GENIE3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Network type</strong></td>
+<td>Undirected, weighted</td>
+<td>Undirected (MI-based)</td>
+<td>Directed (regulator to target)</td>
+</tr>
+<tr>
+<td><strong>Edge metric</strong></td>
+<td>Pearson correlation (soft-thresholded)</td>
+<td>Mutual information</td>
+<td>Random forest feature importance</td>
+</tr>
+<tr>
+<td><strong>Captures nonlinear relationships</strong></td>
+<td>No</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><strong>Handles indirect interactions</strong></td>
+<td>Partially (via TOM)</td>
+<td>Yes (DPI pruning)</td>
+<td>Implicitly (multivariate regression)</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>High (10,000+ genes)</td>
+<td>Moderate (MI estimation is expensive)</td>
+<td>Moderate (one forest per gene)</td>
+</tr>
+<tr>
+<td><strong>Identifies modules</strong></td>
+<td>Yes (primary strength)</td>
+<td>No (edge list only)</td>
+<td>No (edge list only)</td>
+</tr>
+<tr>
+<td><strong>Requires known regulators</strong></td>
+<td>No</td>
+<td>No (but often restricted to TFs)</td>
+<td>No (but often restricted to TFs)</td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Modules + eigengenes</td>
+<td>Ranked edge list</td>
+<td>Ranked edge list</td>
+</tr>
+</tbody>
+</table>
+<h4 id="diagram-co-expression-network-and-module-detection">Diagram: Co-Expression Network and Module Detection</h4>
+<iframe src="../../sims/coexpression-network/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/coexpression-network/main.html">View Co-Expression Network MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: coexpression-network
+Library: p5.js
+Status: Specified
+
+An interactive network visualization of a simulated co-expression network. Nodes represent genes, colored by module assignment (clusters of tightly co-expressed genes). Edge thickness reflects correlation strength. A slider adjusts the soft-thresholding power, and users can observe how increasing the power prunes weak edges and sharpens module boundaries. Clicking a module highlights its member genes and displays the module eigengene as a small line chart.
+</details>
+
+<h2 id="graph-models-for-regulation">Graph Models for Regulation</h2>
+<p>Beyond simple edge lists, several formal <strong>graph models for regulation</strong> provide frameworks for simulating and predicting regulatory dynamics.</p>
+<h3 id="boolean-network-models">Boolean Network Models</h3>
+<p>A <strong>Boolean network model</strong> represents each gene as a binary variable (on = 1, off = 0) whose state at time <span class="arithmatex">\(t + 1\)</span> is determined by a Boolean function of its regulators at time <span class="arithmatex">\(t\)</span>. For example, if gene <span class="arithmatex">\(C\)</span> is activated when <span class="arithmatex">\(A\)</span> is on AND <span class="arithmatex">\(B\)</span> is off, the update rule is:</p>
+<div class="arithmatex">\[C(t+1) = A(t) \wedge \neg B(t)\]</div>
+<p>Boolean networks are computationally tractable and can capture the qualitative logic of gene regulation — including attractors that correspond to stable cell states. Stuart Kauffman's random Boolean network (RBN) model showed that networks with an average of two inputs per gene exhibit a phase transition between ordered and chaotic behavior, with the critical regime ("edge of chaos") producing complex, lifelike dynamics.</p>
+<h3 id="bayesian-network-models">Bayesian Network Models</h3>
+<p>A <strong>Bayesian network model</strong> is a directed acyclic graph (DAG) in which nodes represent genes and edges encode conditional dependencies. Each node is associated with a conditional probability distribution that quantifies the probabilistic relationship between a gene and its parents in the graph. Bayesian networks can model continuous expression data and capture stochastic aspects of gene regulation. Structure learning algorithms (hill-climbing, score-based methods using BIC or BDe scores) search the space of possible DAGs to find the network structure that best explains the observed data. The requirement that the graph be acyclic is a significant limitation, since real regulatory networks contain feedback loops; dynamic Bayesian networks (DBNs), which model time-series data, partially address this by allowing edges between time slices.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Watch Out for Cycles!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/warning.png" data-desc-position="bottom"><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Olli warns you"></a>
+Standard Bayesian networks require a directed acyclic graph (DAG), which means they cannot directly represent feedback loops — one of the most common and important motifs in gene regulation. If you are working with time-series expression data, consider dynamic Bayesian networks, which unfold the network across time and allow cyclic relationships between time steps.</p>
+</div>
+<h3 id="graph-model-summary">Graph Model Summary</h3>
+<p>The choice of graph model depends on the question being asked. Boolean networks excel at qualitative analysis of regulatory logic and cell-state attractors. Bayesian networks provide a principled probabilistic framework for structure learning from observational data. Co-expression networks reveal functional modules without requiring causal assumptions, while directed GRN inference methods like GENIE3 attempt to identify the regulators driving expression changes. In all cases, the graph is the central abstraction: nodes represent molecular entities, edges represent relationships, and network properties reveal biological organization.</p>
+<h2 id="single-cell-and-spatial-transcriptomics">Single-Cell and Spatial Transcriptomics</h2>
+<p>Bulk RNA-Seq measures the average expression across millions of cells, masking the heterogeneity that is fundamental to tissue biology. Recent advances in single-cell and spatial technologies have opened new frontiers in transcriptomics.</p>
+<h3 id="single-cell-rna-seq">Single-Cell RNA-Seq</h3>
+<p><strong>Single-cell RNA-Seq</strong> (scRNA-seq) measures the transcriptome of individual cells, revealing cell-to-cell variability that is invisible in bulk experiments. Droplet-based platforms (10x Genomics Chromium) can profile tens of thousands of cells in a single experiment, generating a sparse gene-by-cell expression matrix. Because each cell is sequenced shallowly (typically 1,000 to 5,000 genes detected per cell), scRNA-seq data are characterized by high levels of technical noise and dropout events (genes that are expressed but not detected due to low capture efficiency).</p>
+<h3 id="cell-type-clustering">Cell Type Clustering</h3>
+<p>The first analytical step in most scRNA-seq workflows is <strong>cell type clustering</strong>: grouping cells with similar expression profiles into putative cell types or states. After normalization and selection of highly variable genes, the expression matrix is reduced to a low-dimensional space using PCA, and a k-nearest-neighbor (KNN) graph is constructed in this reduced space. Community detection algorithms — most commonly the Louvain or Leiden algorithm — partition the KNN graph into clusters that correspond to cell types. The graph-based clustering approach is a direct application of the community detection methods introduced in Chapter 4 and is the standard in tools like Scanpy and Seurat.</p>
+<h3 id="trajectory-analysis">Trajectory Analysis</h3>
+<p>Cells captured by scRNA-seq are often in transitional states — differentiating from one cell type to another. <strong>Trajectory analysis</strong> (also called pseudotime analysis) orders cells along a continuous path of gene expression change, reconstructing the sequence of transcriptional events that occur during differentiation. Methods such as Monocle 3 build a principal graph (a tree or graph structure) through the low-dimensional cell embedding, and each cell is projected onto this graph to obtain a pseudotime coordinate. The result is a branching trajectory that reveals differentiation pathways and the genes that drive cell-fate decisions.</p>
+<h4 id="diagram-single-cell-clustering-and-trajectory">Diagram: Single-Cell Clustering and Trajectory</h4>
+<iframe src="../../sims/scrna-clustering/main.html" width="100%" height="640" scrolling="no"></iframe>
+
+<p><em><a href="../../sims/scrna-clustering/main.html">View Single-Cell Clustering MicroSim Fullscreen</a></em></p>
+<details>
+<summary>Diagram Details</summary>
+
+sim-id: scrna-clustering
+Library: p5.js
+Status: Specified
+
+A UMAP-style 2D scatter plot of simulated single-cell data. Cells are colored by cluster (cell type) assignment. A toggle button switches between cluster view and trajectory view, where a principal curve traces through the point cloud to show a differentiation trajectory with pseudotime encoded as a color gradient. A slider controls the resolution parameter for clustering, and users can observe how increasing resolution splits clusters into finer subpopulations.
+</details>
+
+<h3 id="spatial-transcriptomics">Spatial Transcriptomics</h3>
+<p><strong>Spatial transcriptomics</strong> preserves the physical location of gene expression within a tissue section, bridging transcriptomics and histology. Technologies such as 10x Visium, MERFISH, and Slide-seq capture gene expression at thousands of spatial locations (spots or individual molecules). The resulting data can be modeled as a spatial graph in which nodes represent tissue locations and edges connect spatially adjacent spots. Graph neural networks and spatial autocorrelation statistics (Moran's I) applied to this spatial graph can identify spatially variable genes — genes whose expression patterns are structured in space rather than randomly distributed. Spatial transcriptomics is transforming our understanding of tumor microenvironments, brain regionalization, and developmental patterning.</p>
+<h2 id="putting-it-all-together-from-expression-to-regulatory-insight">Putting It All Together: From Expression to Regulatory Insight</h2>
+<p>A typical integrative analysis begins with the RNA-Seq pipeline to generate a count matrix, applies differential expression analysis to identify genes that change between conditions, and then uses network inference to place those genes in a regulatory context. The workflow can be summarized as a layered graph model:</p>
+<ol>
+<li><strong>Expression layer</strong>: A bipartite graph connecting samples to genes, weighted by expression levels.</li>
+<li><strong>Co-expression layer</strong>: An undirected graph connecting genes with correlated expression (built by WGCNA or simple thresholding).</li>
+<li><strong>Regulatory layer</strong>: A directed graph connecting transcription factors to their targets (inferred by ARACNE, GENIE3, or integrated with ChIP-seq binding data).</li>
+<li><strong>Spatial layer</strong> (when available): A graph connecting tissue locations, with gene expression as node attributes.</li>
+</ol>
+<p>This multi-layer <strong>graph model for regulation</strong> integrates evidence from multiple data types and scales, enabling researchers to move from a list of differentially expressed genes to mechanistic hypotheses about which transcription factors drive the observed changes, which modules of genes respond together, and how the regulatory architecture is organized in space and across cell types.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Great Work, Explorers!</p>
+<p><a class="glightbox" data-type="image" data-width="100%" data-height="auto" href="../../img/mascot/celebration.png" data-desc-position="bottom"><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates"></a>
+You have journeyed from raw sequencing reads through statistical testing to the construction of gene regulatory networks — tying together molecular biology, statistics, information theory, and graph algorithms. The transcriptome is not just a list of numbers; it is a dynamic network of interacting genes. By learning to build and analyze these networks, you now have a powerful lens for understanding how cells make decisions. Onward to metabolic pathways!</p>
+</div>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<ol>
+<li>
+<p>The <strong>transcriptome</strong> is the complete set of RNA molecules in a cell, reflecting gene activity at a point in time. <strong>Alternative splicing</strong> and <strong>non-coding RNAs</strong> add layers of complexity beyond simple gene counts.</p>
+</li>
+<li>
+<p>The <strong>RNA-Seq pipeline</strong> — quality trimming, read alignment, transcript quantification — transforms raw reads into a gene expression matrix suitable for statistical analysis.</p>
+</li>
+<li>
+<p><strong>Differential expression</strong> analysis uses the negative binomial model to identify genes with statistically significant changes between conditions. <strong>Fold change</strong> measures effect size, while the <strong>false discovery rate</strong> controls for multiple testing.</p>
+</li>
+<li>
+<p><strong>Transcription factors</strong> bind to <strong>promoter regions</strong>, <strong>enhancer regions</strong>, and other <strong>cis-regulatory elements</strong> to control gene expression. In prokaryotes, <strong>operons</strong> co-regulate functionally related genes.</p>
+</li>
+<li>
+<p><strong>Gene regulatory networks</strong> are directed graphs in which edges represent activation or repression by transcription factors. <strong>Co-expression networks</strong> are undirected graphs that reveal modules of functionally related genes.</p>
+</li>
+<li>
+<p>Three major <strong>network inference methods</strong> — <strong>WGCNA</strong> (correlation-based modules), <strong>ARACNE</strong> (<strong>mutual information</strong> with DPI pruning), and <strong>GENIE3</strong> (random forest regression) — offer complementary approaches to reconstructing regulatory relationships.</p>
+</li>
+<li>
+<p><strong>Boolean network models</strong> capture qualitative regulatory logic, while <strong>Bayesian network models</strong> provide probabilistic structure learning. Both are formal <strong>graph models for regulation</strong>.</p>
+</li>
+<li>
+<p><strong>Single-cell RNA-Seq</strong> reveals cell-to-cell heterogeneity. <strong>Cell type clustering</strong> uses graph-based community detection on KNN graphs, and <strong>trajectory analysis</strong> reconstructs differentiation pathways.</p>
+</li>
+<li>
+<p><strong>Spatial transcriptomics</strong> preserves tissue location, enabling spatial graph analysis of gene expression patterns.</p>
+</li>
+<li>
+<p>The overarching theme: transcriptomics data naturally map onto graph structures — from co-expression networks to directed regulatory networks to spatial graphs — making graph algorithms essential tools for understanding gene regulation.</p>
+</li>
+</ol>
 
 
 
