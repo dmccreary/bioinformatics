@@ -43,6 +43,9 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
+  static_templates:
+    - 404.html
   logo: img/logo.png
   favicon: img/favicon.ico
   palette:
