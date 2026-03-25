@@ -37,6 +37,7 @@ nav:
     - Mascot Style Guide: learning-graph/mascot-test.md
     - Book Metrics: learning-graph/book-metrics.md
     - Chapter Metrics: learning-graph/chapter-metrics.md
+    - FAQ Quality Report: learning-graph/faq-quality-report.md
   
   
   - MicroSims:
@@ -50,6 +51,7 @@ nav:
     - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
 
 
+  - FAQ: faq.md
   - Glossary: glossary.md
   - About: about.md
   - License: license.md

@@ -1,0 +1,1 @@
+run the /faq-generator skill and when done, check the code into github and then run a mkdocs gh-deploy 

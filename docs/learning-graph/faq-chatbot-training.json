@@ -1,0 +1,2302 @@
+{
+  "faq_version": "1.0",
+  "generated_date": "2026-03-25",
+  "source_textbook": "Bioinformatics",
+  "total_questions": 91,
+  "questions": [
+    {
+      "id": "faq-001",
+      "category": "Getting Started",
+      "question": "What is this course about and who is it for?",
+      "answer": "This course provides a comprehensive introduction to **bioinformatics** with a distinctive emphasis on **graph-based representations** of biological data. It is designed for upper-division undergraduates, graduate students, and working professionals who want to understand how biological information \u2014 from DNA sequences to protein interactions to metabolic pathways \u2014 can be modeled, stored, and analyzed using graph structures. Unlike traditional bioinformatics courses that treat graph theory as a peripheral topic, this course places graphs at the center of every major bioinformatics problem. By the end of the course, you will be able to query biological databases, perform sequence alignments, build phylogenetic trees, analyze protein interaction networks, and integrate multi-omics data using both classical algorithms and modern graph database technologies. See [Foundations of Molecular Biology](chapters/01-foundations-molecular-biology/index.md) for the starting point.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "bioinformatics",
+        "graph-based representations"
+      ],
+      "keywords": [
+        "course",
+        "about",
+        "who"
+      ],
+      "source_links": [
+        "chapters/01-foundations-molecular-biology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 126
+    },
+    {
+      "id": "faq-002",
+      "category": "Getting Started",
+      "question": "What are the prerequisites for this course?",
+      "answer": "You need three foundational areas of preparation. First, **introductory biology** \u2014 you should understand basic molecular biology concepts such as DNA, RNA, proteins, the central dogma of molecular biology, and cell structure. A single semester of college-level biology is sufficient. Second, **one semester of Python programming** \u2014 you should be comfortable writing functions, using loops and conditionals, working with lists and dictionaries, and reading/writing files. You do not need to be an expert, but you should not be learning Python for the first time alongside this material. Third, **basic statistics** \u2014 you should understand concepts like mean, variance, probability distributions, hypothesis testing, and p-values. If you are unsure about any of these areas, review them before diving into [Chapter 1](chapters/01-foundations-molecular-biology/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "introductory biology",
+        "one semester of Python programming",
+        "basic statistics"
+      ],
+      "keywords": [
+        "prerequisites",
+        "course"
+      ],
+      "source_links": [
+        "chapters/01-foundations-molecular-biology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 120
+    },
+    {
+      "id": "faq-003",
+      "category": "Getting Started",
+      "question": "How is this textbook different from a traditional bioinformatics textbook?",
+      "answer": "Traditional bioinformatics textbooks typically organize material around biological problems \u2014 sequence analysis, structural biology, genomics \u2014 and treat computational methods as tools applied to each domain. This textbook instead uses **graph theory** as a unifying framework that connects all of bioinformatics. Every major biological data type is shown to have a natural graph representation: sequences become paths, phylogenies become trees, protein interactions become networks, metabolic pathways become directed graphs, and knowledge bases become labeled property graphs. This approach reveals deep structural similarities across seemingly different biological problems and equips you with a transferable set of graph algorithms and database skills. The textbook also emphasizes hands-on interaction through **MicroSims** \u2014 embedded interactive simulations that let you explore concepts visually.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "graph theory",
+        "MicroSims"
+      ],
+      "keywords": [
+        "textbook",
+        "different",
+        "from",
+        "traditional",
+        "bioinformatics",
+        "textbook"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-004",
+      "category": "Getting Started",
+      "question": "What software and tools do I need to install?",
+      "answer": "You will need several tools throughout the course. **Python 3.9+** is essential, along with key libraries: **NetworkX** for graph analysis, **Biopython** for biological sequence manipulation, and the **Neo4j Python driver** for graph database queries. You should also install **Neo4j Desktop** or use **Neo4j AuraDB** (free tier) for working with graph databases in [Chapter 5](chapters/05-graph-databases-query-languages/index.md). A good code editor such as VS Code is recommended. For visualization, **Matplotlib** and **Pyvis** are helpful. Jupyter Notebooks are used for many exercises. All tools are free or have free tiers available. Detailed installation instructions appear in [Python Tools and Capstone Projects](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Python 3.9+",
+        "NetworkX",
+        "Biopython",
+        "Neo4j Python driver",
+        "Neo4j Desktop"
+      ],
+      "keywords": [
+        "software",
+        "tools",
+        "need",
+        "install"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md",
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 97
+    },
+    {
+      "id": "faq-005",
+      "category": "Getting Started",
+      "question": "How should I use the interactive MicroSims in this textbook?",
+      "answer": "The **MicroSims** are embedded interactive simulations built with p5.js and other web technologies. They appear as light-blue panels within chapter pages. Each MicroSim has controls \u2014 sliders, buttons, dropdowns \u2014 that let you manipulate parameters and observe how biological or computational concepts change in real time. For example, you can explore codon tables, visualize mutation types, or watch graph algorithms traverse a network. The best approach is to read the surrounding text first to understand what the simulation demonstrates, then interact with the MicroSim to build intuition. Many MicroSims have an **Explore mode** for learning and a **Quiz mode** for self-testing. You can click \"View Fullscreen\" to open any MicroSim in a dedicated browser tab for a larger view.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "MicroSims",
+        "Explore mode",
+        "Quiz mode"
+      ],
+      "keywords": [
+        "use",
+        "interactive",
+        "microsims",
+        "textbook"
+      ],
+      "source_links": [],
+      "has_example": true,
+      "word_count": 119
+    },
+    {
+      "id": "faq-006",
+      "category": "Getting Started",
+      "question": "What is the recommended study path through this course?",
+      "answer": "The textbook is organized in a deliberate sequence. Chapters 1-3 establish the **biological and data foundations** \u2014 molecular biology, databases, and file formats. Chapters 4-5 introduce the **graph theory and graph database skills** you will use throughout the rest of the course. Chapters 6-8 cover **classical bioinformatics** topics (alignment, phylogenetics, structural biology) through a graph lens. Chapters 9-13 explore **network biology** applications \u2014 protein interactions, genome assembly, gene regulation, metabolism, and signaling. Chapters 14-15 address **integration and knowledge representation**. Chapter 16 ties everything together with **Python tools and a capstone project**. We recommend following this order, though students with strong biology backgrounds can skim Chapters 1-3, and those with graph theory experience can skim Chapter 4.",
+      "bloom_level": "Remember",
+      "difficulty": "easy",
+      "concepts": [
+        "biological and data foundations",
+        "graph theory and graph database skills",
+        "classical bioinformatics",
+        "network biology",
+        "integration and knowledge representation"
+      ],
+      "keywords": [
+        "recommended",
+        "study",
+        "path",
+        "through",
+        "course"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 116
+    },
+    {
+      "id": "faq-007",
+      "category": "Getting Started",
+      "question": "Do I need prior experience with graph databases?",
+      "answer": "No. **Graph databases** are introduced from scratch in [Chapter 5](chapters/05-graph-databases-query-languages/index.md). You will learn the **labeled property graph** model, the **Cypher** query language used by Neo4j, and the emerging **GQL** standard. The only prerequisite is basic comfort with the idea of databases \u2014 if you have ever used a spreadsheet or written a SQL query, you have sufficient background. Chapter 4 covers the mathematical foundations of graph theory, and Chapter 5 builds on that to show how these abstract concepts map to practical database technology. Many students find graph databases more intuitive than relational databases because the data model closely mirrors how we naturally think about relationships.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "Graph databases",
+        "labeled property graph",
+        "Cypher",
+        "GQL"
+      ],
+      "keywords": [
+        "need",
+        "prior",
+        "experience",
+        "with",
+        "graph",
+        "databases"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md"
+      ],
+      "has_example": false,
+      "word_count": 106
+    },
+    {
+      "id": "faq-008",
+      "category": "Getting Started",
+      "question": "What kinds of assessments or projects should I expect?",
+      "answer": "Each chapter includes conceptual review questions, hands-on coding exercises, and discussion prompts. The course culminates in a **capstone project** described in [Chapter 16](chapters/16-python-tools-capstone-projects/index.md), where you integrate skills from across the course to analyze a real biological dataset using graph-based methods. Typical projects include building a disease-gene knowledge graph, analyzing a protein interaction network for drug targets, or assembling a pangenome graph from sequencing data. Throughout the course, you will also build smaller projects: querying NCBI and UniProt databases, performing sequence alignments, constructing phylogenetic trees, and running graph algorithms on biological networks.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "capstone project"
+      ],
+      "keywords": [
+        "kinds",
+        "assessments",
+        "projects",
+        "expect"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 91
+    },
+    {
+      "id": "faq-009",
+      "category": "Getting Started",
+      "question": "How much time should I plan to spend per chapter?",
+      "answer": "Plan approximately **4-6 hours per chapter** for a thorough understanding, though this varies by chapter and your background. The early chapters (1-3) may be faster if you have strong biology or data science backgrounds. Chapters 4-5 on graph theory and databases are foundational and deserve careful attention \u2014 budget 6-8 hours each. The network biology chapters (9-13) are content-rich and may require 5-7 hours each, including time for coding exercises. The capstone chapter (16) requires the most time \u2014 plan 15-20 hours for the project. Reading the text takes about 1-2 hours per chapter; the remaining time is for MicroSims, exercises, and coding practice.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "4-6 hours per chapter"
+      ],
+      "keywords": [
+        "much",
+        "time",
+        "plan",
+        "spend",
+        "per",
+        "chapter"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 104
+    },
+    {
+      "id": "faq-010",
+      "category": "Getting Started",
+      "question": "Can I use this course for self-study without an instructor?",
+      "answer": "Absolutely. This textbook is designed as an **intelligent textbook**, meaning it includes interactive elements, self-assessment tools, and guided learning paths that support independent study. The MicroSims provide immediate visual feedback, the mascot Olli offers tips and warnings about common mistakes, and each chapter builds systematically on previous material. For self-study, we recommend keeping a coding notebook where you reproduce the examples and extend them with your own data. Join the course community forums if available, and consider forming a study group \u2014 discussing graph representations of biological problems with peers deepens understanding significantly.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "intelligent textbook"
+      ],
+      "keywords": [
+        "use",
+        "course",
+        "self-study",
+        "without",
+        "instructor"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 93
+    },
+    {
+      "id": "faq-011",
+      "category": "Getting Started",
+      "question": "What Python libraries are most important for this course?",
+      "answer": "Three Python libraries form the core toolkit. **NetworkX** is used throughout for creating, manipulating, and analyzing graphs \u2014 you will use it for everything from simple pathway graphs to large-scale protein interaction networks. **Biopython** handles biological data: parsing sequence files, querying NCBI databases, performing alignments, and building phylogenetic trees. The **Neo4j Python driver** (neo4j package) connects your Python code to Neo4j graph databases for Cypher queries. Supporting libraries include **Matplotlib** and **Pyvis** for visualization, **Pandas** for data manipulation, **NumPy** and **SciPy** for numerical computation, and **scikit-learn** for machine learning on graph features. All are covered in [Python Tools and Capstone Projects](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "NetworkX",
+        "Biopython",
+        "Neo4j Python driver",
+        "Matplotlib",
+        "Pyvis"
+      ],
+      "keywords": [
+        "python",
+        "libraries",
+        "most",
+        "important",
+        "course"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 101
+    },
+    {
+      "id": "faq-012",
+      "category": "Getting Started",
+      "question": "Where can I find the biological datasets used in this course?",
+      "answer": "The course uses publicly available data from major biological databases covered in [Chapter 2](chapters/02-biological-databases/index.md). These include **NCBI** (GenBank sequences, PubMed literature), **UniProt** (protein sequences and annotations), **PDB** (protein 3D structures), **KEGG** (metabolic pathways), **Reactome** (biological pathways), **STRING** (protein interactions), and **Gene Ontology** (functional annotations). Most exercises provide specific accession numbers or download links. For the capstone project, you will select your own dataset from these resources. All databases are freely accessible for academic use, though some require registration.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "NCBI",
+        "UniProt",
+        "PDB",
+        "KEGG",
+        "Reactome"
+      ],
+      "keywords": [
+        "where",
+        "find",
+        "biological",
+        "datasets",
+        "used",
+        "course"
+      ],
+      "source_links": [
+        "chapters/02-biological-databases/index.md"
+      ],
+      "has_example": false,
+      "word_count": 78
+    },
+    {
+      "id": "faq-013",
+      "category": "Getting Started",
+      "question": "How does the learning graph work?",
+      "answer": "The **learning graph** is a visual map of all concepts in this course and how they connect to each other. It is itself a graph \u2014 nodes represent concepts (like \"DNA replication\" or \"Dijkstra's algorithm\") and edges represent prerequisite or related-concept relationships. You can use the interactive graph viewer to see which concepts you need to master before tackling a new topic, identify clusters of related ideas, and track your progress through the course. The learning graph is generated from the course description and embodies the same graph-based philosophy that the course teaches: knowledge itself is a network.",
+      "bloom_level": "Understand",
+      "difficulty": "easy",
+      "concepts": [
+        "learning graph"
+      ],
+      "keywords": [
+        "learning",
+        "graph",
+        "work"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 98
+    },
+    {
+      "id": "faq-014",
+      "category": "Core Concepts",
+      "question": "What is bioinformatics and why does it matter?",
+      "answer": "**Bioinformatics** is the interdisciplinary field that develops and applies computational methods to understand biological data. It sits at the intersection of biology, computer science, mathematics, and statistics. Bioinformatics matters because modern biology generates enormous volumes of data \u2014 a single human genome contains about 3 billion base pairs, and high-throughput experiments can measure the expression of tens of thousands of genes simultaneously. Without computational tools, this data is incomprehensible. Bioinformatics enables us to identify disease-causing mutations, discover drug targets, trace evolutionary relationships, understand metabolic processes, and predict protein structures. The field has direct impact on medicine (precision medicine, pharmacogenomics), agriculture (crop improvement), environmental science (metagenomics), and forensics. See [Chapter 1](chapters/01-foundations-molecular-biology/index.md) for the biological foundations.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Bioinformatics"
+      ],
+      "keywords": [
+        "bioinformatics",
+        "matter"
+      ],
+      "source_links": [
+        "chapters/01-foundations-molecular-biology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 114
+    },
+    {
+      "id": "faq-015",
+      "category": "Core Concepts",
+      "question": "What is the central dogma of molecular biology?",
+      "answer": "The **central dogma** describes the flow of genetic information in biological systems: **DNA** is transcribed into **RNA**, which is translated into **proteins**. DNA serves as the long-term information storage molecule, RNA acts as an intermediate messenger, and proteins perform most of the work in cells. In practice, the term \"central dogma\" is somewhat historical \u2014 the course uses the phrase **canonical data types** to emphasize that these three molecule types (DNA, RNA, protein) are the primary data types in bioinformatics, each with its own sequence alphabet, file formats, and analytical methods. Important exceptions exist: reverse transcriptase copies RNA back to DNA (as in retroviruses), and some RNA molecules have catalytic or regulatory functions without being translated to protein. Understanding this flow is essential because it defines the data transformations at the heart of bioinformatics. See [Chapter 1](chapters/01-foundations-molecular-biology/index.md) for details.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "central dogma",
+        "DNA",
+        "RNA",
+        "proteins",
+        "canonical data types"
+      ],
+      "keywords": [
+        "central",
+        "dogma",
+        "molecular",
+        "biology"
+      ],
+      "source_links": [
+        "chapters/01-foundations-molecular-biology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 139
+    },
+    {
+      "id": "faq-016",
+      "category": "Core Concepts",
+      "question": "Why are graphs so important in bioinformatics?",
+      "answer": "**Graphs** are natural representations for biological data because biology is fundamentally about relationships. Molecules interact with each other, genes regulate other genes, metabolites are transformed through enzymatic reactions, species are connected by evolutionary descent, and diseases involve cascades of molecular events. A graph captures these relationships explicitly: nodes represent biological entities and edges represent the connections between them. This is not merely a convenient analogy \u2014 graph algorithms can reveal properties of biological systems that are invisible to other methods. For example, highly connected nodes in a protein interaction network are often essential genes, shortest paths in metabolic networks reveal efficient biosynthetic routes, and community detection can identify functional modules associated with diseases. Graphs provide a unified language for problems that might otherwise seem unrelated. See [Graph Theory Fundamentals](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Graphs"
+      ],
+      "keywords": [
+        "graphs",
+        "important",
+        "bioinformatics"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": true,
+      "word_count": 129
+    },
+    {
+      "id": "faq-017",
+      "category": "Core Concepts",
+      "question": "What is a graph in mathematical terms?",
+      "answer": "A **graph** $G = (V, E)$ consists of a set of **vertices** (also called nodes) $V$ and a set of **edges** $E$ that connect pairs of vertices. Edges can be **directed** (having a source and target, like gene regulation where gene A activates gene B) or **undirected** (representing symmetric relationships, like protein-protein binding). Graphs can be **weighted** (edges carry numerical values, like interaction confidence scores) or **unweighted**. Key properties include **degree** (number of edges connected to a node), **path** (sequence of edges connecting two nodes), **cycle** (a path that returns to its starting node), and **connectedness** (whether every node can reach every other node). Special graph types important in bioinformatics include **trees** (connected graphs with no cycles, used for phylogenetics), **directed acyclic graphs** or **DAGs** (used for ontologies), and **bipartite graphs** (nodes divided into two groups with edges only between groups). See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "graph",
+        "vertices",
+        "edges",
+        "directed",
+        "undirected"
+      ],
+      "keywords": [
+        "graph",
+        "mathematical",
+        "terms"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 144
+    },
+    {
+      "id": "faq-018",
+      "category": "Core Concepts",
+      "question": "What is the difference between a graph and a network?",
+      "answer": "In practice, the terms are often used interchangeably, but there is a subtle distinction. A **graph** is the abstract mathematical object \u2014 vertices and edges with defined properties. A **network** typically refers to a graph that represents a real-world system, often with additional metadata on nodes and edges. For example, a protein-protein interaction network is a graph where nodes have attributes (protein name, function, cellular location) and edges have attributes (interaction type, confidence score, experimental method). In bioinformatics, we say \"graph theory\" when discussing algorithms and mathematical properties, and \"network\" when discussing biological systems. A **labeled property graph**, as used in Neo4j, is a network-oriented data model where both nodes and edges carry key-value properties and categorical labels.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "graph",
+        "network",
+        "labeled property graph"
+      ],
+      "keywords": [
+        "difference",
+        "graph",
+        "network"
+      ],
+      "source_links": [],
+      "has_example": true,
+      "word_count": 118
+    },
+    {
+      "id": "faq-019",
+      "category": "Core Concepts",
+      "question": "What is a labeled property graph?",
+      "answer": "A **labeled property graph** is the data model used by graph databases like **Neo4j**. Each node has one or more labels (categories like \"Gene,\" \"Protein,\" or \"Disease\") and zero or more key-value properties (like name, organism, or molecular weight). Each edge (called a \"relationship\" in Neo4j) has exactly one type (like \"INTERACTS_WITH,\" \"REGULATES,\" or \"CAUSES\") and can also carry properties (like confidence score or publication reference). This model is extremely flexible for biological data because it allows heterogeneous entities \u2014 genes, proteins, diseases, drugs, pathways \u2014 to coexist in the same graph with richly typed relationships. Unlike relational databases, which require join tables for many-to-many relationships, property graphs represent relationships as first-class objects. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "labeled property graph",
+        "Neo4j"
+      ],
+      "keywords": [
+        "labeled",
+        "property",
+        "graph"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md"
+      ],
+      "has_example": false,
+      "word_count": 116
+    },
+    {
+      "id": "faq-020",
+      "category": "Core Concepts",
+      "question": "What is Cypher and how is it used in bioinformatics?",
+      "answer": "**Cypher** is the query language for the Neo4j graph database, designed to express graph patterns in an intuitive, ASCII-art-like syntax. A basic Cypher query looks like: `MATCH (g:Gene)-[:REGULATES]->(t:Gene) WHERE g.name = \"TP53\" RETURN t.name`. This reads as \"find all genes regulated by TP53.\" Cypher uses parentheses for nodes and square brackets with arrows for relationships. In bioinformatics, Cypher is used to query knowledge graphs, find paths between diseases and drugs, identify regulatory cascades, and explore protein interaction neighborhoods. The emerging **GQL** (Graph Query Language) standard is based heavily on Cypher and is becoming the ISO standard for graph databases. Learning Cypher gives you skills transferable to GQL and other graph query languages. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md) for hands-on examples.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Cypher",
+        "GQL"
+      ],
+      "keywords": [
+        "cypher",
+        "used",
+        "bioinformatics"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-021",
+      "category": "Core Concepts",
+      "question": "What is sequence alignment and why is it fundamental?",
+      "answer": "**Sequence alignment** is the process of arranging two or more DNA, RNA, or protein sequences to identify regions of similarity. These similarities may indicate functional, structural, or evolutionary relationships. There are two main types: **pairwise alignment** (comparing two sequences) and **multiple sequence alignment** (comparing three or more). Pairwise alignment uses **dynamic programming** algorithms \u2014 **Needleman-Wunsch** for global alignment (entire sequences end-to-end) and **Smith-Waterman** for local alignment (best matching subsequences). In graph terms, these algorithms find optimal paths through an alignment matrix, which can be viewed as a directed acyclic graph. Alignment is fundamental because almost every bioinformatics analysis begins with comparing an unknown sequence to known sequences. If your sequence is similar to a well-characterized protein, you can infer its function, structure, and evolutionary origin. See [Sequence Alignment and Homology](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Sequence alignment",
+        "pairwise alignment",
+        "multiple sequence alignment",
+        "dynamic programming",
+        "Needleman-Wunsch"
+      ],
+      "keywords": [
+        "sequence",
+        "alignment",
+        "fundamental"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 130
+    },
+    {
+      "id": "faq-022",
+      "category": "Core Concepts",
+      "question": "What is homology and how does it differ from similarity?",
+      "answer": "**Homology** means two sequences share a common evolutionary ancestor \u2014 it is a qualitative, binary concept (sequences are either homologous or they are not). **Similarity** is a quantitative measure of how alike two sequences are, expressed as percent identity or an alignment score. High similarity suggests homology, but they are not the same thing. Two sequences can be homologous yet have diverged so much that their similarity is barely detectable (remote homologs). Conversely, short sequences might appear similar by chance without being homologous. Bioinformaticians use tools like **BLAST** to detect significant similarity, then infer homology based on statistical significance (E-values). Homology is further classified as **orthology** (divergence through speciation \u2014 the \"same\" gene in different species) and **paralogy** (divergence through gene duplication within a species). This distinction matters because orthologs tend to retain similar functions while paralogs may evolve new functions. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Homology",
+        "Similarity",
+        "BLAST",
+        "orthology",
+        "paralogy"
+      ],
+      "keywords": [
+        "homology",
+        "differ",
+        "from",
+        "similarity"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 144
+    },
+    {
+      "id": "faq-023",
+      "category": "Core Concepts",
+      "question": "What is a phylogenetic tree and how does it relate to graph theory?",
+      "answer": "A **phylogenetic tree** is a branching diagram that represents the evolutionary relationships among a set of organisms or sequences. In graph theory terms, it is a **tree** \u2014 a connected acyclic graph where internal nodes represent common ancestors and leaf nodes represent extant organisms or sequences. The edges (branches) often have lengths proportional to evolutionary distance or time. Phylogenetic trees can be **rooted** (with a defined common ancestor at the root) or **unrooted** (showing relationships without specifying the direction of evolution). Methods for constructing phylogenetic trees include **distance-based** approaches (like Neighbor-Joining, which builds the tree from a distance matrix) and **character-based** approaches (like Maximum Likelihood and Bayesian inference, which evaluate tree topologies against sequence data). See [Phylogenetics and Evolutionary Graphs](chapters/07-phylogenetics-evolutionary-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "phylogenetic tree",
+        "tree",
+        "rooted",
+        "unrooted",
+        "distance-based"
+      ],
+      "keywords": [
+        "phylogenetic",
+        "tree",
+        "relate",
+        "graph",
+        "theory"
+      ],
+      "source_links": [
+        "chapters/07-phylogenetics-evolutionary-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 120
+    },
+    {
+      "id": "faq-024",
+      "category": "Core Concepts",
+      "question": "What is a protein-protein interaction network?",
+      "answer": "A **protein-protein interaction (PPI) network** is a graph where nodes represent proteins and edges represent physical or functional interactions between them. Physical interactions mean the proteins bind to each other (detected by methods like yeast two-hybrid, co-immunoprecipitation, or mass spectrometry). Functional interactions mean the proteins participate in the same biological process, even without direct binding. PPI networks are typically **undirected** (binding is mutual) and **weighted** (edges carry confidence scores). Key analyses include identifying **hubs** (highly connected proteins, which are often essential), **bottlenecks** (proteins that bridge different network regions), and **modules** (clusters of densely connected proteins that often correspond to protein complexes or functional units). PPI networks are available from databases like **STRING**, **BioGRID**, and **IntAct**. See [Protein-Protein Interaction Networks](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "protein-protein interaction (PPI) network",
+        "undirected",
+        "weighted",
+        "hubs",
+        "bottlenecks"
+      ],
+      "keywords": [
+        "protein-protein",
+        "interaction",
+        "network"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 119
+    },
+    {
+      "id": "faq-025",
+      "category": "Core Concepts",
+      "question": "What are de Bruijn graphs and why are they used in genome assembly?",
+      "answer": "A **de Bruijn graph** is a directed graph where nodes represent short DNA subsequences (k-mers) and edges connect overlapping k-mers. Specifically, for k-mer length $k$, nodes represent $(k-1)$-mers and a directed edge from node $u$ to node $v$ exists if some k-mer in the sequencing reads has $u$ as its prefix and $v$ as its suffix. The genome sequence corresponds to an **Eulerian path** through this graph \u2014 a path that traverses every edge exactly once. De Bruijn graphs are the foundation of most modern short-read genome assemblers (like **SPAdes**, **Velvet**, and **SOAPdenovo**) because they handle the massive number of short reads from next-generation sequencing efficiently. Unlike overlap-based approaches that require expensive all-vs-all read comparisons, de Bruijn graphs can be constructed in time proportional to the total read length. See [Genome Assembly and Variation Graphs](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "de Bruijn graph",
+        "Eulerian path",
+        "SPAdes",
+        "Velvet",
+        "SOAPdenovo"
+      ],
+      "keywords": [
+        "bruijn",
+        "graphs",
+        "they",
+        "used",
+        "genome",
+        "assembly"
+      ],
+      "source_links": [
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 135
+    },
+    {
+      "id": "faq-026",
+      "category": "Core Concepts",
+      "question": "What is a pangenome graph?",
+      "answer": "A **pangenome graph** represents the genetic variation across an entire population or species, not just a single reference genome. Instead of a linear reference sequence, a pangenome graph encodes all known variants \u2014 SNPs, insertions, deletions, structural variants \u2014 as alternative paths through the graph. The shared sequence segments are edges that all individuals traverse, while variant regions create branches and bubbles in the graph. Tools like **vg** (variation graph) and the **GFA** (Graphical Fragment Assembly) format support pangenome graphs. The advantage over traditional reference-based approaches is that pangenome graphs eliminate **reference bias** \u2014 the tendency to miss or mischaracterize sequences that differ significantly from the chosen reference. This is particularly important for studying populations with high genetic diversity. See [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "pangenome graph",
+        "vg",
+        "GFA",
+        "reference bias"
+      ],
+      "keywords": [
+        "pangenome",
+        "graph"
+      ],
+      "source_links": [
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 122
+    },
+    {
+      "id": "faq-027",
+      "category": "Core Concepts",
+      "question": "What is a gene regulatory network?",
+      "answer": "A **gene regulatory network (GRN)** is a directed graph that describes how genes control each other's expression levels. Nodes represent genes (or their protein products, typically **transcription factors**), and directed edges represent regulatory relationships: an edge from gene A to gene B means the product of gene A activates or represses the transcription of gene B. GRNs are inferred from experimental data such as **RNA-seq** (measuring gene expression), **ChIP-seq** (identifying transcription factor binding sites), and perturbation experiments (observing expression changes when a gene is knocked out). GRN analysis reveals **master regulators** (transcription factors that control many downstream genes), **feed-forward loops** (common regulatory motifs), and **network modules** associated with specific cellular states or disease conditions. See [Transcriptomics and Gene Regulatory Networks](chapters/11-transcriptomics-gene-regulatory-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "gene regulatory network (GRN)",
+        "transcription factors",
+        "RNA-seq",
+        "ChIP-seq",
+        "master regulators"
+      ],
+      "keywords": [
+        "gene",
+        "regulatory",
+        "network"
+      ],
+      "source_links": [
+        "chapters/11-transcriptomics-gene-regulatory-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 120
+    },
+    {
+      "id": "faq-028",
+      "category": "Core Concepts",
+      "question": "What is a metabolic pathway and how is it represented as a graph?",
+      "answer": "A **metabolic pathway** is a series of chemical reactions catalyzed by enzymes that convert substrates into products within a cell. As a graph, metabolic pathways can be represented in several ways. In a **substrate graph**, nodes are metabolites and edges represent reactions (an edge from A to B means a reaction converts A to B). In a **reaction graph**, nodes are reactions and edges connect reactions that share a metabolite. In a **bipartite graph**, one set of nodes represents metabolites and the other represents reactions, with edges connecting each reaction to its substrates and products. Databases like **KEGG** and **Reactome** provide curated pathway data. Graph analysis of metabolic networks reveals properties like **flux balance** (how resources flow through the network), **essential reactions** (whose removal disconnects the network), and **metabolic modularity**. See [Metabolic Pathway Modeling](chapters/12-metabolic-pathway-modeling/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "metabolic pathway",
+        "substrate graph",
+        "reaction graph",
+        "bipartite graph",
+        "KEGG"
+      ],
+      "keywords": [
+        "metabolic",
+        "pathway",
+        "represented",
+        "graph"
+      ],
+      "source_links": [
+        "chapters/12-metabolic-pathway-modeling/index.md"
+      ],
+      "has_example": false,
+      "word_count": 134
+    },
+    {
+      "id": "faq-029",
+      "category": "Core Concepts",
+      "question": "What is a knowledge graph in the biomedical context?",
+      "answer": "A **biomedical knowledge graph** is a large-scale graph that integrates heterogeneous biological and medical data into a unified structure. Nodes represent entities of many types \u2014 genes, proteins, diseases, drugs, pathways, cell types, tissues, organisms \u2014 and edges represent diverse relationships \u2014 \"causes,\" \"treats,\" \"binds to,\" \"expressed in,\" \"participates in.\" Knowledge graphs draw data from multiple curated databases and literature, creating a comprehensive map of biomedical knowledge. They are used for **drug repurposing** (finding new uses for existing drugs by discovering unexpected paths between drug nodes and disease nodes), **disease mechanism discovery**, and **literature-based discovery**. **Ontologies** like the **Gene Ontology (GO)** and **Disease Ontology** provide standardized vocabularies that structure the knowledge graph. See [Biomedical Knowledge Graphs and Ontologies](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "biomedical knowledge graph",
+        "drug repurposing",
+        "disease mechanism discovery",
+        "literature-based discovery",
+        "Ontologies"
+      ],
+      "keywords": [
+        "knowledge",
+        "graph",
+        "biomedical",
+        "context"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-030",
+      "category": "Core Concepts",
+      "question": "What is an ontology and why is it important?",
+      "answer": "An **ontology** is a formal, structured vocabulary that defines the types, properties, and relationships of entities within a domain. In bioinformatics, ontologies provide standardized terms so that different databases and research groups describe the same concepts in the same way. The most widely used is the **Gene Ontology (GO)**, which classifies gene products by three domains: **Molecular Function** (what the protein does), **Biological Process** (what larger process it participates in), and **Cellular Component** (where it is located). Ontologies are structured as **directed acyclic graphs (DAGs)**, where more specific terms are children of more general terms. For example, \"protein kinase activity\" is a child of \"transferase activity,\" which is a child of \"catalytic activity.\" This hierarchical structure enables powerful analyses like **gene set enrichment** \u2014 determining whether a set of differentially expressed genes is enriched for specific functions. See [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "ontology",
+        "Gene Ontology (GO)",
+        "Molecular Function",
+        "Biological Process",
+        "Cellular Component"
+      ],
+      "keywords": [
+        "ontology",
+        "important"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": true,
+      "word_count": 140
+    },
+    {
+      "id": "faq-031",
+      "category": "Core Concepts",
+      "question": "What is multi-omics integration?",
+      "answer": "**Multi-omics integration** combines data from multiple layers of biological information \u2014 **genomics** (DNA), **transcriptomics** (RNA), **proteomics** (proteins), **metabolomics** (metabolites), **epigenomics** (DNA modifications), and others \u2014 to build a holistic understanding of biological systems. Each omics layer provides a partial view; integration reveals emergent properties invisible to any single layer. Graph-based integration is particularly powerful: nodes from different omics layers are connected by cross-layer edges (e.g., a gene node connected to its transcript, which is connected to its protein, which is connected to its metabolic product). Analytical approaches include **network fusion** (combining multiple similarity networks), **multi-layer network analysis**, and **graph neural networks**. Applications include identifying disease subtypes, discovering biomarkers, and understanding drug mechanisms. See [Multi-Omics Integration and Graph Analytics](chapters/15-multi-omics-integration-graph-analytics/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Multi-omics integration",
+        "genomics",
+        "transcriptomics",
+        "proteomics",
+        "metabolomics"
+      ],
+      "keywords": [
+        "multi-omics",
+        "integration"
+      ],
+      "source_links": [
+        "chapters/15-multi-omics-integration-graph-analytics/index.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-032",
+      "category": "Core Concepts",
+      "question": "How does BLAST work at a high level?",
+      "answer": "**BLAST** (Basic Local Alignment Search Tool) is the most widely used sequence similarity search program. It works in three stages. First, it breaks the query sequence into short **words** (default: 3 amino acids for protein, 11 nucleotides for DNA) and finds all database sequences containing high-scoring matches to these words. Second, it **extends** each word hit in both directions, looking for longer alignments that exceed a score threshold. Third, it evaluates the statistical significance of each alignment, reporting an **E-value** \u2014 the expected number of alignments with that score or better that would occur by chance in a database of that size. Lower E-values indicate more significant matches. BLAST is a heuristic: unlike Smith-Waterman, it does not guarantee finding the optimal alignment, but it is thousands of times faster, making it practical for searching databases with billions of sequences. The results can be interpreted through the lens of **homology**: statistically significant BLAST hits suggest shared evolutionary ancestry. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "BLAST",
+        "words",
+        "extends",
+        "E-value",
+        "homology"
+      ],
+      "keywords": [
+        "blast",
+        "work",
+        "high",
+        "level"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 160
+    },
+    {
+      "id": "faq-033",
+      "category": "Core Concepts",
+      "question": "What is the difference between global and local sequence alignment?",
+      "answer": "**Global alignment** (Needleman-Wunsch algorithm) aligns two sequences from end to end, forcing the entire length of both sequences to be aligned. It is appropriate when the sequences are of similar length and expected to be similar throughout \u2014 for example, comparing the same gene from two closely related species. **Local alignment** (Smith-Waterman algorithm) finds the best-matching subsequences, ignoring poorly matching regions at the ends or in the middle. It is appropriate when sequences differ in length or when only a portion is expected to be similar \u2014 for example, finding a conserved domain within a larger, divergent protein. Both algorithms use **dynamic programming** to fill a scoring matrix and trace back the optimal alignment. In practice, BLAST performs local alignment (since database searches typically look for partial matches), while tools like Clustal Omega perform global multiple alignment. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Global alignment",
+        "Local alignment",
+        "dynamic programming"
+      ],
+      "keywords": [
+        "difference",
+        "global",
+        "local",
+        "sequence",
+        "alignment"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": true,
+      "word_count": 140
+    },
+    {
+      "id": "faq-034",
+      "category": "Core Concepts",
+      "question": "What is a substitution matrix and why is it needed?",
+      "answer": "A **substitution matrix** assigns a score to each possible pairing of residues (amino acids or nucleotides) in a sequence alignment. For protein alignment, the most common matrices are **BLOSUM** (Blocks Substitution Matrix) and **PAM** (Point Accepted Mutation). These matrices reflect the observed frequencies of amino acid substitutions in evolutionarily related proteins. For example, a leucine-to-isoleucine substitution scores positively (both are hydrophobic, so this substitution is common and conservative), while a tryptophan-to-glycine substitution scores negatively (these are chemically very different). Without a substitution matrix, alignment algorithms would treat all mismatches equally, missing the biological reality that some substitutions are much more likely than others. **BLOSUM62** is the most widely used default, derived from protein blocks with at least 62% identity. For closely related sequences, use higher-numbered matrices (BLOSUM80); for distant relationships, use lower-numbered ones (BLOSUM45). See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "substitution matrix",
+        "BLOSUM",
+        "PAM",
+        "BLOSUM62"
+      ],
+      "keywords": [
+        "substitution",
+        "matrix",
+        "needed"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": true,
+      "word_count": 137
+    },
+    {
+      "id": "faq-035",
+      "category": "Core Concepts",
+      "question": "What is an E-value and how should I interpret it?",
+      "answer": "The **E-value** (Expect value) is the number of alignments with a given score (or better) that you would expect to find by chance when searching a database of a particular size. An E-value of 0.001 means you would expect to see one alignment this good by chance in every 1,000 searches of a random database. Lower E-values indicate more statistically significant matches. As a rule of thumb: E-values below $10^{-5}$ generally indicate true homology; E-values between $10^{-5}$ and $0.01$ are borderline and require additional evidence; E-values above $1$ are likely chance matches. Important caveats: E-values depend on database size (the same alignment has a higher E-value in a larger database), query length (longer queries are more likely to find matches), and sequence composition (low-complexity regions inflate matches). Always filter BLAST results by E-value before drawing biological conclusions.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "E-value"
+      ],
+      "keywords": [
+        "e-value",
+        "interpret",
+        "it"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 137
+    },
+    {
+      "id": "faq-036",
+      "category": "Core Concepts",
+      "question": "What are network motifs and why do they matter in biology?",
+      "answer": "**Network motifs** are small subgraph patterns that occur significantly more frequently in a biological network than would be expected in a random network with the same degree distribution. Common motifs include **feed-forward loops** (gene A activates gene B, and both A and B activate gene C), **feedback loops** (gene A activates B which inhibits A), and **bifan motifs** (two regulators jointly controlling two targets). Motifs are the building blocks of network function \u2014 each motif type confers specific dynamic behavior. For example, feed-forward loops can act as noise filters or signal accelerators. Motifs are identified by enumerating all subgraphs of a given size and comparing their frequencies against randomized network ensembles. Their overrepresentation reveals evolutionary selection for specific regulatory architectures. See [Transcriptomics and Gene Regulatory Networks](chapters/11-transcriptomics-gene-regulatory-networks/index.md) and [Signaling Networks and Disease Modules](chapters/13-signaling-networks-disease-modules/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Network motifs",
+        "feed-forward loops",
+        "feedback loops",
+        "bifan motifs"
+      ],
+      "keywords": [
+        "network",
+        "motifs",
+        "they",
+        "matter",
+        "biology"
+      ],
+      "source_links": [
+        "chapters/11-transcriptomics-gene-regulatory-networks/index.md",
+        "chapters/13-signaling-networks-disease-modules/index.md"
+      ],
+      "has_example": true,
+      "word_count": 132
+    },
+    {
+      "id": "faq-037",
+      "category": "Core Concepts",
+      "question": "What is the difference between a tree, a DAG, and a general graph?",
+      "answer": "These three structures form a hierarchy of increasing complexity. A **tree** is a connected graph with no cycles \u2014 every pair of nodes is connected by exactly one path. Trees are used for phylogenetics and hierarchical classification. A **directed acyclic graph (DAG)** is a directed graph with no directed cycles \u2014 nodes can have multiple parents, but you can never follow directed edges in a circle back to where you started. DAGs are used for ontologies (like the Gene Ontology, where a term can belong to multiple parent categories) and for certain workflow representations. A **general graph** can have cycles, be directed or undirected, and have any connectivity pattern. Protein interaction networks, metabolic networks, and signaling networks are general graphs. The choice of graph type determines which algorithms apply: tree algorithms (linear time traversals) are simplest, DAG algorithms (topological sorting) are more general, and general graph algorithms (cycle detection, community detection) are most flexible but often more computationally expensive. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "tree",
+        "directed acyclic graph (DAG)",
+        "general graph"
+      ],
+      "keywords": [
+        "difference",
+        "tree",
+        "dag",
+        "general",
+        "graph"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 162
+    },
+    {
+      "id": "faq-038",
+      "category": "Core Concepts",
+      "question": "What is a scoring matrix in dynamic programming alignment?",
+      "answer": "The **scoring matrix** (also called the dynamic programming matrix or alignment matrix) is the two-dimensional table filled during Needleman-Wunsch or Smith-Waterman alignment. Each cell $(i, j)$ stores the optimal alignment score for the first $i$ characters of sequence 1 and the first $j$ characters of sequence 2. The value is computed as the maximum of three possibilities: (1) the diagonal cell $(i-1, j-1)$ plus the match/mismatch score (from the substitution matrix), (2) the cell above $(i-1, j)$ plus a gap penalty, or (3) the cell to the left $(i, j-1)$ plus a gap penalty. After filling the entire matrix, the optimal alignment is recovered by **traceback** \u2014 following the path of choices from the final cell back to the origin. For Smith-Waterman, cells cannot go below zero, and traceback starts from the highest-scoring cell.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "scoring matrix",
+        "traceback"
+      ],
+      "keywords": [
+        "scoring",
+        "matrix",
+        "dynamic",
+        "programming",
+        "alignment"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 134
+    },
+    {
+      "id": "faq-039",
+      "category": "Core Concepts",
+      "question": "What is the significance of scale-free networks in biology?",
+      "answer": "Many biological networks \u2014 including protein-protein interaction networks and metabolic networks \u2014 exhibit a **scale-free** topology, meaning their degree distribution follows a **power law**: most nodes have few connections while a small number of **hubs** have very many connections. This property has important biological implications. Hub proteins tend to be **essential** (their deletion is lethal) and **evolutionarily conserved**. Scale-free networks are **robust** to random failures (removing random nodes rarely disconnects the network) but **vulnerable** to targeted attacks (removing hubs quickly fragments the network). This has practical applications: drug targets that are network hubs may be effective but toxic, while targeting specific non-hub bottleneck nodes may disrupt disease pathways with fewer side effects. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "scale-free",
+        "power law",
+        "hubs",
+        "essential",
+        "evolutionarily conserved"
+      ],
+      "keywords": [
+        "significance",
+        "scale-free",
+        "networks",
+        "biology"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 115
+    },
+    {
+      "id": "faq-040",
+      "category": "Core Concepts",
+      "question": "What are graph centrality measures and how are they used in biology?",
+      "answer": "**Centrality measures** quantify the importance of individual nodes within a network. **Degree centrality** counts the number of connections \u2014 high-degree proteins in PPI networks are essential hubs. **Betweenness centrality** measures how often a node lies on the shortest path between other nodes \u2014 high-betweenness proteins are **bottlenecks** that connect different functional modules and are often important drug targets. **Closeness centrality** measures how close a node is to all other nodes \u2014 proteins with high closeness can rapidly propagate signals through the network. **Eigenvector centrality** gives high scores to nodes connected to other high-scoring nodes \u2014 it identifies proteins that are not just well-connected but connected to other important proteins. **PageRank** (the algorithm behind Google) is a variant of eigenvector centrality used to rank genes by network importance. Each measure captures a different aspect of biological significance. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md) and [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Centrality measures",
+        "Degree centrality",
+        "Betweenness centrality",
+        "bottlenecks",
+        "Closeness centrality"
+      ],
+      "keywords": [
+        "graph",
+        "centrality",
+        "measures",
+        "they",
+        "used",
+        "biology"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md",
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 142
+    },
+    {
+      "id": "faq-041",
+      "category": "Core Concepts",
+      "question": "What is community detection in biological networks?",
+      "answer": "**Community detection** identifies groups of nodes that are more densely connected to each other than to the rest of the network. In biological networks, these communities often correspond to functional modules \u2014 protein complexes, co-regulated gene sets, or metabolic subsystems. Common algorithms include the **Louvain method** (optimizes modularity, fast and scalable), **Girvan-Newman** (removes high-betweenness edges to reveal community structure), **label propagation** (nodes adopt the most common label among their neighbors), and **spectral clustering** (uses eigenvectors of the graph Laplacian). The choice of algorithm depends on network size and desired resolution. Community detection in PPI networks can predict protein complex membership, in gene regulatory networks can identify co-expression modules, and in knowledge graphs can discover disease-related functional groups. See [Chapter 9](chapters/09-protein-interaction-networks/index.md) and [Chapter 13](chapters/13-signaling-networks-disease-modules/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Community detection",
+        "Louvain method",
+        "Girvan-Newman",
+        "label propagation",
+        "spectral clustering"
+      ],
+      "keywords": [
+        "community",
+        "detection",
+        "biological",
+        "networks"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md",
+        "chapters/13-signaling-networks-disease-modules/index.md"
+      ],
+      "has_example": false,
+      "word_count": 123
+    },
+    {
+      "id": "faq-042",
+      "category": "Core Concepts",
+      "question": "What is flux balance analysis in metabolic networks?",
+      "answer": "**Flux balance analysis (FBA)** is a mathematical method for predicting the flow of metabolites through a metabolic network. It models the network as a system of linear equations based on the **stoichiometric matrix** (which encodes which metabolites are consumed and produced by each reaction) and the constraint of **steady state** (the rate of production equals the rate of consumption for each metabolite). Given an objective function (typically maximizing biomass production or ATP yield), FBA uses **linear programming** to find the optimal flux distribution through all reactions. FBA does not require kinetic parameters (which are often unknown), making it applicable to genome-scale metabolic models. It can predict gene essentiality (which reaction knockouts are lethal), identify metabolic engineering targets, and compare metabolic capabilities across organisms. See [Metabolic Pathway Modeling](chapters/12-metabolic-pathway-modeling/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Flux balance analysis (FBA)",
+        "stoichiometric matrix",
+        "steady state",
+        "linear programming"
+      ],
+      "keywords": [
+        "flux",
+        "balance",
+        "analysis",
+        "metabolic",
+        "networks"
+      ],
+      "source_links": [
+        "chapters/12-metabolic-pathway-modeling/index.md"
+      ],
+      "has_example": false,
+      "word_count": 127
+    },
+    {
+      "id": "faq-043",
+      "category": "Core Concepts",
+      "question": "What is the difference between clustering coefficient and modularity?",
+      "answer": "The **clustering coefficient** measures how densely interconnected a node's neighbors are \u2014 it is the fraction of possible edges among a node's neighbors that actually exist. A high clustering coefficient means the node's neighbors tend to be connected to each other, forming a clique-like structure. The network-level clustering coefficient is the average over all nodes. **Modularity** measures how well a network can be divided into communities \u2014 it compares the density of edges within communities to what would be expected in a random network. A modularity value near 0 means no community structure beyond random, while values above 0.3-0.4 indicate significant community structure. While clustering coefficient is a local property of individual nodes, modularity is a global property of a network partition. Both are important in biological network analysis: high clustering suggests functional grouping, and high modularity confirms that the network has meaningful modular organization. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "clustering coefficient",
+        "Modularity"
+      ],
+      "keywords": [
+        "difference",
+        "clustering",
+        "coefficient",
+        "modularity"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 148
+    },
+    {
+      "id": "faq-044",
+      "category": "Technical Details",
+      "question": "What are the most important biological databases and what does each contain?",
+      "answer": "The major databases covered in this course include: **NCBI** (National Center for Biotechnology Information) \u2014 a suite of databases including GenBank (DNA sequences), RefSeq (curated reference sequences), PubMed (biomedical literature), and the Sequence Read Archive (raw sequencing data). **UniProt** \u2014 the comprehensive protein sequence and annotation database, with SwissProt (manually curated) and TrEMBL (automatically annotated) divisions. **PDB** (Protein Data Bank) \u2014 3D structures of proteins and nucleic acids determined by X-ray crystallography, NMR, and cryo-EM. **KEGG** (Kyoto Encyclopedia of Genes and Genomes) \u2014 metabolic pathways, disease pathways, and drug information. **Reactome** \u2014 curated biological pathways with a focus on human biology. **STRING** \u2014 protein-protein interaction data combining experimental evidence with computational predictions. **Gene Ontology** \u2014 standardized functional annotations for gene products. See [Biological Databases](chapters/02-biological-databases/index.md) for detailed coverage of each.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "NCBI",
+        "UniProt",
+        "PDB",
+        "KEGG",
+        "Reactome"
+      ],
+      "keywords": [
+        "most",
+        "important",
+        "biological",
+        "databases",
+        "each",
+        "contain"
+      ],
+      "source_links": [
+        "chapters/02-biological-databases/index.md"
+      ],
+      "has_example": false,
+      "word_count": 129
+    },
+    {
+      "id": "faq-045",
+      "category": "Technical Details",
+      "question": "What is a FASTA file and how is it structured?",
+      "answer": "**FASTA** is the simplest and most widely used format for biological sequences. Each entry has a header line beginning with `>` followed by a description, then one or more lines of sequence characters. For example:\n\n```\n>sp|P53_HUMAN|TP53 Cellular tumor antigen p53\nMEEPQSDPSVEPPLSQETFSDLWKLLPENNVLSPLPSQAMDDLMLSPDD\nIEQWFTEDPGPDEAPRMPEAAPPVAPAPAAPTPAAPAPAPSWPLSSSVPSQ\n```\n\nDNA sequences use the alphabet A, C, G, T (and sometimes N for unknown). Protein sequences use the 20 standard amino acid single-letter codes. FASTA files can contain multiple entries (multi-FASTA format). Despite its simplicity, FASTA has limitations: it carries no quality scores, no alignment information, and no rich metadata. For these, other formats like FASTQ (quality scores), SAM/BAM (alignments), and GenBank flat files (annotations) are used. See [Bioinformatics Data Formats](chapters/03-bioinformatics-data-formats/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "FASTA"
+      ],
+      "keywords": [
+        "fasta",
+        "file",
+        "structured"
+      ],
+      "source_links": [
+        "chapters/03-bioinformatics-data-formats/index.md"
+      ],
+      "has_example": true,
+      "word_count": 115
+    },
+    {
+      "id": "faq-046",
+      "category": "Technical Details",
+      "question": "What is the difference between FASTA and FASTQ formats?",
+      "answer": "**FASTA** stores sequences with a simple header-plus-sequence format and is used for reference genomes, protein databases, and any context where quality scores are not relevant. **FASTQ** extends this by adding per-base quality scores from sequencing instruments. Each FASTQ entry has four lines: (1) a header starting with `@`, (2) the sequence, (3) a separator line starting with `+`, and (4) quality scores encoded as ASCII characters. The quality score for each base represents the probability that the base call is incorrect, expressed as a **Phred score**: $Q = -10 \\log_{10}(P)$, where $P$ is the error probability. A Phred score of 30 means a 1 in 1,000 chance of error. FASTQ is the standard output of Illumina and other next-generation sequencing platforms and is the starting point for most genomics pipelines. See [Chapter 3](chapters/03-bioinformatics-data-formats/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "FASTA",
+        "FASTQ",
+        "Phred score"
+      ],
+      "keywords": [
+        "difference",
+        "fasta",
+        "fastq",
+        "formats"
+      ],
+      "source_links": [
+        "chapters/03-bioinformatics-data-formats/index.md"
+      ],
+      "has_example": false,
+      "word_count": 133
+    },
+    {
+      "id": "faq-047",
+      "category": "Technical Details",
+      "question": "What is the GFA format and why was it developed?",
+      "answer": "**GFA** (Graphical Fragment Assembly) is a file format for representing sequence graphs \u2014 graphs where edges or nodes carry DNA sequence information. It was developed because traditional linear formats like FASTA cannot represent the branching, merging, and cyclic structures that arise in genome assembly and pangenomics. GFA has two versions: **GFA1** supports segments (sequences), links (overlaps between segments), and paths (walks through the graph representing individual genomes or contigs). **GFA2** adds edges with more flexible overlap representations and support for gaps. GFA is used by assemblers, pangenome tools like **vg**, and visualization tools like **Bandage**. A GFA file contains lines starting with S (segment), L (link), or P (path), making it both human-readable and machine-parseable. See [Chapter 3](chapters/03-bioinformatics-data-formats/index.md) and [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "GFA",
+        "GFA1",
+        "GFA2",
+        "vg",
+        "Bandage"
+      ],
+      "keywords": [
+        "gfa",
+        "format",
+        "was",
+        "developed"
+      ],
+      "source_links": [
+        "chapters/03-bioinformatics-data-formats/index.md",
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 121
+    },
+    {
+      "id": "faq-048",
+      "category": "Technical Details",
+      "question": "What is a PDB file and what information does it contain?",
+      "answer": "A **PDB** (Protein Data Bank) file contains the three-dimensional atomic coordinates of a biological macromolecule \u2014 typically a protein, but also nucleic acids and complexes. Each ATOM record specifies an atom's serial number, name, residue, chain, residue number, and x/y/z coordinates in angstroms. The file also contains metadata: experimental method (X-ray, NMR, cryo-EM), resolution, R-factor (a measure of model quality), and information about ligands, water molecules, and crystal contacts. The newer **mmCIF** format is gradually replacing PDB format for large structures. Structural bioinformatics uses PDB data to analyze protein folding, identify binding sites, predict drug interactions, and study structure-function relationships. AlphaFold and ESMFold have massively expanded the number of available predicted structures. See [Structural Bioinformatics](chapters/08-structural-bioinformatics/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "PDB",
+        "mmCIF"
+      ],
+      "keywords": [
+        "pdb",
+        "file",
+        "information",
+        "contain"
+      ],
+      "source_links": [
+        "chapters/08-structural-bioinformatics/index.md"
+      ],
+      "has_example": false,
+      "word_count": 115
+    },
+    {
+      "id": "faq-049",
+      "category": "Technical Details",
+      "question": "How does NetworkX represent graphs in Python?",
+      "answer": "**NetworkX** is a Python library that represents graphs as dictionaries of dictionaries. Creating a graph is straightforward: `G = nx.Graph()` for undirected, `G = nx.DiGraph()` for directed. Nodes can be any hashable object (strings, numbers, tuples) and can carry attribute dictionaries: `G.add_node(\"TP53\", type=\"gene\", essential=True)`. Edges connect pairs of nodes with optional attributes: `G.add_edge(\"TP53\", \"MDM2\", weight=0.95, method=\"Y2H\")`. NetworkX provides algorithms for shortest paths, centrality measures, community detection, flow analysis, and more. For biological networks, you might build a PPI network from a STRING database download, compute betweenness centrality to find bottleneck proteins, and use the Louvain algorithm to detect functional modules \u2014 all in a few lines of Python. See [Chapter 16](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "NetworkX"
+      ],
+      "keywords": [
+        "networkx",
+        "represent",
+        "graphs",
+        "python"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 111
+    },
+    {
+      "id": "faq-050",
+      "category": "Technical Details",
+      "question": "What is the Neo4j Python driver and how do I use it?",
+      "answer": "The **Neo4j Python driver** (installed as `pip install neo4j`) connects Python scripts to a running Neo4j database, allowing you to execute Cypher queries programmatically. A basic session looks like:\n\n```python\nfrom neo4j import GraphDatabase\ndriver = GraphDatabase.driver(\"bolt://localhost:7687\", auth=(\"neo4j\", \"password\"))\nwith driver.session() as session:\n    result = session.run(\"MATCH (g:Gene {name: $name})-[:INTERACTS_WITH]->(p) RETURN p.name\", name=\"TP53\")\n    for record in result:\n        print(record[\"p.name\"])\n```\n\nThe driver uses parameterized queries (the `$name` syntax) to prevent injection attacks and improve performance. For bioinformatics workflows, you typically load data from files or APIs into Neo4j using `CREATE` and `MERGE` statements, then query the resulting graph for paths, patterns, and aggregations. The driver supports transactions, allowing you to batch large imports efficiently. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md) and [Chapter 16](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Neo4j Python driver"
+      ],
+      "keywords": [
+        "neo4j",
+        "python",
+        "driver",
+        "use",
+        "it"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md",
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 118
+    },
+    {
+      "id": "faq-051",
+      "category": "Technical Details",
+      "question": "What is GQL and how does it relate to Cypher?",
+      "answer": "**GQL** (Graph Query Language) is the first international standard query language for graph databases, published as ISO/IEC 39075 in 2024. GQL is heavily based on **Cypher** syntax \u2014 the pattern-matching approach with ASCII-art node/relationship notation \u2014 but also incorporates ideas from SQL and other graph query languages. For most practical purposes, if you learn Cypher, you can read and write GQL. Key features include composable graph queries, graph types for schema definition, and path pattern expressions. The standardization means that in the future, the same queries should work across different graph database products, much as SQL works across relational databases. Neo4j is progressively adding GQL compliance alongside Cypher. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md) for both languages.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "GQL",
+        "Cypher"
+      ],
+      "keywords": [
+        "gql",
+        "relate",
+        "cypher"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md"
+      ],
+      "has_example": false,
+      "word_count": 114
+    },
+    {
+      "id": "faq-052",
+      "category": "Technical Details",
+      "question": "What is Biopython and what can I do with it?",
+      "answer": "**Biopython** is a collection of Python tools for computational biology. Its major modules include: **Bio.SeqIO** for reading and writing sequence files (FASTA, FASTQ, GenBank, and many others), **Bio.AlignIO** for alignment files, **Bio.Blast** for running and parsing BLAST searches, **Bio.PDB** for working with protein structures, **Bio.Phylo** for phylogenetic trees, and **Bio.Entrez** for querying NCBI databases programmatically. For example, fetching a protein sequence from NCBI is:\n\n```python\nfrom Bio import Entrez, SeqIO\nEntrez.email = \"your@email.com\"\nhandle = Entrez.efetch(db=\"protein\", id=\"NP_000537\", rettype=\"fasta\")\nrecord = SeqIO.read(handle, \"fasta\")\nprint(record.seq[:50])\n```\n\nBiopython handles the complexity of parsing diverse file formats and interacting with web APIs, letting you focus on the biological analysis. See [Chapter 16](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Biopython",
+        "Bio.SeqIO",
+        "Bio.AlignIO",
+        "Bio.Blast",
+        "Bio.PDB"
+      ],
+      "keywords": [
+        "biopython",
+        "with",
+        "it"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": true,
+      "word_count": 108
+    },
+    {
+      "id": "faq-053",
+      "category": "Technical Details",
+      "question": "What is the difference between an adjacency matrix and an adjacency list?",
+      "answer": "These are two fundamental representations of graphs in computer memory. An **adjacency matrix** is an $n \\times n$ matrix where entry $(i, j)$ is 1 (or the edge weight) if there is an edge from node $i$ to node $j$, and 0 otherwise. For weighted graphs, the matrix stores weights instead of binary values. An **adjacency list** stores, for each node, a list of its neighbors. The adjacency matrix uses $O(n^2)$ space regardless of edge count, making it efficient for dense graphs but wasteful for sparse graphs. The adjacency list uses $O(n + m)$ space (where $m$ is the number of edges), making it ideal for the sparse graphs common in biology \u2014 a PPI network with 20,000 proteins might have only 200,000 interactions, meaning the adjacency matrix would be 99.9% zeros. NetworkX uses a dictionary-of-dictionaries representation that functions like an adjacency list. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "adjacency matrix",
+        "adjacency list"
+      ],
+      "keywords": [
+        "difference",
+        "adjacency",
+        "matrix",
+        "adjacency",
+        "list"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 146
+    },
+    {
+      "id": "faq-054",
+      "category": "Technical Details",
+      "question": "What are the main graph traversal algorithms and when do I use each?",
+      "answer": "**Breadth-first search (BFS)** explores all neighbors of a node before moving to neighbors' neighbors, expanding outward in layers. It finds the **shortest path** (fewest edges) between nodes and is used to compute network distances, identify connected components, and find the shortest regulatory path from one gene to another. **Depth-first search (DFS)** follows a path as far as possible before backtracking, and is used for cycle detection, topological sorting (ordering nodes in a DAG), and identifying strongly connected components in directed graphs. **Dijkstra's algorithm** extends BFS for weighted graphs, finding the path with minimum total weight \u2014 useful for finding the strongest interaction path in a weighted PPI network. These algorithms have time complexity $O(n + m)$ for BFS and DFS, and $O((n + m) \\log n)$ for Dijkstra's with a priority queue. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Breadth-first search (BFS)",
+        "shortest path",
+        "Depth-first search (DFS)",
+        "Dijkstra's algorithm"
+      ],
+      "keywords": [
+        "main",
+        "graph",
+        "traversal",
+        "algorithms",
+        "use",
+        "each"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 135
+    },
+    {
+      "id": "faq-055",
+      "category": "Technical Details",
+      "question": "What is the SAM/BAM format used for?",
+      "answer": "**SAM** (Sequence Alignment/Map) and its binary equivalent **BAM** store the results of aligning sequencing reads to a reference genome. Each record contains the read name, alignment flag (encoding properties like whether the read mapped, which strand it aligned to, and whether it is part of a pair), reference chromosome, position, mapping quality, CIGAR string (encoding the alignment as matches, insertions, deletions, and soft clips), mate information, and the sequence and quality scores. SAM/BAM files are the output of read mapping tools like **BWA** and **Bowtie2** and are the input to downstream tools for variant calling (GATK, bcftools), visualization (IGV), and quantification (featureCounts). The BAM format is compressed and indexed, allowing efficient random access to specific genomic regions. See [Chapter 3](chapters/03-bioinformatics-data-formats/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "SAM",
+        "BAM",
+        "BWA",
+        "Bowtie2"
+      ],
+      "keywords": [
+        "sam/bam",
+        "format",
+        "used"
+      ],
+      "source_links": [
+        "chapters/03-bioinformatics-data-formats/index.md"
+      ],
+      "has_example": false,
+      "word_count": 120
+    },
+    {
+      "id": "faq-056",
+      "category": "Technical Details",
+      "question": "What is a VCF file and what does it represent?",
+      "answer": "**VCF** (Variant Call Format) stores genetic variants \u2014 positions where a sample's genome differs from the reference. Each variant record specifies the chromosome, position, reference allele, alternate allele(s), quality score, filter status, and additional information fields. VCF files can represent **SNPs** (single nucleotide polymorphisms), **indels** (insertions and deletions), and **structural variants** (large rearrangements). The genotype field indicates whether each sample is homozygous reference, heterozygous, or homozygous alternate. VCF is the standard output of variant callers like GATK and the input for population genetics tools, genome-wide association studies (GWAS), and clinical variant interpretation. In the context of pangenome graphs, VCF variants can be embedded into graph structures where each variant creates an alternative path. See [Chapter 3](chapters/03-bioinformatics-data-formats/index.md) and [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "VCF",
+        "SNPs",
+        "indels",
+        "structural variants"
+      ],
+      "keywords": [
+        "vcf",
+        "file",
+        "represent"
+      ],
+      "source_links": [
+        "chapters/03-bioinformatics-data-formats/index.md",
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 119
+    },
+    {
+      "id": "faq-057",
+      "category": "Technical Details",
+      "question": "How do I query NCBI databases programmatically?",
+      "answer": "NCBI provides the **Entrez** suite of web APIs, accessible through Biopython's `Bio.Entrez` module. The main functions are: `esearch` (search a database and retrieve matching IDs), `efetch` (download records by ID), `einfo` (get database metadata), and `elink` (find related records across databases). Always set `Entrez.email` to your email address, as NCBI requires this for tracking. Rate limits apply: without an API key, you are limited to 3 requests per second; with a key (free from NCBI), you get 10 per second. For large downloads, use `efetch` with `retmax` and `retstart` parameters for pagination. For example, searching for human TP53 protein sequences: `handle = Entrez.esearch(db=\"protein\", term=\"TP53[Gene] AND Homo sapiens[Organism]\")`. See [Chapter 2](chapters/02-biological-databases/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Entrez"
+      ],
+      "keywords": [
+        "query",
+        "ncbi",
+        "databases",
+        "programmatically"
+      ],
+      "source_links": [
+        "chapters/02-biological-databases/index.md"
+      ],
+      "has_example": true,
+      "word_count": 110
+    },
+    {
+      "id": "faq-058",
+      "category": "Technical Details",
+      "question": "What is the difference between STRING and BioGRID databases?",
+      "answer": "Both are protein interaction databases, but they differ in scope and methodology. **STRING** integrates multiple evidence types \u2014 experimental data, computational predictions, text mining, co-expression, and genomic context \u2014 assigning a combined confidence score (0-1000) to each interaction. It provides a comprehensive but heterogeneous network that includes both physical and functional associations. **BioGRID** focuses exclusively on experimentally validated interactions from curated literature, providing higher confidence but fewer interactions. For exploratory analysis (discovering potential interactions), STRING's broader coverage is advantageous. For hypothesis testing requiring experimentally validated interactions, BioGRID's strict curation standards are preferable. Many studies use STRING for network construction and filter by confidence threshold (e.g., score > 700 for high confidence). See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "STRING",
+        "BioGRID"
+      ],
+      "keywords": [
+        "difference",
+        "string",
+        "biogrid",
+        "databases"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 114
+    },
+    {
+      "id": "faq-059",
+      "category": "Technical Details",
+      "question": "What is the difference between a directed and undirected graph in biological contexts?",
+      "answer": "The choice between **directed** and **undirected** graphs depends on whether relationships have a defined direction. **Undirected graphs** are appropriate when relationships are symmetric: protein-protein binding (if A binds B, then B binds A), genetic interactions, sequence similarity, and co-expression. **Directed graphs** are used when relationships have an inherent direction: gene regulation (A activates B does not mean B activates A), metabolic reactions (substrate to product), signal transduction (upstream to downstream), and evolutionary descent (ancestor to descendant). Some biological networks are naturally **mixed** \u2014 a signaling network might have directed regulatory edges and undirected binding edges. In these cases, a directed graph can encode both (an undirected edge becomes two reciprocal directed edges). The choice affects which algorithms are applicable: shortest paths, centrality measures, and community detection all have directed and undirected variants with different interpretations. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "directed",
+        "undirected",
+        "Undirected graphs",
+        "Directed graphs",
+        "mixed"
+      ],
+      "keywords": [
+        "difference",
+        "directed",
+        "undirected",
+        "graph",
+        "biological",
+        "contexts"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 138
+    },
+    {
+      "id": "faq-060",
+      "category": "Common Challenges",
+      "question": "Why is sequence alignment computationally expensive and how do tools address this?",
+      "answer": "**Dynamic programming** alignment (Needleman-Wunsch, Smith-Waterman) has time and space complexity $O(nm)$ where $n$ and $m$ are the sequence lengths. For comparing two short sequences this is fine, but searching a 500-amino-acid query against a database of millions of sequences would take days. Tools address this with heuristics. **BLAST** uses a seed-and-extend strategy: first find short exact or near-exact matches (seeds), then extend only those seeds into full alignments. This reduces the search space dramatically while missing only a small fraction of true matches. **DIAMOND** and **MMseqs2** use similar but more aggressive heuristics for even faster protein searches. For **multiple sequence alignment**, progressive methods like Clustal Omega align the most similar sequences first, then progressively add more distant ones, avoiding the exponential cost of optimally aligning all sequences simultaneously. The trade-off is always between speed and sensitivity. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Dynamic programming",
+        "BLAST",
+        "DIAMOND",
+        "MMseqs2",
+        "multiple sequence alignment"
+      ],
+      "keywords": [
+        "sequence",
+        "alignment",
+        "computationally",
+        "expensive",
+        "tools",
+        "address"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 139
+    },
+    {
+      "id": "faq-061",
+      "category": "Common Challenges",
+      "question": "I am confused by the difference between k-mers and reads \u2014 can you clarify?",
+      "answer": "A **read** is a fragment of DNA that comes directly from a sequencing machine \u2014 it is a real physical measurement. Illumina reads are typically 150-300 base pairs long; Oxford Nanopore reads can be thousands to millions of base pairs. A **k-mer** is a computational construct: a substring of length $k$ extracted from a read (or any sequence) by sliding a window one position at a time. A read of length $L$ contains $L - k + 1$ k-mers. For example, the read ACGTACG with $k = 4$ contains the 4-mers: ACGT, CGTA, GTAC, TACG. K-mers are used in **de Bruijn graph** assembly (nodes are k-1-mers, edges represent k-mers), **error correction** (true k-mers appear many times, errors create rare k-mers), and **taxonomic classification** (organisms have characteristic k-mer signatures). The key insight is that reads are data from the instrument while k-mers are a computational decomposition of that data. See [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "read",
+        "k-mer",
+        "de Bruijn graph",
+        "error correction",
+        "taxonomic classification"
+      ],
+      "keywords": [
+        "confused",
+        "difference",
+        "k-mers",
+        "reads",
+        "you",
+        "clarify"
+      ],
+      "source_links": [
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": true,
+      "word_count": 151
+    },
+    {
+      "id": "faq-062",
+      "category": "Common Challenges",
+      "question": "Why does my BLAST search return no results or too many results?",
+      "answer": "No results usually mean one of three things: (1) the database does not contain sequences similar to your query, (2) your E-value threshold is too stringent (try increasing it to 10 or 100 for exploratory searches), or (3) you are searching the wrong database (e.g., searching a nucleotide query against a protein database without using the appropriate BLAST program \u2014 use blastx for nucleotide query vs. protein database). Too many results usually mean: (1) your sequence contains **low-complexity regions** (repetitive sequences like AAAAAAA or CAGCAGCAG) that match many unrelated sequences \u2014 use the low-complexity filter (enabled by default in web BLAST), (2) your E-value threshold is too permissive (try $10^{-5}$ or stricter), or (3) your query belongs to a large, highly conserved protein family. Always examine the alignment details of top hits rather than relying solely on E-values. Check that matches span a biologically meaningful length, not just a short conserved motif.",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "low-complexity regions"
+      ],
+      "keywords": [
+        "blast",
+        "search",
+        "return",
+        "results",
+        "too",
+        "many",
+        "results"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 152
+    },
+    {
+      "id": "faq-063",
+      "category": "Common Challenges",
+      "question": "How do I handle missing data in biological networks?",
+      "answer": "Biological networks are inherently **incomplete** \u2014 we observe only a fraction of true interactions. Protein interaction databases capture perhaps 20-40% of human PPI, and regulatory networks are even less complete. Strategies for handling this include: (1) **Confidence-aware analysis** \u2014 use weighted edges from databases like STRING and set appropriate thresholds. (2) **Multiple data integration** \u2014 combine evidence from different experimental methods and databases to increase coverage. (3) **Link prediction** \u2014 use network topology (common neighbors, Jaccard index, Adamic-Adar index) to predict missing edges. (4) **Robustness testing** \u2014 repeat your analysis with edges randomly removed to check whether your conclusions depend on specific connections. (5) **Reporting limitations** \u2014 always state which database version you used and acknowledge incompleteness. Never treat absence of an edge as evidence that two proteins do not interact. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "incomplete",
+        "Confidence-aware analysis",
+        "Multiple data integration",
+        "Link prediction",
+        "Robustness testing"
+      ],
+      "keywords": [
+        "handle",
+        "missing",
+        "data",
+        "biological",
+        "networks"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 134
+    },
+    {
+      "id": "faq-064",
+      "category": "Common Challenges",
+      "question": "What is the hairball problem in network visualization?",
+      "answer": "The **hairball problem** refers to the fact that when you visualize a large biological network (thousands of nodes and edges), the result is an uninformative tangled mess \u2014 a \"hairball.\" This happens because general-purpose graph layout algorithms (force-directed layouts) place nodes to minimize edge crossings, but for dense networks, this is impossible. Solutions include: (1) **Filtering** \u2014 show only edges above a confidence threshold or only the subnetwork around nodes of interest. (2) **Layout algorithms** \u2014 use algorithms suited to your network structure (hierarchical layout for regulatory cascades, circular layout for pathways). (3) **Community-based visualization** \u2014 detect communities first, then visualize inter-community connections at a higher level. (4) **Interactive exploration** \u2014 use tools that allow zooming, filtering, and searching rather than trying to show everything at once. (5) **Small multiples** \u2014 instead of one large network, show several focused subnetworks. The MicroSims in this textbook use interactive visualization to address this challenge.",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "hairball problem",
+        "Filtering",
+        "Layout algorithms",
+        "Community-based visualization",
+        "Interactive exploration"
+      ],
+      "keywords": [
+        "hairball",
+        "problem",
+        "network",
+        "visualization"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 152
+    },
+    {
+      "id": "faq-065",
+      "category": "Common Challenges",
+      "question": "Why do different phylogenetic methods give different trees?",
+      "answer": "Different tree-building methods make different assumptions and can produce different topologies. **Distance methods** (Neighbor-Joining, UPGMA) compress all evolutionary information into a single pairwise distance number, losing information about which specific positions changed. **Maximum Parsimony** assumes the tree requiring the fewest total changes is best, which can fail when evolution rates vary across lineages (**long branch attraction**). **Maximum Likelihood** explicitly models the substitution process but depends on choosing the right evolutionary model. **Bayesian methods** incorporate prior probabilities and produce posterior probability distributions over trees. When methods disagree, this signals that the phylogenetic signal is weak or conflicting. Best practice: use multiple methods and report **bootstrap support** values (for ML/distance) or **posterior probabilities** (for Bayesian) to quantify confidence in each branch. See [Chapter 7](chapters/07-phylogenetics-evolutionary-graphs/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Distance methods",
+        "Maximum Parsimony",
+        "long branch attraction",
+        "Maximum Likelihood",
+        "Bayesian methods"
+      ],
+      "keywords": [
+        "different",
+        "phylogenetic",
+        "methods",
+        "give",
+        "different",
+        "trees"
+      ],
+      "source_links": [
+        "chapters/07-phylogenetics-evolutionary-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 122
+    },
+    {
+      "id": "faq-066",
+      "category": "Common Challenges",
+      "question": "How do I choose the right k-mer size for genome assembly?",
+      "answer": "Choosing the **k-mer size** involves a fundamental trade-off. **Smaller k** (e.g., 21) means each k-mer is more likely to occur multiple times, providing better connectivity in the de Bruijn graph and greater tolerance for sequencing errors, but repetitive genomic regions longer than $k$ create ambiguous paths. **Larger k** (e.g., 77 or 99) resolves more repeats because longer sequences are more likely to be unique, but requires higher sequencing depth (each k-mer is seen fewer times) and is more sensitive to errors. A common guideline: k should be odd (to avoid palindromic k-mers), at least 21, and no more than the read length. Many modern assemblers use **multi-k strategies** \u2014 assembling with several different k values and merging the results (SPAdes does this automatically). Start with the assembler's default and adjust if your assembly metrics (N50, number of contigs) are unsatisfactory. See [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "k-mer size",
+        "Smaller k",
+        "Larger k",
+        "multi-k strategies"
+      ],
+      "keywords": [
+        "choose",
+        "right",
+        "k-mer",
+        "size",
+        "genome",
+        "assembly"
+      ],
+      "source_links": [
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 143
+    },
+    {
+      "id": "faq-067",
+      "category": "Common Challenges",
+      "question": "What are common pitfalls when interpreting network centrality measures?",
+      "answer": "Several pitfalls can lead to incorrect biological conclusions from centrality analysis. (1) **Study bias**: highly studied proteins (like TP53 or BRCA1) have more known interactions not because they are more connected in reality, but because more experiments have been done on them. This inflates their degree centrality. (2) **Network incompleteness**: centrality rankings change as new interactions are discovered. A protein that appears to be a bottleneck might lose that status when the missing edges are filled in. (3) **Ignoring edge confidence**: treating all edges equally when some are high-confidence experimental results and others are low-confidence predictions distorts centrality calculations. (4) **Comparing across networks**: centrality values are not comparable between networks of different sizes or densities. (5) **Over-interpreting single measures**: each centrality measure captures one aspect of importance \u2014 use multiple measures and look for convergent evidence. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Study bias",
+        "Network incompleteness",
+        "Ignoring edge confidence",
+        "Comparing across networks",
+        "Over-interpreting single measures"
+      ],
+      "keywords": [
+        "common",
+        "pitfalls",
+        "interpreting",
+        "network",
+        "centrality",
+        "measures"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 139
+    },
+    {
+      "id": "faq-068",
+      "category": "Common Challenges",
+      "question": "Why is multiple sequence alignment harder than pairwise alignment?",
+      "answer": "**Pairwise alignment** of two sequences of lengths $n$ and $m$ can be solved optimally in $O(nm)$ time using dynamic programming. **Multiple sequence alignment (MSA)** of $k$ sequences is fundamentally harder: the exact solution requires a $k$-dimensional dynamic programming matrix with $O(n^k)$ time complexity, which is computationally intractable for more than a handful of sequences. MSA is in fact **NP-hard** under most scoring schemes. Practical MSA tools use heuristics. **Progressive alignment** (Clustal Omega) builds a guide tree from pairwise distances, then aligns sequences in order from most to least similar. **Iterative refinement** (MUSCLE) repeatedly realigns subsets to improve the overall score. **Consistency-based** methods (T-Coffee) use pairwise alignment information to guide the multiple alignment. Each heuristic can produce suboptimal results, particularly for divergent sequences or sequences with large insertions/deletions. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Pairwise alignment",
+        "Multiple sequence alignment (MSA)",
+        "NP-hard",
+        "Progressive alignment",
+        "Iterative refinement"
+      ],
+      "keywords": [
+        "multiple",
+        "sequence",
+        "alignment",
+        "harder",
+        "than",
+        "pairwise",
+        "alignment"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 130
+    },
+    {
+      "id": "faq-069",
+      "category": "Common Challenges",
+      "question": "How do I deal with the multiple testing problem in enrichment analysis?",
+      "answer": "When testing whether a set of genes is enriched for GO terms, you typically test hundreds or thousands of terms simultaneously. At a p-value threshold of 0.05, you expect 5% of tests to be significant by chance \u2014 so with 1,000 GO terms, you would get about 50 false positives. **Multiple testing correction** adjusts for this. **Bonferroni correction** divides the significance threshold by the number of tests \u2014 it is conservative and controls the **family-wise error rate** but may miss true positives. **Benjamini-Hochberg (FDR)** procedure controls the **false discovery rate** \u2014 the expected proportion of false positives among all positives \u2014 and is the standard in bioinformatics because it balances sensitivity and specificity. Always report FDR-adjusted p-values (q-values) rather than raw p-values for enrichment analyses. A q-value of 0.05 means that among all terms you call significant, at most 5% are expected to be false positives. See [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "medium",
+      "concepts": [
+        "Multiple testing correction",
+        "Bonferroni correction",
+        "family-wise error rate",
+        "Benjamini-Hochberg (FDR)",
+        "false discovery rate"
+      ],
+      "keywords": [
+        "deal",
+        "with",
+        "multiple",
+        "testing",
+        "problem",
+        "enrichment",
+        "analysis"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": false,
+      "word_count": 149
+    },
+    {
+      "id": "faq-070",
+      "category": "Common Challenges",
+      "question": "What does it mean when a graph algorithm does not scale to my dataset?",
+      "answer": "**Scalability** issues arise when an algorithm's time or memory requirements grow faster than your data. Common scenarios: (1) **All-pairs shortest paths** ($O(n^3)$) is fine for 1,000 nodes but impractical for 100,000. Use approximate or sample-based methods instead. (2) **Community detection** algorithms vary widely \u2014 Louvain is $O(n \\log n)$ and handles millions of nodes; Girvan-Newman is $O(m^2 n)$ and struggles beyond tens of thousands. (3) **Subgraph isomorphism** (finding a pattern in a graph) is NP-complete \u2014 for small patterns in large graphs, specialized algorithms exist, but arbitrary pattern matching is intractable. Solutions include: working with subnetworks focused on your biological question, using approximate algorithms, leveraging graph databases (Neo4j can efficiently traverse billion-edge graphs), and parallelizing with tools like **GraphX** or **graph-tool**. Always check algorithm complexity before applying it to your dataset. See [Chapter 4](chapters/04-graph-theory-fundamentals/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "medium",
+      "concepts": [
+        "Scalability",
+        "All-pairs shortest paths",
+        "Community detection",
+        "Subgraph isomorphism",
+        "GraphX"
+      ],
+      "keywords": [
+        "mean",
+        "graph",
+        "algorithm",
+        "not",
+        "scale",
+        "dataset"
+      ],
+      "source_links": [
+        "chapters/04-graph-theory-fundamentals/index.md"
+      ],
+      "has_example": false,
+      "word_count": 134
+    },
+    {
+      "id": "faq-071",
+      "category": "Common Challenges",
+      "question": "Why are my gene regulatory network inference results noisy?",
+      "answer": "**Gene regulatory network inference** from expression data is inherently challenging for several reasons. (1) **Indirect effects**: if gene A activates gene B which activates gene C, correlation-based methods will also predict a direct edge from A to C. Methods like partial correlation or mutual information try to distinguish direct from indirect effects, but imperfectly. (2) **Post-transcriptional regulation**: mRNA levels (measured by RNA-seq) do not perfectly reflect protein activity levels, so regulatory relationships may not be visible in transcriptomic data alone. (3) **Condition specificity**: regulatory relationships active in one cell type or condition may be invisible in another. (4) **Sample size**: accurate inference typically requires dozens to hundreds of samples, more than many experiments provide. Best practices: combine multiple inference methods and look for edges predicted by several approaches, integrate with ChIP-seq or ATAC-seq data for transcription factor binding evidence, and validate predictions experimentally. See [Chapter 11](chapters/11-transcriptomics-gene-regulatory-networks/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "medium",
+      "concepts": [
+        "Gene regulatory network inference",
+        "Indirect effects",
+        "Post-transcriptional regulation",
+        "Condition specificity",
+        "Sample size"
+      ],
+      "keywords": [
+        "gene",
+        "regulatory",
+        "network",
+        "inference",
+        "results",
+        "noisy"
+      ],
+      "source_links": [
+        "chapters/11-transcriptomics-gene-regulatory-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 146
+    },
+    {
+      "id": "faq-072",
+      "category": "Best Practices",
+      "question": "When should I use a graph database versus an in-memory graph library?",
+      "answer": "Use an **in-memory library like NetworkX** when your graph fits in RAM (typically up to a few hundred thousand nodes and a few million edges), when you need to run many different algorithms rapidly, and when you are in an exploratory analysis phase. NetworkX is ideal for small-to-medium biological networks: a human PPI network (~20,000 proteins, ~200,000 interactions) loads easily. Use a **graph database like Neo4j** when your data exceeds available RAM, when you need persistent storage with ACID transactions, when multiple users or applications need to query the same graph, when your queries involve complex multi-hop patterns across heterogeneous node types (knowledge graphs), or when you need to integrate data from many sources over time. In practice, many bioinformatics projects use both: Neo4j for data storage and complex queries, and NetworkX for algorithm-heavy analysis on extracted subgraphs. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md) and [Chapter 16](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "in-memory library like NetworkX",
+        "graph database like Neo4j"
+      ],
+      "keywords": [
+        "use",
+        "graph",
+        "database",
+        "versus",
+        "in-memory",
+        "graph",
+        "library"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md",
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 144
+    },
+    {
+      "id": "faq-073",
+      "category": "Best Practices",
+      "question": "How do I choose the right BLAST program for my search?",
+      "answer": "The choice depends on your query type and target database. **blastn**: nucleotide query against nucleotide database \u2014 use for finding similar DNA/RNA sequences. **blastp**: protein query against protein database \u2014 use for finding homologous proteins. **blastx**: nucleotide query translated in all six reading frames against protein database \u2014 use when you have a DNA sequence and want to find homologous proteins (especially useful for ESTs or unannotated sequences). **tblastn**: protein query against translated nucleotide database \u2014 use when searching for protein homologs in unannotated genomes. **tblastx**: translated nucleotide query against translated nucleotide database \u2014 the slowest option, used for comparing unannotated nucleotide sequences at the protein level. As a decision rule: if both sequences are protein, use blastp. If your query is DNA and you suspect it encodes a protein, use blastx. If you are comparing genomes, use blastn. For maximum sensitivity in detecting remote homology, protein-level searches (blastp, blastx) are superior to nucleotide searches because protein sequences diverge more slowly. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "blastn",
+        "blastp",
+        "blastx",
+        "tblastn",
+        "tblastx"
+      ],
+      "keywords": [
+        "choose",
+        "right",
+        "blast",
+        "program",
+        "search"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 164
+    },
+    {
+      "id": "faq-074",
+      "category": "Best Practices",
+      "question": "What is the best way to visualize a biological network?",
+      "answer": "The best visualization depends on the network's size and structure. For **small networks** (fewer than 100 nodes): use Cytoscape or Pyvis with a force-directed layout. Color nodes by attribute (e.g., function or expression level) and size them by degree. For **medium networks** (100-1,000 nodes): filter edges by confidence threshold, detect communities first and color by community, and use hierarchical or grouped layouts. Consider **Pyvis** for interactive HTML visualizations you can embed in reports. For **large networks** (over 1,000 nodes): avoid force-directed layouts (they produce hairballs). Instead, use adjacency matrices, community-level summary graphs, or interactive tools that allow zooming and filtering. **Neo4j Browser** provides good interactive exploration for property graphs. General principles: always encode a biological variable in node color, use edge width for weights, add a legend, and provide the ability to hover or click for details. The MicroSims in this textbook demonstrate many of these techniques. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "small networks",
+        "medium networks",
+        "Pyvis",
+        "large networks",
+        "Neo4j Browser"
+      ],
+      "keywords": [
+        "best",
+        "way",
+        "visualize",
+        "biological",
+        "network"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 150
+    },
+    {
+      "id": "faq-075",
+      "category": "Best Practices",
+      "question": "How should I validate the results of a network analysis?",
+      "answer": "Validation is critical because network analyses can produce results that are statistically significant but biologically meaningless. Key strategies: (1) **Literature validation** \u2014 check whether your predicted hubs, modules, or pathways are supported by published studies. (2) **Enrichment analysis** \u2014 test whether identified modules are enriched for known biological functions using GO or pathway databases. (3) **Permutation testing** \u2014 compare your results against random networks with the same degree distribution to ensure they are not artifacts of network topology. (4) **Cross-database validation** \u2014 repeat your analysis using interaction data from a different source (e.g., run on both STRING and BioGRID data). (5) **Robustness analysis** \u2014 randomly remove 10-20% of edges and check whether your main conclusions still hold. (6) **Experimental validation** \u2014 the gold standard, but not always feasible; identify top predictions for experimental testing. Always report the database version, confidence thresholds, and algorithm parameters used.",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "Literature validation",
+        "Enrichment analysis",
+        "Permutation testing",
+        "Cross-database validation",
+        "Robustness analysis"
+      ],
+      "keywords": [
+        "validate",
+        "results",
+        "network",
+        "analysis"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 145
+    },
+    {
+      "id": "faq-076",
+      "category": "Best Practices",
+      "question": "When should I use a weighted versus an unweighted graph?",
+      "answer": "Use **weighted graphs** when edge values carry meaningful biological information: interaction confidence scores (STRING database), expression correlation strengths, evolutionary distances, reaction rates, or binding affinities. Weighted analysis captures the reality that some relationships are stronger than others \u2014 a high-confidence physical interaction should count more than a low-confidence text-mining prediction. Use **unweighted graphs** when edge presence/absence is what matters and you have already applied a confidence threshold: if you include only interactions above a confidence score of 0.7, treating them all equally may be appropriate. Also use unweighted graphs when edge values are not comparable across different data types, or when the algorithm you need (some community detection methods, motif finding) only works on unweighted graphs. A common workflow: start with weighted analysis to leverage all available information, then verify key findings on a high-confidence unweighted subgraph.",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "weighted graphs",
+        "unweighted graphs"
+      ],
+      "keywords": [
+        "use",
+        "weighted",
+        "versus",
+        "unweighted",
+        "graph"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 137
+    },
+    {
+      "id": "faq-077",
+      "category": "Best Practices",
+      "question": "What are best practices for building a biomedical knowledge graph?",
+      "answer": "Building a robust biomedical knowledge graph requires careful attention to several principles. (1) **Schema design**: define your node labels (Gene, Protein, Disease, Drug, Pathway) and relationship types (INTERACTS_WITH, CAUSES, TREATS, EXPRESSED_IN) before importing data. Map each source database to this schema. (2) **Entity resolution**: the same entity may have different identifiers across databases (NCBI Gene ID vs. Ensembl ID vs. HGNC symbol). Use standardized identifiers and cross-reference tables to merge duplicates. (3) **Provenance tracking**: store the source database, version, and evidence type for every edge so you can trace claims back to their origin. (4) **Confidence scoring**: not all edges are equally reliable \u2014 distinguish curated experimental evidence from text-mining predictions. (5) **Versioning**: biological knowledge changes frequently; track database versions and provide reproducibility information. (6) **Validation**: check for known relationships to verify correct import, and look for unexpected patterns that may indicate errors. See [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "Schema design",
+        "Entity resolution",
+        "Provenance tracking",
+        "Confidence scoring",
+        "Versioning"
+      ],
+      "keywords": [
+        "best",
+        "practices",
+        "building",
+        "biomedical",
+        "knowledge",
+        "graph"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": false,
+      "word_count": 146
+    },
+    {
+      "id": "faq-078",
+      "category": "Best Practices",
+      "question": "How do I select the right community detection algorithm?",
+      "answer": "Algorithm choice depends on your network properties and research question. **Louvain method**: fast, scalable, and good for detecting non-overlapping communities in large networks \u2014 the default choice for exploratory analysis of PPI networks. **Leiden algorithm**: an improved version of Louvain that guarantees well-connected communities \u2014 preferred when community quality matters. **Label propagation**: very fast and does not require specifying the number of communities, but results can be non-deterministic \u2014 good for very large networks where speed is paramount. **Girvan-Newman**: conceptually clear (removes high-betweenness edges) but slow \u2014 use for small networks when you want to understand the hierarchical community structure. **Spectral clustering**: requires specifying the number of communities but provides theoretical guarantees \u2014 use when you have prior knowledge of the expected number of functional modules. **Overlapping community detection** (like OSLOM or ClusterONE): use when proteins may belong to multiple complexes simultaneously, which is biologically common. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "Louvain method",
+        "Leiden algorithm",
+        "Label propagation",
+        "Girvan-Newman",
+        "Spectral clustering"
+      ],
+      "keywords": [
+        "select",
+        "right",
+        "community",
+        "detection",
+        "algorithm"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 149
+    },
+    {
+      "id": "faq-079",
+      "category": "Best Practices",
+      "question": "What confidence threshold should I use for protein interaction data?",
+      "answer": "For **STRING** database interactions, common thresholds are: **low confidence** (score > 150) \u2014 includes many predictions, useful for exploring hypotheses but noisy; **medium confidence** (score > 400) \u2014 the default, balances coverage and reliability; **high confidence** (score > 700) \u2014 mostly experimentally supported, recommended for hypothesis testing and publication; **highest confidence** (score > 900) \u2014 very few false positives, but misses many real interactions. The right threshold depends on your downstream analysis. For community detection, higher thresholds (700+) produce more biologically meaningful modules. For link prediction or network propagation, medium thresholds (400+) provide better coverage. For **BioGRID** and other experimentally curated databases, all interactions are experimentally supported, but consider filtering by number of independent studies (interactions supported by 2+ publications are more reliable). Always report the threshold used and test sensitivity by varying it. See [Chapter 9](chapters/09-protein-interaction-networks/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "STRING",
+        "low confidence",
+        "medium confidence",
+        "high confidence",
+        "highest confidence"
+      ],
+      "keywords": [
+        "confidence",
+        "threshold",
+        "use",
+        "protein",
+        "interaction",
+        "data"
+      ],
+      "source_links": [
+        "chapters/09-protein-interaction-networks/index.md"
+      ],
+      "has_example": false,
+      "word_count": 137
+    },
+    {
+      "id": "faq-080",
+      "category": "Best Practices",
+      "question": "How should I organize a bioinformatics project computationally?",
+      "answer": "A well-organized project structure supports reproducibility and collaboration. Create a directory structure like: `data/raw/` (original downloaded data, never modified), `data/processed/` (cleaned and transformed data), `notebooks/` (Jupyter notebooks for exploration), `scripts/` (Python scripts for reproducible analyses), `results/` (output files, figures, tables), and `docs/` (notes and documentation). Use a **virtual environment** (venv or conda) to pin exact package versions. Track your code with **git** and include a `.gitignore` that excludes large data files. Record every download URL, database version, and access date. For graph-specific projects, keep your Neo4j import scripts in `scripts/` and your Cypher queries in documented notebooks. When using NetworkX, save processed graphs in standard formats (GraphML, GML, or edge lists) so they can be loaded by other tools. See [Chapter 16](chapters/16-python-tools-capstone-projects/index.md) for complete project templates.",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "virtual environment",
+        "git"
+      ],
+      "keywords": [
+        "organize",
+        "bioinformatics",
+        "project",
+        "computationally"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 126
+    },
+    {
+      "id": "faq-081",
+      "category": "Best Practices",
+      "question": "When should I use a relational database versus a graph database for biological data?",
+      "answer": "Use a **relational database** (PostgreSQL, SQLite) when your data is tabular and relationships are simple: gene annotation tables, experimental metadata, sample information, or any data that naturally fits rows and columns with straightforward joins. Use a **graph database** (Neo4j) when relationships are the primary focus: interaction networks, regulatory pathways, knowledge graphs connecting diverse entity types, and any analysis that requires multi-hop path queries. The key question is: does your most important query involve following chains of relationships? If you regularly ask \"find all paths of length 3 between drug X and disease Y through gene intermediaries,\" a graph database handles this naturally while a relational database requires expensive multi-table joins. Many bioinformatics projects use both: a relational database for structured experimental data and a graph database for the interaction and pathway knowledge that connects those experiments. See [Chapter 5](chapters/05-graph-databases-query-languages/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "relational database",
+        "graph database"
+      ],
+      "keywords": [
+        "use",
+        "relational",
+        "database",
+        "versus",
+        "graph",
+        "database",
+        "biological",
+        "data"
+      ],
+      "source_links": [
+        "chapters/05-graph-databases-query-languages/index.md"
+      ],
+      "has_example": false,
+      "word_count": 139
+    },
+    {
+      "id": "faq-082",
+      "category": "Best Practices",
+      "question": "How do I decide between different sequence alignment tools?",
+      "answer": "The choice depends on the specific task. For **database searches** (finding similar sequences in a large database): BLAST is the standard starting point; DIAMOND is faster for large-scale protein searches; MMseqs2 is fastest for very large comparisons. For **pairwise alignment** of two sequences: use Biopython's pairwise2 module or EMBOSS tools (needle for global, water for local). For **multiple sequence alignment**: Clustal Omega is the reliable default; MUSCLE is fast and accurate for moderate numbers of sequences; MAFFT handles large and diverse sets well; T-Coffee is most accurate for small numbers of sequences with complex evolutionary relationships. For **structural alignment** (aligning by 3D structure): use TM-align or DALI. For **genome-to-genome alignment**: use MUMmer or minimap2. The general principle: start with the standard tool, evaluate your results, and switch to a more specialized tool if needed. See [Chapter 6](chapters/06-sequence-alignment-homology/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "database searches",
+        "pairwise alignment",
+        "multiple sequence alignment",
+        "structural alignment",
+        "genome-to-genome alignment"
+      ],
+      "keywords": [
+        "decide",
+        "different",
+        "sequence",
+        "alignment",
+        "tools"
+      ],
+      "source_links": [
+        "chapters/06-sequence-alignment-homology/index.md"
+      ],
+      "has_example": false,
+      "word_count": 137
+    },
+    {
+      "id": "faq-083",
+      "category": "Advanced Topics",
+      "question": "What are graph neural networks and how are they applied in bioinformatics?",
+      "answer": "**Graph neural networks (GNNs)** are deep learning models designed to operate on graph-structured data. Unlike traditional neural networks that require fixed-size vector inputs, GNNs learn node representations by aggregating information from each node's neighborhood through message-passing rounds. Each node starts with initial features (e.g., gene expression, protein properties), and through successive layers, it incorporates information from increasingly distant neighbors. Common architectures include **Graph Convolutional Networks (GCN)**, **GraphSAGE** (which samples neighborhoods for scalability), and **Graph Attention Networks (GAT)** (which learn which neighbors are most important). In bioinformatics, GNNs are used for **protein function prediction** (from PPI networks), **drug-target interaction prediction** (from knowledge graphs), **compound property prediction** (from molecular graphs), and **cell type classification** (from gene regulatory networks). GNNs have shown state-of-the-art performance on tasks where both node features and network structure carry information. See [Chapter 15](chapters/15-multi-omics-integration-graph-analytics/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "Graph neural networks (GNNs)",
+        "Graph Convolutional Networks (GCN)",
+        "GraphSAGE",
+        "Graph Attention Networks (GAT)",
+        "protein function prediction"
+      ],
+      "keywords": [
+        "graph",
+        "neural",
+        "networks",
+        "they",
+        "applied",
+        "bioinformatics"
+      ],
+      "source_links": [
+        "chapters/15-multi-omics-integration-graph-analytics/index.md"
+      ],
+      "has_example": false,
+      "word_count": 135
+    },
+    {
+      "id": "faq-084",
+      "category": "Advanced Topics",
+      "question": "How can I combine multiple types of biological networks for integrative analysis?",
+      "answer": "**Multi-layer network integration** combines networks from different data sources or omics layers. Several approaches exist. **Network fusion** (e.g., SNF \u2014 Similarity Network Fusion) iteratively combines patient similarity networks from different omics layers into a single consensus network. **Multiplex networks** maintain separate layers (PPI layer, co-expression layer, metabolic layer) with inter-layer edges connecting the same entity across layers. **Heterogeneous networks** combine different node types (genes, proteins, metabolites, diseases) in a single graph with typed edges. **Joint embedding** methods learn a shared low-dimensional representation that captures structure from all input networks. The choice depends on your question: for patient stratification, network fusion is effective; for understanding cross-layer regulatory mechanisms, multiplex or heterogeneous networks are more interpretable. Tools include **MultiNET**, **muxViz** for multiplex visualization, and **MOGONET** for multi-omics GNN analysis. See [Chapter 15](chapters/15-multi-omics-integration-graph-analytics/index.md).",
+      "bloom_level": "Apply",
+      "difficulty": "hard",
+      "concepts": [
+        "Multi-layer network integration",
+        "Network fusion",
+        "Multiplex networks",
+        "Heterogeneous networks",
+        "Joint embedding"
+      ],
+      "keywords": [
+        "combine",
+        "multiple",
+        "types",
+        "biological",
+        "networks",
+        "integrative",
+        "analysis"
+      ],
+      "source_links": [
+        "chapters/15-multi-omics-integration-graph-analytics/index.md"
+      ],
+      "has_example": false,
+      "word_count": 130
+    },
+    {
+      "id": "faq-085",
+      "category": "Advanced Topics",
+      "question": "What is network medicine and how does it use graph approaches?",
+      "answer": "**Network medicine** applies network science to understand human disease at a systems level. The core idea is that diseases are not caused by single gene defects but by perturbations in molecular networks. Key concepts include: **disease modules** \u2014 groups of genes/proteins in a PPI network whose dysfunction causes a specific disease, identified through network clustering and enrichment analysis. **Network proximity** \u2014 diseases whose disease modules are close in the interactome tend to have shared symptoms, comorbidities, or drug targets. **Drug repurposing** \u2014 finding existing drugs whose targets are near a disease module in network space, suggesting therapeutic potential. **Disease-disease relationships** \u2014 building a \"diseasome\" where diseases are connected if they share molecular mechanisms, revealing unexpected links between conditions. Network medicine has successfully predicted new drug indications, identified disease subtypes with different molecular mechanisms, and prioritized candidate genes from GWAS studies. See [Chapter 13](chapters/13-signaling-networks-disease-modules/index.md) and [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "Network medicine",
+        "disease modules",
+        "Network proximity",
+        "Drug repurposing",
+        "Disease-disease relationships"
+      ],
+      "keywords": [
+        "network",
+        "medicine",
+        "use",
+        "graph",
+        "approaches"
+      ],
+      "source_links": [
+        "chapters/13-signaling-networks-disease-modules/index.md",
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": false,
+      "word_count": 146
+    },
+    {
+      "id": "faq-086",
+      "category": "Advanced Topics",
+      "question": "How is graph-based drug repurposing performed?",
+      "answer": "**Graph-based drug repurposing** identifies new therapeutic uses for existing drugs by analyzing paths in a biomedical knowledge graph connecting drugs to diseases. The process typically involves: (1) **Constructing a knowledge graph** with drugs, targets, genes, pathways, and diseases as nodes, and known relationships as edges. (2) **Computing network proximity** between drug target nodes and disease gene nodes \u2014 drugs whose targets are topologically close to disease modules are repurposing candidates. (3) **Using link prediction** \u2014 machine learning models (including GNNs) predict missing drug-disease edges based on learned graph patterns. (4) **Path analysis** \u2014 enumerating and scoring meta-paths (e.g., Drug-targets-Protein-interacts-Protein-associated-Disease) to find mechanistically interpretable drug-disease connections. Successful examples include the repurposing of baricitinib for COVID-19, predicted through network proximity of its targets to SARS-CoV-2 host factors. Validation combines computational scoring with in vitro experiments and clinical data. See [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "Graph-based drug repurposing",
+        "Constructing a knowledge graph",
+        "Computing network proximity",
+        "Using link prediction",
+        "Path analysis"
+      ],
+      "keywords": [
+        "graph-based",
+        "drug",
+        "repurposing",
+        "performed"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md"
+      ],
+      "has_example": false,
+      "word_count": 139
+    },
+    {
+      "id": "faq-087",
+      "category": "Advanced Topics",
+      "question": "What are the current limitations of pangenome graphs?",
+      "answer": "Despite their advantages, **pangenome graphs** face several limitations. (1) **Complexity**: pangenome graphs for large, diverse populations can become extremely complex, with millions of nodes and edges, making visualization and interpretation difficult. (2) **Structural variant representation**: while pangenome graphs handle SNPs and small indels well, representing large structural variants (inversions, translocations, complex rearrangements) remains challenging. (3) **Tool ecosystem**: although growing rapidly, the pangenome tool ecosystem is less mature than reference-based tools \u2014 fewer downstream analysis tools accept graph input natively. (4) **Coordinate systems**: biologists are accustomed to linear genomic coordinates; graph-based coordinates are less intuitive and complicate communication of variant positions. (5) **Reference bias in construction**: pangenome graphs are typically built from a set of assembled genomes, which themselves were assembled using a reference, potentially propagating bias. (6) **Computational resources**: building and querying pangenome graphs requires significant memory and compute compared to linear reference operations. See [Chapter 10](chapters/10-genome-assembly-variation-graphs/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "pangenome graphs",
+        "Complexity",
+        "Structural variant representation",
+        "Tool ecosystem",
+        "Coordinate systems"
+      ],
+      "keywords": [
+        "current",
+        "limitations",
+        "pangenome",
+        "graphs"
+      ],
+      "source_links": [
+        "chapters/10-genome-assembly-variation-graphs/index.md"
+      ],
+      "has_example": false,
+      "word_count": 147
+    },
+    {
+      "id": "faq-088",
+      "category": "Advanced Topics",
+      "question": "How might quantum computing impact graph algorithms in bioinformatics?",
+      "answer": "**Quantum computing** has the potential to accelerate certain graph problems that are intractable on classical computers. Quantum algorithms like **Grover's search** provide quadratic speedup for unstructured search problems, which could benefit subgraph isomorphism and motif finding. **Quantum walks** on graphs could accelerate network analysis tasks like community detection and centrality computation. The **quantum approximate optimization algorithm (QAOA)** is designed for combinatorial optimization on graphs, potentially improving solutions for problems like optimal network partitioning or maximum weight clique (relevant to protein complex identification). However, current quantum hardware (NISQ era) has too few qubits and too much noise for practical bioinformatics applications. The near-term impact will likely be hybrid classical-quantum algorithms that use quantum subroutines for the hardest computational steps within otherwise classical pipelines. This is an active research frontier with more theoretical promise than practical application at present.",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "Quantum computing",
+        "Grover's search",
+        "Quantum walks",
+        "quantum approximate optimization algorithm (QAOA)"
+      ],
+      "keywords": [
+        "might",
+        "quantum",
+        "computing",
+        "impact",
+        "graph",
+        "algorithms",
+        "bioinformatics"
+      ],
+      "source_links": [],
+      "has_example": false,
+      "word_count": 137
+    },
+    {
+      "id": "faq-089",
+      "category": "Advanced Topics",
+      "question": "What is the role of graph databases in precision medicine?",
+      "answer": "**Precision medicine** aims to tailor treatments to individual patients based on their unique molecular profiles. Graph databases are uniquely suited to this because they can integrate the diverse, interconnected data types that precision medicine requires: a patient's genetic variants linked to affected genes, linked to dysregulated pathways, linked to potential drug targets, linked to available therapeutics \u2014 all in a single queryable graph. Clinical applications include: **variant interpretation** \u2014 querying a knowledge graph to find all known associations between a patient's variants and diseases or drug responses. **Treatment recommendation** \u2014 traversing paths from a patient's disease module to approved drugs. **Cohort identification** \u2014 finding patients with similar molecular profiles for clinical trial matching. **Pharmacogenomics** \u2014 predicting drug metabolism and adverse reactions based on genetic variants in drug-metabolizing enzymes. Neo4j-based clinical knowledge graphs are being deployed at major medical centers for these applications. See [Chapter 14](chapters/14-biomedical-knowledge-graphs-ontologies/index.md) and [Chapter 15](chapters/15-multi-omics-integration-graph-analytics/index.md).",
+      "bloom_level": "Remember",
+      "difficulty": "hard",
+      "concepts": [
+        "Precision medicine",
+        "variant interpretation",
+        "Treatment recommendation",
+        "Cohort identification",
+        "Pharmacogenomics"
+      ],
+      "keywords": [
+        "role",
+        "graph",
+        "databases",
+        "precision",
+        "medicine"
+      ],
+      "source_links": [
+        "chapters/14-biomedical-knowledge-graphs-ontologies/index.md",
+        "chapters/15-multi-omics-integration-graph-analytics/index.md"
+      ],
+      "has_example": false,
+      "word_count": 148
+    },
+    {
+      "id": "faq-090",
+      "category": "Advanced Topics",
+      "question": "How would I design a capstone project that integrates multiple chapters of this course?",
+      "answer": "A strong capstone project should draw on at least four distinct skill areas from the course. Here is a template: (1) **Data acquisition** (Chapters 2-3) \u2014 download interaction data from STRING, gene expression data from NCBI GEO, and disease associations from DisGeNET. (2) **Graph construction** (Chapters 4-5) \u2014 build a heterogeneous knowledge graph in Neo4j with genes, proteins, diseases, and drugs as nodes, using Cypher to import and link entities. (3) **Network analysis** (Chapters 9, 11, 13) \u2014 extract a disease-specific subnetwork, compute centrality measures to identify key genes, detect functional modules using community detection, and find enriched pathways. (4) **Integration** (Chapter 15) \u2014 overlay transcriptomic data onto the network to identify differentially expressed hubs and dysregulated modules. (5) **Biological interpretation** \u2014 use GO enrichment to characterize identified modules, predict drug repurposing candidates by network proximity, and validate against published literature. Document your analysis in a Jupyter notebook with clear methodology, visualizations, and biological interpretation. See [Python Tools and Capstone Projects](chapters/16-python-tools-capstone-projects/index.md) for detailed guidance and example projects.",
+      "bloom_level": "Create",
+      "difficulty": "hard",
+      "concepts": [
+        "Data acquisition",
+        "Graph construction",
+        "Network analysis",
+        "Integration",
+        "Biological interpretation"
+      ],
+      "keywords": [
+        "would",
+        "design",
+        "capstone",
+        "project",
+        "integrates",
+        "multiple",
+        "chapters",
+        "course"
+      ],
+      "source_links": [
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 167
+    },
+    {
+      "id": "faq-091",
+      "category": "Advanced Topics",
+      "question": "What emerging graph-based technologies should I watch in bioinformatics?",
+      "answer": "Several cutting-edge developments are reshaping graph-based bioinformatics. **Foundation models on graphs**: large pre-trained models (analogous to GPT for text) trained on massive biological graphs that can be fine-tuned for specific prediction tasks. **Temporal graphs**: representing how biological networks change over time (during development, disease progression, or drug response) \u2014 moving beyond static network snapshots. **Federated graph learning**: training GNN models across multiple institutions' patient data without sharing sensitive information, enabling privacy-preserving precision medicine. **Knowledge graph completion with LLMs**: using large language models to extract biological relationships from literature and populate knowledge graphs automatically. **Spatial transcriptomics graphs**: representing gene expression data as graphs where nodes are spatial locations in a tissue and edges connect neighboring cells, enabling spatial network analysis. **Graph-based single-cell analysis**: using k-nearest-neighbor graphs of cells for trajectory inference, cell type identification, and perturbation analysis. Each of these represents an active research frontier where graph methods are enabling fundamentally new analyses. See [Chapter 15](chapters/15-multi-omics-integration-graph-analytics/index.md) and [Chapter 16](chapters/16-python-tools-capstone-projects/index.md).",
+      "bloom_level": "Understand",
+      "difficulty": "hard",
+      "concepts": [
+        "Foundation models on graphs",
+        "Temporal graphs",
+        "Federated graph learning",
+        "Knowledge graph completion with LLMs",
+        "Spatial transcriptomics graphs"
+      ],
+      "keywords": [
+        "emerging",
+        "graph-based",
+        "technologies",
+        "watch",
+        "bioinformatics"
+      ],
+      "source_links": [
+        "chapters/15-multi-omics-integration-graph-analytics/index.md",
+        "chapters/16-python-tools-capstone-projects/index.md"
+      ],
+      "has_example": false,
+      "word_count": 158
+    }
+  ]
+}
