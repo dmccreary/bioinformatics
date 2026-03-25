@@ -91,14 +91,27 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - BFS vs DFS Traversal Comparison: sims/bfs-vs-dfs/index.md
     - Biological Database Ecosystem: sims/bio-database-ecosystem/index.md
+    - Bipartite Graph of a Metabolic Sub-network: sims/bipartite-metabolic/index.md
     - Central Dogma and Its Exceptions: sims/central-dogma-exceptions/index.md
     - Central Dogma Information Flow: sims/central-dogma-flow/index.md
     - Codon Table Explorer: sims/codon-table-explorer/index.md
+    - Dynamic Programming Matrix Visualization: sims/dp-alignment-matrix/index.md
+    - FASTQ Quality Control Pipeline: sims/fastq-qc-pipeline/index.md
+    - Gene Tree vs Species Tree Discordance: sims/gene-tree-species-tree/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
     - Mutation Types and Their Effects on Protein Sequence: sims/mutation-types-explorer/index.md
+    - Network Model Comparison: sims/network-models/index.md
+    - Phylogenetic Network with Reticulation Events: sims/phylogenetic-network/index.md
+    - PPI Knowledge Graph Schema: sims/ppi-knowledge-graph-schema/index.md
+    - Profile HMM Architecture: sims/profile-hmm-architecture/index.md
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
     - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
+    - Rooted and Unrooted Phylogenetic Trees: sims/phylogenetic-tree-types/index.md
+    - Sequence Similarity Network: sims/sequence-similarity-network/index.md
+
+
 
 
 
