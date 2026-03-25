@@ -553,3 +553,5 @@ A robust quality control strategy follows a consistent pattern:
 12. **Data format conversion** requires understanding coordinate systems, information content differences, and the availability of validated tools like samtools, bedtools, bcftools, and BioPython.
 
 13. **Data quality control** is a continuous process applied at every pipeline stage — from raw read assessment (FastQC) through alignment QC (samtools flagstat) to variant QC (bcftools stats) — and must be documented for reproducibility.
+
+[See Annotated References](./references.md)

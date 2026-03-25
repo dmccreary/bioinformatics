@@ -441,3 +441,5 @@ This pipeline transforms raw interaction data into biological insights — ident
 - Most biological networks are **scale-free** (power-law degree distribution) and **small-world** (high clustering, short diameter).
 - The **Erdos-Renyi model** generates random graphs for null hypothesis testing; the **Barabasi-Albert model** explains scale-free topology via preferential attachment.
 - **Network motifs** are recurring subgraph patterns that serve as functional building blocks in biological networks.
+
+[See Annotated References](./references.md)

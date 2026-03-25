@@ -406,3 +406,5 @@ Each step feeds into the next, and the final graph representation connects this 
 - **Hidden Markov models** — especially profile HMMs — are the most sensitive statistical framework for modeling sequence families, capturing position-specific residue preferences and indel patterns.
 - **Sequence motifs** can be represented as regular expressions, position weight matrices, or profile HMMs, with increasing power and computational cost.
 - **Motif discovery** algorithms (MEME, Gibbs sampling) find unknown conserved patterns in sets of unaligned sequences.
+
+[See Annotated References](./references.md)

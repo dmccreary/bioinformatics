@@ -13,51 +13,67 @@ nav:
     - 1. Foundations of Molecular Biology:
       - Content: chapters/01-foundations-molecular-biology/index.md
       - Quiz: chapters/01-foundations-molecular-biology/quiz.md
+      - References: chapters/01-foundations-molecular-biology/references.md
     - 2. Biological Databases:
       - Content: chapters/02-biological-databases/index.md
       - Quiz: chapters/02-biological-databases/quiz.md
+      - References: chapters/02-biological-databases/references.md
     - 3. Bioinformatics Data Formats:
       - Content: chapters/03-bioinformatics-data-formats/index.md
       - Quiz: chapters/03-bioinformatics-data-formats/quiz.md
+      - References: chapters/03-bioinformatics-data-formats/references.md
     - 4. Graph Theory Fundamentals:
       - Content: chapters/04-graph-theory-fundamentals/index.md
       - Quiz: chapters/04-graph-theory-fundamentals/quiz.md
+      - References: chapters/04-graph-theory-fundamentals/references.md
     - 5. Graph Databases and Queries:
       - Content: chapters/05-graph-databases-query-languages/index.md
       - Quiz: chapters/05-graph-databases-query-languages/quiz.md
+      - References: chapters/05-graph-databases-query-languages/references.md
     - 6. Sequence Alignment:
       - Content: chapters/06-sequence-alignment-homology/index.md
       - Quiz: chapters/06-sequence-alignment-homology/quiz.md
+      - References: chapters/06-sequence-alignment-homology/references.md
     - 7. Phylogenetics:
       - Content: chapters/07-phylogenetics-evolutionary-graphs/index.md
       - Quiz: chapters/07-phylogenetics-evolutionary-graphs/quiz.md
+      - References: chapters/07-phylogenetics-evolutionary-graphs/references.md
     - 8. Structural Bioinformatics:
       - Content: chapters/08-structural-bioinformatics/index.md
       - Quiz: chapters/08-structural-bioinformatics/quiz.md
+      - References: chapters/08-structural-bioinformatics/references.md
     - 9. Protein Interaction Networks:
       - Content: chapters/09-protein-interaction-networks/index.md
       - Quiz: chapters/09-protein-interaction-networks/quiz.md
+      - References: chapters/09-protein-interaction-networks/references.md
     - 10. Genome Assembly:
       - Content: chapters/10-genome-assembly-variation-graphs/index.md
       - Quiz: chapters/10-genome-assembly-variation-graphs/quiz.md
+      - References: chapters/10-genome-assembly-variation-graphs/references.md
     - 11. Transcriptomics:
       - Content: chapters/11-transcriptomics-regulatory-networks/index.md
       - Quiz: chapters/11-transcriptomics-regulatory-networks/quiz.md
+      - References: chapters/11-transcriptomics-regulatory-networks/references.md
     - 12. Metabolic Pathways:
       - Content: chapters/12-metabolic-pathway-modeling/index.md
       - Quiz: chapters/12-metabolic-pathway-modeling/quiz.md
+      - References: chapters/12-metabolic-pathway-modeling/references.md
     - 13. Signaling and Disease:
       - Content: chapters/13-signaling-networks-disease/index.md
       - Quiz: chapters/13-signaling-networks-disease/quiz.md
+      - References: chapters/13-signaling-networks-disease/references.md
     - 14. Knowledge Graphs:
       - Content: chapters/14-knowledge-graphs-ontologies/index.md
       - Quiz: chapters/14-knowledge-graphs-ontologies/quiz.md
+      - References: chapters/14-knowledge-graphs-ontologies/references.md
     - 15. Multi-Omics Integration:
       - Content: chapters/15-multi-omics-graph-analytics/index.md
       - Quiz: chapters/15-multi-omics-graph-analytics/quiz.md
+      - References: chapters/15-multi-omics-graph-analytics/references.md
     - 16. Python Tools and Capstone:
       - Content: chapters/16-python-tools-capstone/index.md
       - Quiz: chapters/16-python-tools-capstone/quiz.md
+      - References: chapters/16-python-tools-capstone/references.md
   
   - Learning Graph:
     - Introduction: learning-graph/index.md

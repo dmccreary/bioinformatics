@@ -371,3 +371,5 @@ This pipeline is the engine behind both Case Study 2 (drug repurposing with Heti
 9. **Hetionet** demonstrates the practical power of biomedical knowledge graphs, integrating 29 databases and 24 edge types to support systematic drug repurposing.
 
 10. This chapter's concepts form a complete pipeline -- from ontology design through graph construction, embedding, and prediction -- that serves as the capstone of the graph-based approach to bioinformatics developed throughout this course.
+
+[See Annotated References](./references.md)

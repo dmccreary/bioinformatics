@@ -552,3 +552,5 @@ And in this final chapter, we assembled the practical toolkit — Python librari
 7. **The future of graph bioinformatics** lies in graph neural networks, federated learning, scalable cloud platforms, and multimodal knowledge graphs — but the fundamentals of graph thinking will remain constant.
 
 8. **Choose the right tool for the question** — Graph methods are most powerful when relationships between entities carry as much information as the entities themselves. Always evaluate whether a graph approach adds genuine value.
+
+[See Annotated References](./references.md)

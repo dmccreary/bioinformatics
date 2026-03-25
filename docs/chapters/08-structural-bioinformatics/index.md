@@ -420,3 +420,5 @@ At every stage, graphs provide the organizing framework: residue interaction net
 9. **Drug-likeness** is assessed using Lipinski's Rule of Five and ADMET property predictions, which filter compound libraries before expensive experimental testing.
 
 10. **Molecular fingerprints and the Tanimoto coefficient** enable rapid chemical similarity searching by encoding molecular graph features as binary vectors and measuring their overlap.
+
+[See Annotated References](./references.md)

@@ -524,3 +524,5 @@ This table is your roadmap for the course. The molecular biology vocabulary you 
 6. **Epigenetics** — including **DNA methylation** and **histone modifications** — controls gene expression without changing the DNA sequence.
 7. **Exceptions** to the central dogma (reverse transcription, RNA replication, prions, functional ncRNAs) are biologically important and drive specialized bioinformatics tools.
 8. Every molecular concept in this chapter maps to a graph-based representation that you will explore in later chapters.
+
+[See Annotated References](./references.md)

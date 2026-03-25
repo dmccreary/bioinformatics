@@ -332,3 +332,5 @@ This pipeline transforms a static genome into a predictive model of cellular met
 8. **Pathway enrichment** connects experimental **metabolomics** results (often obtained via **mass spectrometry for metabolomics**) to biological pathways on the metabolic network graph.
 
 9. **Metabolic network comparison** and **metabolic graph alignment** enable cross-species analysis of conserved and divergent metabolism, forming the basis for Capstone Project 3.
+
+[See Annotated References](./references.md)

@@ -501,3 +501,5 @@ This query finds drugs that share protein targets with known rheumatoid arthriti
 - **Graph data loading** follows an **ETL** pattern: extract from biological data sources, transform to the target schema, and load via **CSV import** or bulk import tools. Always create indexes before loading.
 - **Graph query optimization** relies on selective anchoring and **query profiling** with PROFILE/EXPLAIN to minimize database hits.
 - **Graph scalability** for billion-edge biological networks requires **distributed graph databases** with careful **graph partitioning** strategies, robust **graph transactions**, and fine-grained **graph access control**.
+
+[See Annotated References](./references.md)

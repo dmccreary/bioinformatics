@@ -405,3 +405,5 @@ This project connects every major concept in this chapter -- from the individual
 7. **Patient similarity networks** translate molecular profiles into graph structure, enabling **patient stratification** through community detection and validation through **survival analysis**.
 
 8. **Network-based biomarkers** (subnetwork, hub, and community biomarkers) leverage graph topology to identify robust molecular signatures that outperform single-molecule biomarkers by capturing coordinated changes across entire modules.
+
+[See Annotated References](./references.md)

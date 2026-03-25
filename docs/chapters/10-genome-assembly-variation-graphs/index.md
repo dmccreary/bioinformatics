@@ -369,3 +369,5 @@ Each row builds on the one above, and graph structures appear at every stage fro
 12. **Genotyping**, **haplotype** reconstruction, and **phasing** determine which alleles co-occur on each chromosome; variation graphs and the GBWT index naturally encode haplotype structure.
 13. **Population reference graphs** add allele frequency information to pangenome graphs, enabling more accurate genotyping and imputation.
 14. **Genome annotation** and **gene prediction** identify functional elements in assembled sequence, with emerging methods adapting to graph-based references.
+
+[See Annotated References](./references.md)

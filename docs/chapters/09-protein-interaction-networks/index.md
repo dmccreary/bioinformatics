@@ -364,3 +364,5 @@ This case study demonstrates the practical value of the network concepts covered
 
     <img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Olli celebrates">
     You have navigated the rich landscape of protein interaction networks — from the experimental benchtop to the computational graph. You now understand how to build, filter, analyze, and compare interactomes using the graph-theoretic tools from Chapter 4. In the next chapter, we will shift our focus to genome assembly and variation graphs, where graph structures capture the diversity of DNA sequences across populations. Onward, explorers!
+
+[See Annotated References](./references.md)

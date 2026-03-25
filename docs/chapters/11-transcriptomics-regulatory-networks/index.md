@@ -366,3 +366,5 @@ This multi-layer **graph model for regulation** integrates evidence from multipl
 9. **Spatial transcriptomics** preserves tissue location, enabling spatial graph analysis of gene expression patterns.
 
 10. The overarching theme: transcriptomics data naturally map onto graph structures — from co-expression networks to directed regulatory networks to spatial graphs — making graph algorithms essential tools for understanding gene regulation.
+
+[See Annotated References](./references.md)

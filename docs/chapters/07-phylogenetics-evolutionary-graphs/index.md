@@ -397,3 +397,5 @@ At every step, the underlying representation is a graph — from simple undirect
 - **Phylogenetic networks** generalize trees to directed acyclic graphs with reticulation nodes, accommodating **reticulate evolution** including HGT, recombination, and hybridization.
 - **Phylogenomics** scales phylogenetic analysis to whole genomes using concatenation or coalescent-based approaches; **comparative genomics** uses phylogenetic context to study genome evolution.
 - The **graph model for evolution** unifies all these representations: simple trees, rooted DAGs, and reticulated networks are points on a spectrum of graph complexity that mirrors the complexity of evolutionary history itself.
+
+[See Annotated References](./references.md)

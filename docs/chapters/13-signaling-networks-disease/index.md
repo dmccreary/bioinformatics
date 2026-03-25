@@ -313,3 +313,5 @@ This pipeline illustrates the central promise of network medicine: by integratin
 7. **Drug safety analysis is a graph problem**. Drug-drug interaction graphs, adverse event networks, and side effect prediction via network proximity help manage the risks of polypharmacy and identify off-target effects before they harm patients.
 
 8. **Comorbidity networks reveal hidden relationships between diseases** that can be explained mechanistically through overlapping or proximal disease modules in the interactome.
+
+[See Annotated References](./references.md)

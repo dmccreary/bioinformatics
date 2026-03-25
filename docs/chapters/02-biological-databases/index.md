@@ -405,3 +405,5 @@ This workflow traverses multiple databases, following cross-references at each s
 11. **Programmatic access** through REST APIs and batch download methods is essential for scalable bioinformatics work; always follow rate limits and usage policies.
 
 12. **Data provenance** — recording database versions, evidence codes, curation status, and download dates — is critical for reproducible research.
+
+[See Annotated References](./references.md)
