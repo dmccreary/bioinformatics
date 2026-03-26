@@ -11,7 +11,7 @@ quality_score: 3
 
 # AlphaFold Prediction Pipeline
 
-<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="450" width="100%" scrolling="no"></iframe>
 
 [Run the AlphaFold Prediction Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -45,7 +45,7 @@ AlphaFold2 solved the protein structure prediction problem in 2020, a 50-year gr
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/alphafold-pipeline/main.html"
-        height="522"
+        height="450"
         width="100%"
         scrolling="no"></iframe>
 ```
