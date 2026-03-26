@@ -1,11 +1,12 @@
 // AlphaFold Prediction Pipeline - Animated Flowchart
 // Step through stages: Sequence → MSA → Evoformer → Structure Module → 3D Model → Refinement → Final
+// Click any stage box to jump directly to it
 // MicroSim template version 2026.02
 
 let containerWidth;
 let canvasWidth = 400;
-let drawHeight = 520;
-let controlHeight = 50;
+let drawHeight = 400;
+let controlHeight = 40;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
 let margin = 15;
@@ -14,6 +15,13 @@ let stepBtn, resetBtn, playBtn;
 let currentStage = -1;
 let playing = false;
 let lastStepTime = 0;
+
+// Layout constants
+let boxW = 130;
+let boxH = 42;
+let startY = 28;
+let spacingY = 48;
+let flowX; // set dynamically based on canvas width
 
 const stages = [
     {
@@ -66,20 +74,20 @@ function setup() {
     canvas.parent(document.querySelector('main'));
 
     stepBtn = createButton('Next Step');
-    stepBtn.position(10, drawHeight + 12);
+    stepBtn.position(10, drawHeight + 8);
     stepBtn.mousePressed(() => {
         if (currentStage < stages.length - 1) currentStage++;
     });
 
     playBtn = createButton('Play');
-    playBtn.position(100, drawHeight + 12);
+    playBtn.position(100, drawHeight + 8);
     playBtn.mousePressed(() => {
         playing = !playing;
         playBtn.html(playing ? 'Pause' : 'Play');
     });
 
     resetBtn = createButton('Reset');
-    resetBtn.position(165, drawHeight + 12);
+    resetBtn.position(165, drawHeight + 8);
     resetBtn.mousePressed(() => {
         currentStage = -1;
         playing = false;
@@ -91,6 +99,7 @@ function setup() {
 
 function draw() {
     updateCanvasSize();
+    flowX = canvasWidth * 0.28;
 
     // Auto-advance
     if (playing && millis() - lastStepTime > 1200) {
@@ -121,12 +130,6 @@ function draw() {
     textStyle(BOLD);
     text('AlphaFold Prediction Pipeline', canvasWidth / 2, 6);
     textStyle(NORMAL);
-
-    let boxW = 130;
-    let boxH = 44;
-    let startY = 36;
-    let spacingY = 52;
-    let flowX = canvasWidth * 0.3;
 
     // Draw stages
     for (let i = 0; i < stages.length; i++) {
@@ -178,11 +181,23 @@ function draw() {
         text((i + 1), bx + 5, by + 4);
     }
 
+    // Cursor hint: hand when hovering over a box
+    let overBox = false;
+    for (let i = 0; i < stages.length; i++) {
+        let bx = flowX - boxW / 2;
+        let by = startY + i * spacingY;
+        if (mouseX >= bx && mouseX <= bx + boxW && mouseY >= by && mouseY <= by + boxH) {
+            overBox = true;
+            break;
+        }
+    }
+    cursor(overBox ? HAND : ARROW);
+
     // Info panel
-    let infoX = canvasWidth * 0.58;
-    let infoW = canvasWidth * 0.38;
-    let infoY = 50;
-    let infoH = drawHeight - 80;
+    let infoX = canvasWidth * 0.55;
+    let infoW = canvasWidth * 0.42;
+    let infoY = startY;
+    let infoH = drawHeight - startY - 12;
 
     fill(255);
     stroke('#ddd');
@@ -191,36 +206,63 @@ function draw() {
 
     if (currentStage >= 0) {
         let s = stages[currentStage];
+
+        // Colored header bar
         fill(s.color);
         noStroke();
-        textAlign(LEFT, TOP);
-        textSize(13);
+        rect(infoX, infoY, infoW, 30, 8, 8, 0, 0);
+        fill(255);
+        textAlign(LEFT, CENTER);
+        textSize(12);
         textStyle(BOLD);
         let titleText = s.label.replace('\n', ' ');
-        text(titleText, infoX + 10, infoY + 12);
+        text(titleText, infoX + 10, infoY + 15);
         textStyle(NORMAL);
 
+        // Stage number badge
+        textAlign(RIGHT, CENTER);
+        textSize(10);
+        text('Step ' + (currentStage + 1) + '/' + stages.length, infoX + infoW - 10, infoY + 15);
+
+        // Description text
         fill('#333');
         textSize(11);
         textAlign(LEFT, TOP);
-        drawWrappedText(s.desc, infoX + 10, infoY + 35, infoW - 20, 15);
+        let textEndY = drawWrappedText(s.desc, infoX + 10, infoY + 42, infoW - 20, 15);
 
-        // Draw stage icon
-        drawStageIcon(s.icon, infoX + infoW / 2, infoY + infoH - 80, s.color);
+        // Draw stage icon centered between text end and panel bottom
+        let iconY = (textEndY + 20 + infoY + infoH - 10) / 2;
+        iconY = max(iconY, textEndY + 35); // at least 35px below text
+        iconY = min(iconY, infoY + infoH - 35); // at least 35px from bottom
+        drawStageIcon(s.icon, infoX + infoW / 2, iconY, s.color);
     } else {
         fill('#888');
         noStroke();
         textAlign(CENTER, CENTER);
         textSize(13);
-        text('Click "Next Step" to\nwalk through the\nAlphaFold pipeline', infoX + infoW / 2, infoY + infoH / 2);
+        text('Click a stage box or\n"Next Step" to explore\nthe AlphaFold pipeline', infoX + infoW / 2, infoY + infoH / 2);
     }
 
-    // Stage counter
+    // Stage counter in control area
     fill('#666');
     noStroke();
     textAlign(LEFT, CENTER);
     textSize(11);
-    text('Stage: ' + (currentStage + 1) + ' / ' + stages.length, 250, drawHeight + 22);
+    text('Stage: ' + (currentStage + 1) + ' / ' + stages.length, 240, drawHeight + 20);
+}
+
+function mousePressed() {
+    // Check if a stage box was clicked
+    for (let i = 0; i < stages.length; i++) {
+        let bx = flowX - boxW / 2;
+        let by = startY + i * spacingY;
+        if (mouseX >= bx && mouseX <= bx + boxW && mouseY >= by && mouseY <= by + boxH) {
+            currentStage = i;
+            playing = false;
+            playBtn.html('Play');
+            return;
+        }
+    }
 }
 
 function drawWrappedText(txt, x, y, maxW, lineH) {
@@ -237,7 +279,11 @@ function drawWrappedText(txt, x, y, maxW, lineH) {
             line = test;
         }
     }
-    if (line.trim().length > 0) text(line.trim(), x, cy);
+    if (line.trim().length > 0) {
+        text(line.trim(), x, cy);
+        cy += lineH;
+    }
+    return cy; // return Y position after last line
 }
 
 function drawStageIcon(icon, cx, cy, col) {
