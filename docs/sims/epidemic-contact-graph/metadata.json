@@ -1,0 +1,65 @@
+{
+  "title": "Epidemic Contact Graph",
+  "creator": "Dan McCreary",
+  "subject": "Bioinformatics",
+  "description": "Interactive SIR epidemic simulation with contact tracing visualization as a force-directed network graph",
+  "date": "2026-03-26",
+  "requested_by": "Adam Flowler",
+  "educational": {
+    "gradeLevel": [
+      "college"
+    ],
+    "subjectArea": "Bioinformatics / Epidemiology",
+    "topic": "Epidemic Contact Graphs and Contact Tracing",
+    "learningObjectives": [
+      "Understand the SIR compartmental model of disease spread",
+      "Visualize how contact networks enable or limit epidemic transmission",
+      "Explore the relationship between infection probability, contact rate, and outbreak size",
+      "Identify super-spreader patterns in contact tracing graphs",
+      "Interpret the basic reproduction number R0 and its dependence on model parameters"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Basic graph theory concepts (nodes, edges)",
+      "Understanding of infectious disease transmission"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 570
+    },
+    "responsive": true,
+    "dependencies": [
+      "vis-network (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Parameter exploration with guided discovery",
+    "keyQuestions": [
+      "How does increasing contacts per day affect the speed and size of the outbreak?",
+      "What combination of parameters causes the epidemic to die out before infecting everyone?",
+      "Can you identify the super-spreader nodes in the contact graph?",
+      "How does the recovery time affect the peak number of simultaneous infections?"
+    ],
+    "commonMisconceptions": [
+      "A high infection probability alone guarantees a large outbreak — contact rate matters equally",
+      "Recovered individuals can be reinfected — in the SIR model they are permanently immune",
+      "All infected people spread the disease equally — random contacts create uneven spread patterns"
+    ],
+    "assessmentOpportunities": [
+      "Students predict outbreak size given specific parameter combinations, then verify with simulation",
+      "Students identify which parameter changes would represent public health interventions (masking, social distancing, vaccination)",
+      "Students sketch the expected SIR curve shape before running the simulation"
+    ]
+  },
+  "chapter": "09-protein-interaction-networks"
+}

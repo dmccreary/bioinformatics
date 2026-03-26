@@ -107,6 +107,7 @@ nav:
     - Disease Module in the Human Interactome: sims/disease-module-interactome/index.md
     - Drug-Drug Interaction Network: sims/drug-drug-interaction-network/index.md
     - Drug-Target-Disease Knowledge Graph: sims/drug-target-disease-graph/index.md
+    - Epidemic Contact Graph: sims/epidemic-contact-graph/index.md
     - Dynamic Programming Matrix Visualization: sims/dp-alignment-matrix/index.md
     - FASTQ Quality Control Pipeline: sims/fastq-qc-pipeline/index.md
     - Flux Balance Analysis Formulation: sims/fba-formulation/index.md
