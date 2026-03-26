@@ -4,7 +4,7 @@
 
 let containerWidth;
 let canvasWidth = 400;
-let drawHeight = 500;
+let drawHeight = 390;
 let controlHeight = 65;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
@@ -60,15 +60,15 @@ function setup() {
 
   inputField = createInput('AUGGCUAAAGAUUUUUGA');
   inputField.position(10, drawHeight + 7);
-  inputField.size(200);
+  inputField.size(280);
   inputField.attribute('placeholder', 'Enter mRNA (A,U,G,C)');
 
   translateBtn = createButton('Translate');
-  translateBtn.position(220, drawHeight + 7);
+  translateBtn.position(300, drawHeight + 7);
   translateBtn.mousePressed(doTranslate);
 
   randomBtn = createButton('Random');
-  randomBtn.position(295, drawHeight + 7);
+  randomBtn.position(375, drawHeight + 7);
   randomBtn.mousePressed(generateRandom);
 
   showFramesCheckbox = createCheckbox('Show Reading Frames', false);
@@ -101,7 +101,7 @@ function draw() {
   text('Codon Table Explorer', canvasWidth / 2, 8);
   textStyle(NORMAL);
 
-  let y = 38;
+  y = 38;
 
   // Draw mRNA sequence with codon grouping
   if (mrnSequence.length > 0) {
@@ -307,9 +307,8 @@ function drawReadingFrames(y) {
 }
 
 function doTranslate() {
-  let raw = inputField.value().toUpperCase().replace(/[^AUGC]/g, '');
-  // Convert T to U if user types DNA
-  raw = raw.replace(/T/g, 'U');
+  let raw = inputField.value().toUpperCase().replace(/T/g, 'U').replace(/[^AUGC]/g, '');
+  inputField.value(raw); // show cleaned sequence as feedback
   mrnSequence = raw;
 
   codons = [];
@@ -326,7 +325,7 @@ function doTranslate() {
 function generateRandom() {
   let bases = 'AUGC';
   let seq = 'AUG'; // start with start codon
-  let len = floor(random(6, 12)) * 3; // multiple of 3
+  let len = floor(random(5, 9)) * 3; // multiple of 3
   for (let i = 3; i < len - 3; i++) {
     seq += bases[floor(random(4))];
   }
