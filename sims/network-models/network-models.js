@@ -4,7 +4,7 @@
 
 let containerWidth;
 let canvasWidth = 400;
-let drawHeight = 620;
+let drawHeight = 430;
 let controlHeight = 55;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
@@ -28,29 +28,41 @@ function setup() {
 
     // ER probability slider
     erSlider = createSlider(0.05, 0.4, 0.12, 0.01);
-    erSlider.position(100, drawHeight + 8);
-    erSlider.size(80);
 
     // BA m parameter slider
     baSlider = createSlider(1, 5, 2, 1);
-    baSlider.position(240, drawHeight + 8);
-    baSlider.size(60);
 
     // WS rewiring probability slider
     wsSlider = createSlider(0.0, 0.5, 0.1, 0.02);
-    wsSlider.position(360, drawHeight + 8);
-    wsSlider.size(80);
+
+    erSlider.input(generateER_graph);
+    baSlider.input(generateBA_graph);
+    wsSlider.input(generateWS_graph);
+
+    positionSliders();
 
     generateAll();
     describe('Three network models side by side: Erdos-Renyi, Barabasi-Albert, Watts-Strogatz with degree distributions', LABEL);
 }
 
 function generateAll() {
+    generateER_graph();
+    generateBA_graph();
+    generateWS_graph();
+}
+
+function generateER_graph() {
     erGraph = generateER(N, erSlider.value());
-    baGraph = generateBA(N, baSlider.value());
-    wsGraph = generateWS(N, 4, wsSlider.value());
     layoutCircular(erGraph);
+}
+
+function generateBA_graph() {
+    baGraph = generateBA(N, baSlider.value());
     layoutCircular(baGraph);
+}
+
+function generateWS_graph() {
+    wsGraph = generateWS(N, 4, wsSlider.value());
     layoutCircular(wsGraph);
 }
 
@@ -101,20 +113,25 @@ function draw() {
     }
 
     // Slider labels
+    let btnW = 75;
+    let sliderArea = canvasWidth - btnW - margin;
+    let sliderW = sliderArea / 3;
+    let labelPad = 35;
+
     fill('#555');
     noStroke();
     textAlign(LEFT, CENTER);
-    textSize(10);
-    text('ER p:', 75, drawHeight + 18);
-    text('BA m:', 215, drawHeight + 18);
-    text('WS p:', 330, drawHeight + 18);
+    textSize(12);
+    text('ER p:', btnW + margin, drawHeight + 18);
+    text('BA m:', btnW + margin + sliderW, drawHeight + 18);
+    text('WS p:', btnW + margin + sliderW * 2, drawHeight + 18);
 
     // Second row labels
-    textSize(9);
+    textSize(11);
     fill('#888');
-    text('ER: ' + erSlider.value().toFixed(2), 100, drawHeight + 38);
-    text('BA: ' + baSlider.value(), 240, drawHeight + 38);
-    text('WS: ' + wsSlider.value().toFixed(2), 360, drawHeight + 38);
+    text('ER: ' + erSlider.value().toFixed(2), btnW + margin + labelPad, drawHeight + 38);
+    text('BA: ' + baSlider.value(), btnW + margin + sliderW + labelPad, drawHeight + 38);
+    text('WS: ' + wsSlider.value().toFixed(2), btnW + margin + sliderW * 2 + labelPad, drawHeight + 38);
 }
 
 function drawNetworkPanel(px, py, pw, ph, graph, title, subtitle, col) {
@@ -330,12 +347,25 @@ function layoutCircular(graph) {
     }
 }
 
+function positionSliders() {
+    let btnW = 75;
+    let sliderArea = canvasWidth - btnW - margin;
+    let sliderW = sliderArea / 3;
+    let labelPad = 35;
+    let sliderSize = sliderW - labelPad - 5;
+
+    erSlider.position(btnW + margin + labelPad, drawHeight + 8);
+    erSlider.size(sliderSize);
+    baSlider.position(btnW + margin + sliderW + labelPad, drawHeight + 8);
+    baSlider.size(sliderSize);
+    wsSlider.position(btnW + margin + sliderW * 2 + labelPad, drawHeight + 8);
+    wsSlider.size(sliderSize);
+}
+
 function windowResized() {
     updateCanvasSize();
     resizeCanvas(containerWidth, containerHeight);
-    erSlider.size(80);
-    baSlider.size(60);
-    wsSlider.size(80);
+    positionSliders();
 }
 
 function updateCanvasSize() {

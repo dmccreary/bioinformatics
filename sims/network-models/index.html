@@ -1457,6 +1457,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degree-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Distributions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1646,48 +1679,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../ppi-knowledge-graph-schema/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PPI Knowledge Graph Schema
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../ppi-topology-explorer/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    PPI Network Topology Explorer
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../profile-hmm-architecture/" class="md-nav__link">
         
   
@@ -1751,6 +1742,48 @@
   
   
     <li class="md-nav__item">
+      <a href="../ppi-knowledge-graph-schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PPI Knowledge Graph Schema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ppi-topology-explorer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    PPI Network Topology Explorer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../protein-structure-hierarchy/" class="md-nav__link">
         
   
@@ -1776,7 +1809,7 @@
         
   
   <span class="md-ellipsis">
-    Protein Structure Hierarchy
+    Protein Structure Levels
   </span>
   
 
@@ -2029,6 +2062,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../../teachers-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Teachers Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../about/" class="md-nav__link">
         
   
@@ -2114,6 +2167,39 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-network-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Network Models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#degree-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Degree Distributions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2228,43 +2314,115 @@
 
 
 <h1 id="network-model-comparison">Network Model Comparison</h1>
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="500" width="100%" scrolling="no"></iframe>
 
 <p><a class="md-button md-button--primary" href="main.html">Run the Network Model Comparison MicroSim Fullscreen</a>
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim lets you compare three foundational network models
+side by side, each with its own degree distribution chart.
+These models are widely used in bioinformatics to describe
+biological networks such as protein-protein interaction (PPI) networks,
+gene regulatory networks, and metabolic pathway graphs.</p>
+<h3 id="three-network-models">Three Network Models</h3>
+<p><strong>Erdos-Renyi (ER) Random Network</strong> — Each possible edge between
+nodes exists with a fixed probability <em>p</em>. This produces a
+network where most nodes have a similar number of connections
+and the degree distribution follows a Poisson-like bell curve.
+ER networks serve as a null model: if a real biological network
+looks very different from an ER graph of the same size, the
+difference reveals non-random organizing principles at work.</p>
+<p><strong>Barabasi-Albert (BA) Scale-Free Network</strong> — New nodes attach
+preferentially to highly connected nodes ("the rich get richer").
+This produces a power-law degree distribution with a few
+highly connected hub nodes and many nodes with only one or two
+connections. Many real biological networks are approximately
+scale-free. In PPI networks, hub proteins tend to be essential
+genes — removing them is often lethal to the organism, while
+removing low-degree nodes has little effect.</p>
+<p><strong>Watts-Strogatz (WS) Small-World Network</strong> — Starting from a
+regular ring lattice, each edge is randomly rewired with
+probability <em>p</em>. Even a small amount of rewiring dramatically
+reduces the average path length while preserving high clustering.
+Small-world properties appear in neural networks, metabolic
+networks, and gene co-expression networks, where they enable
+efficient signal propagation and modular organization.</p>
+<h3 id="degree-distributions">Degree Distributions</h3>
+<p>Below each network visualization is a bar chart showing the
+<strong>degree distribution</strong> — how many nodes have each number of
+connections. Comparing these distributions is key to
+understanding the structural differences between models:</p>
+<ul>
+<li><strong>ER</strong>: Narrow, symmetric distribution centered near the mean degree</li>
+<li><strong>BA</strong>: Right-skewed distribution with a long tail (few hubs, many low-degree nodes)</li>
+<li><strong>WS</strong>: Narrow distribution similar to ER but shifted, reflecting the regular lattice origin</li>
+</ul>
+<h3 id="why-this-matters-for-bioinformatics">Why This Matters for Bioinformatics</h3>
+<p>Understanding network topology helps bioinformaticians:</p>
+<ul>
+<li><strong>Identify essential genes</strong>: Hub nodes in scale-free PPI networks are disproportionately essential</li>
+<li><strong>Detect functional modules</strong>: Clusters in small-world networks often correspond to protein complexes or metabolic pathways</li>
+<li><strong>Assess network robustness</strong>: Scale-free networks are resilient to random node removal but vulnerable to targeted hub attacks</li>
+<li><strong>Build null models</strong>: ER random graphs provide a baseline for statistical tests of network properties</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Generate</strong> — Click the Generate button to create all three networks with the current parameter settings</li>
+<li><strong>ER p slider</strong> — Controls the edge probability in the Erdos-Renyi model. Higher values produce denser, more connected graphs</li>
+<li><strong>BA m slider</strong> — Controls how many edges each new node adds in the Barabasi-Albert model. Higher values produce denser networks with less extreme hub dominance</li>
+<li><strong>WS p slider</strong> — Controls the rewiring probability in the Watts-Strogatz model. At 0 you see a perfect ring lattice; increasing <em>p</em> introduces shortcuts that shrink path lengths</li>
+</ol>
+<p>Each slider updates only its own network in real time, so you can
+explore one model's parameter space without disturbing the others.</p>
+<p><strong>Try these experiments:</strong></p>
+<ul>
+<li>Set ER <em>p</em> very low (0.05) and very high (0.40) — watch the degree distribution shift and widen</li>
+<li>Set BA <em>m</em> = 1 vs. <em>m</em> = 5 — see how hub dominance changes</li>
+<li>Slowly increase WS <em>p</em> from 0 to 0.5 — observe the transition from regular lattice to random-like topology</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/network-models/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"500"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of graphs (nodes and edges)</li>
+<li>Familiarity with degree as the number of connections a node has</li>
+<li>Introduction to biological networks (PPI, gene regulatory, metabolic)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Generate networks with default parameters. Compare the three visualizations and their degree distributions. Which network has the most uneven distribution of connections?</li>
+<li><strong>Guided Practice</strong> (7 min): Systematically vary one parameter at a time. For the ER model, record how the average degree changes with <em>p</em>. For the BA model, note how the number of visible hubs changes with <em>m</em>. For the WS model, describe the visual difference between <em>p</em> = 0 and <em>p</em> = 0.3.</li>
+<li><strong>Discussion</strong> (5 min): Given that real PPI networks tend to have a few highly connected hub proteins and many proteins with few interactions, which model best captures this property? What does this imply about how protein interaction networks evolved?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Which network model produces a power-law degree distribution, and what biological significance does this have?</li>
+<li>Why is the Erdos-Renyi model useful as a null model even though real biological networks rarely look like ER graphs?</li>
+<li>A metabolic network has high clustering and short average path length. Which model best explains this topology, and what biological advantage might it confer?</li>
+<li>If you removed the top 3 most-connected nodes from a BA network vs. 3 random nodes, which removal strategy would be more disruptive? Why?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Erd%C5%91s%E2%80%93R%C3%A9nyi_model">Erdos-Renyi model — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Barab%C3%A1si%E2%80%93Albert_model">Barabasi-Albert model — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Watts%E2%80%93Strogatz_model">Watts-Strogatz model — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scale-free_network">Scale-free network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Biological_network">Biological network — Wikipedia</a></li>
 </ol>
 
 

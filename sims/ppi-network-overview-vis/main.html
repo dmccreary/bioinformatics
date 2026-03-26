@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPI Network Overview</title>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/vis-network/styles/vis-network.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #title-bar {
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a1a1a;
+            padding: 8px 0 4px 0;
+        }
+        #wrapper {
+            display: flex;
+            width: 100%;
+            height: 450px;
+        }
+        #bottom-bar {
+            padding: 6px 10px;
+        }
+        #bottom-bar button {
+            padding: 4px 14px;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        #network-container {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+        }
+        #sidebar {
+            width: 140px;
+            min-width: 140px;
+            padding: 12px;
+            background: white;
+            border-left: 1px solid #ddd;
+            overflow-y: auto;
+            font-size: 13px;
+        }
+        #sidebar h3 {
+            margin: 0 0 10px 0;
+            font-size: 14px;
+            color: #333;
+        }
+        .stat-row {
+            margin-bottom: 4px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .stat-label {
+            font-weight: bold;
+            color: #555;
+            font-size: 11px;
+        }
+        .stat-value {
+            color: #333;
+            font-size: 11px;
+        }
+        .hub-section {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .hub-title {
+            font-weight: bold;
+            color: #C62828;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        .hub-item {
+            font-size: 11px;
+            color: #555;
+            margin-bottom: 3px;
+        }
+        .legend {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 6px;
+            font-size: 11px;
+            color: #555;
+        }
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 6px;
+            flex-shrink: 0;
+        }
+        #hover-info {
+            margin-top: 14px;
+            padding-top: 10px;
+            border-top: 1px solid #eee;
+            display: none;
+        }
+        #hover-info h4 {
+            margin: 0 0 6px 0;
+            font-size: 13px;
+            color: #E65100;
+        }
+        #hover-info .stat-row {
+            margin-bottom: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div id="title-bar">PPI Network Overview</div>
+    <div id="wrapper">
+        <div id="network-container"></div>
+        <div id="sidebar">
+            <h3>Network Stats</h3>
+            <div id="stats-container"></div>
+            <div class="hub-section">
+                <div class="hub-title">Hub Proteins (deg &gt; 4)</div>
+                <div id="hub-list"></div>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-dot" style="background:#1565C0;"></div>
+                    Regular node
+                </div>
+                <div class="legend-item">
+                    <div class="legend-dot" style="background:#C62828;"></div>
+                    Hub (degree &gt; 4)
+                </div>
+            </div>
+            <div id="hover-info">
+                <h4 id="hover-name"></h4>
+                <div id="hover-stats"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-bar">
+        <button id="regenerate-btn">Regenerate</button>
+    </div>
+
+    <div id="return-link" style="display:none; padding: 8px 16px;">
+        <a href=".">← Return to Lesson Plan</a>
+    </div>
+    <script>
+        if (window.self === window.top) {
+            document.getElementById('return-link').style.display = 'block';
+        }
+    </script>
+
+    <script>
+    // --- Data ---
+    const ppiNodeData = [
+        { id: 0, label: 'TP53' },
+        { id: 1, label: 'MDM2' },
+        { id: 2, label: 'BRCA1' },
+        { id: 3, label: 'ATM' },
+        { id: 4, label: 'CHEK2' },
+        { id: 5, label: 'RB1' },
+        { id: 6, label: 'CDK2' },
+        { id: 7, label: 'CCND1' },
+        { id: 8, label: 'E2F1' },
+        { id: 9, label: 'MYC' },
+        { id: 10, label: 'AKT1' },
+        { id: 11, label: 'PTEN' },
+        { id: 12, label: 'PIK3CA' },
+        { id: 13, label: 'EGFR' },
+        { id: 14, label: 'ERBB2' },
+        { id: 15, label: 'SRC' },
+        { id: 16, label: 'RAF1' },
+        { id: 17, label: 'BRAF' },
+        { id: 18, label: 'MAP2K1' },
+        { id: 19, label: 'MAPK1' },
+        { id: 20, label: 'JUN' },
+        { id: 21, label: 'FOS' },
+        { id: 22, label: 'STAT3' },
+        { id: 23, label: 'JAK2' },
+        { id: 24, label: 'GRB2' }
+    ];
+
+    const ppiEdgeData = [
+        [0,1],[0,2],[0,3],[0,4],[0,5],[0,9],
+        [1,3],[1,4],
+        [2,3],[2,6],
+        [3,4],[3,10],
+        [4,5],
+        [5,6],[5,8],[5,9],
+        [6,7],[6,8],[6,24],
+        [7,8],
+        [8,9],[8,20],
+        [9,20],[9,21],
+        [10,11],[10,12],[10,24],
+        [11,12],
+        [12,13],[12,24],
+        [13,14],[13,15],[13,24],
+        [14,15],
+        [15,16],[15,22],
+        [16,17],[16,18],
+        [17,18],
+        [18,19],
+        [19,20],[19,21],
+        [20,21],
+        [22,23],
+        [23,24]
+    ];
+
+    // --- Compute adjacency and degrees ---
+    const adj = {};
+    for (const n of ppiNodeData) adj[n.id] = [];
+    for (const [u, v] of ppiEdgeData) {
+        adj[u].push(v);
+        adj[v].push(u);
+    }
+    const degrees = {};
+    for (const n of ppiNodeData) degrees[n.id] = adj[n.id].length;
+
+    // --- Betweenness centrality (BFS-based) ---
+    const betweenness = {};
+    (function computeBetweenness() {
+        for (const n of ppiNodeData) betweenness[n.id] = 0;
+        for (const s of ppiNodeData) {
+            const stack = [], pred = {}, sigma = {}, dist2 = {}, delta = {};
+            for (const n of ppiNodeData) {
+                pred[n.id] = []; sigma[n.id] = 0;
+                dist2[n.id] = -1; delta[n.id] = 0;
+            }
+            sigma[s.id] = 1; dist2[s.id] = 0;
+            const queue = [s.id];
+            while (queue.length > 0) {
+                const v = queue.shift(); stack.push(v);
+                for (const w of adj[v]) {
+                    if (dist2[w] < 0) { queue.push(w); dist2[w] = dist2[v] + 1; }
+                    if (dist2[w] === dist2[v] + 1) { sigma[w] += sigma[v]; pred[w].push(v); }
+                }
+            }
+            while (stack.length > 0) {
+                const w = stack.pop();
+                for (const v of pred[w]) delta[v] += (sigma[v] / sigma[w]) * (1 + delta[w]);
+                if (w !== s.id) betweenness[w] += delta[w];
+            }
+        }
+        const maxB = Math.max(1, ...Object.values(betweenness));
+        for (const n of ppiNodeData) betweenness[n.id] /= maxB;
+    })();
+
+    // --- Clustering coefficient ---
+    function clusteringCoeff(nodeId) {
+        const nb = adj[nodeId];
+        if (nb.length < 2) return 0;
+        let links = 0;
+        for (let i = 0; i < nb.length; i++)
+            for (let j = i + 1; j < nb.length; j++)
+                if (adj[nb[i]].includes(nb[j])) links++;
+        return (2 * links) / (nb.length * (nb.length - 1));
+    }
+
+    // --- Build vis-network nodes ---
+    const maxDeg = Math.max(...Object.values(degrees));
+    const nodes = new vis.DataSet(ppiNodeData.map(n => {
+        const deg = degrees[n.id];
+        const isHub = deg > 4;
+        const size = 10 + (deg / maxDeg) * 20;
+        return {
+            id: n.id,
+            label: n.label,
+            size: size,
+            color: {
+                background: isHub ? '#C62828' : '#1565C0',
+                border: isHub ? '#B71C1C' : '#0D47A1',
+                highlight: { background: '#E65100', border: '#BF360C' },
+                hover: { background: '#FF8F00', border: '#E65100' }
+            },
+            borderWidth: isHub ? 2 : 1.5,
+            font: {
+                size: 11,
+                color: '#333',
+                strokeWidth: 3,
+                strokeColor: '#ffffff'
+            }
+        };
+    }));
+
+    // --- Build vis-network edges ---
+    const edges = new vis.DataSet(ppiEdgeData.map(([u, v], i) => ({
+        id: i,
+        from: u,
+        to: v,
+        color: { color: '#B0BEC5', highlight: '#333', hover: '#666' },
+        width: 1,
+        selectionWidth: 2
+    })));
+
+    // --- Environment detection ---
+    function isInIframe() {
+        try { return window.self !== window.top; }
+        catch (e) { return true; }
+    }
+    const enableMouseInteraction = !isInIframe();
+
+    // --- Create network ---
+    const container = document.getElementById('network-container');
+    const data = { nodes: nodes, edges: edges };
+    const options = {
+        physics: {
+            solver: 'forceAtlas2Based',
+            forceAtlas2Based: {
+                gravitationalConstant: -40,
+                centralGravity: 0.01,
+                springLength: 120,
+                springConstant: 0.06,
+                damping: 0.4
+            },
+            stabilization: {
+                iterations: 200,
+                updateInterval: 25
+            }
+        },
+        interaction: {
+            hover: true,
+            tooltipDelay: 100,
+            hideEdgesOnDrag: false,
+            zoomView: enableMouseInteraction,
+            dragView: enableMouseInteraction,
+            navigationButtons: true
+        },
+        nodes: {
+            shape: 'dot',
+            scaling: { min: 10, max: 30 }
+        },
+        edges: {
+            smooth: false
+        }
+    };
+
+    const network = new vis.Network(container, data, options);
+
+    // --- Populate sidebar stats ---
+    const avgDeg = (ppiEdgeData.length * 2 / ppiNodeData.length).toFixed(1);
+    const density = (2 * ppiEdgeData.length / (ppiNodeData.length * (ppiNodeData.length - 1))).toFixed(3);
+    let totalCC = 0;
+    for (const n of ppiNodeData) totalCC += clusteringCoeff(n.id);
+    totalCC = (totalCC / ppiNodeData.length).toFixed(3);
+
+    const statsHTML = [
+        ['Nodes', ppiNodeData.length],
+        ['Edges', ppiEdgeData.length],
+        ['Avg Degree', avgDeg],
+        ['Max Degree', maxDeg],
+        ['Density', density],
+        ['Avg Clustering', totalCC]
+    ].map(([label, val]) =>
+        `<div class="stat-row"><div class="stat-label">${label}</div><div class="stat-value">${val}</div></div>`
+    ).join('');
+    document.getElementById('stats-container').innerHTML = statsHTML;
+
+    // Hub list
+    const hubHTML = ppiNodeData
+        .filter(n => degrees[n.id] > 4)
+        .sort((a, b) => degrees[b.id] - degrees[a.id])
+        .map(n => `<div class="hub-item">${n.label} (${degrees[n.id]})</div>`)
+        .join('');
+    document.getElementById('hub-list').innerHTML = hubHTML;
+
+    // --- Hover info ---
+    const hoverInfo = document.getElementById('hover-info');
+    const hoverName = document.getElementById('hover-name');
+    const hoverStats = document.getElementById('hover-stats');
+
+    network.on('hoverNode', function(params) {
+        const id = params.node;
+        const n = ppiNodeData.find(n => n.id === id);
+        const cc = clusteringCoeff(id).toFixed(2);
+        const bw = betweenness[id].toFixed(2);
+
+        hoverName.textContent = n.label;
+        hoverStats.innerHTML = [
+            ['Degree', degrees[id]],
+            ['Betweenness', bw],
+            ['Clustering', cc]
+        ].map(([l, v]) =>
+            `<div class="stat-row"><div class="stat-label">${l}</div><div class="stat-value">${v}</div></div>`
+        ).join('');
+        hoverInfo.style.display = 'block';
+    });
+
+    network.on('blurNode', function() {
+        hoverInfo.style.display = 'none';
+    });
+
+    // Regenerate layout with new random seed
+    document.getElementById('regenerate-btn').addEventListener('click', function() {
+        // Randomize node positions to get a fresh layout
+        const positions = network.getPositions();
+        for (const id in positions) {
+            network.moveNode(Number(id), (Math.random() - 0.5) * 400, (Math.random() - 0.5) * 400);
+        }
+        network.stabilize(200);
+    });
+    </script>
+</body>
+</html>

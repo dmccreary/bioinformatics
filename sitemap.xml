@@ -465,6 +465,10 @@
          <lastmod>2026-03-26</lastmod>
     </url>
     <url>
+         <loc>https://dmccreary.github.io/bioinformatics/sims/ppi-network-overview-vis/</loc>
+         <lastmod>2026-03-26</lastmod>
+    </url>
+    <url>
          <loc>https://dmccreary.github.io/bioinformatics/sims/ppi-topology-explorer/</loc>
          <lastmod>2026-03-26</lastmod>
     </url>
@@ -530,6 +534,10 @@
     </url>
     <url>
          <loc>https://dmccreary.github.io/bioinformatics/stories/list-of-possible-stories/</loc>
+         <lastmod>2026-03-26</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/bioinformatics/teachers-guide/</loc>
          <lastmod>2026-03-26</lastmod>
     </url>
 </urlset>

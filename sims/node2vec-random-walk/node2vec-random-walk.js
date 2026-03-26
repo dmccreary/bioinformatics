@@ -5,7 +5,7 @@
 
 let containerWidth;
 let canvasWidth = 400;
-let drawHeight = 520;
+let drawHeight = 470;
 let controlHeight = 60;
 let canvasHeight = drawHeight + controlHeight;
 let margin = 14;
@@ -68,15 +68,16 @@ function setup() {
 
     autoBtn = createButton('Auto');
     autoBtn.position(margin + 360, cy1);
-    autoBtn.mousePressed(() => { autoPlay = !autoPlay; });
+    autoBtn.mousePressed(() => { autoPlay = !autoPlay; autoBtn.html(autoPlay ? 'Pause' : 'Auto'); });
 
     resetBtn = createButton('Reset');
-    resetBtn.position(margin + 410, cy1);
+    resetBtn.position(margin + 420, cy1);
     resetBtn.mousePressed(() => {
         walkPath = [0];
         previousNode = -1;
-        candidateProbs = [];
         autoPlay = false;
+        autoBtn.html('Auto');
+        computeCandidates();
     });
 
     computeCandidates();
@@ -163,7 +164,7 @@ function draw() {
     text('q = ' + q.toFixed(2), margin + 234, drawHeight + 16);
 
     // Parameter description
-    textSize(9);
+    textSize(13);
     fill('#666');
     textAlign(LEFT, TOP);
     text('p controls return (low p → backtrack).  q controls exploration (low q → DFS, high q → BFS).', margin, drawHeight + 34);
