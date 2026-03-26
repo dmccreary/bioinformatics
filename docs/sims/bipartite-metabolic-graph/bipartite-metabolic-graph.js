@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const nodeArray = [];
     metabolites.forEach(m => {
         nodeArray.push({
-            id: m.id, label: m.label,
-            shape: 'ellipse',
+            id: m.id, label: '  ' + m.label + '  ',
+            shape: 'box',
             color: { background: '#1ABC9C', border: '#16A085' },
             font: { color: '#FFFFFF', size: 11, face: 'Arial' },
             borderWidth: 2, shadow: true,
@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     reactions.forEach(r => {
         nodeArray.push({
-            id: r.id, label: r.label,
-            shape: 'box',
+            id: r.id, label: '  ' + r.label + '  ',
+            shape: 'ellipse',
             color: { background: '#E67E22', border: '#D35400' },
             font: { color: '#FFFFFF', size: 11, face: 'Arial', multi: true },
             borderWidth: 2, shadow: true,
@@ -110,8 +110,8 @@ document.addEventListener('DOMContentLoaded', function () {
             <div id="network" style="width:100%; height:480px;"></div>
             <div id="legend" style="position:absolute; top:8px; left:8px; background:rgba(255,255,255,0.92); padding:8px 12px; border-radius:6px; font-size:12px; box-shadow:0 1px 4px rgba(0,0,0,0.15);">
                 <strong>Bipartite Metabolic Graph</strong><br>
-                <span style="display:inline-block;width:12px;height:12px;background:#1ABC9C;border-radius:50%;margin:2px 4px -2px 0;"></span>Metabolite<br>
-                <span style="display:inline-block;width:12px;height:12px;background:#E67E22;border-radius:2px;margin:2px 4px -2px 0;"></span>Reaction<br>
+                <span style="display:inline-block;width:14px;height:12px;background:#1ABC9C;border-radius:2px;margin:2px 4px -2px 0;"></span>Metabolite<br>
+                <span style="display:inline-block;width:12px;height:12px;background:#E67E22;border-radius:50%;margin:2px 4px -2px 0;"></span>Reaction<br>
                 <span style="font-size:11px;color:#666;">→ substrate / product flow</span>
             </div>
             <div id="info-panel" style="margin:0 12px; padding:10px 14px; min-height:36px; background:#fff; border:1px solid #ddd; border-radius:6px; font-size:14px; line-height:1.5;">

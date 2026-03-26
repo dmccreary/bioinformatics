@@ -11,11 +11,11 @@ quality_score: 3
 
 # Bipartite Graph of a Metabolic Sub-network
 
-<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="722" width="100%" scrolling="no"></iframe>
 
 [Run the Bipartite Graph of a Metabolic Sub-network MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
-[Edit in the p5.js Editor](https://editor.p5js.org/)
+[Edit the Bipartite Graph of a Metabolic Sub-network MicroSim using the p5.js Editor](https://editor.p5js.org/dmccreary/sketches/0uD18j9K0)
 
 ## About This MicroSim
 
