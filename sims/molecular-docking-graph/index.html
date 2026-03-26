@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for molecular docking and protein-ligand graph.">
+        <meta name="description" content="Interactive dual-panel display showing a 2D ligand in a binding pocket with interaction lines alongside its graph representation where atoms and residues are nodes and interactions are edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Molecular Docking and Protein-Ligand Graph - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for molecular docking and protein-ligand graph.">
+        <meta property="og:description" content="Interactive dual-panel display showing a 2D ligand in a binding pocket with interaction lines alongside its graph representation where atoms and residues are nodes and interactions are edges.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/molecular-docking-graph/molecular-docking-graph.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Molecular Docking and Protein-Ligand Graph - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for molecular docking and protein-ligand graph.">
+        <meta name="twitter:description" content="Interactive dual-panel display showing a 2D ligand in a binding pocket with interaction lines alongside its graph representation where atoms and residues are nodes and interactions are edges.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/molecular-docking-graph/molecular-docking-graph.png">
       
@@ -1440,6 +1440,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Panels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-panels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Panels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interaction-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interaction Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2345,70 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim shows two views of a <strong>protein-ligand docking interaction</strong>: a 2D binding pocket diagram (left) and its corresponding <strong>graph representation</strong> (right). The left panel shows a drug molecule in a protein binding pocket with interaction lines, while the right panel converts the same information into a graph where atoms/residues are nodes and interactions are typed edges.</p>
+<h3 id="two-panels">Two Panels</h3>
+<ul>
+<li><strong>Binding Pocket View</strong> (left) — The ligand sits in the protein's binding site with colored lines showing hydrogen bonds, hydrophobic contacts, and other interactions with specific amino acid residues</li>
+<li><strong>Graph Representation</strong> (right) — The same interactions as a graph: ligand atoms and protein residues become nodes, and non-covalent interactions become labeled edges</li>
+</ul>
+<h3 id="interaction-types">Interaction Types</h3>
+<ul>
+<li><strong>Hydrogen bonds</strong> — Directional interactions between donor and acceptor groups</li>
+<li><strong>Hydrophobic contacts</strong> — Van der Waals interactions between nonpolar groups</li>
+<li><strong>Pi-stacking</strong> — Interactions between aromatic rings</li>
+<li><strong>Salt bridges</strong> — Electrostatic interactions between charged groups</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Graph representations of protein-ligand interactions are used in:
+- Machine learning for drug binding affinity prediction
+- Virtual screening of drug candidates
+- Understanding structure-activity relationships</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Compare panels</strong> — See how the 2D binding pocket maps to the graph representation</li>
+<li><strong>Identify interaction types</strong> — Different colors/styles represent different non-covalent interaction types</li>
+<li><strong>Hover</strong> for details on specific atoms, residues, and interaction types</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/molecular-docking-graph/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of protein structure and binding sites</li>
+<li>Basic knowledge of drug-target interactions</li>
+<li>Concept of non-covalent molecular interactions</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Examine the binding pocket view. Identify all interaction types by color. Then find the same interactions in the graph view.</li>
+<li><strong>Graph Analysis</strong> (5 min): In the graph representation, which protein residue has the most interactions with the ligand? What does this suggest about its importance for drug binding?</li>
+<li><strong>Discussion</strong> (5 min): If you mutated the most-connected residue to alanine, what would you predict would happen to drug binding affinity? How could this graph representation help in drug design?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why is a graph representation useful for encoding protein-ligand interactions?</li>
+<li>What types of non-covalent interactions hold a drug in its binding pocket?</li>
+<li>How could machine learning on protein-ligand graphs predict binding affinity for new drug candidates?</li>
+<li>What is the advantage of representing docking results as a graph rather than just a docking score?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Molecular_docking">Molecular docking — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein%E2%80%93ligand_docking">Protein-ligand docking — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Non-covalent_interaction">Non-covalent interaction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Drug_design">Drug design — Wikipedia</a></li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for ppi knowledge graph schema.">
+        <meta name="description" content="Interactive vis-network schema diagram showing the node types (Protein, Gene, Disease, Drug, Pathway, Organism) and labeled relationship types that define a PPI knowledge graph data model.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="PPI Knowledge Graph Schema - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for ppi knowledge graph schema.">
+        <meta property="og:description" content="Interactive vis-network schema diagram showing the node types (Protein, Gene, Disease, Drug, Pathway, Organism) and labeled relationship types that define a PPI knowledge graph data model.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-knowledge-graph-schema/ppi-knowledge-graph-schema.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="PPI Knowledge Graph Schema - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for ppi knowledge graph schema.">
+        <meta name="twitter:description" content="Interactive vis-network schema diagram showing the node types (Protein, Gene, Disease, Drug, Pathway, Organism) and labeled relationship types that define a PPI knowledge graph data model.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-knowledge-graph-schema/ppi-knowledge-graph-schema.png">
       
@@ -1650,6 +1650,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,73 @@
 <h1 id="ppi-knowledge-graph-schema">PPI Knowledge Graph Schema</h1>
 <iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the PPI Knowledge Graph Schema MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the PPI Knowledge Graph Schema MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays the <strong>schema</strong> (data model) for a protein-protein interaction knowledge graph. Unlike a data-level graph that shows specific proteins, this schema shows the <strong>types</strong> of nodes and the <strong>types</strong> of relationships between them — it is a blueprint for how PPI data should be organized.</p>
+<h3 id="node-types">Node Types</h3>
+<ul>
+<li><strong>Protein</strong> — Individual protein entities with properties (name, sequence, molecular weight)</li>
+<li><strong>Gene</strong> — Genes that encode proteins</li>
+<li><strong>Disease</strong> — Medical conditions linked to proteins</li>
+<li><strong>Drug</strong> — Pharmaceutical compounds that target proteins</li>
+<li><strong>Pathway</strong> — Biological pathways that proteins participate in</li>
+<li><strong>Organism</strong> — Species from which proteins originate</li>
+</ul>
+<h3 id="relationship-types">Relationship Types</h3>
+<ul>
+<li>Protein <strong>interacts_with</strong> Protein</li>
+<li>Gene <strong>encodes</strong> Protein</li>
+<li>Protein <strong>associated_with</strong> Disease</li>
+<li>Drug <strong>targets</strong> Protein</li>
+<li>Protein <strong>participates_in</strong> Pathway</li>
+<li>Protein <strong>belongs_to</strong> Organism</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any node type to see its properties and example values</li>
+<li><strong>Read edge labels</strong> — Each relationship type is labeled with its semantic meaning</li>
+<li><strong>Trace paths</strong> — Follow multi-hop paths through the schema to understand what queries the graph can answer</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/ppi-knowledge-graph-schema/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"560"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of knowledge graphs and schemas</li>
+<li>Familiarity with biological entities (proteins, genes, diseases)</li>
+<li>Concept of data modeling</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify all node types and relationship types. How many node types are there? How many relationship types?</li>
+<li><strong>Query Design</strong> (5 min): Using this schema, write natural-language queries that the KG could answer. For example: "Which drugs target proteins associated with breast cancer?" Identify the path: Drug → targets → Protein → associated_with → Disease.</li>
+<li><strong>Schema Extension</strong> (5 min): What node types or relationship types are missing? Consider adding: clinical trials, publications, cellular locations. How would you connect them?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is the difference between a schema-level graph and a data-level graph?</li>
+<li>How does the "encodes" relationship between Gene and Protein reflect the central dogma?</li>
+<li>Design a 3-hop query using this schema that could help identify drug repurposing candidates.</li>
+<li>Why is having a well-defined schema important before populating a knowledge graph with data?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_graph">Knowledge graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Database_schema">Database schema — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction">Protein-protein interaction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ontology_(information_science)">Ontology (information science) — Wikipedia</a></li>
 </ol>
 
 

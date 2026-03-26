@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for mutation types and their effects on protein sequence.">
+        <meta name="description" content="Interactive tool for applying different mutation types (SNPs, insertions, deletions) to a DNA sequence and visualizing how each mutation affects the resulting protein.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Mutation Types and Their Effects on Protein Sequence - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for mutation types and their effects on protein sequence.">
+        <meta property="og:description" content="Interactive tool for applying different mutation types (SNPs, insertions, deletions) to a DNA sequence and visualizing how each mutation affects the resulting protein.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/mutation-types-explorer/mutation-types-explorer.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Mutation Types and Their Effects on Protein Sequence - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for mutation types and their effects on protein sequence.">
+        <meta name="twitter:description" content="Interactive tool for applying different mutation types (SNPs, insertions, deletions) to a DNA sequence and visualizing how each mutation affects the resulting protein.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/mutation-types-explorer/mutation-types-explorer.png">
       
@@ -1461,6 +1461,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutation Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1469,6 +1493,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutation-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mutation Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,80 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim lets students apply different types of <strong>DNA mutations</strong> to a reference sequence and immediately see how each mutation affects the encoded protein. The side-by-side comparison of the original and mutated sequences makes the relationship between genotype and phenotype concrete and visual.</p>
+<h3 id="mutation-types">Mutation Types</h3>
+<ul>
+<li><strong>SNP — Synonymous</strong> — A single nucleotide change that does not alter the amino acid (due to codon degeneracy). The protein is unchanged.</li>
+<li><strong>SNP — Missense</strong> — A single nucleotide change that substitutes one amino acid for another. The protein has a different residue at that position.</li>
+<li><strong>SNP — Nonsense</strong> — A single nucleotide change that creates a premature stop codon, truncating the protein.</li>
+<li><strong>1-bp Insertion</strong> — A single base is inserted, shifting the reading frame of all downstream codons (frameshift mutation).</li>
+<li><strong>1-bp Deletion</strong> — A single base is removed, causing a frameshift in the opposite direction.</li>
+<li><strong>3-bp Deletion</strong> — Three consecutive bases are removed, deleting one amino acid without shifting the reading frame (in-frame deletion).</li>
+</ul>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Reference sequence</strong> is shown on top with bases color-coded: A (green), T (red), G (yellow), C (blue)</li>
+<li><strong>Mutated sequence</strong> is shown below with changed bases highlighted</li>
+<li><strong>Codons</strong> are grouped and translated to amino acids for both sequences</li>
+<li><strong>Changed amino acids</strong> are visually highlighted so students can see exactly where the protein differs</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Mutation type dropdown</strong> — Select the type of mutation to apply (SNP synonymous, missense, nonsense, insertion, deletion)</li>
+<li><strong>Position slider</strong> — Choose where in the DNA sequence the mutation occurs (0-indexed)</li>
+<li><strong>Apply Mutation button</strong> — Apply the selected mutation at the chosen position</li>
+<li><strong>Reset button</strong> — Return to the original reference sequence</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Apply a <strong>synonymous SNP</strong> and verify that the protein sequence is identical despite the DNA change. This demonstrates codon degeneracy.</li>
+<li>Apply a <strong>missense SNP</strong> at the same position and compare — now a single amino acid differs.</li>
+<li>Apply a <strong>1-bp insertion</strong> early in the sequence and observe how every downstream codon and amino acid changes — this is the devastating effect of a frameshift.</li>
+<li>Apply a <strong>3-bp deletion</strong> and notice that only one amino acid is removed while the rest of the protein remains intact — this is an in-frame deletion.</li>
+<li>Compare a <strong>nonsense SNP</strong> to a frameshift — both can truncate the protein, but by different mechanisms.</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/mutation-types-explorer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of DNA base pairing and the genetic code</li>
+<li>Knowledge of codons and how mRNA is translated into protein</li>
+<li>Basic concept of mutations as changes to DNA sequence</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Apply each of the six mutation types one at a time. For each, note: (a) how many DNA bases changed, (b) how many amino acids changed, (c) whether the protein length changed.</li>
+<li><strong>Guided Practice</strong> (5 min): Apply a 1-bp insertion at position 3 (early in the sequence) and then at position 15 (near the end). Compare the extent of protein damage in each case. Why does the position of a frameshift mutation matter?</li>
+<li><strong>Comparative Analysis</strong> (5 min): Apply a synonymous SNP, a missense SNP, and a nonsense SNP all at position 6. Rank these from least to most damaging and explain your reasoning.</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why can a single nucleotide change sometimes have no effect on the protein (synonymous) while other times it is catastrophic (nonsense)?</li>
+<li>Explain why a 1-bp insertion is generally more damaging than a single-base substitution.</li>
+<li>Why is a 3-bp deletion (in-frame) usually less damaging than a 1-bp deletion (frameshift)?</li>
+<li>Sickle cell disease is caused by a single missense mutation in the hemoglobin gene. Use this MicroSim to explain how one amino acid change can alter protein function.</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Mutation">Mutation — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Point_mutation">Point mutation — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Frameshift_mutation">Frameshift mutation — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Nonsense_mutation">Nonsense mutation — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Codon_degeneracy">Genetic code degeneracy — Wikipedia</a></li>
 </ol>
 
 

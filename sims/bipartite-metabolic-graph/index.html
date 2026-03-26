@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for bipartite metabolic graph structure.">
+        <meta name="description" content="Interactive vis-network showing a bipartite metabolic graph with metabolite nodes (circles) and reaction nodes (squares) connected by directed substrate-to-product edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Bipartite Metabolic Graph Structure - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for bipartite metabolic graph structure.">
+        <meta property="og:description" content="Interactive vis-network showing a bipartite metabolic graph with metabolite nodes (circles) and reaction nodes (squares) connected by directed substrate-to-product edges.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic-graph/bipartite-metabolic-graph.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Bipartite Metabolic Graph Structure - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for bipartite metabolic graph structure.">
+        <meta name="twitter:description" content="Interactive vis-network showing a bipartite metabolic graph with metabolite nodes (circles) and reaction nodes (squares) connected by directed substrate-to-product edges.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic-graph/bipartite-metabolic-graph.png">
       
@@ -894,6 +894,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-graph-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bipartite Graph Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-bipartite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Bipartite?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -902,6 +926,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bipartite-graph-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bipartite Graph Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-bipartite" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Bipartite?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2275,41 +2353,73 @@
 <h1 id="bipartite-metabolic-graph-structure">Bipartite Metabolic Graph Structure</h1>
 <iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Bipartite Metabolic Graph Structure MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Bipartite Metabolic Graph Structure MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes a <strong>bipartite metabolic network</strong> — a graph with two distinct node types: <strong>metabolites</strong> (circles, teal) and <strong>reactions</strong> (squares, orange). Directed edges show the flow of substrates into reactions and products out, capturing the structure of metabolic pathways as a graph.</p>
+<h3 id="bipartite-graph-structure">Bipartite Graph Structure</h3>
+<p>In a bipartite metabolic graph:</p>
+<ul>
+<li><strong>Metabolite nodes</strong> represent chemical compounds (glucose, pyruvate, ATP, etc.)</li>
+<li><strong>Reaction nodes</strong> represent enzyme-catalyzed transformations</li>
+<li><strong>Substrate edges</strong> (metabolite → reaction) show which compounds are consumed</li>
+<li><strong>Product edges</strong> (reaction → metabolite) show which compounds are produced</li>
+<li>Edges only connect metabolites to reactions (never metabolite-to-metabolite or reaction-to-reaction)</li>
+</ul>
+<h3 id="why-bipartite">Why Bipartite?</h3>
+<p>The bipartite structure enforces the biological constraint that metabolites don't spontaneously convert into each other — they must pass through an enzyme-catalyzed reaction. This makes the graph more biologically accurate than a simple metabolite-metabolite network.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any node to highlight all its direct connections — substrates and products for reactions, or participating reactions for metabolites</li>
+<li><strong>Hover</strong> for tooltips showing node details</li>
+<li><strong>Drag</strong> nodes to rearrange the layout</li>
+<li><strong>Trace pathways</strong> — Follow directed edges from substrates through reactions to products to trace metabolic flux</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Find glucose and trace all the reactions it participates in as a substrate</li>
+<li>Identify metabolites that appear as products of one reaction and substrates of the next — these are the intermediates of a metabolic pathway</li>
+<li>Look for hub metabolites (like ATP) that participate in many reactions — these are the currency metabolites of the cell</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic-graph/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"560"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of metabolic reactions (substrates, products, enzymes)</li>
+<li>Knowledge of glycolysis or the citric acid cycle</li>
+<li>Concept of bipartite graphs</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify the two node types by shape and color. Click several reaction nodes and list their substrates and products. Verify that edges only connect metabolites to reactions.</li>
+<li><strong>Pathway Tracing</strong> (5 min): Starting from glucose, follow the directed edges through sequential reactions. How many reaction steps can you trace? This reconstructs a metabolic pathway from graph structure alone.</li>
+<li><strong>Hub Analysis</strong> (5 min): Which metabolites are connected to the most reactions? Why are molecules like ATP, NADH, and water considered "currency metabolites"? Should they be treated differently in network analysis?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What makes a metabolic graph "bipartite," and why is this structure biologically meaningful?</li>
+<li>Why can't you have a direct edge between two metabolite nodes in a bipartite metabolic graph?</li>
+<li>What is a "currency metabolite," and why might you want to remove these from network analysis?</li>
+<li>How would you use this graph to identify all the products that can be made from a given substrate?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Bipartite_graph">Bipartite graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_network">Metabolic network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_pathway">Metabolic pathway — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Glycolysis">Glycolysis — Wikipedia</a></li>
 </ol>
 
 

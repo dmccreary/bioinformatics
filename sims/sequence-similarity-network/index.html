@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for sequence similarity network.">
+        <meta name="description" content="Interactive vis-network showing ~20 proteins colored by family, with edges representing BLAST hits and an E-value threshold slider to control edge visibility.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Sequence Similarity Network - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for sequence similarity network.">
+        <meta property="og:description" content="Interactive vis-network showing ~20 proteins colored by family, with edges representing BLAST hits and an E-value threshold slider to control edge visibility.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/sequence-similarity-network/sequence-similarity-network.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Sequence Similarity Network - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for sequence similarity network.">
+        <meta name="twitter:description" content="Interactive vis-network showing ~20 proteins colored by family, with edges representing BLAST hits and an E-value threshold slider to control edge visibility.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/sequence-similarity-network/sequence-similarity-network.png">
       
@@ -1776,6 +1776,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-sequence-similarity-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Sequence Similarity Networks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1784,6 +1808,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-sequence-similarity-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Sequence Similarity Networks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2275,41 +2353,73 @@
 <h1 id="sequence-similarity-network">Sequence Similarity Network</h1>
 <iframe src="main.html" height="500" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Sequence Similarity Network MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Sequence Similarity Network MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes a <strong>sequence similarity network (SSN)</strong> — a graph where proteins are nodes and edges connect proteins with significant sequence similarity as determined by BLAST. An <strong>E-value threshold slider</strong> controls which edges are displayed, letting students explore how stringency affects network structure.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Node colors</strong> — Proteins are colored by protein family (e.g., kinases, proteases, transcription factors)</li>
+<li><strong>Edges</strong> — Connect proteins with BLAST E-values below the current threshold</li>
+<li><strong>E-value slider</strong> — Adjusts the significance threshold. Low E-values (strict) show only highly similar pairs; high E-values (permissive) reveal more distant relationships.</li>
+</ul>
+<h3 id="why-sequence-similarity-networks">Why Sequence Similarity Networks?</h3>
+<p>SSNs are an alternative to phylogenetic trees for visualizing relationships among large protein families:
+- They scale to thousands of sequences (trees become unreadable at this scale)
+- They naturally reveal protein family boundaries as disconnected clusters
+- They can show relationships between distantly related families that share structural or functional features</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>E-value threshold slider</strong> — Adjust to control which BLAST hits are shown as edges</li>
+<li><strong>Hover</strong> over nodes for protein names and family assignments</li>
+<li><strong>Observe clusters</strong> — At strict thresholds, clusters correspond to protein families</li>
+<li><strong>Relax the threshold</strong> — Watch how families merge as distant similarities become visible</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Start with a very strict threshold (low E-value) — each protein family should appear as a separate cluster</li>
+<li>Gradually relax the threshold — watch when clusters begin to merge. The E-value at which two families merge indicates how distantly related they are</li>
+<li>At very permissive thresholds, most proteins may connect into a single giant component — this illustrates the "twilight zone" of sequence similarity</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/sequence-similarity-network/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"500"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of BLAST and sequence similarity</li>
+<li>Concept of E-values as significance measures</li>
+<li>Familiarity with protein families</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Find the strictest threshold where all same-colored proteins are still connected. This is the optimal threshold for separating families.</li>
+<li><strong>Family Boundaries</strong> (5 min): Relax the threshold until two families merge. What E-value does this happen at? What does this tell you about the evolutionary relationship between these families?</li>
+<li><strong>Discussion</strong> (5 min): How does an SSN compare to a phylogenetic tree for analyzing protein family relationships? What can SSNs show that trees cannot, and vice versa?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does an edge in a sequence similarity network represent?</li>
+<li>How does the E-value threshold affect the number of clusters in the network?</li>
+<li>Why might two proteins from different families still be connected in an SSN?</li>
+<li>What advantage do SSNs have over phylogenetic trees for very large protein families?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Sequence_homology">Sequence similarity — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/BLAST_(biotechnology)">BLAST (biotechnology) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/E-value">E-value — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_family">Protein family — Wikipedia</a></li>
 </ol>
 
 

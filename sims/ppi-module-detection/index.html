@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for module detection in ppi networks.">
+        <meta name="description" content="Interactive p5.js PPI network with ~20 nodes and a dropdown to compare three module detection algorithms (MCODE, MCL, Clique Percolation) that highlight different protein complex groupings.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Module Detection in PPI Networks - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for module detection in ppi networks.">
+        <meta property="og:description" content="Interactive p5.js PPI network with ~20 nodes and a dropdown to compare three module detection algorithms (MCODE, MCL, Clique Percolation) that highlight different protein complex groupings.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-module-detection/ppi-module-detection.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Module Detection in PPI Networks - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for module detection in ppi networks.">
+        <meta name="twitter:description" content="Interactive p5.js PPI network with ~20 nodes and a dropdown to compare three module detection algorithms (MCODE, MCL, Clique Percolation) that highlight different protein complex groupings.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-module-detection/ppi-module-detection.png">
       
@@ -1419,6 +1419,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1427,6 +1451,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-algorithms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Algorithms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,72 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim demonstrates <strong>module detection</strong> (protein complex identification) in a PPI network with ~20 nodes. A dropdown lets students switch between three different module detection algorithms — <strong>MCODE</strong>, <strong>MCL</strong>, and <strong>Clique Percolation</strong> — each of which identifies different groupings of proteins as potential complexes.</p>
+<h3 id="three-algorithms">Three Algorithms</h3>
+<ul>
+<li><strong>MCODE</strong> (Molecular Complex Detection) — Finds densely connected regions by scoring nodes by local density and expanding outward from seed nodes</li>
+<li><strong>MCL</strong> (Markov Cluster Algorithm) — Simulates random walks on the graph; proteins that are frequently visited together are grouped into modules</li>
+<li><strong>Clique Percolation</strong> — Finds overlapping communities by identifying adjacent k-cliques (completely connected subgraphs)</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Protein complexes are the functional units of the cell. Identifying them computationally from PPI networks helps:</p>
+<ul>
+<li>Predict protein function (guilt by association)</li>
+<li>Identify potential drug targets (disrupting a complex may be more effective than targeting a single protein)</li>
+<li>Understand cellular organization</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Algorithm dropdown</strong> — Switch between MCODE, MCL, and Clique Percolation to see different module assignments</li>
+<li><strong>Compare results</strong> — Notice which proteins are grouped differently by each algorithm</li>
+<li><strong>Hover</strong> over nodes for protein names and module assignments</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Switch between all three algorithms and note which modules are consistent across methods — these are high-confidence protein complexes</li>
+<li>Find proteins that are assigned to different modules depending on the algorithm — these may be bridge proteins connecting multiple complexes</li>
+<li>Compare the number and size of modules produced by each algorithm</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/ppi-module-detection/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"562"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of PPI networks</li>
+<li>Concept of network modules/communities</li>
+<li>Familiarity with protein complexes</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Try all three algorithms. Count the number of modules each produces. Which algorithm finds the most modules? The fewest?</li>
+<li><strong>Consensus Analysis</strong> (5 min): Are there protein groups that all three algorithms agree on? These consensus modules are likely real protein complexes.</li>
+<li><strong>Discussion</strong> (5 min): Why do different algorithms produce different results? Which algorithm would you trust most for identifying protein complexes, and why?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is the biological significance of a "module" in a PPI network?</li>
+<li>How does MCODE differ from MCL in its approach to finding modules?</li>
+<li>Why might Clique Percolation find overlapping modules when the other algorithms do not?</li>
+<li>If a protein appears in different modules depending on the algorithm, what might this suggest about its biological role?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_complex">Protein complex — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markov_cluster_algorithm">Markov cluster algorithm — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Clique_percolation_method">Clique percolation method — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Community_structure">Community structure — Wikipedia</a></li>
 </ol>
 
 

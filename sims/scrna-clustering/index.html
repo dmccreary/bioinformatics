@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for single-cell clustering and trajectory.">
+        <meta name="description" content="Interactive UMAP-style scatter plot of 200 simulated single cells across 5 immune cell types, with toggle between cluster view and pseudotime trajectory view.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Single-Cell Clustering and Trajectory - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for single-cell clustering and trajectory.">
+        <meta property="og:description" content="Interactive UMAP-style scatter plot of 200 simulated single cells across 5 immune cell types, with toggle between cluster view and pseudotime trajectory view.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/scrna-clustering/scrna-clustering.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Single-Cell Clustering and Trajectory - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for single-cell clustering and trajectory.">
+        <meta name="twitter:description" content="Interactive UMAP-style scatter plot of 200 simulated single cells across 5 immune cell types, with toggle between cluster view and pseudotime trajectory view.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/scrna-clustering/scrna-clustering.png">
       
@@ -1797,6 +1797,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-immune-cell-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Five Immune Cell Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-visualization-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Visualization Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trajectory Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1805,6 +1838,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2208,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-immune-cell-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Five Immune Cell Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-visualization-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Visualization Modes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trajectory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trajectory Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2249,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2375,81 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim simulates a <strong>single-cell RNA sequencing (scRNA-seq)</strong> analysis, displaying ~200 cells in a UMAP-like 2D embedding. Students can toggle between a <strong>cluster view</strong> (cells colored by cell type) and a <strong>trajectory view</strong> (cells colored by pseudotime), revealing how the same data supports both discrete classification and continuous differentiation analysis.</p>
+<h3 id="five-immune-cell-types">Five Immune Cell Types</h3>
+<p>The simulated dataset contains five clusters representing distinct immune cell populations:</p>
+<ul>
+<li><strong>T Cells</strong> (blue) — Adaptive immune cells that coordinate immune responses</li>
+<li><strong>B Cells</strong> (red) — Antibody-producing cells of the adaptive immune system</li>
+<li><strong>Monocytes</strong> (green) — Innate immune cells that differentiate into macrophages and dendritic cells</li>
+<li><strong>NK Cells</strong> (orange) — Natural killer cells of the innate immune system</li>
+<li><strong>Dendritic Cells</strong> (purple) — Antigen-presenting cells that bridge innate and adaptive immunity</li>
+</ul>
+<h3 id="two-visualization-modes">Two Visualization Modes</h3>
+<ul>
+<li><strong>Cluster view</strong> — Cells colored by assigned cell type. Distinct clusters indicate different transcriptional profiles. This is the standard output of tools like Scanpy and Seurat.</li>
+<li><strong>Trajectory view</strong> — Cells colored by pseudotime along a differentiation trajectory. Branching trajectories (e.g., from dendritic cells → T cells and dendritic cells → monocytes) show how progenitor cells differentiate along multiple lineages.</li>
+</ul>
+<h3 id="trajectory-structure">Trajectory Structure</h3>
+<p>The simulated trajectory starts at Dendritic Cells (the progenitor) and branches into two paths:
+- Dendritic Cells → T Cells → B Cells
+- Dendritic Cells → Monocytes → NK Cells</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>View dropdown</strong> — Switch between Cluster view and Trajectory view</li>
+<li><strong>Hover</strong> over any cell to see its assigned cell type and cluster identity</li>
+<li><strong>Regenerate button</strong> — Create a new set of simulated cells with different random positions within each cluster</li>
+<li><strong>Compare views</strong> — Toggle between Cluster and Trajectory to see how the same cells are interpreted through different analytical lenses</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>In Cluster view, identify the 5 distinct clusters and note how well-separated they are — this indicates strong transcriptional differences between cell types</li>
+<li>Switch to Trajectory view and observe the color gradient — cells transition smoothly from early pseudotime (dark) to late pseudotime (light)</li>
+<li>Notice how some clusters are closer to each other in the embedding — proximity in UMAP space suggests transcriptional similarity</li>
+<li>Regenerate several times and observe that cluster positions vary but relative relationships remain consistent</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/scrna-clustering/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of gene expression and RNA sequencing</li>
+<li>Basic concept of cell types and cellular differentiation</li>
+<li>Familiarity with dimensionality reduction (PCA or UMAP)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): In Cluster view, identify all five cell types. Which clusters are closest to each other in the embedding? Does this make biological sense? (Hint: T Cells and B Cells are both adaptive immune cells.)</li>
+<li><strong>Trajectory Analysis</strong> (5 min): Switch to Trajectory view. Follow the pseudotime gradient from early to late. Where does the trajectory branch? What does the branching point represent biologically?</li>
+<li><strong>Comparison</strong> (5 min): Toggle between views. Can you identify cells at cluster boundaries that might be transitioning between cell types? These are the cells where pseudotime analysis adds information beyond simple clustering.</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does each dot in a scRNA-seq UMAP plot represent, and what determines its position?</li>
+<li>Why might two clusters appear close together in a UMAP embedding? What does this suggest about their gene expression profiles?</li>
+<li>What is pseudotime, and how does it differ from real time in trajectory analysis?</li>
+<li>A researcher finds a cell population at the boundary between T Cells and NK Cells. What might this suggest about these cells' differentiation state?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Single-cell_sequencing">Single-cell sequencing — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Uniform_manifold_approximation_and_projection">UMAP — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cell_type">Cell type — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cellular_differentiation">Cellular differentiation — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Trajectory_inference">Trajectory inference — Wikipedia</a></li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for biological database ecosystem.">
+        <meta name="description" content="Interactive vis-network diagram showing major bioinformatics databases as color-coded nodes with cross-reference edges between them.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Biological Database Ecosystem - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for biological database ecosystem.">
+        <meta property="og:description" content="Interactive vis-network diagram showing major bioinformatics databases as color-coded nodes with cross-reference edges between them.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/bio-database-ecosystem/bio-database-ecosystem.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Biological Database Ecosystem - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for biological database ecosystem.">
+        <meta name="twitter:description" content="Interactive vis-network diagram showing major bioinformatics databases as color-coded nodes with cross-reference edges between them.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/bio-database-ecosystem/bio-database-ecosystem.png">
       
@@ -851,6 +851,30 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Categories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-References
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,68 @@
 <h1 id="biological-database-ecosystem">Biological Database Ecosystem</h1>
 <iframe src="main.html" height="530" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Biological Database Ecosystem MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Biological Database Ecosystem MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim maps the <strong>ecosystem of major bioinformatics databases</strong> as an interactive network. Each node represents a database, colored by category (sequence, structure, pathway, interaction, etc.), and edges show cross-reference links between databases. This helps students understand how biological data is organized and interconnected across the field.</p>
+<h3 id="database-categories">Database Categories</h3>
+<p>Databases are grouped by the type of biological data they store:</p>
+<ul>
+<li><strong>Sequence databases</strong> — GenBank, UniProt, RefSeq</li>
+<li><strong>Structure databases</strong> — PDB, AlphaFold DB</li>
+<li><strong>Pathway databases</strong> — KEGG, Reactome</li>
+<li><strong>Interaction databases</strong> — STRING, IntAct, BioGRID</li>
+<li><strong>Ontology/annotation</strong> — Gene Ontology, InterPro</li>
+<li><strong>Disease/variation</strong> — OMIM, ClinVar, dbSNP</li>
+</ul>
+<h3 id="cross-references">Cross-References</h3>
+<p>Edges between databases show how entries link to each other. For example, a UniProt protein entry cross-references its 3D structure in PDB, its gene in GenBank, its pathways in KEGG, and its known variants in ClinVar.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Hover</strong> over any database node to see its full name, description, and data type</li>
+<li><strong>Drag</strong> nodes to rearrange the layout</li>
+<li><strong>Zoom and pan</strong> to explore different regions of the ecosystem</li>
+<li><strong>Follow edges</strong> to understand how databases cross-reference each other</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/bio-database-ecosystem/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"530"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of biological data types (sequences, structures, pathways)</li>
+<li>Awareness that bioinformatics relies on public databases</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify all sequence databases in the network. How do they differ? (GenBank stores nucleotide sequences, UniProt stores protein sequences, RefSeq provides curated reference sequences.)</li>
+<li><strong>Cross-Reference Tracing</strong> (5 min): Start at GenBank and follow edges to all connected databases. List each connected database and explain what type of information you would find there.</li>
+<li><strong>Discussion</strong> (5 min): You discover a new gene. Which databases would you need to search, and in what order, to fully characterize its sequence, structure, function, associated diseases, and pathways?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Name three major categories of biological databases and give one example of each.</li>
+<li>Why is cross-referencing between databases important for biological research?</li>
+<li>What is the difference between GenBank and UniProt in terms of the data they store?</li>
+<li>If you wanted to find all known disease-causing mutations in a gene, which databases would you consult?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Biological_database">Biological database — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/GenBank">GenBank — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/UniProt">UniProt — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_Data_Bank">Protein Data Bank — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/KEGG">KEGG — Wikipedia</a></li>
 </ol>
 
 

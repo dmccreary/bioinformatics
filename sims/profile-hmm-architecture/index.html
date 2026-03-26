@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for profile hmm architecture.">
+        <meta name="description" content="Interactive vis-network diagram showing the Match, Insert, and Delete states of a Profile Hidden Markov Model with transition probabilities for protein family sequence analysis.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Profile HMM Architecture - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for profile hmm architecture.">
+        <meta property="og:description" content="Interactive vis-network diagram showing the Match, Insert, and Delete states of a Profile Hidden Markov Model with transition probabilities for protein family sequence analysis.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/profile-hmm-architecture/profile-hmm-architecture.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Profile HMM Architecture - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for profile hmm architecture.">
+        <meta name="twitter:description" content="Interactive vis-network diagram showing the Match, Insert, and Delete states of a Profile Hidden Markov Model with transition probabilities for protein family sequence analysis.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/profile-hmm-architecture/profile-hmm-architecture.png">
       
@@ -1587,6 +1587,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#state-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      State Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transitions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2341,76 @@
 <h1 id="profile-hmm-architecture">Profile HMM Architecture</h1>
 <iframe src="main.html" height="480" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Profile HMM Architecture MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Profile HMM Architecture MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays the architecture of a <strong>Profile Hidden Markov Model (Profile HMM)</strong> — the probabilistic model used by tools like HMMER and Pfam to represent protein families. The diagram shows the three types of states (Match, Insert, Delete) and the transitions between them.</p>
+<h3 id="state-types">State Types</h3>
+<ul>
+<li><strong>Match states (M)</strong> — Represent conserved positions in the multiple sequence alignment. Each match state emits an amino acid according to a position-specific probability distribution.</li>
+<li><strong>Insert states (I)</strong> — Handle extra amino acids between conserved positions. Emit amino acids using a background distribution.</li>
+<li><strong>Delete states (D)</strong> — Handle missing amino acids at conserved positions. Silent states (no emission).</li>
+</ul>
+<h3 id="transitions">Transitions</h3>
+<ul>
+<li><strong>M → M</strong> — Move to the next conserved position (most common)</li>
+<li><strong>M → I</strong> — Insert extra amino acids after this position</li>
+<li><strong>M → D</strong> — Skip the next conserved position (deletion)</li>
+<li><strong>I → I</strong> — Continue inserting (multiple insertions)</li>
+<li><strong>I → M</strong> — Return to the next conserved position</li>
+<li><strong>D → M</strong> — Resume matching at the next position</li>
+<li><strong>D → D</strong> — Skip multiple consecutive positions</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Profile HMMs are the gold standard for:
+- Detecting remote homologs that sequence alignment would miss
+- Classifying proteins into families (Pfam database)
+- Building multiple sequence alignments of distantly related proteins</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Examine the state diagram</strong> — Follow the transitions from Begin through Match/Insert/Delete states to End</li>
+<li><strong>Click</strong> states and transitions to see their descriptions and probability parameters</li>
+<li><strong>Trace paths</strong> — A typical protein traverses mostly Match states; insertions and deletions are rarer</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/profile-hmm-architecture/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"480"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of multiple sequence alignment</li>
+<li>Basic probability concepts</li>
+<li>Concept of protein families and domains</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify all three state types and their transitions. Which transition is most common? Which is rarest?</li>
+<li><strong>Path Tracing</strong> (5 min): A protein has the pattern "conserved-conserved-insertion-conserved-deletion-conserved." Trace this path through the HMM states.</li>
+<li><strong>Discussion</strong> (5 min): Why are Profile HMMs better at detecting remote homologs than pairwise alignment? What information does the position-specific emission probability capture?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What are the three types of states in a Profile HMM, and what does each represent?</li>
+<li>How does a Profile HMM handle insertions and deletions differently from a standard scoring matrix?</li>
+<li>Why are Profile HMMs trained from multiple sequence alignments rather than single sequences?</li>
+<li>What is the Pfam database, and how does it use Profile HMMs?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Hidden_Markov_model">Hidden Markov model — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/HMMER">HMMER — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pfam">Pfam — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sequence_alignment">Sequence alignment — Wikipedia</a></li>
 </ol>
 
 

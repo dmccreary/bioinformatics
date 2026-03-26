@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta name="description" content="Interactive four-panel display of the four levels of protein structure (primary, secondary, tertiary, quaternary) with clickable panels showing structural details, stabilizing forces, and data formats.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Protein Structure Hierarchy - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta property="og:description" content="Interactive four-panel display of the four levels of protein structure (primary, secondary, tertiary, quaternary) with clickable panels showing structural details, stabilizing forces, and data formats.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/protein-structure-levels/protein-structure-levels.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Protein Structure Hierarchy - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta name="twitter:description" content="Interactive four-panel display of the four levels of protein structure (primary, secondary, tertiary, quaternary) with clickable panels showing structural details, stabilizing forces, and data formats.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/protein-structure-levels/protein-structure-levels.png">
       
@@ -1713,6 +1713,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Levels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2327,69 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>four levels of protein structure</strong> as interactive, expandable panels. Clicking any panel reveals a detailed description with a visual representation, the stabilizing forces at that level, and the bioinformatics data format used to represent it.</p>
+<h3 id="the-four-levels">The Four Levels</h3>
+<ul>
+<li><strong>Primary</strong> (green) — The linear amino acid sequence from N-terminus to C-terminus, encoded by the gene and linked by peptide bonds. Stored in FASTA format.</li>
+<li><strong>Secondary</strong> (blue) — Local folding patterns (alpha helices and beta sheets) stabilized by backbone hydrogen bonds between NH and C=O groups. Annotated in DSSP / PDB format.</li>
+<li><strong>Tertiary</strong> (orange) — The complete 3D fold of a single polypeptide chain, stabilized by side-chain interactions including hydrophobic packing, disulfide bonds, ionic bonds, and van der Waals forces. Stored in PDB / mmCIF format.</li>
+<li><strong>Quaternary</strong> (purple) — The arrangement of multiple polypeptide subunits into a functional complex (e.g., hemoglobin's alpha-2-beta-2 tetramer). Not all proteins have quaternary structure. Stored in PDB biological assembly format.</li>
+</ul>
+<h3 id="why-this-matters-for-bioinformatics">Why This Matters for Bioinformatics</h3>
+<p>Protein structure prediction is one of bioinformatics' grand challenges. Understanding the hierarchy helps students appreciate:</p>
+<ul>
+<li>Why sequence (primary) determines structure (AlphaFold predicts 3D from sequence)</li>
+<li>How different data formats capture different structural levels</li>
+<li>Why structure-function relationships depend on all four levels</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click any panel</strong> to expand it and see the detailed description, stabilizing forces, and data format</li>
+<li><strong>Click the expanded panel</strong> or use the <strong>Reset</strong> button to return to the four-panel overview</li>
+<li><strong>Read the visual</strong> — each panel includes a schematic of that structural level (amino acid chain, helix/sheet, 3D fold, multi-subunit complex)</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/protein-structure-levels/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"452"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Knowledge of amino acids as the building blocks of proteins</li>
+<li>Understanding that genes encode protein sequences</li>
+<li>Basic concept of molecular bonds (covalent, hydrogen, ionic)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (4 min): Click each panel in order from Primary to Quaternary. For each level, note: (a) what stabilizing forces hold it together, (b) what data format represents it, (c) how it differs from the previous level.</li>
+<li><strong>Guided Practice</strong> (4 min): A missense mutation changes one amino acid in a protein. Which structural level is directly affected? How might this change propagate to affect secondary, tertiary, or quaternary structure? Discuss using the panel descriptions.</li>
+<li><strong>Discussion</strong> (4 min): AlphaFold takes primary structure as input and predicts tertiary structure. Why is this considered a major breakthrough? What information about quaternary structure might it miss?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>List the four levels of protein structure and the dominant stabilizing force at each level.</li>
+<li>Why does primary structure determine all higher levels of structure?</li>
+<li>A protein has a cysteine-to-serine mutation. Which level of structure is most likely affected, and why? (Hint: think about disulfide bonds.)</li>
+<li>Hemoglobin is an alpha-2-beta-2 tetramer. Which structural level describes this arrangement?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_structure">Protein structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Alpha_helix">Alpha helix — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Beta_sheet">Beta sheet — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_quaternary_structure">Quaternary structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_Data_Bank">Protein Data Bank — Wikipedia</a></li>
 </ol>
 
 

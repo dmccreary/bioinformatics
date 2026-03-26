@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for rooted and unrooted phylogenetic trees.">
+        <meta name="description" content="Interactive display of three phylogenetic tree representations (cladogram, phylogram, unrooted) for the same set of taxa, with selectable datasets for mammals, bacteria, and plants.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Rooted and Unrooted Phylogenetic Trees - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for rooted and unrooted phylogenetic trees.">
+        <meta property="og:description" content="Interactive display of three phylogenetic tree representations (cladogram, phylogram, unrooted) for the same set of taxa, with selectable datasets for mammals, bacteria, and plants.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/phylogenetic-tree-types/phylogenetic-tree-types.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Rooted and Unrooted Phylogenetic Trees - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for rooted and unrooted phylogenetic trees.">
+        <meta name="twitter:description" content="Interactive display of three phylogenetic tree representations (cladogram, phylogram, unrooted) for the same set of taxa, with selectable datasets for mammals, bacteria, and plants.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/phylogenetic-tree-types/phylogenetic-tree-types.png">
       
@@ -1755,6 +1755,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-tree-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Tree Representations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1763,6 +1787,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-tree-representations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Tree Representations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Datasets
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,73 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays the <strong>same evolutionary relationships</strong> in three different phylogenetic tree formats, side by side. Students can switch between three taxonomic datasets (Mammals, Bacteria, Plants) to see how the same tree topology looks in each representation.</p>
+<h3 id="three-tree-representations">Three Tree Representations</h3>
+<ul>
+<li><strong>Cladogram</strong> (left) — Shows only the branching pattern (topology) with equal branch lengths. The focus is on <em>who is related to whom</em>, not on how much change occurred. All taxa are aligned at the right edge.</li>
+<li><strong>Phylogram</strong> (center) — Branch lengths are proportional to the amount of evolutionary change (e.g., nucleotide substitutions per site). Longer branches indicate more divergence from the ancestor.</li>
+<li><strong>Unrooted tree</strong> (right) — Shows the same relationships without designating an ancestor (root). This is the raw output of many tree-building algorithms. An outgroup is needed to determine where the root should be placed.</li>
+</ul>
+<h3 id="example-datasets">Example Datasets</h3>
+<ul>
+<li><strong>Mammals</strong> — Human, Chimp, Gorilla, Mouse, Dog, Opossum (outgroup)</li>
+<li><strong>Bacteria</strong> — E. coli, Salmonella, B. subtilis, S. aureus, M. tuberculosis, Archaea sp. (outgroup)</li>
+<li><strong>Plants</strong> — Rice, Wheat, Maize, Arabidopsis, Tomato, Pine (outgroup)</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Dataset dropdown</strong> — Switch between Mammals, Bacteria, and Plants to see different taxonomic examples</li>
+<li><strong>Compare representations</strong> — The same tree is shown in all three formats. Notice that the topology (branching order) is identical, but the visual emphasis differs.</li>
+<li><strong>Read branch lengths</strong> — In the phylogram, compare branch lengths between closely related taxa (short branches) and distantly related taxa (long branches to the outgroup).</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Start with Mammals: Human and Chimp have very short branches in the phylogram (recently diverged), while Opossum has a very long branch (diverged ~180 million years ago)</li>
+<li>Switch to Bacteria and notice that the branch lengths are much more variable — reflecting the vast evolutionary distances between bacterial phyla</li>
+<li>Compare the cladogram and phylogram for Plants — Rice, Wheat, and Maize (all grasses) cluster tightly in the phylogram but appear equally spaced in the cladogram</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/phylogenetic-tree-types/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of evolution and common ancestry</li>
+<li>Concept of DNA sequence divergence over evolutionary time</li>
+<li>Familiarity with taxonomic classification</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): With the Mammals dataset, compare all three representations. Identify Human's closest relative in each view. Does the answer change depending on the representation? It shouldn't — the topology is the same.</li>
+<li><strong>Branch Length Interpretation</strong> (5 min): In the phylogram, which mammal has the longest branch? What does this mean biologically? Why might Opossum (a marsupial) have a longer branch than Mouse (a placental mammal)?</li>
+<li><strong>Rooting Exercise</strong> (5 min): Look at the unrooted tree. If you did not know which taxon was the outgroup, could you determine the root? Discuss why outgroup selection matters for interpreting evolutionary relationships.</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What information does a phylogram convey that a cladogram does not?</li>
+<li>Why can't you determine the direction of evolution (which taxon is ancestral) from an unrooted tree?</li>
+<li>In the Mammals phylogram, Human and Chimp have similar branch lengths from their common ancestor. What does this imply about their rates of molecular evolution?</li>
+<li>You are building a phylogenetic tree of fish species and include a shark as an outgroup. Why is outgroup selection important for rooting the tree?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Phylogenetic_tree">Phylogenetic tree — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cladogram">Cladogram — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Outgroup_(cladistics)">Outgroup (cladistics) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Molecular_phylogenetics">Molecular phylogenetics — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phylogenetics">Phylogenetics — Wikipedia</a></li>
 </ol>
 
 

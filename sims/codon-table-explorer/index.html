@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for codon table explorer.">
+        <meta name="description" content="Interactive mRNA translation tool where students type or generate mRNA sequences and watch them translated codon-by-codon into amino acids, color-coded by chemical property.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Codon Table Explorer - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for codon table explorer.">
+        <meta property="og:description" content="Interactive mRNA translation tool where students type or generate mRNA sequences and watch them translated codon-by-codon into amino acids, color-coded by chemical property.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/codon-table-explorer/codon-table-explorer.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Codon Table Explorer - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for codon table explorer.">
+        <meta name="twitter:description" content="Interactive mRNA translation tool where students type or generate mRNA sequences and watch them translated codon-by-codon into amino acids, color-coded by chemical property.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/codon-table-explorer/codon-table-explorer.png">
       
@@ -999,6 +999,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-display-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Display Rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amino-acid-color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amino Acid Color Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Frames
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1007,6 +1040,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2208,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-display-rows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Three Display Rows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amino-acid-color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amino Acid Color Coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reading-frames" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reading Frames
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2249,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2375,82 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim lets students <strong>translate mRNA sequences into proteins</strong> using the standard genetic code. Students can type any mRNA sequence (or generate a random one) and immediately see the sequence parsed into codons and decoded into amino acids. The amino acids are color-coded by their chemical properties, making patterns in the genetic code visible at a glance.</p>
+<h3 id="three-display-rows">Three Display Rows</h3>
+<ul>
+<li><strong>mRNA row</strong> — The input sequence displayed base by base, color-coded: A (green), U (red), G (yellow), C (blue)</li>
+<li><strong>Codons row</strong> — The mRNA grouped into triplets, with each codon box colored by the property of its encoded amino acid</li>
+<li><strong>Protein row</strong> — The resulting amino acid chain shown as colored circles connected by peptide bonds, with single-letter amino acid codes</li>
+</ul>
+<h3 id="amino-acid-color-coding">Amino Acid Color Coding</h3>
+<p>Amino acids are colored by their chemical properties, which determine how they contribute to protein structure:</p>
+<ul>
+<li><strong>Blue</strong> — Hydrophobic (F, L, I, M, V, A, W): tend to fold into the protein interior</li>
+<li><strong>Green</strong> — Polar (S, T, Y, N, Q): form hydrogen bonds on the protein surface</li>
+<li><strong>Red</strong> — Positively charged (K, R, H): attract negatively charged molecules</li>
+<li><strong>Yellow</strong> — Negatively charged (D, E): attract positively charged molecules</li>
+<li><strong>Purple</strong> — Special (P, G, C): proline introduces kinks, glycine is ultra-flexible, cysteine forms disulfide bonds</li>
+<li><strong>Gray</strong> — Stop codons (UAA, UAG, UGA): signal the end of translation</li>
+</ul>
+<h3 id="reading-frames">Reading Frames</h3>
+<p>The optional <strong>Show Reading Frames</strong> checkbox displays all three forward reading frames simultaneously. Each frame starts at a different offset (0, 1, or 2 bases from the beginning), showing how the same mRNA sequence encodes entirely different proteins depending on where translation begins. Start codons (AUG) are highlighted in green and stop codons in red.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Type an mRNA sequence</strong> — Enter bases (A, U, G, C) in the text field. The sequence is automatically cleaned and translated.</li>
+<li><strong>Translate button</strong> — Click to parse and translate the current input sequence</li>
+<li><strong>Random button</strong> — Generate a random mRNA sequence that starts with AUG and ends with a stop codon</li>
+<li><strong>Show Reading Frames checkbox</strong> — Toggle display of all three forward reading frames to compare alternative translations</li>
+<li><strong>Hover over codons</strong> — Move your mouse over any codon to highlight both the codon and its corresponding amino acid</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Enter <code>AUGUUUUUUUUUUUUUGA</code> — a sequence encoding only phenylalanine (F). Notice how all codons are hydrophobic (blue).</li>
+<li>Try <code>AUGAAAGAUGAAAUGA</code> — a sequence with charged amino acids. Compare the color pattern.</li>
+<li>Toggle reading frames and observe how a single-base shift produces completely different amino acids.</li>
+<li>Find the shortest possible protein: <code>AUGUGAUAA</code> (Met-stop, but the stop prevents translation after the first amino acid).</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/codon-table-explorer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of mRNA as a single-stranded molecule with bases A, U, G, C</li>
+<li>Knowledge that codons are three-base sequences that encode amino acids</li>
+<li>Familiarity with the concept of start codons (AUG) and stop codons</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Use the Random button to generate several sequences. For each, note where translation starts (AUG) and where it stops. Observe the amino acid color patterns — are most amino acids hydrophobic, polar, or charged?</li>
+<li><strong>Guided Practice</strong> (5 min): Enter the sequence <code>AUGCGCAAAGAUUUCGCUUGA</code>. Before clicking Translate, predict how many amino acids the protein will have. Then translate and check. Identify each amino acid's chemical property by color.</li>
+<li><strong>Reading Frame Analysis</strong> (5 min): Enter a sequence of at least 30 bases. Enable Show Reading Frames and compare the three frames. Do all frames contain a start codon? How many stop codons appear in each frame? Which frame would produce the longest protein?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why does every protein-coding mRNA begin with the codon AUG, and what amino acid does it encode?</li>
+<li>There are 64 possible codons but only 20 amino acids. What property of the genetic code does this reflect, and what are its implications for mutation tolerance?</li>
+<li>How does a single-nucleotide insertion (frameshift mutation) affect the protein product? Use the reading frames display to illustrate your answer.</li>
+<li>Why are hydrophobic amino acids typically found in the interior of folded proteins while polar and charged amino acids are on the surface?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Genetic_code">Genetic code — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Codon">Codon — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reading_frame">Reading frame — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Amino_acid">Amino acid — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Codon_degeneracy">Degeneracy of the genetic code — Wikipedia</a></li>
 </ol>
 
 

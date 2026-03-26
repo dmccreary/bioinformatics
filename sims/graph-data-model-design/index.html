@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for graph data model design process.">
+        <meta name="description" content="Interactive vis-network flowchart showing the iterative process of designing a graph data model — from entity identification through relationship definition, property assignment, query validation, and iteration.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Graph Data Model Design Process - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for graph data model design process.">
+        <meta property="og:description" content="Interactive vis-network flowchart showing the iterative process of designing a graph data model — from entity identification through relationship definition, property assignment, query validation, and iteration.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/graph-data-model-design/graph-data-model-design.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Graph Data Model Design Process - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for graph data model design process.">
+        <meta name="twitter:description" content="Interactive vis-network flowchart showing the iterative process of designing a graph data model — from entity identification through relationship definition, property assignment, query validation, and iteration.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/graph-data-model-design/graph-data-model-design.png">
       
@@ -1251,6 +1251,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Steps
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2305,62 @@
 <h1 id="graph-data-model-design-process">Graph Data Model Design Process</h1>
 <iframe src="main.html" height="520" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Graph Data Model Design Process MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Graph Data Model Design Process MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim shows the <strong>iterative design process</strong> for building a graph data model, visualized as a cyclic flowchart. Each step in the process is a node, with a feedback loop from the final validation step back to the beginning, emphasizing that graph data model design is never a one-pass process.</p>
+<h3 id="design-steps">Design Steps</h3>
+<ol>
+<li><strong>Identify Entities</strong> — Determine what real-world objects become nodes (genes, proteins, diseases, drugs)</li>
+<li><strong>Define Relationships</strong> — Determine what connections exist between entities and what they mean (interacts_with, treats, encodes)</li>
+<li><strong>Assign Properties</strong> — Add key-value attributes to nodes and edges (gene name, molecular weight, confidence score)</li>
+<li><strong>Validate Against Queries</strong> — Test the model against the questions you need to answer (Can the model answer "which drugs treat diseases linked to gene X"?)</li>
+<li><strong>Iterate</strong> — Refine the model based on validation results, cycling back to add missing entities or relationships</li>
+</ol>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> each step to see its detailed description and examples from bioinformatics</li>
+<li><strong>Follow the cycle</strong> — Notice that the process loops back from Iterate to Identify Entities</li>
+<li><strong>Consider the examples</strong> — Each step includes concrete biomedical examples</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/graph-data-model-design/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"520"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of graph databases (nodes, edges, properties)</li>
+<li>Familiarity with biological entities (genes, proteins, diseases)</li>
+<li>Concept of data modeling</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click each step in the design cycle. What is the key question answered at each step?</li>
+<li><strong>Hands-On Design</strong> (5 min): Imagine you need a graph to answer "Which proteins interact with BRCA1, and what diseases are they associated with?" Walk through each design step and sketch your model on paper.</li>
+<li><strong>Discussion</strong> (5 min): Why is graph data model design iterative rather than linear? What might cause you to go back and redesign your model?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What are the five steps in the graph data model design process?</li>
+<li>Why is "Validate Against Queries" an important step before deploying a graph database?</li>
+<li>Give an example of when you would need to iterate on your graph model after initial design.</li>
+<li>How does a graph data model differ from a relational (tabular) data model for biological data?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_database">Graph database — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_modeling">Data modeling — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_graph">Knowledge graph — Wikipedia</a></li>
 </ol>
 
 

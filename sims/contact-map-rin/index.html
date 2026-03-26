@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for contact map and residue interaction network.">
+        <meta name="description" content="Interactive dual-panel display showing a protein contact map (symmetric heatmap) alongside a circular residue interaction network, with synchronized highlighting between panels.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Contact Map and Residue Interaction Network - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for contact map and residue interaction network.">
+        <meta property="og:description" content="Interactive dual-panel display showing a protein contact map (symmetric heatmap) alongside a circular residue interaction network, with synchronized highlighting between panels.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/contact-map-rin/contact-map-rin.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Contact Map and Residue Interaction Network - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for contact map and residue interaction network.">
+        <meta name="twitter:description" content="Interactive dual-panel display showing a protein contact map (symmetric heatmap) alongside a circular residue interaction network, with synchronized highlighting between panels.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/contact-map-rin/contact-map-rin.png">
       
@@ -1020,6 +1020,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contact-map-left-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Map (Left Panel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#residue-interaction-network-right-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Residue Interaction Network (Right Panel)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1028,6 +1052,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#contact-map-left-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Map (Left Panel)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#residue-interaction-network-right-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      Residue Interaction Network (Right Panel)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,75 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim shows two complementary views of <strong>protein residue contacts</strong>: a <strong>contact map</strong> (left, symmetric heatmap grid) and a <strong>residue interaction network</strong> (right, circular layout). Clicking a residue in either panel highlights it in both, showing how the same structural information is represented in different formats.</p>
+<h3 id="contact-map-left-panel">Contact Map (Left Panel)</h3>
+<p>A contact map is a symmetric matrix where:</p>
+<ul>
+<li>Each axis represents the protein's amino acid sequence (residue 1 to N)</li>
+<li>A filled cell at position (i, j) indicates that residues i and j are within a distance threshold (typically 8 Angstroms) in the 3D structure</li>
+<li>The <strong>diagonal</strong> always shows contacts (each residue is close to itself)</li>
+<li><strong>Off-diagonal contacts</strong> between residues far apart in sequence indicate 3D folding — these long-range contacts are the most informative</li>
+</ul>
+<h3 id="residue-interaction-network-right-panel">Residue Interaction Network (Right Panel)</h3>
+<p>The same contacts visualized as a circular graph:</p>
+<ul>
+<li>Residues are arranged in sequence order around a circle</li>
+<li>Edges connect residues that are in spatial contact</li>
+<li><strong>Short arcs</strong> (nearby residues) represent local interactions (secondary structure)</li>
+<li><strong>Long chords</strong> (distant residues) represent tertiary contacts (3D folding)</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> a residue in either the contact map or the circular network — the corresponding residue and its contacts are highlighted in both panels</li>
+<li><strong>Compare representations</strong> — The same contact appears as a filled cell in the heatmap and as an edge in the network</li>
+<li><strong>Look for patterns</strong> — Secondary structures (helices, sheets) create characteristic diagonal bands in the contact map</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Click a residue near the N-terminus (low number). Its contacts in the contact map form a column/row — count how many long-range contacts it makes.</li>
+<li>Look for diagonal bands parallel to the main diagonal — these indicate alpha helices (contacts between residues i and i+4)</li>
+<li>Find a long chord in the circular network — this represents a 3D contact between sequence-distant residues, created by protein folding</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/contact-map-rin/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of protein primary structure (amino acid sequence)</li>
+<li>Basic knowledge of secondary and tertiary structure</li>
+<li>Concept of spatial distance between residues in a folded protein</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Examine the contact map. What patterns do you see along and near the diagonal? Click several residues and observe their contacts in both panels.</li>
+<li><strong>Secondary Structure</strong> (5 min): Look for diagonal bands offset from the main diagonal. These indicate regular secondary structures. Bands at offset +4 suggest alpha helices (hydrogen bonds between residues i and i+4). Can you identify any?</li>
+<li><strong>Long-Range Contacts</strong> (5 min): In the circular network, find the 3 longest chords. These are contacts between residues far apart in sequence. What does this tell you about how the protein folds?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does a filled cell at position (5, 25) in a contact map mean?</li>
+<li>Why is the contact map symmetric (filled at both (i,j) and (j,i))?</li>
+<li>Why are long-range contacts more informative for understanding protein folding than short-range contacts?</li>
+<li>AlphaFold predicts contact maps as an intermediate step. Why is a predicted contact map useful for predicting 3D structure?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Contact_map">Contact map — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_contact_map">Protein contact map — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_structure">Protein structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_residue_interaction_network">Residue interaction network — Wikipedia</a></li>
 </ol>
 
 

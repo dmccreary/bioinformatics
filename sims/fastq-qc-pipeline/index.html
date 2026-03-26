@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for fastq quality control pipeline.">
+        <meta name="description" content="Interactive vis-network flowchart showing the FASTQ quality control pipeline steps with decision nodes for filtering low-quality reads and adapter contamination.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="FASTQ Quality Control Pipeline - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for fastq quality control pipeline.">
+        <meta property="og:description" content="Interactive vis-network flowchart showing the FASTQ quality control pipeline steps with decision nodes for filtering low-quality reads and adapter contamination.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/fastq-qc-pipeline/fastq-qc-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="FASTQ Quality Control Pipeline - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for fastq quality control pipeline.">
+        <meta name="twitter:description" content="Interactive vis-network flowchart showing the FASTQ quality control pipeline steps with decision nodes for filtering low-quality reads and adapter contamination.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/fastq-qc-pipeline/fastq-qc-pipeline.png">
       
@@ -1167,6 +1167,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Nodes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Steps
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decision-nodes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Nodes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,67 @@
 <h1 id="fastq-quality-control-pipeline">FASTQ Quality Control Pipeline</h1>
 <iframe src="main.html" height="580" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the FASTQ Quality Control Pipeline MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the FASTQ Quality Control Pipeline MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>FASTQ quality control pipeline</strong> as an interactive directed flowchart. Each node represents a processing step or decision point, showing how raw sequencing reads are filtered and trimmed before downstream analysis.</p>
+<h3 id="pipeline-steps">Pipeline Steps</h3>
+<ol>
+<li><strong>Raw FASTQ</strong> — Unprocessed sequencing reads with quality scores</li>
+<li><strong>Quality Assessment</strong> — Tools like FastQC evaluate per-base quality, GC content, adapter contamination, and read length distribution</li>
+<li><strong>Adapter Trimming</strong> — Remove adapter sequences ligated during library preparation (Trimmomatic, Cutadapt)</li>
+<li><strong>Quality Filtering</strong> — Remove reads below a quality threshold (e.g., Phred &lt; 20)</li>
+<li><strong>Length Filtering</strong> — Remove reads shorter than a minimum length after trimming</li>
+<li><strong>Deduplication</strong> — Optional removal of PCR duplicate reads</li>
+<li><strong>Clean FASTQ</strong> — High-quality reads ready for alignment or assembly</li>
+</ol>
+<h3 id="decision-nodes">Decision Nodes</h3>
+<p>The flowchart includes decision points where reads pass or fail quality criteria, illustrating how different QC steps filter the data and how the filtering criteria affect the final read count.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any pipeline step to see its description, the tools commonly used, and the parameters involved</li>
+<li><strong>Follow the flow</strong> — Trace reads from raw input through each processing step to clean output</li>
+<li><strong>Identify decision points</strong> — See where reads are filtered out and why</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/fastq-qc-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"580"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of DNA sequencing (Illumina short reads)</li>
+<li>Concept of Phred quality scores</li>
+<li>Awareness that raw data requires preprocessing</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click each pipeline step in order. For each, note what problem it addresses and what tool is commonly used.</li>
+<li><strong>Parameter Discussion</strong> (5 min): What happens if you set the quality threshold too high? Too low? Discuss the trade-off between read quality and read quantity.</li>
+<li><strong>Pipeline Design</strong> (5 min): If you were analyzing RNA-seq data vs. whole-genome sequencing, would you change any QC parameters? Why?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why is quality control the first step in any sequencing analysis pipeline?</li>
+<li>What is a Phred quality score, and what does a Phred score of 30 mean?</li>
+<li>Why must adapter sequences be removed before alignment?</li>
+<li>What are the risks of over-filtering (too strict QC) vs. under-filtering (too lenient QC)?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/FASTQ_format">FASTQ format — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Phred_quality_score">Phred quality score — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/DNA_sequencing">DNA sequencing — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Sequence_assembly">Sequence assembly — Wikipedia</a></li>
 </ol>
 
 

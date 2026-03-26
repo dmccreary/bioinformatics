@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for drug-drug interaction network.">
+        <meta name="description" content="Interactive vis-network showing drug-drug interactions colored by therapeutic class, with edges colored by severity (severe, moderate, mild) and click-to-explore interaction details.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Drug-Drug Interaction Network - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for drug-drug interaction network.">
+        <meta property="og:description" content="Interactive vis-network showing drug-drug interactions colored by therapeutic class, with edges colored by severity (severe, moderate, mild) and click-to-explore interaction details.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/drug-drug-interaction-network/drug-drug-interaction-network.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Drug-Drug Interaction Network - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for drug-drug interaction network.">
+        <meta name="twitter:description" content="Interactive vis-network showing drug-drug interactions colored by therapeutic class, with edges colored by severity (severe, moderate, mild) and click-to-explore interaction details.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/drug-drug-interaction-network/drug-drug-interaction-network.png">
       
@@ -1082,6 +1082,30 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,71 @@
 <h1 id="drug-drug-interaction-network">Drug-Drug Interaction Network</h1>
 <iframe src="main.html" height="540" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Drug-Drug Interaction Network MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Drug-Drug Interaction Network MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes a <strong>drug-drug interaction (DDI) network</strong> where each node is a drug, colored by therapeutic class, and each edge represents a known interaction between two drugs. Edge colors indicate <strong>interaction severity</strong>: red for severe, orange for moderate, and yellow for mild.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Node colors</strong> — Drugs are grouped by therapeutic class (e.g., cardiovascular, oncology, CNS, anti-infective)</li>
+<li><strong>Red edges</strong> — Severe interactions (contraindicated or potentially life-threatening)</li>
+<li><strong>Orange edges</strong> — Moderate interactions (may require dose adjustment or monitoring)</li>
+<li><strong>Yellow edges</strong> — Mild interactions (clinically minor)</li>
+<li><strong>Click</strong> any drug to highlight all its interactions and see details</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Drug-drug interactions are a major cause of adverse drug events, especially in patients taking multiple medications (polypharmacy). Network analysis helps pharmacologists identify:</p>
+<ul>
+<li>Drugs with many severe interactions (high-risk nodes)</li>
+<li>Drug pairs that should never be co-prescribed</li>
+<li>Safer therapeutic alternatives within the same drug class</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any drug node to highlight its interactions and see severity details</li>
+<li><strong>Hover</strong> for drug name and therapeutic class</li>
+<li><strong>Drag and zoom</strong> to explore the network</li>
+<li><strong>Look for red edges</strong> — these represent the most dangerous drug combinations</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/drug-drug-interaction-network/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"540"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of pharmacology (drugs and their targets)</li>
+<li>Concept of adverse drug reactions</li>
+<li>Familiarity with network visualization</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Find the drug with the most severe (red) interactions. Why might some drugs have more interactions than others?</li>
+<li><strong>Severity Analysis</strong> (5 min): Click several drugs and categorize their interactions by severity. Are severe interactions more common between drugs of the same or different therapeutic classes?</li>
+<li><strong>Discussion</strong> (5 min): A patient is prescribed 5 medications. How would you use this network to assess their polypharmacy risk? What strategies could reduce the risk?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What factors make a drug-drug interaction "severe" versus "mild"?</li>
+<li>Why are drugs with many interactions (hub nodes) particularly important in clinical decision support?</li>
+<li>How could a DDI network be integrated into electronic health records to prevent adverse events?</li>
+<li>What is polypharmacy, and why does the risk of DDIs increase with the number of co-prescribed medications?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Drug_interaction">Drug interaction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Polypharmacy">Polypharmacy — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Adverse_drug_reaction">Adverse drug reaction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pharmacovigilance">Pharmacovigilance — Wikipedia</a></li>
 </ol>
 
 

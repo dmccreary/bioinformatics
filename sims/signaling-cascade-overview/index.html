@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for cell signaling cascade overview.">
+        <meta name="description" content="Interactive vis-network showing the MAPK/ERK signaling cascade as a directed graph from receptor through adaptor, RAF, MEK, ERK to transcription factors, with feedback loops and cellular compartment coloring.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Cell Signaling Cascade Overview - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for cell signaling cascade overview.">
+        <meta property="og:description" content="Interactive vis-network showing the MAPK/ERK signaling cascade as a directed graph from receptor through adaptor, RAF, MEK, ERK to transcription factors, with feedback loops and cellular compartment coloring.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/signaling-cascade-overview/signaling-cascade-overview.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Cell Signaling Cascade Overview - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for cell signaling cascade overview.">
+        <meta name="twitter:description" content="Interactive vis-network showing the MAPK/ERK signaling cascade as a directed graph from receptor through adaptor, RAF, MEK, ERK to transcription factors, with feedback loops and cellular compartment coloring.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/signaling-cascade-overview/signaling-cascade-overview.png">
       
@@ -914,6 +914,30 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathway-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cellular-compartments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cellular Compartments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathway-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cellular-compartments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cellular Compartments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,66 @@
 <h1 id="cell-signaling-cascade-overview">Cell Signaling Cascade Overview</h1>
 <iframe src="main.html" height="570" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Cell Signaling Cascade Overview MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Cell Signaling Cascade Overview MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes the <strong>MAPK/ERK signaling cascade</strong> as a directed graph. The pathway flows from a cell surface receptor through adaptor proteins, kinase cascade (RAF → MEK → ERK), to transcription factors in the nucleus. Feedback loops are shown as curved edges, and nodes are colored by cellular compartment.</p>
+<h3 id="pathway-components">Pathway Components</h3>
+<ul>
+<li><strong>Receptor</strong> (cell membrane) — Receives extracellular signal (e.g., growth factor)</li>
+<li><strong>Adaptor</strong> (cytoplasm) — Bridges receptor to intracellular signaling (e.g., GRB2, SOS)</li>
+<li><strong>RAF → MEK → ERK</strong> (cytoplasm) — Sequential kinase cascade where each kinase phosphorylates and activates the next</li>
+<li><strong>Transcription Factors</strong> (nucleus) — ERK phosphorylates TFs (e.g., JUN, FOS) that activate gene expression</li>
+<li><strong>Feedback loops</strong> — Negative feedback from ERK back to upstream components regulates signal strength</li>
+</ul>
+<h3 id="cellular-compartments">Cellular Compartments</h3>
+<p>Nodes are colored by location: membrane (gray), cytoplasm (blue), and nucleus (green), showing how signals traverse cellular compartments.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Follow the cascade</strong> — Trace the directed edges from receptor to transcription factors</li>
+<li><strong>Identify feedback loops</strong> — Find curved edges that point backward (upstream)</li>
+<li><strong>Hover</strong> for protein names and roles</li>
+<li><strong>Click</strong> nodes to highlight all their connections</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/signaling-cascade-overview/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"570"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of cell signaling and signal transduction</li>
+<li>Concept of kinases and phosphorylation</li>
+<li>Basic knowledge of gene regulation</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Trace the pathway from receptor to transcription factors. How many kinase steps are there? Why is this called a "cascade"?</li>
+<li><strong>Feedback Analysis</strong> (5 min): Identify all feedback loops. Are they positive or negative? What is the biological purpose of negative feedback in signaling?</li>
+<li><strong>Discussion</strong> (5 min): Many cancer drugs target components of the MAPK pathway (e.g., BRAF inhibitors). Using this diagram, predict what would happen if you inhibited MEK. Would the feedback loop compensate?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is signal amplification, and how does the kinase cascade achieve it?</li>
+<li>Why are feedback loops essential for controlling signaling pathway output?</li>
+<li>The BRAF V600E mutation makes BRAF constitutively active. Trace the downstream effects using this cascade diagram.</li>
+<li>How does representing a signaling pathway as a directed graph help identify drug targets?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/MAPK/ERK_pathway">MAPK/ERK pathway — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Signal_transduction">Signal transduction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Kinase">Kinase — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Feedback">Feedback — Wikipedia</a></li>
 </ol>
 
 

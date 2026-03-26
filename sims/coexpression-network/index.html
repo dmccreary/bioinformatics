@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for co-expression network and module detection.">
+        <meta name="description" content="Interactive p5.js gene co-expression network with ~30 genes in 4 modules, edge thickness proportional to correlation, and an adjustable soft-threshold slider.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Co-Expression Network and Module Detection - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for co-expression network and module detection.">
+        <meta property="og:description" content="Interactive p5.js gene co-expression network with ~30 genes in 4 modules, edge thickness proportional to correlation, and an adjustable soft-threshold slider.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/coexpression-network/coexpression-network.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Co-Expression Network and Module Detection - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for co-expression network and module detection.">
+        <meta name="twitter:description" content="Interactive p5.js gene co-expression network with ~30 genes in 4 modules, edge thickness proportional to correlation, and an adjustable soft-threshold slider.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/coexpression-network/coexpression-network.png">
       
@@ -978,6 +978,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#co-expression-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-Expression Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-thresholding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Thresholding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -986,6 +1010,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#co-expression-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Co-Expression Networks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-thresholding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Soft Thresholding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,70 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim simulates a <strong>weighted gene co-expression network</strong> with ~30 genes organized into 4 functional modules. Edge thickness represents the correlation strength between gene pairs, and a <strong>soft-threshold slider</strong> lets students explore how threshold selection affects network topology and module boundaries.</p>
+<h3 id="co-expression-networks">Co-Expression Networks</h3>
+<p>In a co-expression network:</p>
+<ul>
+<li>Each <strong>node</strong> is a gene</li>
+<li>Each <strong>edge</strong> represents correlated expression across samples — genes that go up and down together are connected</li>
+<li><strong>Edge weight</strong> (thickness) reflects the strength of the correlation</li>
+<li><strong>Modules</strong> (color-coded clusters) are groups of tightly co-expressed genes that often share biological function</li>
+</ul>
+<h3 id="soft-thresholding">Soft Thresholding</h3>
+<p>The soft-threshold slider controls which edges are displayed. At low thresholds, many weak correlations appear and the network is dense. At high thresholds, only the strongest correlations survive and modules become clearly separated. This illustrates the core concept of <strong>WGCNA (Weighted Gene Co-expression Network Analysis)</strong> — choosing the right threshold to reveal biologically meaningful modules.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Soft threshold slider</strong> — Adjust to filter edges by correlation strength. Low = dense, noisy network; high = sparse, modular network</li>
+<li><strong>Hover</strong> over nodes to see gene names and module assignments</li>
+<li><strong>Observe modules</strong> — Watch how the four color-coded modules emerge as you increase the threshold</li>
+<li><strong>Compare edge thickness</strong> — Thicker edges indicate stronger co-expression</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Start with a low threshold and observe the dense, hard-to-interpret network</li>
+<li>Slowly increase the threshold and watch modules emerge as weak inter-module edges disappear first</li>
+<li>At high threshold, note that intra-module edges (within a color) survive longer than inter-module edges — this is the basis for module detection</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/coexpression-network/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of gene expression and RNA-seq</li>
+<li>Basic concept of correlation as a measure of co-expression</li>
+<li>Familiarity with network modules/communities</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Set the threshold low and count visible edges. Then increase it gradually. At what threshold do the four modules become clearly distinct?</li>
+<li><strong>Module Analysis</strong> (5 min): At a moderate threshold, identify the four modules by color. Which modules are closest to each other (connected by inter-module edges)? What might this mean biologically?</li>
+<li><strong>Discussion</strong> (5 min): In WGCNA, genes within the same module are assumed to share biological function. Why is this a reasonable assumption? What would it mean if two modules are connected by many inter-module edges?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does an edge in a co-expression network represent, and how is its weight determined?</li>
+<li>Why is threshold selection important in co-expression network analysis?</li>
+<li>How could you use a co-expression network to predict the function of an unknown gene?</li>
+<li>What biological insight does module detection provide that individual gene analysis does not?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Gene_co-expression_network">Gene co-expression network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Weighted_correlation_network_analysis">Weighted correlation network analysis — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gene_expression">Gene expression — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cluster_analysis">Cluster analysis — Wikipedia</a></li>
 </ol>
 
 

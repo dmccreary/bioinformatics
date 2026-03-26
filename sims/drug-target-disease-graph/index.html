@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for drug-target-disease knowledge graph.">
+        <meta name="description" content="Interactive vis-network heterogeneous knowledge graph with drugs (blue circles), protein targets (green diamonds), and diseases (red squares) connected by binds, treats, and associated_with edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Drug-Target-Disease Knowledge Graph - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for drug-target-disease knowledge graph.">
+        <meta property="og:description" content="Interactive vis-network heterogeneous knowledge graph with drugs (blue circles), protein targets (green diamonds), and diseases (red squares) connected by binds, treats, and associated_with edges.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/drug-target-disease-graph/drug-target-disease-graph.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Drug-Target-Disease Knowledge Graph - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for drug-target-disease knowledge graph.">
+        <meta name="twitter:description" content="Interactive vis-network heterogeneous knowledge graph with drugs (blue circles), protein targets (green diamonds), and diseases (red squares) connected by binds, treats, and associated_with edges.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/drug-target-disease-graph/drug-target-disease-graph.png">
       
@@ -1103,6 +1103,39 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types-and-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types and Shapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drug-repurposing-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drug Repurposing Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types-and-shapes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types and Shapes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relationship-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relationship Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drug-repurposing-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Drug Repurposing Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2341,70 @@
 <h1 id="drug-target-disease-knowledge-graph">Drug-Target-Disease Knowledge Graph</h1>
 <iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Drug-Target-Disease Knowledge Graph MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Drug-Target-Disease Knowledge Graph MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>heterogeneous knowledge graph</strong> connecting three entity types: <strong>drugs</strong> (blue circles), <strong>protein targets</strong> (green diamonds), and <strong>diseases</strong> (red squares). Labeled edges show the relationships: drugs "bind" targets, targets are "associated with" diseases, and drugs "treat" diseases.</p>
+<h3 id="node-types-and-shapes">Node Types and Shapes</h3>
+<ul>
+<li><strong>Drugs</strong> (blue circles) — Pharmaceutical compounds</li>
+<li><strong>Protein Targets</strong> (green diamonds) — The molecular targets that drugs act on</li>
+<li><strong>Diseases</strong> (red squares) — Medical conditions</li>
+</ul>
+<h3 id="relationship-types">Relationship Types</h3>
+<ul>
+<li><strong>binds</strong> (drug → target) — The drug physically interacts with the protein</li>
+<li><strong>associated_with</strong> (target → disease) — The protein is genetically or functionally linked to the disease</li>
+<li><strong>treats</strong> (drug → disease) — The drug is used clinically to treat the disease</li>
+</ul>
+<h3 id="drug-repurposing-paths">Drug Repurposing Paths</h3>
+<p>The most interesting patterns are <strong>indirect paths</strong>: a drug binds a target that is associated with a disease the drug was NOT designed to treat. These paths suggest potential drug repurposing opportunities.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any node to highlight all its direct connections and see the path structure</li>
+<li><strong>Hover</strong> for node details</li>
+<li><strong>Trace paths</strong> — Follow Drug → binds → Target → associated_with → Disease to discover drug-target-disease relationships</li>
+<li><strong>Look for triangles</strong> — When a Drug → Target → Disease path also has a direct Drug → treats → Disease edge, this validates the mechanism</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/drug-target-disease-graph/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"550"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of drug mechanisms of action</li>
+<li>Basic knowledge of proteins as drug targets</li>
+<li>Concept of knowledge graphs</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify all three node types by shape and color. Click several drugs and trace their connections to diseases through protein targets.</li>
+<li><strong>Path Analysis</strong> (5 min): Find a drug that binds a target associated with a disease the drug does NOT currently treat. This is a drug repurposing hypothesis. What additional evidence would you need?</li>
+<li><strong>Discussion</strong> (5 min): Why is a knowledge graph more useful for drug discovery than three separate tables of drugs, targets, and diseases?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What are the three node types and three edge types in this knowledge graph?</li>
+<li>How can a Drug → Target → Disease path suggest a drug repurposing opportunity?</li>
+<li>Why might a drug that "binds" a target NOT "treat" the associated disease?</li>
+<li>What databases would you need to build a real drug-target-disease knowledge graph?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Drug_repositioning">Drug repositioning — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Drug_target">Drug target — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_graph">Knowledge graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pharmacology">Pharmacology — Wikipedia</a></li>
 </ol>
 
 

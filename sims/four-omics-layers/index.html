@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for the four omics layers.">
+        <meta name="description" content="Interactive vis-network diagram showing four horizontal omics layers (genomics, transcriptomics, proteomics, metabolomics) with cancer-related genes connected by intra-layer and cross-layer edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="The Four Omics Layers - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for the four omics layers.">
+        <meta property="og:description" content="Interactive vis-network diagram showing four horizontal omics layers (genomics, transcriptomics, proteomics, metabolomics) with cancer-related genes connected by intra-layer and cross-layer edges.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/four-omics-layers/four-omics-layers.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="The Four Omics Layers - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for the four omics layers.">
+        <meta name="twitter:description" content="Interactive vis-network diagram showing four horizontal omics layers (genomics, transcriptomics, proteomics, metabolomics) with cancer-related genes connected by intra-layer and cross-layer edges.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/four-omics-layers/four-omics-layers.png">
       
@@ -1839,6 +1839,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-layer-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Layer Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1847,6 +1880,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2208,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-layer-connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Layer Connections
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2249,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2275,41 +2371,80 @@
 <h1 id="the-four-omics-layers">The Four Omics Layers</h1>
 <iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the The Four Omics Layers MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the The Four Omics Layers MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes the <strong>multi-omics landscape</strong> of cancer biology as a four-tiered force-directed network. Each horizontal layer represents a different omics level, and edges connect molecules both within and across layers to show how genetic information flows from genome to metabolome.</p>
+<h3 id="the-four-layers">The Four Layers</h3>
+<ul>
+<li><strong>Genomics</strong> (blue, bottom) — Gene loci including BRCA1, TP53, EGFR, and MYC, with edges representing co-alteration or co-amplification patterns</li>
+<li><strong>Transcriptomics</strong> (green) — mRNA transcripts and regulatory RNAs like miR-21, with edges for co-expression and regulatory relationships</li>
+<li><strong>Proteomics</strong> (orange) — Protein products and their physical interactions, including key signaling proteins like AKT</li>
+<li><strong>Metabolomics</strong> (red, top) — Small molecules (glucose, glutamine, lactate, ATP) linked by metabolic reactions</li>
+</ul>
+<h3 id="cross-layer-connections">Cross-Layer Connections</h3>
+<p>Vertical edges connecting layers represent the biological processes that link omics levels:</p>
+<ul>
+<li><strong>Gene → mRNA</strong> edges represent transcription</li>
+<li><strong>mRNA → Protein</strong> edges represent translation</li>
+<li><strong>Protein → Metabolite</strong> edges represent enzymatic regulation (e.g., MYC upregulates glutamine metabolism, EGFR stimulates glucose uptake)</li>
+</ul>
+<h3 id="why-this-matters-for-bioinformatics">Why This Matters for Bioinformatics</h3>
+<p>Multi-omics integration is a central challenge in modern bioinformatics. Understanding how mutations at the genomic level propagate through transcription and translation to alter metabolic phenotypes is essential for identifying drug targets, explaining why some mutations have large phenotypic effects, and building predictive models that integrate data across biological scales.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Hover</strong> over any node to see its description in a tooltip — each molecule is annotated with its biological role and clinical significance</li>
+<li><strong>Drag</strong> nodes to rearrange the layout and explore connections</li>
+<li><strong>Scroll</strong> to zoom in on specific layers or regions</li>
+<li><strong>Trace cross-layer paths</strong> — Follow a gene from the genomics layer up through transcription, translation, and metabolic effects to see the full information flow</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Start at EGFR in the genomics layer and trace its path upward: EGFR gene → EGFR mRNA → EGFR protein → glucose uptake. This shows how a single gene amplification can rewire cellular metabolism.</li>
+<li>Find miR-21 in the transcriptomics layer. Notice it suppresses TP53 mRNA — a regulatory relationship that doesn't follow the simple gene → mRNA → protein flow.</li>
+<li>Compare the connectivity of MYC across layers: it is co-amplified with EGFR at the genomic level, co-expressed at the transcript level, and directly upregulates glutamine metabolism at the protein-metabolite interface.</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/four-omics-layers/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"550"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of the central dogma (DNA → RNA → Protein)</li>
+<li>Familiarity with gene expression and protein function</li>
+<li>Basic knowledge of metabolic pathways and small molecules</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Layer Exploration</strong> (5 min): Start at the bottom (genomics) layer. Hover over each node and read its description. Move up through each layer and note how the same gene name appears at different omics levels (e.g., BRCA1 gene, BRCA1 mRNA, BRCA1 protein).</li>
+<li><strong>Cross-Layer Tracing</strong> (5 min): Choose TP53 and trace its full path from gene to protein. Then find all nodes that TP53's protein product interacts with. How does a TP53 mutation potentially affect the proteomics layer?</li>
+<li><strong>Regulatory Complexity</strong> (5 min): Find miR-21 in the transcriptomics layer. This microRNA suppresses TP53 mRNA. Discuss: if miR-21 is overexpressed in a tumor, what happens to p53 protein levels? What downstream effects would you predict?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Name the four omics layers and give one example of a molecule type found at each level.</li>
+<li>Why is multi-omics integration more informative than studying a single omics layer in isolation?</li>
+<li>Trace the path from EGFR gene to glucose metabolism. What does this tell you about the Warburg effect in cancer cells?</li>
+<li>How could a mutation in the TP53 gene affect molecules at the proteomics and metabolomics layers?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Omics">Omics — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multi-omics">Multi-omics — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Warburg_effect_(oncology)">Warburg effect (oncology) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Systems_biology">Systems biology — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Myc">MYC — Wikipedia</a></li>
 </ol>
 
 

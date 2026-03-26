@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for variation graph for a genomic region.">
+        <meta name="description" content="Interactive p5.js directed graph showing a reference path with alternative paths for SNPs, insertions, and deletions, with toggleable read alignments along different paths.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Variation Graph for a Genomic Region - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for variation graph for a genomic region.">
+        <meta property="og:description" content="Interactive p5.js directed graph showing a reference path with alternative paths for SNPs, insertions, and deletions, with toggleable read alignments along different paths.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/variation-graph/variation-graph.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Variation Graph for a Genomic Region - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for variation graph for a genomic region.">
+        <meta name="twitter:description" content="Interactive p5.js directed graph showing a reference path with alternative paths for SNPs, insertions, and deletions, with toggleable read alignments along different paths.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/variation-graph/variation-graph.png">
       
@@ -1881,6 +1881,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-variation-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Variation Graphs?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1889,6 +1913,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-variation-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Variation Graphs?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,75 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes a <strong>variation graph (VG)</strong> — a directed graph that represents a reference genome along with known genetic variants. Instead of a single linear reference sequence, a variation graph encodes multiple alleles as alternative paths through the graph.</p>
+<h3 id="graph-structure">Graph Structure</h3>
+<ul>
+<li><strong>Reference path</strong> — The main path through the graph representing the reference genome sequence</li>
+<li><strong>SNP paths</strong> — Alternative nodes that branch and rejoin, encoding single nucleotide polymorphisms</li>
+<li><strong>Insertion paths</strong> — Extra nodes inserted between reference nodes, encoding insertions</li>
+<li><strong>Deletion paths</strong> — Edges that skip reference nodes, encoding deletions</li>
+<li><strong>Read paths</strong> — Toggleable alignments showing how sequencing reads traverse different paths</li>
+</ul>
+<h3 id="why-variation-graphs">Why Variation Graphs?</h3>
+<p>Traditional linear reference genomes introduce <strong>reference bias</strong> — reads from non-reference alleles may fail to align or align incorrectly. Variation graphs solve this by:</p>
+<ul>
+<li>Representing all known variants as first-class paths</li>
+<li>Allowing reads to align to any path, reducing reference bias</li>
+<li>Enabling genotyping by identifying which paths each read traverses</li>
+<li>Tools: vg, GraphAligner, minigraph</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Examine the graph</strong> — Follow the reference path and identify where alternative paths branch off for SNPs, insertions, and deletions</li>
+<li><strong>Toggle read paths</strong> — Show or hide read alignments to see which paths individual reads traverse</li>
+<li><strong>Identify variants</strong> — Each branching point in the graph represents a known variant site</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Find the SNP site: one path has the reference allele, the other has the alternate allele. Which reads support each allele?</li>
+<li>Find the insertion: extra nodes appear in one path but not the reference. How do reads align through this region?</li>
+<li>Find the deletion: one path skips a reference node. What does this mean for reads from individuals with this deletion?</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/variation-graph/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of reference genomes and genome variants (SNPs, indels)</li>
+<li>Concept of read alignment to a reference</li>
+<li>Basic graph theory (directed graphs, paths)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Trace the reference path through the graph. Identify all variant sites (branching points). Classify each as SNP, insertion, or deletion.</li>
+<li><strong>Read Alignment</strong> (5 min): Toggle on read paths. For each variant site, count how many reads support the reference allele vs. the alternate allele. What genotype would you call?</li>
+<li><strong>Discussion</strong> (5 min): Why does a linear reference genome create bias against non-reference alleles? How do variation graphs solve this problem? Which populations benefit most from variation graphs?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is reference bias in read alignment, and how do variation graphs reduce it?</li>
+<li>How is a SNP represented in a variation graph compared to a VCF file?</li>
+<li>Why are variation graphs particularly important for studying structurally diverse genomic regions (like the MHC locus)?</li>
+<li>A read traverses the reference path at all variant sites. What genotype does this suggest?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Genome_graph">Genome graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Variant_Call_Format">Variant Call Format — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reference_genome">Reference genome — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">Single-nucleotide polymorphism — Wikipedia</a></li>
 </ol>
 
 

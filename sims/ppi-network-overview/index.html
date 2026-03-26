@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for protein interaction network overview.">
+        <meta name="description" content="Interactive p5.js force-directed visualization of a 25-node cancer protein interaction network with hub highlighting, degree-scaled node sizes, and hover details.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Protein Interaction Network Overview - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for protein interaction network overview.">
+        <meta property="og:description" content="Interactive p5.js force-directed visualization of a 25-node cancer protein interaction network with hub highlighting, degree-scaled node sizes, and hover details.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-network-overview/ppi-network-overview.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Protein Interaction Network Overview - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for protein interaction network overview.">
+        <meta name="twitter:description" content="Interactive p5.js force-directed visualization of a 25-node cancer protein interaction network with hub highlighting, degree-scaled node sizes, and hover details.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-network-overview/ppi-network-overview.png">
       
@@ -1629,6 +1629,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteins-included" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proteins Included
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1637,6 +1661,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#proteins-included" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proteins Included
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,80 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes a <strong>25-protein interaction network</strong> built from well-characterized cancer signaling proteins using a p5.js force-directed layout. Proteins are represented as nodes, with edges showing known physical or functional interactions. The force simulation positions tightly connected proteins near each other, revealing the modular structure of cancer signaling.</p>
+<h3 id="proteins-included">Proteins Included</h3>
+<p>The network spans several major cancer signaling pathways:</p>
+<ul>
+<li><strong>TP53 / DNA damage</strong> — TP53, MDM2, BRCA1, ATM, CHEK2</li>
+<li><strong>Cell cycle</strong> — RB1, CDK2, CCND1, E2F1</li>
+<li><strong>PI3K/AKT</strong> — AKT1, PTEN, PIK3CA, EGFR, ERBB2</li>
+<li><strong>MAPK cascade</strong> — SRC, RAF1, BRAF, MAP2K1, MAPK1</li>
+<li><strong>Transcription</strong> — MYC, JUN, FOS</li>
+<li><strong>JAK/STAT</strong> — STAT3, JAK2</li>
+<li><strong>Adaptor</strong> — GRB2</li>
+</ul>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Node size</strong> scales with degree (number of interactions) — larger nodes are more connected</li>
+<li><strong>Hub nodes</strong> (high degree) are highlighted, indicating proteins central to many interactions</li>
+<li><strong>Edges</strong> represent known protein-protein interactions</li>
+<li><strong>Force-directed layout</strong> automatically clusters proteins that share many connections</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Hover</strong> over any node to see its protein name and network metrics</li>
+<li><strong>Observe the layout</strong> — the force simulation clusters pathway members together</li>
+<li><strong>Reset button</strong> — Randomize node positions and watch the force simulation re-organize the network</li>
+<li><strong>Identify hubs</strong> — Find the most connected proteins and consider their biological significance</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Find TP53 — it should be one of the largest nodes with 6 connections. In real biology, TP53 is the most frequently mutated gene in human cancers.</li>
+<li>Locate GRB2 — this adaptor protein bridges receptor tyrosine kinases to downstream signaling cascades, making it a critical network connector.</li>
+<li>Compare pathway clusters — can you visually distinguish the DNA damage pathway from the MAPK cascade based on how the force layout positions them?</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/ppi-network-overview/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"582"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of proteins and their cellular functions</li>
+<li>Basic graph theory (nodes, edges, degree)</li>
+<li>Familiarity with cancer signaling pathways</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Let the force simulation stabilize. Identify the 3 most connected proteins (largest nodes). What do these hub proteins have in common biologically?</li>
+<li><strong>Pathway Identification</strong> (5 min): Try to identify visual clusters that correspond to signaling pathways. Do the TP53/DNA-damage proteins cluster together? Do the MAPK proteins form a recognizable group?</li>
+<li><strong>Hub Analysis</strong> (5 min): If you were designing a cancer drug, which protein(s) would you target based on their network position? Consider: targeting a hub disrupts many pathways, but may cause severe side effects.</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is a "hub" protein in a PPI network, and why are hubs often essential genes?</li>
+<li>Why does the force-directed layout tend to place proteins from the same signaling pathway near each other?</li>
+<li>GRB2 is an adaptor protein with moderate degree but connects receptor tyrosine kinases to downstream signaling. What network metric (other than degree) would capture its importance?</li>
+<li>If you removed TP53 from this network, how many connections would be lost? What does this suggest about TP53's role in cancer?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction">Protein-protein interaction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interactome">Interactome — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/P53">TP53 — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scale-free_network">Scale-free network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_biology">Network biology — Wikipedia</a></li>
 </ol>
 
 

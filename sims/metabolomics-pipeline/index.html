@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for metabolomics to network mapping pipeline.">
+        <meta name="description" content="Interactive p5.js pipeline flowchart stepping through metabolomics analysis from sample preparation through LC-MS/MS, feature extraction, statistical testing, and pathway enrichment.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Metabolomics to Network Mapping Pipeline - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for metabolomics to network mapping pipeline.">
+        <meta property="og:description" content="Interactive p5.js pipeline flowchart stepping through metabolomics analysis from sample preparation through LC-MS/MS, feature extraction, statistical testing, and pathway enrichment.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/metabolomics-pipeline/metabolomics-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Metabolomics to Network Mapping Pipeline - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for metabolomics to network mapping pipeline.">
+        <meta name="twitter:description" content="Interactive p5.js pipeline flowchart stepping through metabolomics analysis from sample preparation through LC-MS/MS, feature extraction, statistical testing, and pathway enrichment.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/metabolomics-pipeline/metabolomics-pipeline.png">
       
@@ -1398,6 +1398,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2309,61 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim walks through the <strong>metabolomics analysis pipeline</strong>, from biological sample preparation through mass spectrometry analysis, computational feature extraction, statistical testing, and pathway enrichment mapping. Each stage includes an icon and description panel.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>Sample Preparation</strong> — Biological samples (blood, tissue, cell lysate) are processed to extract metabolites</li>
+<li><strong>LC-MS/MS</strong> — Liquid chromatography coupled with tandem mass spectrometry separates and identifies metabolites by mass-to-charge ratio</li>
+<li><strong>Feature Extraction</strong> — Raw spectral data is processed into a feature table (metabolite x sample matrix of peak intensities)</li>
+<li><strong>Statistical Testing</strong> — Differential abundance analysis identifies metabolites that differ significantly between conditions</li>
+<li><strong>Pathway Enrichment</strong> — Significant metabolites are mapped onto known metabolic pathways to identify dysregulated pathways</li>
+</ol>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Step button</strong> — Advance through each pipeline stage</li>
+<li><strong>Read descriptions</strong> — Each stage explains what happens, what tools are used, and what the output is</li>
+<li><strong>Follow the data transformation</strong> — Watch how raw biological samples become pathway-level insights</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/metabolomics-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"502"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of metabolites and metabolic pathways</li>
+<li>Concept of mass spectrometry</li>
+<li>Familiarity with statistical hypothesis testing</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all stages. At each, note what the input and output are.</li>
+<li><strong>Method Comparison</strong> (5 min): How is the metabolomics pipeline similar to and different from an RNA-seq pipeline? Both start with biological samples and end with pathway-level insights.</li>
+<li><strong>Discussion</strong> (5 min): Metabolite identification is a major bottleneck — many detected features cannot be matched to known metabolites. How does this affect downstream analysis?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What instrument is used for metabolite detection, and what does it measure?</li>
+<li>What is a feature table in metabolomics, and what does each cell represent?</li>
+<li>How does pathway enrichment analysis help interpret a list of significant metabolites?</li>
+<li>Why is metabolomics considered complementary to genomics and proteomics?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolomics">Metabolomics — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Mass_spectrometry">Mass spectrometry — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Liquid_chromatography%E2%80%93mass_spectrometry">Liquid chromatography-mass spectrometry — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_pathway">Metabolic pathway — Wikipedia</a></li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for disease module in the human interactome.">
+        <meta name="description" content="Interactive vis-network showing a human interactome subset with two overlapping disease modules (asthma and diabetes), toggle controls, and network proximity scoring.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Disease Module in the Human Interactome - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for disease module in the human interactome.">
+        <meta property="og:description" content="Interactive vis-network showing a human interactome subset with two overlapping disease modules (asthma and diabetes), toggle controls, and network proximity scoring.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/disease-module-interactome/disease-module-interactome.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Disease Module in the Human Interactome - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for disease module in the human interactome.">
+        <meta name="twitter:description" content="Interactive vis-network showing a human interactome subset with two overlapping disease modules (asthma and diabetes), toggle controls, and network proximity scoring.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/disease-module-interactome/disease-module-interactome.png">
       
@@ -1062,6 +1062,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-disease-module-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Disease Module Hypothesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1070,6 +1094,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-disease-module-hypothesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Disease Module Hypothesis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2275,41 +2353,79 @@
 <h1 id="disease-module-in-the-human-interactome">Disease Module in the Human Interactome</h1>
 <iframe src="main.html" height="530" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Disease Module in the Human Interactome MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Disease Module in the Human Interactome MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes the <strong>disease module hypothesis</strong> — the idea that genes associated with the same disease tend to cluster together in the human protein-protein interaction network (interactome). Two disease modules (asthma in blue and diabetes in red) are highlighted within a ~30-protein interactome subset, with overlap proteins shown in purple.</p>
+<h3 id="the-disease-module-hypothesis">The Disease Module Hypothesis</h3>
+<p>Proposed by Barabasi and colleagues, this hypothesis states that:</p>
+<ul>
+<li>Disease genes are not randomly scattered across the interactome — they form localized <strong>modules</strong></li>
+<li>The closer two disease modules are in the network, the more likely the diseases share biological mechanisms and comorbidity</li>
+<li><strong>Overlap proteins</strong> (in both modules) suggest shared molecular mechanisms between diseases</li>
+</ul>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Blue nodes</strong> — Proteins associated with asthma</li>
+<li><strong>Red nodes</strong> — Proteins associated with diabetes</li>
+<li><strong>Purple nodes</strong> — Overlap proteins associated with both diseases</li>
+<li><strong>Gray nodes</strong> — Background interactome proteins (not disease-associated)</li>
+<li><strong>Network proximity score</strong> — A metric quantifying how close the two disease modules are</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Toggle disease modules</strong> — Show or hide each disease module to see its proteins highlighted in the interactome</li>
+<li><strong>Hover</strong> over nodes to see protein names and disease associations</li>
+<li><strong>Identify overlap</strong> — Find purple nodes that belong to both disease modules</li>
+<li><strong>Drag and zoom</strong> to explore the network layout</li>
+<li><strong>Read the proximity score</strong> — Low proximity indicates the modules are close (diseases may share mechanisms); high proximity indicates distant modules</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Toggle only asthma ON — observe how its associated proteins cluster together rather than scattering randomly</li>
+<li>Toggle both ON — find the purple overlap proteins and consider what shared biology they might represent</li>
+<li>Look at the network distance between the two modules — are they adjacent or separated by many hops?</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/disease-module-interactome/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"530"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of protein-protein interaction networks</li>
+<li>Basic knowledge of complex diseases and genetic risk factors</li>
+<li>Familiarity with network metrics (degree, distance)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Toggle each disease module on separately. Does each module form a connected cluster, or are its proteins scattered? What does this observation support?</li>
+<li><strong>Overlap Analysis</strong> (5 min): Toggle both modules on. Identify all overlap proteins (purple). Research one of these proteins — is it known to play a role in both diseases?</li>
+<li><strong>Discussion</strong> (5 min): The network proximity between two disease modules can predict disease comorbidity. If asthma and diabetes modules are close, what might this suggest about patients who have both conditions?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is the disease module hypothesis, and what evidence supports it?</li>
+<li>Why do overlap proteins between disease modules suggest shared molecular mechanisms?</li>
+<li>How could network proximity between disease modules be used to predict drug repurposing opportunities?</li>
+<li>If a newly discovered disease gene is adjacent to an existing disease module in the interactome, what would you predict about its function?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Disease_module">Disease module — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Interactome">Interactome — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_medicine">Network medicine — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Comorbidity">Comorbidity — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Albert-L%C3%A1szl%C3%B3_Barab%C3%A1si">Albert-Laszlo Barabasi — Wikipedia</a></li>
 </ol>
 
 

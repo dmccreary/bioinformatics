@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for louvain vs. leiden community detection.">
+        <meta name="description" content="Side-by-side comparison of Louvain and Leiden community detection algorithms on a 20-node graph, demonstrating how Leiden's refinement phase fixes disconnected communities that Louvain can produce.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Louvain vs. Leiden Community Detection - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for louvain vs. leiden community detection.">
+        <meta property="og:description" content="Side-by-side comparison of Louvain and Leiden community detection algorithms on a 20-node graph, demonstrating how Leiden's refinement phase fixes disconnected communities that Louvain can produce.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/louvain-vs-leiden/louvain-vs-leiden.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Louvain vs. Leiden Community Detection - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for louvain vs. leiden community detection.">
+        <meta name="twitter:description" content="Side-by-side comparison of Louvain and Leiden community detection algorithms on a 20-node graph, demonstrating how Leiden's refinement phase fixes disconnected communities that Louvain can produce.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/louvain-vs-leiden/louvain-vs-leiden.png">
       
@@ -1377,6 +1377,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Graph
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algorithm-phases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algorithm Phases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2345,75 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim provides a <strong>side-by-side comparison</strong> of the Louvain and Leiden community detection algorithms on the same 20-node graph. It demonstrates a well-known flaw in Louvain — the tendency to produce <strong>disconnected communities</strong> — and shows how Leiden's refinement phase fixes this problem.</p>
+<h3 id="the-graph">The Graph</h3>
+<p>A 20-node graph with 3 natural communities:
+- <strong>Community 1</strong> (7 nodes, top-left) — Densely connected cluster
+- <strong>Community 2</strong> (6 nodes, top-right) — Contains two sub-clusters connected by a bridge
+- <strong>Community 3</strong> (7 nodes, bottom) — Dense cluster with moderate inter-community connections</p>
+<h3 id="algorithm-phases">Algorithm Phases</h3>
+<p>Step through four phases to see how each algorithm behaves:</p>
+<ol>
+<li><strong>Initial Graph</strong> — All nodes uncolored. Both algorithms start with each node in its own community.</li>
+<li><strong>Local Moving</strong> — Nodes are greedily moved to the neighboring community that maximizes modularity. Louvain and Leiden differ in node processing order.</li>
+<li><strong>Community Result</strong> — Louvain incorrectly merges nodes 7-8 into Community 1 (blue), leaving them disconnected from the rest of their natural community. Leiden keeps Community 2 intact (orange).</li>
+<li><strong>Leiden Refinement</strong> — Leiden adds a refinement phase that checks each community for internal connectivity. Disconnected sub-communities are split and re-assigned, guaranteeing well-connected results.</li>
+</ol>
+<h3 id="why-this-matters-for-bioinformatics">Why This Matters for Bioinformatics</h3>
+<p>Community detection is widely used in biological network analysis:
+- Identifying <strong>protein complexes</strong> in PPI networks
+- Finding <strong>co-expressed gene modules</strong> in expression data
+- Detecting <strong>cell type clusters</strong> in scRNA-seq analysis (Leiden is the default in Scanpy)</p>
+<p>Leiden is now preferred over Louvain in most bioinformatics tools because it guarantees connected communities while being equally fast.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Next Phase button</strong> — Step through the four algorithm phases, observing the changes on both the Louvain (left) and Leiden (right) sides</li>
+<li><strong>Reset button</strong> — Return to the initial graph state</li>
+<li><strong>Compare sides</strong> — At each phase, compare how nodes are colored on the left (Louvain) vs. right (Leiden)</li>
+<li><strong>Look for the flaw</strong> — In Phase 3, find the disconnected nodes in Louvain's blue community that are not directly connected to the rest of the blue cluster</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/louvain-vs-leiden/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of graphs, communities, and clustering</li>
+<li>Concept of modularity as a measure of community quality</li>
+<li>Familiarity with biological networks (PPI, co-expression)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all four phases. At Phase 3, identify which nodes Louvain misassigned. Verify that these nodes are disconnected from the rest of their assigned community by tracing edges.</li>
+<li><strong>Guided Practice</strong> (5 min): Reset and step through again. At each phase, explain what the algorithm is doing. Why does Louvain's greedy approach lead to the disconnected community? How does Leiden's refinement fix it?</li>
+<li><strong>Discussion</strong> (5 min): Scanpy (the standard scRNA-seq analysis tool) switched from Louvain to Leiden as its default clustering algorithm. Given what you've seen in this simulation, why might disconnected communities be particularly problematic for identifying cell types?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is the Louvain algorithm's known flaw, and what causes it?</li>
+<li>How does the Leiden algorithm's refinement phase fix this problem?</li>
+<li>Why is it important that detected communities be internally connected in biological network analysis?</li>
+<li>Both algorithms optimize modularity. What does modularity measure, and why is it a useful objective for community detection?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Louvain_method">Louvain method — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Leiden_algorithm">Leiden algorithm — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Community_structure">Community structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Modularity_(networks)">Modularity (networks) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Biological_network#Network_analysis">Network analysis in systems biology — Wikipedia</a></li>
 </ol>
 
 

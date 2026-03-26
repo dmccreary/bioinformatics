@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for overview of a metabolic network.">
+        <meta name="description" content="Interactive vis-network visualization of a metabolic network with hub metabolites (ATP, NADH, pyruvate) scaled by connectivity, pathway clusters color-coded, and click-to-highlight pathway tracing.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Overview of a Metabolic Network - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for overview of a metabolic network.">
+        <meta property="og:description" content="Interactive vis-network visualization of a metabolic network with hub metabolites (ATP, NADH, pyruvate) scaled by connectivity, pathway clusters color-coded, and click-to-highlight pathway tracing.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/metabolic-network-overview/metabolic-network-overview.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Overview of a Metabolic Network - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for overview of a metabolic network.">
+        <meta name="twitter:description" content="Interactive vis-network visualization of a metabolic network with hub metabolites (ATP, NADH, pyruvate) scaled by connectivity, pathway clusters color-coded, and click-to-highlight pathway tracing.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/metabolic-network-overview/metabolic-network-overview.png">
       
@@ -1524,6 +1524,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hub-metabolites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hub Metabolites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hub-metabolites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hub Metabolites
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,63 @@
 <h1 id="overview-of-a-metabolic-network">Overview of a Metabolic Network</h1>
 <iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Overview of a Metabolic Network MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Overview of a Metabolic Network MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>metabolic network</strong> where metabolites are nodes and reactions are edges. Hub metabolites like ATP, NADH, and pyruvate appear as large nodes reflecting their high connectivity. Different metabolic pathways are color-coded, and clicking a pathway highlights its constituent metabolites and reactions.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Node size</strong> scales with degree — highly connected metabolites (currency metabolites) are larger</li>
+<li><strong>Pathway colors</strong> — Each metabolic pathway cluster is assigned a distinct color (glycolysis, TCA cycle, pentose phosphate, etc.)</li>
+<li><strong>Click to highlight</strong> — Click any node or pathway label to highlight connected components</li>
+</ul>
+<h3 id="hub-metabolites">Hub Metabolites</h3>
+<p>Currency metabolites like ATP, NADH, CoA, and water participate in hundreds of reactions. Their high connectivity makes them hubs in the network, but their ubiquity means they often need special treatment in network analysis to avoid trivially connecting all pathways.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any metabolite to highlight its connected reactions and pathway</li>
+<li><strong>Hover</strong> for metabolite names and pathway assignments</li>
+<li><strong>Drag and zoom</strong> to explore the network</li>
+<li><strong>Identify hubs</strong> — Find the largest nodes (most connected metabolites)</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/metabolic-network-overview/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"550"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of metabolic pathways (glycolysis, TCA cycle)</li>
+<li>Basic knowledge of enzymes and metabolites</li>
+<li>Concept of network hubs</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify the 3 largest hub metabolites. Why are these molecules so highly connected?</li>
+<li><strong>Pathway Tracing</strong> (5 min): Click to highlight glycolysis. Trace the pathway from glucose to pyruvate. How many intermediate metabolites are involved?</li>
+<li><strong>Discussion</strong> (5 min): Should hub metabolites like ATP and water be included or removed from metabolic network analysis? What are the arguments for each approach?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is a currency metabolite, and why does it act as a hub in a metabolic network?</li>
+<li>How does the network view of metabolism differ from the traditional linear pathway diagram?</li>
+<li>Why might removing water and ATP from the network reveal more biologically meaningful connections?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_network">Metabolic network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_pathway">Metabolic pathway — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Glycolysis">Glycolysis — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Citric_acid_cycle">Citric acid cycle — Wikipedia</a></li>
 </ol>
 
 

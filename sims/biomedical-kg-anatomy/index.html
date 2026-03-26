@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for anatomy of a biomedical knowledge graph.">
+        <meta name="description" content="Interactive vis-network showing a heterogeneous biomedical knowledge graph with genes, diseases, drugs, phenotypes, and GO terms connected by labeled relationship edges.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Anatomy of a Biomedical Knowledge Graph - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for anatomy of a biomedical knowledge graph.">
+        <meta property="og:description" content="Interactive vis-network showing a heterogeneous biomedical knowledge graph with genes, diseases, drugs, phenotypes, and GO terms connected by labeled relationship edges.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/biomedical-kg-anatomy/biomedical-kg-anatomy.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Anatomy of a Biomedical Knowledge Graph - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for anatomy of a biomedical knowledge graph.">
+        <meta name="twitter:description" content="Interactive vis-network showing a heterogeneous biomedical knowledge graph with genes, diseases, drugs, phenotypes, and GO terms connected by labeled relationship edges.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/biomedical-kg-anatomy/biomedical-kg-anatomy.png">
       
@@ -810,6 +810,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-types-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Types (Relationships)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -818,6 +851,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2208,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#node-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edge-types-relationships" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edge Types (Relationships)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2249,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-exploration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Exploration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2275,41 +2371,82 @@
 <h1 id="anatomy-of-a-biomedical-knowledge-graph">Anatomy of a Biomedical Knowledge Graph</h1>
 <iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Anatomy of a Biomedical Knowledge Graph MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Anatomy of a Biomedical Knowledge Graph MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>heterogeneous biomedical knowledge graph</strong> — a graph where nodes and edges have different types. Students can explore how genes, diseases, drugs, phenotypes, and Gene Ontology (GO) terms are interconnected through typed, labeled relationships.</p>
+<h3 id="node-types">Node Types</h3>
+<ul>
+<li><strong>Genes</strong> (blue) — Gene/protein entities (e.g., BRCA1, TP53, EGFR)</li>
+<li><strong>Diseases</strong> (red) — Disease entities (e.g., breast cancer, lung cancer)</li>
+<li><strong>Drugs</strong> (green) — Pharmaceutical compounds (e.g., tamoxifen, erlotinib)</li>
+<li><strong>Phenotypes</strong> (orange) — Observable characteristics (e.g., tumor growth, inflammation)</li>
+<li><strong>GO Terms</strong> (purple) — Gene Ontology functional annotations</li>
+</ul>
+<h3 id="edge-types-relationships">Edge Types (Relationships)</h3>
+<ul>
+<li><strong>gene–disease</strong>: "associated_with" — a gene is linked to a disease</li>
+<li><strong>drug–gene</strong>: "targets" — a drug acts on a gene/protein</li>
+<li><strong>drug–disease</strong>: "treats" — a drug is used to treat a disease</li>
+<li><strong>gene–phenotype</strong>: "causes" — a gene mutation causes a phenotype</li>
+<li><strong>gene–GO</strong>: "annotated_with" — a gene has a functional annotation</li>
+</ul>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Biomedical knowledge graphs power drug repurposing, disease gene discovery, and clinical decision support. Understanding their structure is essential for bioinformaticians working with graph databases and machine learning on biological knowledge.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> any node to see its details and all connected relationships</li>
+<li><strong>Hover</strong> over edges to see the relationship type</li>
+<li><strong>Drag</strong> nodes to explore the graph layout</li>
+<li><strong>Zoom</strong> to focus on specific regions of the graph</li>
+<li><strong>Trace paths</strong> — Follow multi-hop paths like Drug → targets → Gene → associated_with → Disease to understand drug mechanisms</li>
+</ol>
+<h3 id="suggested-exploration">Suggested Exploration</h3>
+<ul>
+<li>Find a drug node and trace its path: which gene does it target, and what diseases is that gene associated with?</li>
+<li>Find a gene connected to both a disease and a GO term — the GO term helps explain <em>why</em> the gene is associated with the disease</li>
+<li>Look for triangles: Drug → targets → Gene → associated_with → Disease. Does the drug also have a direct "treats" edge to that disease?</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/biomedical-kg-anatomy/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"560"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of genes, proteins, and their roles in disease</li>
+<li>Basic graph theory (nodes, edges, types)</li>
+<li>Concept of knowledge representation</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Identify all five node types by color. For each type, find one example and read its details. How many relationships does each node have?</li>
+<li><strong>Path Tracing</strong> (5 min): Find a drug and trace its path to a disease through a gene target. Write out the full path using the format: Drug → targets → Gene → associated_with → Disease.</li>
+<li><strong>Discussion</strong> (5 min): Drug repurposing uses knowledge graphs to find existing drugs that might treat new diseases. How could you use this graph to identify a drug repurposing candidate? What kind of path would you look for?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What makes a knowledge graph "heterogeneous" compared to a simple network?</li>
+<li>Why are labeled edges important in a biomedical knowledge graph? Give an example of two edges that connect the same node types but have different meanings.</li>
+<li>How could a bioinformatician use a knowledge graph to predict new gene-disease associations?</li>
+<li>What is the difference between the "targets" and "treats" relationships in this graph?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_graph">Knowledge graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Biomedical_informatics">Biomedical informatics — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Drug_repositioning">Drug repurposing — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gene_Ontology">Gene Ontology — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_database">Graph database — Wikipedia</a></li>
 </ol>
 
 

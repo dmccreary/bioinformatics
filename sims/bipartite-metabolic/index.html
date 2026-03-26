@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for bipartite graph of a metabolic sub-network.">
+        <meta name="description" content="Interactive p5.js bipartite layout with enzymes on the left and metabolites on the right, showing how enzymes connect substrates to products in a glycolysis sub-network.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Bipartite Graph of a Metabolic Sub-network - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for bipartite graph of a metabolic sub-network.">
+        <meta property="og:description" content="Interactive p5.js bipartite layout with enzymes on the left and metabolites on the right, showing how enzymes connect substrates to products in a glycolysis sub-network.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic/bipartite-metabolic.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Bipartite Graph of a Metabolic Sub-network - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for bipartite graph of a metabolic sub-network.">
+        <meta name="twitter:description" content="Interactive p5.js bipartite layout with enzymes on the left and metabolites on the right, showing how enzymes connect substrates to products in a glycolysis sub-network.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic/bipartite-metabolic.png">
       
@@ -872,6 +872,30 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-column-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Column Layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Layout?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#two-column-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two-Column Layout
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Layout?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2327,60 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>glycolysis sub-network</strong> as a bipartite graph with enzymes (circles, teal) arranged on the left and metabolites (squares, orange) on the right. Hovering over any node highlights its connected edges and partner nodes, making it easy to trace which enzymes act on which metabolites.</p>
+<h3 id="two-column-layout">Two-Column Layout</h3>
+<ul>
+<li><strong>Left column (Enzymes)</strong> — The catalysts that drive each reaction (hexokinase, phosphofructokinase, pyruvate kinase, etc.)</li>
+<li><strong>Right column (Metabolites)</strong> — The substrates and products (glucose, glucose-6-phosphate, fructose-6-phosphate, pyruvate, etc.)</li>
+<li><strong>Edges</strong> connect each enzyme to its substrates (consumed) and products (produced)</li>
+</ul>
+<h3 id="why-this-layout">Why This Layout?</h3>
+<p>The two-column bipartite layout makes the enzyme-metabolite relationships immediately visible. You can quickly see which enzymes share substrates, which metabolites are produced by multiple enzymes, and how the pathway flows from glucose at the top to pyruvate at the bottom.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Hover</strong> over any enzyme or metabolite to highlight its connections — connected edges and partner nodes light up</li>
+<li><strong>Trace the pathway</strong> — Follow from glucose (top right) through connected enzymes down to pyruvate (bottom right)</li>
+<li><strong>Identify shared metabolites</strong> — Find metabolites connected to multiple enzymes, indicating branch points or shared intermediates</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/bipartite-metabolic/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic knowledge of glycolysis as a metabolic pathway</li>
+<li>Understanding of enzyme-substrate relationships</li>
+<li>Concept of bipartite graphs</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (4 min): Hover over each enzyme in order from top to bottom. For each, identify its substrate(s) and product(s). This reconstructs the glycolysis pathway from graph structure.</li>
+<li><strong>Guided Practice</strong> (4 min): Find ATP in the metabolites column. Which enzymes consume ATP? Which produce it? What does this tell you about the energy balance of glycolysis?</li>
+<li><strong>Discussion</strong> (4 min): If you removed hexokinase (the first enzyme) from this graph, what would happen to the downstream metabolites? How does this illustrate the concept of metabolic flux?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>In this bipartite layout, why are enzymes and metabolites placed in separate columns?</li>
+<li>Which metabolite in glycolysis is connected to the most enzymes? What does this suggest about its role?</li>
+<li>How would you identify a rate-limiting enzyme from the graph structure alone?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Glycolysis">Glycolysis — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bipartite_graph">Bipartite graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Enzyme">Enzyme — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_pathway">Metabolic pathway — Wikipedia</a></li>
 </ol>
 
 

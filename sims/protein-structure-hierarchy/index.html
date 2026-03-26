@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta name="description" content="Interactive four-panel display showing the four levels of protein structure with toggle buttons to view one level at a time, including descriptions and visual representations.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Protein Structure Hierarchy - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta property="og:description" content="Interactive four-panel display showing the four levels of protein structure with toggle buttons to view one level at a time, including descriptions and visual representations.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/protein-structure-hierarchy/protein-structure-hierarchy.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Protein Structure Hierarchy - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for protein structure hierarchy.">
+        <meta name="twitter:description" content="Interactive four-panel display showing the four levels of protein structure with toggle buttons to view one level at a time, including descriptions and visual representations.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/protein-structure-hierarchy/protein-structure-hierarchy.png">
       
@@ -1692,6 +1692,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-four-levels" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Four Levels
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2309,57 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>four levels of protein structure</strong> (primary, secondary, tertiary, quaternary) with toggle buttons that let students focus on one level at a time. Each level includes a visual representation and a description of the structures and stabilizing forces involved.</p>
+<h3 id="the-four-levels">The Four Levels</h3>
+<ul>
+<li><strong>Primary</strong> — The linear amino acid sequence, linked by peptide bonds</li>
+<li><strong>Secondary</strong> — Local folding patterns (alpha helices and beta sheets) stabilized by backbone hydrogen bonds</li>
+<li><strong>Tertiary</strong> — The 3D fold of a single polypeptide chain, stabilized by side-chain interactions</li>
+<li><strong>Quaternary</strong> — Multi-subunit complexes formed by the association of multiple polypeptide chains</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Toggle buttons</strong> — Click to show one structural level at a time</li>
+<li><strong>Read descriptions</strong> — Each level explains the structures, stabilizing forces, and associated data formats</li>
+<li><strong>Compare levels</strong> — Switch between levels to understand how each builds on the previous one</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/protein-structure-hierarchy/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Knowledge of amino acids and peptide bonds</li>
+<li>Understanding of molecular interactions (hydrogen bonds, hydrophobic effect)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (4 min): Toggle through each level and note the key stabilizing forces.</li>
+<li><strong>Guided Practice</strong> (4 min): For each level, name one bioinformatics tool or database that works with data at that level.</li>
+<li><strong>Assessment</strong> (4 min): Answer the questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What stabilizing forces are unique to tertiary structure that are not present in secondary structure?</li>
+<li>Why does primary structure determine all higher levels of structure?</li>
+<li>Not all proteins have quaternary structure. Give an example of a protein that does and one that does not.</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_structure">Protein structure — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Alpha_helix">Alpha helix — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Beta_sheet">Beta sheet — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_quaternary_structure">Protein quaternary structure — Wikipedia</a></li>
 </ol>
 
 

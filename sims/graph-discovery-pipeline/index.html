@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for graph-based discovery pipeline.">
+        <meta name="description" content="Interactive vis-network DAG showing the end-to-end pipeline from data acquisition through graph construction, analysis, machine learning, visualization, and interpretation.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Graph-Based Discovery Pipeline - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for graph-based discovery pipeline.">
+        <meta property="og:description" content="Interactive vis-network DAG showing the end-to-end pipeline from data acquisition through graph construction, analysis, machine learning, visualization, and interpretation.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/graph-discovery-pipeline/graph-discovery-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Graph-Based Discovery Pipeline - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for graph-based discovery pipeline.">
+        <meta name="twitter:description" content="Interactive vis-network DAG showing the end-to-end pipeline from data acquisition through graph construction, analysis, machine learning, visualization, and interpretation.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/graph-discovery-pipeline/graph-discovery-pipeline.png">
       
@@ -1272,6 +1272,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2305,66 @@
 <h1 id="graph-based-discovery-pipeline">Graph-Based Discovery Pipeline</h1>
 <iframe src="main.html" height="470" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Graph-Based Discovery Pipeline MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Graph-Based Discovery Pipeline MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim visualizes the <strong>end-to-end pipeline for graph-based biological discovery</strong> as a directed acyclic graph (DAG). Each node represents a major stage, from raw data acquisition through graph construction, computational analysis, machine learning, visualization, interpretation, and communication of results.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>Data Acquisition</strong> — Retrieve biological data from databases (STRING, KEGG, UniProt, PDB)</li>
+<li><strong>Data Wrangling</strong> — Clean, normalize, and integrate heterogeneous data sources</li>
+<li><strong>Graph Construction</strong> — Build the biological network (nodes, edges, properties)</li>
+<li><strong>Graph Analysis</strong> — Compute network metrics (centrality, clustering, community detection)</li>
+<li><strong>Machine Learning</strong> — Apply graph embeddings, GNNs, or link prediction</li>
+<li><strong>Visualization</strong> — Create interactive network visualizations for exploration</li>
+<li><strong>Interpretation</strong> — Connect computational findings to biological hypotheses</li>
+<li><strong>Communication</strong> — Publish results, share data, write papers</li>
+</ol>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> each pipeline stage to see its description, key tools, and example outputs</li>
+<li><strong>Follow the flow</strong> — Trace the path from data to discovery</li>
+<li><strong>Note dependencies</strong> — Some stages branch or merge, reflecting the non-linear nature of research</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/graph-discovery-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"470"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Familiarity with biological databases</li>
+<li>Basic understanding of network analysis</li>
+<li>Concept of computational pipelines</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click each stage and list the key tools or methods used at that stage.</li>
+<li><strong>Pipeline Design</strong> (5 min): You want to discover new drug targets for Alzheimer's disease using a protein interaction network. For each pipeline stage, describe what specific actions you would take.</li>
+<li><strong>Discussion</strong> (5 min): Why is data wrangling often the most time-consuming stage? What challenges arise when integrating data from multiple sources?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>List the eight stages of the graph-based discovery pipeline in order.</li>
+<li>Why is graph construction placed after data wrangling rather than immediately after data acquisition?</li>
+<li>How do machine learning methods (like graph neural networks) add value beyond traditional graph analysis metrics?</li>
+<li>Why is visualization important for biological interpretation of network analysis results?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Network_biology">Network biology — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_wrangling">Data wrangling — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_neural_network">Graph neural network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scholarly_communication">Scientific communication — Wikipedia</a></li>
 </ol>
 
 

@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for graphlet orbits and network comparison.">
+        <meta name="description" content="Interactive p5.js display of 2-5 node graphlet types with a sample PPI network where clicking any node shows its Graphlet Degree Vector (GDV) as a bar chart for topological comparison.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Graphlet Orbits and Network Comparison - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for graphlet orbits and network comparison.">
+        <meta property="og:description" content="Interactive p5.js display of 2-5 node graphlet types with a sample PPI network where clicking any node shows its Graphlet Degree Vector (GDV) as a bar chart for topological comparison.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/graphlet-analysis/graphlet-analysis.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Graphlet Orbits and Network Comparison - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for graphlet orbits and network comparison.">
+        <meta name="twitter:description" content="Interactive p5.js display of 2-5 node graphlet types with a sample PPI network where clicking any node shows its Graphlet Degree Vector (GDV) as a bar chart for topological comparison.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/graphlet-analysis/graphlet-analysis.png">
       
@@ -1293,6 +1293,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-graphlets" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Graphlets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphlet-degree-vector-gdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphlet Degree Vector (GDV)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-are-graphlets" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Are Graphlets?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graphlet-degree-vector-gdv" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphlet Degree Vector (GDV)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2345,71 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim introduces <strong>graphlets</strong> — small connected subgraph patterns (2-5 nodes) that characterize the local topology around each node in a network. Students can view all graphlet types, click nodes in a sample PPI network, and see each node's <strong>Graphlet Degree Vector (GDV)</strong> as a bar chart.</p>
+<h3 id="what-are-graphlets">What Are Graphlets?</h3>
+<p>Graphlets are the non-isomorphic connected subgraphs of a given size. They are the building blocks of network topology:</p>
+<ul>
+<li><strong>2-node graphlet</strong> — A single edge (1 type)</li>
+<li><strong>3-node graphlets</strong> — Path and triangle (2 types)</li>
+<li><strong>4-node graphlets</strong> — Path, star, cycle, tailed triangle, complete graph (6 types)</li>
+<li><strong>5-node graphlets</strong> — 21 distinct patterns</li>
+</ul>
+<h3 id="graphlet-degree-vector-gdv">Graphlet Degree Vector (GDV)</h3>
+<p>Each node's GDV counts how many times it participates in each graphlet orbit position. The GDV provides a much richer topological fingerprint than simple degree, capturing the local network neighborhood structure.</p>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>Graphlet analysis is used in bioinformatics to:</p>
+<ul>
+<li>Compare PPI network topology across species</li>
+<li>Identify functionally similar proteins (similar GDV = similar network role)</li>
+<li>Detect network motifs characteristic of biological networks</li>
+<li>Measure network similarity beyond global statistics</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>View graphlet types</strong> — The reference panel shows all graphlet patterns organized by size</li>
+<li><strong>Click</strong> any node in the PPI network to see its GDV bar chart</li>
+<li><strong>Compare GDVs</strong> — Click different nodes and compare their bar charts to understand how their local topology differs</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/graphlet-analysis/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"602"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of graph theory (nodes, edges, subgraphs)</li>
+<li>Concept of network motifs and patterns</li>
+<li>Familiarity with PPI networks</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Review all graphlet types. Click several nodes in the PPI network and examine their GDV bar charts. Which graphlet orbits are most common?</li>
+<li><strong>Comparison</strong> (5 min): Find two nodes with high degree. Do they have similar GDVs? Now find a hub node and a peripheral node — how do their GDVs differ?</li>
+<li><strong>Discussion</strong> (5 min): Two proteins have identical degree (both connect to 5 partners) but very different GDVs. What does this tell you about their network roles? Could they have different biological functions?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is a graphlet, and how does it differ from a network motif?</li>
+<li>Why does the Graphlet Degree Vector provide more information than simple node degree?</li>
+<li>How could graphlet analysis help identify functionally similar proteins across species?</li>
+<li>If two PPI networks have similar graphlet frequency distributions, what does this suggest about their topology?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Graphlet">Graphlet — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_motif">Network motif — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_isomorphism">Graph isomorphism — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein%E2%80%93protein_interaction">Protein-protein interaction — Wikipedia</a></li>
 </ol>
 
 

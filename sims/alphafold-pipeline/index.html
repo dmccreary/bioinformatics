@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for alphafold prediction pipeline.">
+        <meta name="description" content="Animated step-through flowchart of the AlphaFold protein structure prediction pipeline from amino acid sequence through MSA, Evoformer, structure module, to final 3D model.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="AlphaFold Prediction Pipeline - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for alphafold prediction pipeline.">
+        <meta property="og:description" content="Animated step-through flowchart of the AlphaFold protein structure prediction pipeline from amino acid sequence through MSA, Evoformer, structure module, to final 3D model.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/alphafold-pipeline/alphafold-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="AlphaFold Prediction Pipeline - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for alphafold prediction pipeline.">
+        <meta name="twitter:description" content="Animated step-through flowchart of the AlphaFold protein structure prediction pipeline from amino acid sequence through MSA, Evoformer, structure module, to final 3D model.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/alphafold-pipeline/alphafold-pipeline.png">
       
@@ -788,6 +788,30 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2327,65 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim walks through the <strong>AlphaFold protein structure prediction pipeline</strong> as an animated flowchart. Students step through each stage to understand how DeepMind's AlphaFold2 system predicts 3D protein structure from amino acid sequence alone.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>Amino Acid Sequence</strong> — The input: a protein's primary structure in FASTA format</li>
+<li><strong>Multiple Sequence Alignment (MSA)</strong> — Homologous sequences are retrieved and aligned, revealing co-evolutionary patterns that encode structural constraints</li>
+<li><strong>Evoformer</strong> — A deep neural network processes the MSA and pairwise features through attention layers, learning residue-residue relationships</li>
+<li><strong>Structure Module</strong> — Converts the Evoformer output into 3D atomic coordinates using an iterative refinement process</li>
+<li><strong>3D Model</strong> — The predicted structure with per-residue confidence scores (pLDDT)</li>
+<li><strong>Refinement</strong> — Energy minimization and side-chain optimization to produce the final structure</li>
+<li><strong>Final Predicted Structure</strong> — The output in PDB format, ready for analysis</li>
+</ol>
+<h3 id="why-this-matters">Why This Matters</h3>
+<p>AlphaFold2 solved the protein structure prediction problem in 2020, a 50-year grand challenge in biology. Understanding its pipeline helps students appreciate how machine learning transforms bioinformatics, and why the AlphaFold Protein Structure Database now contains over 200 million predicted structures.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Next / Previous buttons</strong> — Step through the pipeline stages one at a time</li>
+<li><strong>Read the descriptions</strong> — Each stage includes an explanation of what happens and why it matters</li>
+<li><strong>Follow the flow</strong> — Watch how information transforms from 1D sequence to 3D structure across the pipeline</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/alphafold-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"522"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of protein primary and tertiary structure</li>
+<li>Familiarity with sequence alignment concepts</li>
+<li>Basic awareness of machine learning / neural networks</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all stages. At each stage, note what the input is, what processing occurs, and what the output is.</li>
+<li><strong>Guided Practice</strong> (5 min): Go back to the MSA stage. Why are homologous sequences important for structure prediction? What information does co-evolution provide that a single sequence cannot?</li>
+<li><strong>Discussion</strong> (5 min): Before AlphaFold, experimental methods (X-ray crystallography, cryo-EM, NMR) were the only way to determine protein structure. What are the advantages and limitations of computational prediction vs. experimental determination?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is the input to AlphaFold, and what is the output?</li>
+<li>Why is the multiple sequence alignment step critical for prediction accuracy?</li>
+<li>What does the pLDDT confidence score tell you about a predicted structure, and how should you interpret low-confidence regions?</li>
+<li>How has AlphaFold changed the landscape of structural biology and drug discovery?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/AlphaFold">AlphaFold — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_structure_prediction">Protein structure prediction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Multiple_sequence_alignment">Multiple sequence alignment — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/AlphaFold_Protein_Structure_Database">AlphaFold Protein Structure Database — Wikipedia</a></li>
 </ol>
 
 

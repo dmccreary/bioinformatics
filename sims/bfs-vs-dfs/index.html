@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for bfs vs dfs traversal comparison.">
+        <meta name="description" content="Side-by-side animation comparing breadth-first search (queue-based) and depth-first search (stack-based) graph traversal on the same 8-node graph.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="BFS vs DFS Traversal Comparison - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for bfs vs dfs traversal comparison.">
+        <meta property="og:description" content="Side-by-side animation comparing breadth-first search (queue-based) and depth-first search (stack-based) graph traversal on the same 8-node graph.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/bfs-vs-dfs/bfs-vs-dfs.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="BFS vs DFS Traversal Comparison - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for bfs vs dfs traversal comparison.">
+        <meta name="twitter:description" content="Side-by-side animation comparing breadth-first search (queue-based) and depth-first search (stack-based) graph traversal on the same 8-node graph.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/bfs-vs-dfs/bfs-vs-dfs.png">
       
@@ -831,6 +831,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -839,6 +863,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-this-matters-for-bioinformatics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why This Matters for Bioinformatics
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,77 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim runs <strong>breadth-first search (BFS)</strong> and <strong>depth-first search (DFS)</strong> side by side on the same 8-node graph, allowing students to directly compare how each algorithm explores the graph structure. BFS uses a <strong>queue</strong> (blue) and explores level by level, while DFS uses a <strong>stack</strong> (red) and dives deep along each branch before backtracking.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Blue nodes and edges</strong> — Visited by BFS, with numbered visit order</li>
+<li><strong>Red nodes and edges</strong> — Visited by DFS, with numbered visit order</li>
+<li><strong>Gray nodes</strong> — Not yet visited</li>
+<li><strong>Queue display</strong> (BFS) — Shows the current contents of the FIFO queue</li>
+<li><strong>Stack display</strong> (DFS) — Shows the current contents of the LIFO stack</li>
+<li>Both traversals start from the same root node (A) and use the same graph</li>
+</ul>
+<h3 id="why-this-matters-for-bioinformatics">Why This Matters for Bioinformatics</h3>
+<p>Graph traversal algorithms are foundational for analyzing biological networks:</p>
+<ul>
+<li><strong>BFS</strong> finds shortest paths in protein-protein interaction networks, identifying the minimum number of interactions connecting two proteins</li>
+<li><strong>DFS</strong> is used in topological sorting of metabolic pathways and detecting cycles in regulatory networks</li>
+<li>Both algorithms underpin community detection, network motif finding, and pathway enrichment analysis</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Step button</strong> — Advance both BFS and DFS by one step simultaneously, watching how each algorithm chooses the next node differently</li>
+<li><strong>Play button</strong> — Auto-step through the traversal at the speed set by the slider</li>
+<li><strong>Reset button</strong> — Clear all visited nodes and restart both traversals</li>
+<li><strong>Speed slider</strong> — Control the auto-play speed (milliseconds between steps)</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Step through slowly and compare the visit order: BFS visits all neighbors of A before moving deeper, while DFS dives down the leftmost branch first</li>
+<li>Notice when the two algorithms visit the same node at different times — this reveals their fundamentally different exploration strategies</li>
+<li>After both traversals complete, compare the numbered visit orders to understand the tree structures each algorithm implicitly builds</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/bfs-vs-dfs/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"482"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of graphs as nodes (vertices) connected by edges</li>
+<li>Basic knowledge of queues (FIFO) and stacks (LIFO) as data structures</li>
+<li>Familiarity with the concept of graph traversal</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click Step repeatedly and watch both traversals progress. Write down the visit order for BFS and DFS separately. Which algorithm reaches node H first?</li>
+<li><strong>Guided Practice</strong> (5 min): Reset and step through again. After each step, predict which node each algorithm will visit next by looking at the queue (BFS) and stack (DFS) contents. Verify your predictions.</li>
+<li><strong>Discussion</strong> (5 min): In a PPI network, you want to find all proteins within 2 interactions of a target protein. Which algorithm is more appropriate and why? Now consider finding all proteins in a connected component — does the choice of algorithm matter?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What data structure does BFS use, and how does this produce a level-by-level exploration pattern?</li>
+<li>What data structure does DFS use, and why does this cause the algorithm to explore deeply before backtracking?</li>
+<li>If you needed to find the shortest path (fewest edges) between two nodes in an unweighted graph, which algorithm guarantees the optimal solution? Why?</li>
+<li>Give a bioinformatics example where DFS would be more appropriate than BFS.</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Breadth-first_search">Breadth-first search — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Depth-first_search">Depth-first search — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_traversal">Graph traversal — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Biological_network">Biological network — Wikipedia</a></li>
 </ol>
 
 

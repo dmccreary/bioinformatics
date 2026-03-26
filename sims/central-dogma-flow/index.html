@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for central dogma information flow.">
+        <meta name="description" content="Interactive step-through diagram showing the five stages of information flow from DNA to protein, with illustrations and data type annotations at each step.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Central Dogma Information Flow - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for central dogma information flow.">
+        <meta property="og:description" content="Interactive step-through diagram showing the five stages of information flow from DNA to protein, with illustrations and data type annotations at each step.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/central-dogma-flow/central-dogma-flow.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Central Dogma Information Flow - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for central dogma information flow.">
+        <meta name="twitter:description" content="Interactive step-through diagram showing the five stages of information flow from DNA to protein, with illustrations and data type annotations at each step.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/central-dogma-flow/central-dogma-flow.png">
       
@@ -956,6 +956,39 @@
       About This MicroSim
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Five Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bioinformatics-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bioinformatics Data Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2193,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#five-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Five Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bioinformatics-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bioinformatics Data Types
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2345,81 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim provides a guided, step-by-step walkthrough of the <strong>central dogma of molecular biology</strong> — the flow of genetic information from DNA to RNA to Protein. Students advance through five stages using Previous/Next buttons, with each step highlighting the active stage in the flow diagram, displaying an illustrative visualization, and explaining what happens at that stage.</p>
+<h3 id="five-stages">Five Stages</h3>
+<ol>
+<li><strong>DNA in the Nucleus</strong> — The double-stranded DNA molecule stores genetic instructions. A promoter region marks where transcription begins.</li>
+<li><strong>Transcription Begins</strong> — RNA polymerase binds the promoter, unwinds the double helix, and synthesizes a complementary mRNA strand.</li>
+<li><strong>mRNA Processing</strong> — In eukaryotes, the pre-mRNA receives a 5' cap, a poly-A tail, and has its introns spliced out before export to the cytoplasm.</li>
+<li><strong>Translation at the Ribosome</strong> — Ribosomes read mRNA codons while tRNAs deliver matching amino acids, building a polypeptide chain.</li>
+<li><strong>Folded Protein</strong> — The polypeptide folds into its three-dimensional functional structure, assisted by chaperone proteins.</li>
+</ol>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Colored boxes</strong> across the top represent the five stages, connected by arrows</li>
+<li>The <strong>currently active stage</strong> is highlighted with a bold border and full opacity</li>
+<li><strong>Completed stages</strong> show at medium opacity; <strong>future stages</strong> are faded</li>
+<li>A <strong>stage-specific illustration</strong> shows the molecular process (helix, transcription bubble, processed mRNA, ribosome, or folded protein)</li>
+<li>An <strong>info panel</strong> displays the title, description, and associated bioinformatics data type for each step</li>
+</ul>
+<h3 id="bioinformatics-data-types">Bioinformatics Data Types</h3>
+<p>Each step is annotated with the type of data bioinformaticians work with at that level:</p>
+<ul>
+<li>DNA → Genome databases (FASTA, GenBank)</li>
+<li>Transcription → Measured by RNA-seq</li>
+<li>mRNA → Splice variants in GFF3/GTF</li>
+<li>Translation → Proteomics (mass spectrometry)</li>
+<li>Protein → Structure in PDB format</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Previous / Next buttons</strong> — Step through the five stages of the central dogma</li>
+<li><strong>Observe the flow diagram</strong> — Watch how each stage lights up in sequence, showing the directionality of information flow</li>
+<li><strong>Read the info panel</strong> — Each step includes a biological explanation and the bioinformatics data type associated with that stage</li>
+<li><strong>Study the illustration</strong> — The central visualization changes to show the molecular structures and processes at each stage</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/central-dogma-flow/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"422"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
 <p>10-15 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of cells and the nucleus</li>
+<li>Familiarity with DNA as the molecule of heredity</li>
+<li>Introduction to the concept of genes</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (4 min): Step through all five stages. At each step, read the description and note which bioinformatics data type corresponds to that stage. Pay attention to how the illustration changes.</li>
+<li><strong>Guided Practice</strong> (4 min): Go back to Step 2 (Transcription). Identify which enzyme performs transcription, what direction it reads the template strand, and what direction the new mRNA is synthesized. Then advance to Step 3 and list the three processing modifications made to eukaryotic pre-mRNA.</li>
+<li><strong>Concept Mapping</strong> (4 min): On paper, draw the five stages as a linear flow chart. At each stage, write the key enzyme or structure involved and the data format a bioinformatician would use to study it.</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below without looking back at the MicroSim.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What are the three main stages of the central dogma, and what molecule is produced at each stage?</li>
+<li>Why does eukaryotic mRNA require processing before translation, and what are the three modifications?</li>
+<li>Match each central dogma stage to its bioinformatics data type: FASTA, RNA-seq, PDB, mass spectrometry, GFF3.</li>
+<li>Where in the cell does transcription occur in eukaryotes? Where does translation occur? Why is this spatial separation important?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Central_dogma_of_molecular_biology">Central dogma of molecular biology — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transcription_(biology)">Transcription (biology) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Translation_(biology)">Translation (biology) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Post-transcriptional_modification">Post-transcriptional modification — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Protein_folding">Protein folding — Wikipedia</a></li>
 </ol>
 
 

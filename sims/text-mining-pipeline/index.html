@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for text mining pipeline for knowledge graph population.">
+        <meta name="description" content="Interactive vis-network flowchart showing how PubMed abstracts are processed through NER, relation extraction, triple generation, and KG update to populate a biomedical knowledge graph.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Text Mining Pipeline for Knowledge Graph Population - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for text mining pipeline for knowledge graph population.">
+        <meta property="og:description" content="Interactive vis-network flowchart showing how PubMed abstracts are processed through NER, relation extraction, triple generation, and KG update to populate a biomedical knowledge graph.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/text-mining-pipeline/text-mining-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Text Mining Pipeline for Knowledge Graph Population - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for text mining pipeline for knowledge graph population.">
+        <meta name="twitter:description" content="Interactive vis-network flowchart showing how PubMed abstracts are processed through NER, relation extraction, triple generation, and KG update to populate a biomedical knowledge graph.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/text-mining-pipeline/text-mining-pipeline.png">
       
@@ -1818,6 +1818,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Coding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Color Coding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,69 @@
 <h1 id="text-mining-pipeline-for-knowledge-graph-population">Text Mining Pipeline for Knowledge Graph Population</h1>
 <iframe src="main.html" height="520" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Text Mining Pipeline for Knowledge Graph Population MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Text Mining Pipeline for Knowledge Graph Population MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>text mining pipeline</strong> for extracting biomedical knowledge from scientific literature and populating a knowledge graph. The flowchart shows how unstructured text (PubMed abstracts) is transformed into structured knowledge (triples) through NLP processing.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>PubMed Abstracts</strong> (blue) — Raw scientific text from the biomedical literature</li>
+<li><strong>Named Entity Recognition (NER)</strong> (green) — Identify biomedical entities (genes, diseases, drugs, proteins) in the text</li>
+<li><strong>Relation Extraction</strong> (green) — Determine relationships between identified entities (e.g., "drug X inhibits protein Y")</li>
+<li><strong>Triple Generation</strong> (green) — Convert extracted relationships into structured triples (subject, predicate, object)</li>
+<li><strong>KG Update</strong> (purple) — Add new triples to the knowledge graph, resolving entities and deduplicating</li>
+</ol>
+<h3 id="color-coding">Color Coding</h3>
+<ul>
+<li><strong>Blue</strong> — Input data (raw text)</li>
+<li><strong>Green</strong> — NLP processing stages</li>
+<li><strong>Purple</strong> — Knowledge graph output</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> each pipeline stage to see its description, example tools, and sample outputs</li>
+<li><strong>Follow the transformation</strong> — Watch how "BRCA1 is associated with breast cancer" becomes the triple (BRCA1, associated_with, breast_cancer)</li>
+<li><strong>Consider challenges</strong> — Ambiguity, negation, and abbreviations make each NLP stage difficult</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/text-mining-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"520"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Basic understanding of natural language processing</li>
+<li>Concept of knowledge graphs and triples</li>
+<li>Familiarity with biomedical literature (PubMed)</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click each stage and note the key challenges and tools used.</li>
+<li><strong>Manual NER</strong> (5 min): Read this sentence: "Imatinib inhibits BCR-ABL and is used to treat chronic myeloid leukemia." Manually identify all entities and classify them (drug, protein, disease). Extract the relationships.</li>
+<li><strong>Discussion</strong> (5 min): Why is automated text mining necessary despite its imperfections? Consider that PubMed adds &gt;1 million new articles per year.</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is Named Entity Recognition, and why is it the first NLP step?</li>
+<li>What is a triple, and how does it represent a relationship from text?</li>
+<li>Why is entity resolution necessary when adding text-mined triples to an existing knowledge graph?</li>
+<li>What are the main sources of error in biomedical text mining?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Text_mining">Text mining — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Named-entity_recognition">Named-entity recognition — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Relationship_extraction">Relation extraction — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PubMed">PubMed — Wikipedia</a></li>
 </ol>
 
 

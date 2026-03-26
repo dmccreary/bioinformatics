@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for phylogenetic network with reticulation events.">
+        <meta name="description" content="Interactive vis-network phylogenetic network showing tree edges in teal and reticulation (hybridization/HGT) edges in orange, with a toggle to show or hide reticulation events.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Phylogenetic Network with Reticulation Events - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for phylogenetic network with reticulation events.">
+        <meta property="og:description" content="Interactive vis-network phylogenetic network showing tree edges in teal and reticulation (hybridization/HGT) edges in orange, with a toggle to show or hide reticulation events.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/phylogenetic-network/phylogenetic-network.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Phylogenetic Network with Reticulation Events - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for phylogenetic network with reticulation events.">
+        <meta name="twitter:description" content="Interactive vis-network phylogenetic network showing tree edges in teal and reticulation (hybridization/HGT) edges in orange, with a toggle to show or hide reticulation events.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/phylogenetic-network/phylogenetic-network.png">
       
@@ -1566,6 +1566,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tree-vs-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree vs. Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-phylogenetic-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Phylogenetic Networks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tree-vs-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tree vs. Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-phylogenetic-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Phylogenetic Networks?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2323,69 @@
 <h1 id="phylogenetic-network-with-reticulation-events">Phylogenetic Network with Reticulation Events</h1>
 <iframe src="main.html" height="510" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Phylogenetic Network with Reticulation Events MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Phylogenetic Network with Reticulation Events MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>phylogenetic network</strong> — an extension of a phylogenetic tree that can represent <strong>reticulation events</strong> such as hybridization, horizontal gene transfer (HGT), and recombination. Tree edges are shown in teal, while reticulation edges are shown in orange.</p>
+<h3 id="tree-vs-network">Tree vs. Network</h3>
+<ul>
+<li><strong>Teal edges</strong> — Standard tree edges representing vertical inheritance (parent to offspring)</li>
+<li><strong>Orange edges</strong> — Reticulation edges representing non-tree-like events (hybridization, HGT, or recombination)</li>
+<li><strong>Toggle checkbox</strong> — Show or hide reticulation edges to compare the tree-like view with the full network</li>
+</ul>
+<h3 id="why-phylogenetic-networks">Why Phylogenetic Networks?</h3>
+<p>Traditional phylogenetic trees assume strictly bifurcating descent. But many biological processes violate this:</p>
+<ul>
+<li><strong>Horizontal gene transfer</strong> in bacteria transfers genes between unrelated lineages</li>
+<li><strong>Hybridization</strong> in plants and animals creates offspring from two distinct species</li>
+<li><strong>Recombination</strong> in viruses shuffles genetic material between strains</li>
+</ul>
+<p>Phylogenetic networks capture these complex evolutionary histories that trees cannot represent.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Toggle reticulation events</strong> — Use the checkbox to show/hide orange reticulation edges</li>
+<li><strong>Compare views</strong> — With reticulation hidden, you see a standard tree; with reticulation shown, you see the full network</li>
+<li><strong>Hover</strong> over nodes and edges for details about each taxon and evolutionary event</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/phylogenetic-network/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"510"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of phylogenetic trees</li>
+<li>Concept of horizontal gene transfer and hybridization</li>
+<li>Familiarity with evolutionary processes</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): View the network with and without reticulation edges. How many reticulation events are present? Which taxa are involved?</li>
+<li><strong>Tree vs. Network</strong> (5 min): With reticulation hidden, describe the tree topology. Now add reticulation back — how does it change your understanding of the evolutionary relationships?</li>
+<li><strong>Discussion</strong> (5 min): In which organisms are phylogenetic networks most important (bacteria, plants, viruses)? Why are simple trees insufficient for these groups?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What is a reticulation event, and why can't a standard bifurcating tree represent it?</li>
+<li>Give two biological processes that create reticulate evolutionary patterns.</li>
+<li>Why is horizontal gene transfer particularly common in bacteria?</li>
+<li>How does a phylogenetic network change the interpretation of evolutionary relationships compared to a tree?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Phylogenetic_network">Phylogenetic network — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Horizontal_gene_transfer">Horizontal gene transfer — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Hybrid_(biology)">Hybrid (biology) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reticulate_evolution">Reticulate evolution — Wikipedia</a></li>
 </ol>
 
 

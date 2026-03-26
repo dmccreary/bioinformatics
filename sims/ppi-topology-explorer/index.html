@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for ppi network topology explorer.">
+        <meta name="description" content="Interactive dual-panel PPI network where nodes are colored by a selectable topological metric (degree, betweenness, clustering coefficient) alongside a histogram showing the metric distribution.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="PPI Network Topology Explorer - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for ppi network topology explorer.">
+        <meta property="og:description" content="Interactive dual-panel PPI network where nodes are colored by a selectable topological metric (degree, betweenness, clustering coefficient) alongside a histogram showing the metric distribution.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-topology-explorer/ppi-topology-explorer.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="PPI Network Topology Explorer - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for ppi network topology explorer.">
+        <meta name="twitter:description" content="Interactive dual-panel PPI network where nodes are colored by a selectable topological metric (degree, betweenness, clustering coefficient) alongside a histogram showing the metric distribution.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/ppi-topology-explorer/ppi-topology-explorer.png">
       
@@ -1671,6 +1671,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1679,6 +1703,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2199,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available Metrics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2231,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2357,71 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim provides a <strong>topology explorer</strong> for a PPI network. The left panel shows the network with nodes colored by a selectable topological metric, while the right panel displays a histogram of that metric's distribution across all nodes.</p>
+<h3 id="available-metrics">Available Metrics</h3>
+<ul>
+<li><strong>Degree</strong> — Number of direct interaction partners. High-degree nodes are hubs.</li>
+<li><strong>Betweenness Centrality</strong> — How often a node lies on shortest paths between other nodes. High betweenness indicates bridge proteins.</li>
+<li><strong>Clustering Coefficient</strong> — How densely a node's neighbors are interconnected. High clustering indicates membership in a tight protein complex.</li>
+</ul>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Node color</strong> — Gradient from cool (low value) to warm (high value) for the selected metric</li>
+<li><strong>Histogram</strong> — Distribution of the selected metric across all nodes, showing whether the network has a few extreme values or is uniformly distributed</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Metric dropdown</strong> — Switch between degree, betweenness centrality, and clustering coefficient</li>
+<li><strong>Compare colorings</strong> — See how the same network looks different depending on which metric you visualize</li>
+<li><strong>Hover</strong> over nodes to see their name and metric value</li>
+<li><strong>Read the histogram</strong> — Understand the overall distribution of the metric</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Color by degree: identify the hub proteins (warmest colors)</li>
+<li>Switch to betweenness: are the same proteins highlighted, or are there bridge proteins with moderate degree but high betweenness?</li>
+<li>Switch to clustering coefficient: proteins in tight complexes will have high values, while connector proteins will have low values</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/ppi-topology-explorer/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of PPI networks</li>
+<li>Basic graph theory metrics (degree, path length)</li>
+<li>Concept of network centrality</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Switch between all three metrics. For each, identify the top 3 proteins and note whether they overlap.</li>
+<li><strong>Hub vs. Bridge</strong> (5 min): Find a protein that is a hub (high degree) but NOT a bridge (low betweenness). Find a bridge protein (high betweenness) with moderate degree. What biological roles might these different network positions reflect?</li>
+<li><strong>Discussion</strong> (5 min): Which metric would be most useful for identifying essential genes? Drug targets? Members of protein complexes?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does degree centrality measure, and why are high-degree proteins often essential?</li>
+<li>How does betweenness centrality differ from degree, and what biological role do high-betweenness proteins play?</li>
+<li>What does a high clustering coefficient indicate about a protein's network neighborhood?</li>
+<li>Why is it important to analyze multiple topological metrics rather than relying on degree alone?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Centrality">Centrality — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Betweenness_centrality">Betweenness centrality — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Clustering_coefficient">Clustering coefficient — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Network_biology">Network biology — Wikipedia</a></li>
 </ol>
 
 

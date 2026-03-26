@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for volcano plot for differential expression.">
+        <meta name="description" content="Interactive volcano plot of simulated differential gene expression data with adjustable fold-change and p-value thresholds, hover-to-identify gene details, and color-coded significance categories.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Volcano Plot for Differential Expression - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for volcano plot for differential expression.">
+        <meta property="og:description" content="Interactive volcano plot of simulated differential gene expression data with adjustable fold-change and p-value thresholds, hover-to-identify gene details, and color-coded significance categories.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/volcano-plot/volcano-plot.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Volcano Plot for Differential Expression - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for volcano plot for differential expression.">
+        <meta name="twitter:description" content="Interactive volcano plot of simulated differential gene expression data with adjustable fold-change and p-value thresholds, hover-to-identify gene details, and color-coded significance categories.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/volcano-plot/volcano-plot.png">
       
@@ -1902,6 +1902,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-volcano-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Volcano Plot?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulated Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -1910,6 +1943,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2160,6 +2208,39 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-volcano-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      What Is a Volcano Plot?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulated-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simulated Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2168,6 +2249,21 @@
       How to Use
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2279,37 +2375,81 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim displays a <strong>volcano plot</strong> — the standard visualization for differential gene expression analysis. It plots 100 simulated genes with their <strong>log2 fold change</strong> on the x-axis and <strong>-log10 adjusted p-value</strong> on the y-axis, creating the characteristic volcano shape. Students can adjust significance thresholds and hover over individual genes to explore the data.</p>
+<h3 id="what-is-a-volcano-plot">What Is a Volcano Plot?</h3>
+<p>A volcano plot combines two key metrics from a differential expression experiment:</p>
+<ul>
+<li><strong>Log2 fold change (x-axis)</strong> — How much a gene's expression changed between two conditions (e.g., tumor vs. normal). Positive values indicate upregulation; negative values indicate downregulation.</li>
+<li><strong>-log10 p-value (y-axis)</strong> — Statistical significance of the change. Higher values (further from the x-axis) indicate more statistically significant differences.</li>
+</ul>
+<p>Genes in the upper-left and upper-right corners are both statistically significant and biologically meaningful — these are the most interesting candidates for further study.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
+<ul>
+<li><strong>Red points</strong> — Significantly upregulated genes (above p-value threshold and right of fold-change threshold)</li>
+<li><strong>Blue points</strong> — Significantly downregulated genes (above p-value threshold and left of negative fold-change threshold)</li>
+<li><strong>Gray points</strong> — Genes that do not meet both significance criteria</li>
+<li><strong>Vertical dashed lines</strong> — Fold-change thresholds</li>
+<li><strong>Horizontal dashed line</strong> — P-value significance threshold</li>
+<li><strong>Gene labels</strong> appear on hover, showing the gene name, fold change, and p-value</li>
+</ul>
+<h3 id="simulated-data">Simulated Data</h3>
+<p>The 100 genes are drawn from well-known cancer-related genes (TP53, BRCA1, MYC, EGFR, etc.) with simulated expression changes. Approximately 15% are strongly upregulated, 15% strongly downregulated, 20% are borderline, and 50% show no significant change — reflecting typical real-world distributions.</p>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Fold-change threshold slider</strong> — Adjust the minimum absolute log2 fold change required for significance (vertical dashed lines move)</li>
+<li><strong>P-value threshold slider</strong> — Adjust the -log10 p-value cutoff (horizontal dashed line moves)</li>
+<li><strong>Hover</strong> over any gene point to see its name, fold change value, and p-value</li>
+<li><strong>Regenerate button</strong> — Create a new set of 100 simulated genes with different random expression values</li>
+</ol>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
+<ul>
+<li>Start with default thresholds and count the red (up) and blue (down) significant genes</li>
+<li>Increase the fold-change threshold to 2.0 — watch how many genes lose significance. These were statistically significant but had small effect sizes.</li>
+<li>Increase the p-value threshold to 3.0 (-log10 scale, meaning p &lt; 0.001) — now only the most statistically robust genes remain</li>
+<li>Click Regenerate several times and notice how the distribution varies — this illustrates why statistical thresholds matter</li>
+</ul>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
 <p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/volcano-plot/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of gene expression and how it is measured (RNA-seq)</li>
+<li>Basic statistics: p-values and what statistical significance means</li>
+<li>Concept of fold change as a ratio of expression levels between conditions</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): With default thresholds, hover over genes in each region (red, blue, gray). For 3 genes in each category, record the gene name, fold change, and p-value. What distinguishes significant from non-significant genes?</li>
+<li><strong>Threshold Tuning</strong> (5 min): Set a very permissive threshold (FC &gt; 0.5, p &lt; 0.1) and count significant genes. Then set a very strict threshold (FC &gt; 2.0, p &lt; 0.001). How does threshold choice affect the number of candidate genes? Discuss the trade-off between sensitivity and specificity.</li>
+<li><strong>Biological Interpretation</strong> (5 min): Regenerate the data and find the gene with the highest fold change. Is it also the most statistically significant? Find the gene with the highest -log10 p-value. Is it also the most biologically changed? Discuss why both metrics are needed.</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why does a volcano plot use log2 fold change rather than raw fold change on the x-axis?</li>
+<li>A gene has a log2 fold change of 3.0 but a p-value of 0.08. Would you consider this gene differentially expressed? Why or why not?</li>
+<li>Why do volcano plots typically show a "volcano" shape — few points in the upper corners and many near the origin?</li>
+<li>In a drug treatment experiment, you see 200 significantly upregulated genes and 5 significantly downregulated genes. What might this asymmetry suggest about the drug's mechanism?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Volcano_plot_(statistics)">Volcano plot (statistics) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/RNA-Seq">RNA-Seq — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Gene_expression">Gene expression — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Statistical_significance">Statistical significance — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Fold_change">Fold change — Wikipedia</a></li>
 </ol>
 
 

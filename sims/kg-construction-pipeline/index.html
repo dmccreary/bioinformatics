@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive vis-network MicroSim for knowledge graph construction pipeline.">
+        <meta name="description" content="Interactive vis-network flowchart showing the step-by-step process of building a biomedical knowledge graph from source databases through extraction, schema mapping, entity resolution, integration, to a unified KG.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Knowledge Graph Construction Pipeline - Bioinformatics">
       
-        <meta property="og:description" content="Interactive vis-network MicroSim for knowledge graph construction pipeline.">
+        <meta property="og:description" content="Interactive vis-network flowchart showing the step-by-step process of building a biomedical knowledge graph from source databases through extraction, schema mapping, entity resolution, integration, to a unified KG.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/kg-construction-pipeline/kg-construction-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Knowledge Graph Construction Pipeline - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive vis-network MicroSim for knowledge graph construction pipeline.">
+        <meta name="twitter:description" content="Interactive vis-network flowchart showing the step-by-step process of building a biomedical knowledge graph from source databases through extraction, schema mapping, entity resolution, integration, to a unified KG.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/kg-construction-pipeline/kg-construction-pipeline.png">
       
@@ -1335,6 +1335,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2275,41 +2305,64 @@
 <h1 id="knowledge-graph-construction-pipeline">Knowledge Graph Construction Pipeline</h1>
 <iframe src="main.html" height="520" width="100%" scrolling="no"></iframe>
 
-<p><a class="md-button md-button--primary" href="main.html">Run the Knowledge Graph Construction Pipeline MicroSim Fullscreen</a>
-<br>
-<a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
+<p><a class="md-button md-button--primary" href="main.html">Run the Knowledge Graph Construction Pipeline MicroSim Fullscreen</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>knowledge graph construction pipeline</strong> as an interactive flowchart. Students step through the stages of building a biomedical KG from heterogeneous source databases to a unified, queryable graph.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>Source Databases</strong> — Multiple biological databases (UniProt, PDB, KEGG, STRING, OMIM) provide raw data</li>
+<li><strong>Extraction</strong> — Parse and extract entities and relationships from each source format (XML, JSON, flat files)</li>
+<li><strong>Schema Mapping</strong> — Map extracted entities to a common ontology or schema (e.g., map UniProt protein IDs to gene names)</li>
+<li><strong>Entity Resolution</strong> — Identify and merge duplicate entities across sources (the same protein may have different IDs in different databases)</li>
+<li><strong>Integration</strong> — Combine all resolved entities and relationships into a single graph structure</li>
+<li><strong>Unified Knowledge Graph</strong> — The final KG with consistent entity types, relationship labels, and properties</li>
+</ol>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Click</strong> each stage to see its description, challenges, and example tools</li>
+<li><strong>Step through</strong> — Follow the data flow from source databases to unified KG</li>
+<li><strong>Consider the challenges</strong> — Entity resolution and schema mapping are the hardest stages</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/kg-construction-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"520"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of biological databases and their contents</li>
+<li>Concept of knowledge graphs (nodes, edges, types)</li>
+<li>Basic awareness of data integration challenges</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Click each pipeline stage and note the key challenge at each step.</li>
+<li><strong>Entity Resolution Exercise</strong> (5 min): The protein p53 appears as "TP53" in GenBank, "P04637" in UniProt, and "7157" in Entrez Gene. Discuss how entity resolution would merge these into a single node.</li>
+<li><strong>Discussion</strong> (5 min): Why is schema mapping necessary? What happens if two databases use different relationship types for the same biological interaction?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What are the six stages of the KG construction pipeline?</li>
+<li>Why is entity resolution one of the most challenging stages?</li>
+<li>How does a common ontology (like Gene Ontology) help with schema mapping?</li>
+<li>What would happen if you skipped the entity resolution stage?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Knowledge_graph">Knowledge graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Record_linkage">Entity resolution — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Ontology_(information_science)">Ontology (information science) — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Data_integration">Data integration — Wikipedia</a></li>
 </ol>
 
 

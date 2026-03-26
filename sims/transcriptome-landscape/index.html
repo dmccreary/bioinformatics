@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for the transcriptome landscape.">
+        <meta name="description" content="Interactive cell diagram showing the transcriptome from DNA in the nucleus through different RNA types (mRNA, tRNA, rRNA, ncRNA), mRNA export, and alternative splicing, with toggle buttons for each RNA type.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="The Transcriptome Landscape - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for the transcriptome landscape.">
+        <meta property="og:description" content="Interactive cell diagram showing the transcriptome from DNA in the nucleus through different RNA types (mRNA, tRNA, rRNA, ncRNA), mRNA export, and alternative splicing, with toggle buttons for each RNA type.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/transcriptome-landscape/transcriptome-landscape.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="The Transcriptome Landscape - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for the transcriptome landscape.">
+        <meta name="twitter:description" content="Interactive cell diagram showing the transcriptome from DNA in the nucleus through different RNA types (mRNA, tRNA, rRNA, ncRNA), mRNA export, and alternative splicing, with toggle buttons for each RNA type.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/transcriptome-landscape/transcriptome-landscape.png">
       
@@ -1860,6 +1860,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNA Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2184,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rna-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      RNA Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Features
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2327,65 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>transcriptome landscape</strong> — the complete set of RNA molecules in a cell. A cell diagram shows DNA in the nucleus being transcribed into different RNA types, with toggle buttons that let students show or hide each RNA class to understand the diversity of the transcriptome.</p>
+<h3 id="rna-types">RNA Types</h3>
+<ul>
+<li><strong>mRNA (messenger RNA)</strong> — Carries protein-coding instructions from DNA to ribosomes. Only ~2-5% of the transcriptome by species count, but a large fraction by mass.</li>
+<li><strong>tRNA (transfer RNA)</strong> — Adaptor molecules that match codons to amino acids during translation. ~600 genes in the human genome.</li>
+<li><strong>rRNA (ribosomal RNA)</strong> — Structural and catalytic component of ribosomes. Comprises ~80% of total RNA by mass.</li>
+<li><strong>Non-coding RNA (ncRNA)</strong> — Includes miRNA, lncRNA, snRNA, snoRNA. Regulatory functions including gene silencing, splicing, and chromatin modification.</li>
+</ul>
+<h3 id="additional-features">Additional Features</h3>
+<ul>
+<li><strong>mRNA export</strong> — Shows how processed mRNA moves from nucleus to cytoplasm through nuclear pores</li>
+<li><strong>Alternative splicing</strong> — Illustrates how one gene can produce multiple mRNA variants by including different combinations of exons</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Toggle buttons</strong> — Show or hide each RNA type to focus on one class at a time</li>
+<li><strong>Observe locations</strong> — Note where each RNA type is produced and where it functions</li>
+<li><strong>Compare abundance</strong> — Consider why rRNA is 80% of cellular RNA while mRNA is only 2-5%</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/transcriptome-landscape/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"562"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of the central dogma (DNA → RNA → Protein)</li>
+<li>Knowledge of RNA as a single-stranded molecule</li>
+<li>Basic concept of gene expression</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Toggle each RNA type on and off. Where is each type produced? Where does it function? Which types leave the nucleus?</li>
+<li><strong>Abundance Analysis</strong> (5 min): rRNA is 80% of total RNA by mass. If you do RNA-seq without enrichment, what will most of your reads come from? Why do RNA-seq protocols include rRNA depletion or poly-A selection?</li>
+<li><strong>Alternative Splicing</strong> (5 min): One human gene produces an average of 3 mRNA variants through alternative splicing. How does this increase proteome complexity beyond what the gene count suggests?</li>
+<li><strong>Assessment</strong> (3 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Name four types of RNA and describe the function of each.</li>
+<li>Why does the transcriptome change between cell types even though the genome is identical?</li>
+<li>What is the difference between the transcriptome measured by RNA-seq and the total RNA content of a cell?</li>
+<li>How does alternative splicing contribute to protein diversity?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Transcriptome">Transcriptome — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Messenger_RNA">Messenger RNA — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Non-coding_RNA">Non-coding RNA — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Alternative_splicing">Alternative splicing — Wikipedia</a></li>
 </ol>
 
 

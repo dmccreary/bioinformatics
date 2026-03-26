@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for genome assembly pipeline overview.">
+        <meta name="description" content="Animated flowchart stepping through the genome assembly pipeline from raw reads through QC, k-mer counting, de Bruijn graph construction, contig assembly, scaffolding, gap filling, to final assembly.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Genome Assembly Pipeline Overview - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for genome assembly pipeline overview.">
+        <meta property="og:description" content="Animated flowchart stepping through the genome assembly pipeline from raw reads through QC, k-mer counting, de Bruijn graph construction, contig assembly, scaffolding, gap filling, to final assembly.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/genome-assembly-pipeline/genome-assembly-pipeline.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Genome Assembly Pipeline Overview - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for genome assembly pipeline overview.">
+        <meta name="twitter:description" content="Animated flowchart stepping through the genome assembly pipeline from raw reads through QC, k-mer counting, de Bruijn graph construction, contig assembly, scaffolding, gap filling, to final assembly.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/genome-assembly-pipeline/genome-assembly-pipeline.png">
       
@@ -1230,6 +1230,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pipeline-stages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Stages
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2309,64 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim presents the <strong>genome assembly pipeline</strong> as an animated, step-through flowchart. Students advance through each stage to understand how millions of short sequencing reads are transformed into a contiguous genome assembly.</p>
+<h3 id="pipeline-stages">Pipeline Stages</h3>
+<ol>
+<li><strong>Raw Reads</strong> — Millions of short DNA sequences (100-300 bp) from a sequencing machine</li>
+<li><strong>QC Filter</strong> — Remove low-quality reads, trim adapters, filter contaminants</li>
+<li><strong>K-mer Counting</strong> — Count all k-length subsequences to estimate genome size and detect errors</li>
+<li><strong>De Bruijn Graph</strong> — Construct the assembly graph where k-mers define edges between (k-1)-mer nodes</li>
+<li><strong>Contigs</strong> — Traverse the graph to produce contiguous sequences (contigs)</li>
+<li><strong>Scaffolding</strong> — Use paired-end or mate-pair information to order and orient contigs</li>
+<li><strong>Gap Filling</strong> — Fill gaps between scaffolded contigs using overlap information</li>
+<li><strong>Final Assembly</strong> — The completed genome assembly in FASTA format</li>
+</ol>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Step through</strong> — Advance through each pipeline stage to see what processing occurs</li>
+<li><strong>Read descriptions</strong> — Each stage explains the computational methods and tools used</li>
+<li><strong>Follow the data flow</strong> — Understand how raw reads are progressively transformed into a genome</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/genome-assembly-pipeline/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"542"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>15-20 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of DNA sequencing technologies</li>
+<li>Basic concept of k-mers and sequence overlap</li>
+<li>Familiarity with the de Bruijn graph concept</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Step through all stages. At each, note what the input is, what processing occurs, and what the output is.</li>
+<li><strong>Error Handling</strong> (5 min): Sequencing errors create erroneous k-mers. At which pipeline stages are errors detected or corrected? How does k-mer counting help?</li>
+<li><strong>Discussion</strong> (5 min): Repetitive sequences (transposons, tandem repeats) are the main challenge in genome assembly. At which stage(s) do repeats cause problems? How does scaffolding help resolve ambiguities?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>Why is de Bruijn graph construction preferred over overlap-layout-consensus for short-read assembly?</li>
+<li>What is the difference between a contig and a scaffold?</li>
+<li>How does k-mer counting help estimate genome size before assembly?</li>
+<li>Why are long reads (PacBio, Oxford Nanopore) sometimes used alongside short reads to improve assemblies?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Sequence_assembly">Sequence assembly — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/De_Bruijn_graph">De Bruijn graph — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Contig">Contig — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Scaffolding_(bioinformatics)">Scaffolding (bioinformatics) — Wikipedia</a></li>
 </ol>
 
 

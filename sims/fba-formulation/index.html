@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Interactive p5.js MicroSim for flux balance analysis formulation.">
+        <meta name="description" content="Interactive p5.js MicroSim showing a small metabolic network with its stoichiometric matrix, adjustable exchange reaction bounds, and step-through of the linear programming formulation.">
       
       
         <meta name="author" content="Dan McCreary">
@@ -64,7 +64,7 @@
       
         <meta property="og:title" content="Flux Balance Analysis Formulation - Bioinformatics">
       
-        <meta property="og:description" content="Interactive p5.js MicroSim for flux balance analysis formulation.">
+        <meta property="og:description" content="Interactive p5.js MicroSim showing a small metabolic network with its stoichiometric matrix, adjustable exchange reaction bounds, and step-through of the linear programming formulation.">
       
         <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/sims/fba-formulation/fba-formulation.png">
       
@@ -80,7 +80,7 @@
       
         <meta name="twitter:title" content="Flux Balance Analysis Formulation - Bioinformatics">
       
-        <meta name="twitter:description" content="Interactive p5.js MicroSim for flux balance analysis formulation.">
+        <meta name="twitter:description" content="Interactive p5.js MicroSim showing a small metabolic network with its stoichiometric matrix, adjustable exchange reaction bounds, and step-through of the linear programming formulation.">
       
         <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/sims/fba-formulation/fba-formulation.png">
       
@@ -1188,6 +1188,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2160,6 +2175,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2279,37 +2309,62 @@
 <br>
 <a href="https://editor.p5js.org/">Edit in the p5.js Editor</a></p>
 <h2 id="about-this-microsim">About This MicroSim</h2>
-<p>TODO: Describe what this MicroSim demonstrates.</p>
+<p>This MicroSim demonstrates <strong>Flux Balance Analysis (FBA)</strong> — the mathematical framework for predicting metabolic fluxes in genome-scale metabolic models. Students see a small metabolic network alongside its <strong>stoichiometric matrix S</strong>, adjust exchange reaction bounds with sliders, and step through the linear programming formulation.</p>
+<h3 id="key-concepts">Key Concepts</h3>
+<ul>
+<li><strong>Stoichiometric matrix (S)</strong> — Rows are metabolites, columns are reactions. Each entry is the stoichiometric coefficient (negative for substrates, positive for products).</li>
+<li><strong>Steady-state constraint</strong> — <span class="arithmatex">\(S \cdot v = 0\)</span>, where <span class="arithmatex">\(v\)</span> is the flux vector. At steady state, the net production and consumption of each internal metabolite must balance.</li>
+<li><strong>Flux bounds</strong> — Each reaction has upper and lower bounds on its flux (determined by enzyme capacity, thermodynamics, or experimental measurements).</li>
+<li><strong>Objective function</strong> — Typically maximizing biomass production or ATP yield.</li>
+<li><strong>Linear programming</strong> — FBA solves for the flux distribution that maximizes the objective while satisfying stoichiometric and bound constraints.</li>
+</ul>
 <h2 id="how-to-use">How to Use</h2>
-<p>TODO: Describe how students should interact with this MicroSim.</p>
+<ol>
+<li><strong>Exchange reaction sliders</strong> — Adjust the upper and lower bounds on nutrient uptake and product secretion rates</li>
+<li><strong>Step through the LP formulation</strong> — See how the objective function, constraints, and bounds are assembled</li>
+<li><strong>Observe the metabolic network</strong> — See how the network diagram maps to the stoichiometric matrix</li>
+</ol>
 <h2 id="iframe-embed-code">Iframe Embed Code</h2>
-<p>You can add this MicroSim to any web page by adding this to your HTML:</p>
 <div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
 <span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/fba-formulation/main.html"</span>
-        <span class="na">height</span><span class="o">=</span><span class="s">"450px"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"562"</span>
         <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
         <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
 </code></pre></div></td></tr></tbody></table></div>
 <h2 id="lesson-plan">Lesson Plan</h2>
 <h3 id="grade-level">Grade Level</h3>
-<p>9-12 (High School Geometry)</p>
+<p>College introductory bioinformatics</p>
 <h3 id="duration">Duration</h3>
-<p>10-15 minutes</p>
+<p>20-25 minutes</p>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>TODO: List prerequisites.</p>
+<ul>
+<li>Understanding of metabolic reactions and stoichiometry</li>
+<li>Basic concept of steady-state in biological systems</li>
+<li>Familiarity with linear equations and constraints</li>
+</ul>
 <h3 id="activities">Activities</h3>
 <ol>
-<li><strong>Exploration</strong> (5 min): TODO</li>
-<li><strong>Guided Practice</strong> (5 min): TODO</li>
-<li><strong>Assessment</strong> (5 min): TODO</li>
+<li><strong>Exploration</strong> (5 min): Examine the metabolic network and its stoichiometric matrix. Verify that each column of S corresponds to a reaction in the network, with correct signs for substrates and products.</li>
+<li><strong>Bound Manipulation</strong> (5 min): Adjust the glucose uptake bound. What happens to the feasible flux space? What does it mean biologically when you restrict nutrient uptake?</li>
+<li><strong>LP Formulation</strong> (5 min): Step through the formulation. Identify the objective function, the equality constraints (S*v = 0), and the inequality constraints (bounds).</li>
+<li><strong>Discussion</strong> (5 min): FBA predicts optimal flux distributions but assumes cells maximize growth. When might this assumption be wrong?</li>
+<li><strong>Assessment</strong> (5 min): Answer the reflection questions below.</li>
 </ol>
 <h3 id="assessment">Assessment</h3>
-<p>TODO: List assessment criteria.</p>
+<ol>
+<li>What does the steady-state constraint <span class="arithmatex">\(S \cdot v = 0\)</span> mean biologically?</li>
+<li>Why are exchange reactions important in FBA, and what do their bounds represent?</li>
+<li>If you set glucose uptake to zero, what would FBA predict for biomass production?</li>
+<li>What are the limitations of FBA compared to kinetic modeling?</li>
+</ol>
 <h2 id="references">References</h2>
 <ol>
-<li>TODO: Add references.</li>
+<li><a href="https://en.wikipedia.org/wiki/Flux_balance_analysis">Flux balance analysis — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Stoichiometry">Stoichiometry — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Linear_programming">Linear programming — Wikipedia</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Metabolic_network_modelling">Metabolic network modelling — Wikipedia</a></li>
 </ol>
 
 
