@@ -314,4 +314,32 @@ This pipeline illustrates the central promise of network medicine: by integratin
 
 8. **Comorbidity networks reveal hidden relationships between diseases** that can be explained mechanistically through overlapping or proximal disease modules in the interactome.
 
+## Beyond Molecular Networks: Epidemic Contact Graphs
+
+While this chapter focuses on molecular-level disease networks — signaling
+cascades, disease modules, and drug-target interactions — graph-based
+approaches to disease extend well beyond the molecular scale. One compelling
+example is the **epidemic contact graph**, where nodes represent individuals
+in a population and edges represent contacts that may transmit an infectious
+disease.
+
+Although epidemic contact tracing is not directly related to the core
+bioinformatics topics of this textbook, it illustrates how the same graph
+visualization and analysis principles covered throughout this course apply
+to public health and epidemiology. Contact graphs reveal super-spreader
+nodes (high-degree hubs), transmission chains (directed paths), and
+community structure — concepts that parallel hub proteins in PPI networks,
+signaling cascades, and disease modules.
+
+<iframe src="../../sims/epidemic-contact-graph/main.html" height="570" width="100%" scrolling="no"></iframe>
+
+*[View Epidemic Contact Graph MicroSim Fullscreen](../../sims/epidemic-contact-graph/main.html)*
+
+The simulation above models an **SIR (Susceptible-Infected-Recovered)**
+epidemic. Press **Start** to watch the disease spread through the population.
+Red arrows show transmission events, while gray dashed lines show contacts
+that did not result in infection. Adjust the sliders to explore how
+infection probability, contact rate, and recovery time affect outbreak
+dynamics and the estimated basic reproduction number (R0).
+
 [See Annotated References](./references.md)
