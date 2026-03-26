@@ -1,6 +1,9 @@
 ---
 title: Epidemic Contact Graph
 description: Interactive SIR epidemic simulation showing contact tracing as a force-directed network graph with transmission chains over time.
+image: /sims/epidemic-contact-graph/epidemic-contact-graph.png
+og:image: /sims/epidemic-contact-graph/epidemic-contact-graph.png
+twitter:image: /sims/epidemic-contact-graph/epidemic-contact-graph.png
 social:
    cards: false
 quality_score: 0
