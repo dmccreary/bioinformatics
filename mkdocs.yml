@@ -91,25 +91,61 @@ nav:
   
   - MicroSims:
     - List of MicroSims: sims/index.md
+    - AlphaFold Prediction Pipeline: sims/alphafold-pipeline/index.md
+    - Anatomy of a Biomedical Knowledge Graph: sims/biomedical-kg-anatomy/index.md
     - BFS vs DFS Traversal Comparison: sims/bfs-vs-dfs/index.md
     - Biological Database Ecosystem: sims/bio-database-ecosystem/index.md
     - Bipartite Graph of a Metabolic Sub-network: sims/bipartite-metabolic/index.md
+    - Bipartite Metabolic Graph Structure: sims/bipartite-metabolic-graph/index.md
+    - Cell Signaling Cascade Overview: sims/signaling-cascade-overview/index.md
     - Central Dogma and Its Exceptions: sims/central-dogma-exceptions/index.md
     - Central Dogma Information Flow: sims/central-dogma-flow/index.md
+    - Co-Expression Network and Module Detection: sims/coexpression-network/index.md
     - Codon Table Explorer: sims/codon-table-explorer/index.md
+    - Contact Map and Residue Interaction Network: sims/contact-map-rin/index.md
+    - De Bruijn Graph Construction: sims/de-bruijn-graph/index.md
+    - Disease Module in the Human Interactome: sims/disease-module-interactome/index.md
+    - Drug-Drug Interaction Network: sims/drug-drug-interaction-network/index.md
+    - Drug-Target-Disease Knowledge Graph: sims/drug-target-disease-graph/index.md
     - Dynamic Programming Matrix Visualization: sims/dp-alignment-matrix/index.md
     - FASTQ Quality Control Pipeline: sims/fastq-qc-pipeline/index.md
+    - Flux Balance Analysis Formulation: sims/fba-formulation/index.md
     - Gene Tree vs Species Tree Discordance: sims/gene-tree-species-tree/index.md
+    - Genome Assembly Pipeline Overview: sims/genome-assembly-pipeline/index.md
+    - Graph Data Model Design Process: sims/graph-data-model-design/index.md
+    - Graph-Based Discovery Pipeline: sims/graph-discovery-pipeline/index.md
+    - Graphlet Orbits and Network Comparison: sims/graphlet-analysis/index.md
+    - Integrated Knowledge Graph Pipeline: sims/kg-integrated-pipeline/index.md
+    - Knowledge Graph Construction Pipeline: sims/kg-construction-pipeline/index.md
     - Learning Graph Viewer: sims/graph-viewer/index.md
+    - Louvain vs. Leiden Community Detection: sims/louvain-vs-leiden/index.md
+    - Metabolomics to Network Mapping Pipeline: sims/metabolomics-pipeline/index.md
+    - Module Detection in PPI Networks: sims/ppi-module-detection/index.md
+    - Molecular Docking and Protein-Ligand Graph: sims/molecular-docking-graph/index.md
     - Mutation Types and Their Effects on Protein Sequence: sims/mutation-types-explorer/index.md
     - Network Model Comparison: sims/network-models/index.md
+    - Node2Vec Biased Random Walk: sims/node2vec-random-walk/index.md
+    - Overview of a Metabolic Network: sims/metabolic-network-overview/index.md
+    - Patient Similarity Network Construction: sims/patient-similarity-network/index.md
     - Phylogenetic Network with Reticulation Events: sims/phylogenetic-network/index.md
     - PPI Knowledge Graph Schema: sims/ppi-knowledge-graph-schema/index.md
+    - PPI Network Topology Explorer: sims/ppi-topology-explorer/index.md
     - Profile HMM Architecture: sims/profile-hmm-architecture/index.md
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
+    - Protein Interaction Network Overview: sims/ppi-network-overview/index.md
+    - Protein Structure Hierarchy: sims/protein-structure-hierarchy/index.md
     - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
+    - RNA-Seq Pipeline Overview: sims/rnaseq-pipeline/index.md
     - Rooted and Unrooted Phylogenetic Trees: sims/phylogenetic-tree-types/index.md
     - Sequence Similarity Network: sims/sequence-similarity-network/index.md
+    - Single-Cell Clustering and Trajectory: sims/scrna-clustering/index.md
+    - Text Mining Pipeline for Knowledge Graph Population: sims/text-mining-pipeline/index.md
+    - The Four Omics Layers: sims/four-omics-layers/index.md
+    - The Transcriptome Landscape: sims/transcriptome-landscape/index.md
+    - Variation Graph for a Genomic Region: sims/variation-graph/index.md
+    - Volcano Plot for Differential Expression: sims/volcano-plot/index.md
+
+
 
 
 
