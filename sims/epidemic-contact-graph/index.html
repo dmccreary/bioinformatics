@@ -3,19 +3,19 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="description" content="Interactive SIR epidemic simulation showing contact tracing as a force-directed network graph with transmission chains over time.">
       
       
         <meta name="author" content="Dan McCreary">
       
       
-        <link rel="canonical" href="https://dmccreary.github.io/bioinformatics/sims/graph-viewer/">
+        <link rel="canonical" href="https://dmccreary.github.io/bioinformatics/sims/epidemic-contact-graph/">
       
       
-        <link rel="prev" href="../kg-construction-pipeline/">
+        <link rel="prev" href="../drug-target-disease-graph/">
       
       
-        <link rel="next" href="../louvain-vs-leiden/">
+        <link rel="next" href="../dp-alignment-matrix/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -23,7 +23,7 @@
     
     
       
-        <title>Learning Graph Viewer - Bioinformatics</title>
+        <title>Epidemic Contact Graph - Bioinformatics</title>
       
     
     
@@ -62,11 +62,11 @@
       
         <meta property="og:type" content="website">
       
-        <meta property="og:title" content="Learning Graph Viewer - Bioinformatics">
+        <meta property="og:title" content="Epidemic Contact Graph - Bioinformatics">
       
-        <meta property="og:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta property="og:description" content="Interactive SIR epidemic simulation showing contact tracing as a force-directed network graph with transmission chains over time.">
       
-        <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/sims/graph-viewer/index.png">
+        <meta property="og:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/sims/epidemic-contact-graph/index.png">
       
         <meta property="og:image:type" content="image/png">
       
@@ -74,15 +74,15 @@
       
         <meta property="og:image:height" content="630">
       
-        <meta property="og:url" content="https://dmccreary.github.io/bioinformatics/sims/graph-viewer/">
+        <meta property="og:url" content="https://dmccreary.github.io/bioinformatics/sims/epidemic-contact-graph/">
       
         <meta name="twitter:card" content="summary_large_image">
       
-        <meta name="twitter:title" content="Learning Graph Viewer - Bioinformatics">
+        <meta name="twitter:title" content="Epidemic Contact Graph - Bioinformatics">
       
-        <meta name="twitter:description" content="An interactive intelligent textbook for Bioinformatics with a focus on graph analysis.">
+        <meta name="twitter:description" content="Interactive SIR epidemic simulation showing contact tracing as a force-directed network graph with transmission chains over time.">
       
-        <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/sims/graph-viewer/index.png">
+        <meta name="twitter:image" content="https://dmccreary.github.io/bioinformatics/assets/images/social/sims/epidemic-contact-graph/index.png">
       
     
     
@@ -113,7 +113,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#learning-graph-viewer" class="md-skip">
+        <a href="#epidemic-contact-graph" class="md-skip">
           Skip to content
         </a>
       
@@ -148,7 +148,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Learning Graph Viewer
+              Epidemic Contact Graph
             
           </span>
         </div>
@@ -1070,10 +1070,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../epidemic-contact-graph/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Epidemic Contact Graph
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1082,6 +1102,143 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-microsim" class="md-nav__link">
+    <span class="md-ellipsis">
+      About This MicroSim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-graph-over-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Graph Over Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Bar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-illustrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Illustrated
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts Illustrated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sir-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIR Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Tracing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Effects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iframe-embed-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iframe Embed Code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1301,30 +1458,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Learning Graph Viewer
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../graph-viewer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1333,53 +1470,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
-    <span class="md-ellipsis">
-      Features
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-viewer" class="md-nav__link">
-    <span class="md-ellipsis">
-      Using the Viewer
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#graph-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      Graph Structure
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2085,27 +2175,117 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#features" class="md-nav__link">
+  <a href="#about-this-microsim" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      About This MicroSim
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="About This MicroSim">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visual-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visual Encoding
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#using-the-viewer" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#contact-graph-over-time" class="md-nav__link">
     <span class="md-ellipsis">
-      Using the Viewer
+      Contact Graph Over Time
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#timeline-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timeline Bar
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#graph-structure" class="md-nav__link">
+  <a href="#how-to-use" class="md-nav__link">
     <span class="md-ellipsis">
-      Graph Structure
+      How to Use
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Use">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#suggested-experiments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested Experiments
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-concepts-illustrated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Concepts Illustrated
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Concepts Illustrated">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sir-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIR Model
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#contact-tracing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contact Tracing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-effects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Effects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iframe-embed-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iframe Embed Code
     </span>
   </a>
   
@@ -2126,7 +2306,7 @@
                   
 
   
-    <a href="https://github.com/dmccreary/bioinformatics/edit/master/docs/sims/graph-viewer/index.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/dmccreary/bioinformatics/edit/master/docs/sims/epidemic-contact-graph/index.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
     </a>
@@ -2134,44 +2314,80 @@
   
 
 
-<h1 id="learning-graph-viewer">Learning Graph Viewer</h1>
-<p><a class="md-button md-button--primary" href="main.html">Open Learning Graph Viewer Fullscreen</a></p>
-<iframe src="./main.html" width="100%" height="600px" frameborder="0"></iframe>
+<h1 id="epidemic-contact-graph">Epidemic Contact Graph</h1>
+<iframe src="main.html" height="570" width="100%" scrolling="no"></iframe>
 
-<p>This interactive viewer allows you to explore the learning graph for the course.</p>
-<h2 id="features">Features</h2>
+<p><a class="md-button md-button--primary" href="main.html">Run the Epidemic Contact Graph MicroSim Fullscreen</a></p>
+<h2 id="about-this-microsim">About This MicroSim</h2>
+<p>This MicroSim simulates the spread of an infectious disease through a
+population using an <strong>SIR (Susceptible-Infected-Recovered) model</strong> and
+visualizes the contact network as it builds over time. Each node represents
+an individual, and edges appear as contacts occur — making transmission
+chains directly visible in the graph structure.</p>
+<p>The simulation begins with a single <strong>patient zero</strong> (shown in red) and
+progresses day by day. On each day, every infected individual contacts a
+random subset of the population. Each contact with a susceptible person
+has a probability of transmitting the disease. After a set number of days,
+infected individuals recover and become immune.</p>
+<h3 id="visual-encoding">Visual Encoding</h3>
 <ul>
-<li><strong>Search</strong>: Type in the search box to find specific concepts</li>
-<li><strong>Category Filtering</strong>: Use checkboxes to show/hide concept categories</li>
-<li><strong>Interactive Navigation</strong>: Click and drag to explore, scroll to zoom</li>
-<li><strong>Statistics</strong>: View real-time counts of visible nodes and edges</li>
+<li><strong>Blue nodes</strong> — Susceptible individuals who have not yet been infected</li>
+<li><strong>Red nodes</strong> (larger, bold border) — Currently infected individuals</li>
+<li><strong>Green nodes</strong> — Recovered individuals who are now immune</li>
+<li><strong>Red solid arrows</strong> — Contacts where transmission occurred, showing the direction of infection</li>
+<li><strong>Gray dashed lines</strong> — Contacts that did not result in transmission</li>
 </ul>
-<h2 id="using-the-viewer">Using the Viewer</h2>
+<h3 id="contact-graph-over-time">Contact Graph Over Time</h3>
+<p>As the simulation runs, the network grows with new edges each day. This
+reveals the <strong>contact tracing graph</strong> — the complete history of who
+contacted whom and which contacts led to transmission. Hub nodes with
+many outgoing red arrows are <strong>super-spreaders</strong> who infected multiple
+others.</p>
+<h3 id="timeline-bar">Timeline Bar</h3>
+<p>The horizontal bar at the bottom shows the current proportion of the
+population in each state (blue = susceptible, red = infected, green = recovered),
+giving an at-a-glance view of epidemic progression.</p>
+<h2 id="how-to-use">How to Use</h2>
 <ol>
-<li>
-<p><strong>Search for Concepts</strong>: Start typing in the search box to find concepts. Click on a result to focus on that node.</p>
-</li>
-<li>
-<p><strong>Filter by Category</strong>: Use the category checkboxes in the sidebar to show or hide groups of related concepts. Use "Check All" or "Uncheck All" for bulk operations.</p>
-</li>
-<li>
-<p><strong>Navigate the Graph</strong>:</p>
-</li>
-<li>Drag to pan around the graph</li>
-<li>Scroll to zoom in and out</li>
-<li>
-<p>Click on a node to select it and highlight its connections</p>
-</li>
-<li>
-<p><strong>View Statistics</strong>: The sidebar shows counts of visible nodes, edges, and foundational concepts.</p>
-</li>
+<li><strong>Start</strong> — Click to begin the simulation; click again to pause</li>
+<li><strong>Reset</strong> — Stop the simulation and generate a fresh population</li>
+<li><strong>Population</strong> — Number of individuals in the network (10–60)</li>
+<li><strong>Contacts/day</strong> — How many random people each infected individual contacts per day</li>
+<li><strong>Infection prob</strong> — Probability that a contact between an infected and susceptible person results in transmission</li>
+<li><strong>Recovery days</strong> — Number of days until an infected individual recovers and becomes immune</li>
+<li><strong>Speed</strong> — Milliseconds between simulated days (lower = faster)</li>
 </ol>
-<h2 id="graph-structure">Graph Structure</h2>
+<h3 id="suggested-experiments">Suggested Experiments</h3>
 <ul>
-<li><strong>Foundational Concepts</strong> (left side): Prerequisites with no dependencies</li>
-<li><strong>Advanced Concepts</strong> (right side): Topics that build on multiple prerequisites</li>
-<li><strong>Edges</strong>: Arrows point from a concept to its prerequisites</li>
+<li><strong>Low transmission:</strong> Set infection probability to 0.1 and observe how the disease may die out</li>
+<li><strong>High contacts:</strong> Increase contacts/day to 6–8 and watch super-spreader patterns emerge</li>
+<li><strong>Long recovery:</strong> Set recovery days to 14+ and observe how longer infectious periods lead to larger outbreaks</li>
+<li><strong>Herd immunity:</strong> Watch how recovered (green) nodes create barriers that protect remaining susceptible nodes</li>
 </ul>
+<h2 id="key-concepts-illustrated">Key Concepts Illustrated</h2>
+<h3 id="sir-model">SIR Model</h3>
+<p>The SIR model divides a population into three compartments:
+<strong>Susceptible</strong> (can be infected), <strong>Infected</strong> (can transmit), and
+<strong>Recovered</strong> (immune). The basic reproduction number <strong>R0</strong> estimates
+how many secondary infections each initial case produces.</p>
+<h3 id="contact-tracing">Contact Tracing</h3>
+<p>The graph structure directly shows the contact network — which
+individuals were in contact and when. In real epidemiology, reconstructing
+this graph is essential for identifying transmission chains and breaking
+them through isolation and quarantine.</p>
+<h3 id="network-effects">Network Effects</h3>
+<p>The force-directed layout naturally clusters individuals who share many
+contacts. Densely connected clusters experience rapid local spread, while
+bridges between clusters enable the disease to reach new groups.</p>
+<h2 id="iframe-embed-code">Iframe Embed Code</h2>
+<div class="highlight"><table class="highlighttable"><tbody><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="p">&lt;</span><span class="nt">iframe</span> <span class="na">src</span><span class="o">=</span><span class="s">"https://dmccreary.github.io/bioinformatics/sims/epidemic-contact-graph/main.html"</span>
+        <span class="na">height</span><span class="o">=</span><span class="s">"570"</span>
+        <span class="na">width</span><span class="o">=</span><span class="s">"100%"</span>
+        <span class="na">scrolling</span><span class="o">=</span><span class="s">"no"</span><span class="p">&gt;&lt;/</span><span class="nt">iframe</span><span class="p">&gt;</span>
+</code></pre></div></td></tr></tbody></table></div>
 
 
 
@@ -2210,7 +2426,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer">
         
           
-          <a href="../kg-construction-pipeline/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Knowledge Graph Construction Pipeline">
+          <a href="../drug-target-disease-graph/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Drug-Target-Disease Knowledge Graph">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
@@ -2220,20 +2436,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                Knowledge Graph Construction Pipeline
+                Drug-Target-Disease Knowledge Graph
               </div>
             </div>
           </a>
         
         
           
-          <a href="../louvain-vs-leiden/" class="md-footer__link md-footer__link--next" aria-label="Next: Louvain vs. Leiden Community Detection">
+          <a href="../dp-alignment-matrix/" class="md-footer__link md-footer__link--next" aria-label="Next: Dynamic Programming Matrix Visualization">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Louvain vs. Leiden Community Detection
+                Dynamic Programming Matrix Visualization
               </div>
             </div>
             <div class="md-footer__button md-icon">
