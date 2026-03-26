@@ -128,12 +128,13 @@ nav:
     - Overview of a Metabolic Network: sims/metabolic-network-overview/index.md
     - Patient Similarity Network Construction: sims/patient-similarity-network/index.md
     - Phylogenetic Network with Reticulation Events: sims/phylogenetic-network/index.md
-    - PPI Knowledge Graph Schema: sims/ppi-knowledge-graph-schema/index.md
-    - PPI Network Topology Explorer: sims/ppi-topology-explorer/index.md
     - Profile HMM Architecture: sims/profile-hmm-architecture/index.md
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
     - Protein Interaction Network Overview: sims/ppi-network-overview/index.md
-    - PPI Network Overview (vis-network): sims/ppi-network-overview-vis/index.md
+    # - PPI Network Overview: sims/ppi-network-overview-vis/index.md
+    - PPI Knowledge Graph Schema: sims/ppi-knowledge-graph-schema/index.md
+    # This is the original p5.js version with bugs
+    - PPI Network Topology Explorer: sims/ppi-topology-explorer/index.md
     - Protein Structure Hierarchy: sims/protein-structure-hierarchy/index.md
     - Protein Structure Levels: sims/protein-structure-levels/index.md
     - RNA-Seq Pipeline Overview: sims/rnaseq-pipeline/index.md

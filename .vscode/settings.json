@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "alphafold",
         "ARACNE",
         "arithmatex",
         "betweenness",
@@ -8,6 +9,7 @@
         "Biopython",
         "BLOSUM",
         "Clustal",
+        "coexpression",
         "cofactors",
         "Cytoscape",
         "Ensembl",
@@ -15,9 +17,11 @@
         "FASTQ",
         "Gephi",
         "glightbox",
+        "Graphlet",
         "GWAS",
         "Hetionet",
         "immunoprecipitation",
+        "Interactome",
         "KEGG",
         "Konigsberg",
         "Leonhard",
@@ -37,10 +41,14 @@
         "proteomics",
         "pymdownx",
         "Reactome",
+        "rnaseq",
         "scikit",
+        "scrna",
         "superfences",
+        "transcriptome",
         "transcriptomic",
         "transcriptomics",
+        "Unrooted",
         "WGCNA",
         "Wunsch"
     ]

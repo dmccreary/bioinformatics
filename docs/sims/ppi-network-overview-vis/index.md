@@ -8,7 +8,7 @@ quality_score: 0
 
 # PPI Network Overview
 
-<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="530" width="100%" scrolling="no"></iframe>
 
 [Run the PPI Network Overview MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 
