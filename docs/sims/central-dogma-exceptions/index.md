@@ -11,7 +11,7 @@ quality_score: 0
 
 # Central Dogma and Its Exceptions
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="422" width="100%" scrolling="no"></iframe>
 
 [Run the Central Dogma and Its Exceptions MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

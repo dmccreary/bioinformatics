@@ -11,7 +11,7 @@ quality_score: 0
 
 # Integrated Knowledge Graph Pipeline
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
 [Run the Integrated Knowledge Graph Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

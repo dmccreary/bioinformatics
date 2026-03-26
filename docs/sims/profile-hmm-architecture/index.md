@@ -11,7 +11,7 @@ quality_score: 0
 
 # Profile HMM Architecture
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="480" width="100%" scrolling="no"></iframe>
 
 [Run the Profile HMM Architecture MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

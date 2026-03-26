@@ -11,7 +11,7 @@ quality_score: 0
 
 # PPI Knowledge Graph Schema
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
 [Run the PPI Knowledge Graph Schema MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

@@ -11,7 +11,7 @@ quality_score: 0
 
 # Graph-Based Discovery Pipeline
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="470" width="100%" scrolling="no"></iframe>
 
 [Run the Graph-Based Discovery Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

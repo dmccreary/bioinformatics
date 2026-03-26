@@ -11,7 +11,7 @@ quality_score: 0
 
 # Contact Map and Residue Interaction Network
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
 
 [Run the Contact Map and Residue Interaction Network MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

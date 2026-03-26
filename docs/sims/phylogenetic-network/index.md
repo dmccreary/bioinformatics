@@ -11,7 +11,7 @@ quality_score: 0
 
 # Phylogenetic Network with Reticulation Events
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="510" width="100%" scrolling="no"></iframe>
 
 [Run the Phylogenetic Network with Reticulation Events MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

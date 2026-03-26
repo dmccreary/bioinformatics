@@ -11,7 +11,7 @@ quality_score: 0
 
 # FASTQ Quality Control Pipeline
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="580" width="100%" scrolling="no"></iframe>
 
 [Run the FASTQ Quality Control Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

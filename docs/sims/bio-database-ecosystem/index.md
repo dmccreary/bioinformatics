@@ -11,7 +11,7 @@ quality_score: 0
 
 # Biological Database Ecosystem
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="530" width="100%" scrolling="no"></iframe>
 
 [Run the Biological Database Ecosystem MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

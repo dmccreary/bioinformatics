@@ -11,7 +11,7 @@ quality_score: 0
 
 # The Transcriptome Landscape
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
 
 [Run the The Transcriptome Landscape MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

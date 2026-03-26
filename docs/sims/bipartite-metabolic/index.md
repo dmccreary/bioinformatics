@@ -11,7 +11,7 @@ quality_score: 0
 
 # Bipartite Graph of a Metabolic Sub-network
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
 
 [Run the Bipartite Graph of a Metabolic Sub-network MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

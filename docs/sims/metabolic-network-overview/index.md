@@ -11,7 +11,7 @@ quality_score: 0
 
 # Overview of a Metabolic Network
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
 [Run the Overview of a Metabolic Network MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

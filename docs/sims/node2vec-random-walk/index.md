@@ -11,7 +11,7 @@ quality_score: 0
 
 # Node2Vec Biased Random Walk
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
 
 [Run the Node2Vec Biased Random Walk MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

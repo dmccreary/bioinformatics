@@ -11,7 +11,7 @@ quality_score: 0
 
 # BFS vs DFS Traversal Comparison
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
 
 [Run the BFS vs DFS Traversal Comparison MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

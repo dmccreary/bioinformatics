@@ -11,7 +11,7 @@ quality_score: 0
 
 # Drug-Target-Disease Knowledge Graph
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="550" width="100%" scrolling="no"></iframe>
 
 [Run the Drug-Target-Disease Knowledge Graph MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

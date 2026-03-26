@@ -11,7 +11,7 @@ quality_score: 0
 
 # Graphlet Orbits and Network Comparison
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="602" width="100%" scrolling="no"></iframe>
 
 [Run the Graphlet Orbits and Network Comparison MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

@@ -11,7 +11,7 @@ quality_score: 0
 
 # Volcano Plot for Differential Expression
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
 
 [Run the Volcano Plot for Differential Expression MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

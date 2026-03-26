@@ -11,7 +11,7 @@ quality_score: 0
 
 # Patient Similarity Network Construction
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
 
 [Run the Patient Similarity Network Construction MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

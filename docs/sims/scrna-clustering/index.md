@@ -11,7 +11,7 @@ quality_score: 0
 
 # Single-Cell Clustering and Trajectory
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
 
 [Run the Single-Cell Clustering and Trajectory MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

@@ -11,7 +11,7 @@ quality_score: 0
 
 # Central Dogma Information Flow
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="422" width="100%" scrolling="no"></iframe>
 
 [Run the Central Dogma Information Flow MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>

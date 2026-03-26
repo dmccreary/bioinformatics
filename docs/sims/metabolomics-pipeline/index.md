@@ -11,7 +11,7 @@ quality_score: 0
 
 # Metabolomics to Network Mapping Pipeline
 
-<iframe src="main.html" height="450px" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
 
 [Run the Metabolomics to Network Mapping Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
