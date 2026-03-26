@@ -134,7 +134,7 @@ nav:
     - Prokaryotic vs Eukaryotic Cell: sims/prokaryote-vs-eukaryote/index.md
     - Protein Interaction Network Overview: sims/ppi-network-overview/index.md
     - Protein Structure Hierarchy: sims/protein-structure-hierarchy/index.md
-    - Protein Structure Hierarchy: sims/protein-structure-levels/index.md
+    - Protein Structure Levels: sims/protein-structure-levels/index.md
     - RNA-Seq Pipeline Overview: sims/rnaseq-pipeline/index.md
     - Rooted and Unrooted Phylogenetic Trees: sims/phylogenetic-tree-types/index.md
     - Sequence Similarity Network: sims/sequence-similarity-network/index.md
