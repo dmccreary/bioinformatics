@@ -148,7 +148,7 @@ function initLayout() {
 
 function stepLayout() {
     let k = 0.08; // ideal spring length
-    let repulsion = 0.002;
+    let repulsion = 0.004;
     let attraction = 0.05;
     let damping = 0.85;
     let dt = 0.3;
@@ -169,7 +169,7 @@ function stepLayout() {
         for (let nb of adj[i]) {
             let dx = positions[nb].x - positions[i].x;
             let dy = positions[nb].y - positions[i].y;
-            let d = Math.sqrt(dx * dx + dy * dy);
+            let d = Math.sqrt(dx * dx + dy * dy) + 0.001;
             let force = (d - k) * attraction;
             fx += (dx / d) * force;
             fy += (dy / d) * force;
@@ -177,6 +177,13 @@ function stepLayout() {
         // Center gravity
         fx += (0.5 - positions[i].x) * 0.01;
         fy += (0.5 - positions[i].y) * 0.01;
+
+        // Soft boundary repulsion (replaces hard clamp)
+        let bMin = 0.05, bMax = 0.95, bStrength = 0.005;
+        if (positions[i].x < bMin) fx += bStrength / ((positions[i].x - bMin) * (positions[i].x - bMin) + 0.001);
+        if (positions[i].x > bMax) fx -= bStrength / ((positions[i].x - bMax) * (positions[i].x - bMax) + 0.001);
+        if (positions[i].y < bMin) fy += bStrength / ((positions[i].y - bMin) * (positions[i].y - bMin) + 0.001);
+        if (positions[i].y > bMax) fy -= bStrength / ((positions[i].y - bMax) * (positions[i].y - bMax) + 0.001);
 
         velocities[i].x = (velocities[i].x + fx * dt) * damping;
         velocities[i].y = (velocities[i].y + fy * dt) * damping;
@@ -186,14 +193,14 @@ function stepLayout() {
     for (let i = 0; i < ppiNodes.length; i++) {
         positions[i].x += velocities[i].x;
         positions[i].y += velocities[i].y;
-        // Clamp
-        positions[i].x = Math.max(0.08, Math.min(0.92, positions[i].x));
-        positions[i].y = Math.max(0.08, Math.min(0.92, positions[i].y));
+        // Safety clamp (should rarely activate with soft boundaries)
+        positions[i].x = Math.max(0.02, Math.min(0.98, positions[i].x));
+        positions[i].y = Math.max(0.02, Math.min(0.98, positions[i].y));
         totalMovement += Math.abs(velocities[i].x) + Math.abs(velocities[i].y);
     }
 
     layoutIter++;
-    if (totalMovement < 0.001 || layoutIter > 300) layoutDone = true;
+    if (totalMovement < 0.001 || layoutIter > 500) layoutDone = true;
 }
 
 // Compute clustering coefficient
@@ -256,8 +263,14 @@ function draw() {
     let netY = 26;
 
     // Sidebar
-    let panelX = netX + netW + 8;
+    let panelX = netX + netW + 58;
     let panelW = canvasWidth - panelX - margin;
+
+    // Draw sidebar background first so edges render on top
+    fill(255);
+    stroke('#ddd');
+    strokeWeight(1);
+    rect(panelX, netY, panelW, netH, 6);
 
     // Draw edges
     for (let [u, v] of ppiEdges) {
@@ -315,16 +328,64 @@ function draw() {
             strokeWeight(1.5);
         }
         circle(nx, ny, sz);
-
-        // Label
-        fill(isHov || isHub ? '#333' : '#555');
-        noStroke();
-        textAlign(CENTER, CENTER);
-        textSize(7);
-        textStyle(BOLD);
-        text(n.name, nx, ny - sz / 2 - 7);
-        textStyle(NORMAL);
     }
+
+    // Detect corner nodes (near clamped edges)
+    function isCorner(id) {
+        let p = positions[id];
+        let nearEdgeX = p.x < 0.15 || p.x > 0.85;
+        let nearEdgeY = p.y < 0.15 || p.y > 0.85;
+        return nearEdgeX && nearEdgeY;
+    }
+
+    // Compute label positions with overlap avoidance
+    let labels = [];
+    for (let n of ppiNodes) {
+        let nx = netX + positions[n.id].x * netW;
+        let ny = netY + positions[n.id].y * netH;
+        let deg = degrees[n.id];
+        let sz = map(deg, 1, maxDeg, 12, 28);
+        if (hoveredNode === n.id) sz += 4;
+        let isHov = hoveredNode === n.id;
+        let isHub = deg > 4;
+        labels.push({
+            id: n.id, name: n.name,
+            x: nx, y: ny - sz / 2 - 7 - (isCorner(n.id) ? 20 : 0),
+            anchorX: nx, anchorY: ny,
+            isHov: isHov, isHub: isHub
+        });
+    }
+
+    // Push overlapping labels apart (several relaxation passes)
+    let labelH = 9;
+    let labelPadding = 2;
+    for (let pass = 0; pass < 12; pass++) {
+        for (let i = 0; i < labels.length; i++) {
+            for (let j = i + 1; j < labels.length; j++) {
+                let dx = labels[i].x - labels[j].x;
+                let dy = labels[i].y - labels[j].y;
+                let overlapX = 40 - Math.abs(dx);
+                let overlapY = (labelH + labelPadding) - Math.abs(dy);
+                if (overlapX > 0 && overlapY > 0) {
+                    // Push apart along the axis with less overlap
+                    let pushY = (overlapY / 2 + 1) * (dy >= 0 ? 1 : -1);
+                    labels[i].y += pushY;
+                    labels[j].y -= pushY;
+                }
+            }
+        }
+    }
+
+    // Draw labels
+    textSize(7);
+    textStyle(BOLD);
+    noStroke();
+    textAlign(CENTER, CENTER);
+    for (let lb of labels) {
+        fill(lb.isHov || lb.isHub ? '#333' : '#555');
+        text(lb.name, lb.x, lb.y);
+    }
+    textStyle(NORMAL);
 
     // Hover tooltip
     if (hoveredNode >= 0) {
@@ -362,10 +423,6 @@ function draw() {
     }
 
     // Sidebar stats
-    fill(255);
-    stroke('#ddd');
-    strokeWeight(1);
-    rect(panelX, netY, panelW, netH, 6);
 
     fill('#333');
     noStroke();

@@ -1,0 +1,64 @@
+{
+  "title": "PPI Network Overview (vis-network)",
+  "creator": "Dan McCreary",
+  "subject": "Bioinformatics",
+  "description": "Interactive force-directed protein-protein interaction network with 25 cancer-related proteins, hub highlighting, and network statistics using vis-network",
+  "date": "2026-03-25",
+  "educational": {
+    "gradeLevel": [
+      "college"
+    ],
+    "subjectArea": "Bioinformatics",
+    "topic": "Protein-Protein Interaction Networks",
+    "learningObjectives": [
+      "Identify hub proteins in a PPI network by visual size and color cues",
+      "Interpret network statistics including degree, density, and clustering coefficient",
+      "Explain the biological significance of highly connected proteins in signaling pathways",
+      "Compare betweenness centrality across nodes and explain its role in network communication",
+      "Recognize modular structure in biological networks through interactive exploration"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Basic graph theory concepts (nodes, edges, degree)",
+      "Familiarity with protein names and cell signaling pathways"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "vis-network",
+    "version": "1.0",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "responsive": true,
+    "dependencies": [
+      "vis-network (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": false,
+      "keyboardNavigable": true
+    }
+  },
+  "pedagogical": {
+    "teachingStrategy": "Interactive exploration with guided discovery",
+    "keyQuestions": [
+      "Which protein has the highest degree and why might that matter biologically?",
+      "What does a high betweenness centrality suggest about a protein's role in cellular communication?",
+      "Can you identify clusters of proteins that interact more with each other than with the rest of the network?",
+      "How does the network structure reflect known cancer signaling pathways?"
+    ],
+    "commonMisconceptions": [
+      "Hub proteins are always the most important drug targets — in reality, targeting hubs can cause widespread side effects",
+      "All edges in a PPI network represent direct physical binding — some may represent functional associations",
+      "A high clustering coefficient means a protein is a hub — it actually measures local neighborhood connectivity"
+    ],
+    "assessmentOpportunities": [
+      "Ask students to identify the top 3 hub proteins and explain their biological roles",
+      "Have students predict what would happen to the network if TP53 were removed",
+      "Students compare clustering coefficients of hub vs non-hub proteins and explain the difference"
+    ]
+  },
+  "chapter": "09-protein-interaction-networks"
+}
