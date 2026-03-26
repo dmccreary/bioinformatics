@@ -10,7 +10,13 @@ An **intelligent textbook** is a digital textbook that goes beyond static text a
 
 ### The Five Levels of Intelligent Textbooks
 
-Not all digital textbooks are created equal. We categorize intelligent textbooks into five levels based on how interactive and adaptive they are:
+Not all digital textbooks are created equal. We categorize intelligent textbooks into five levels based on how interactive and adaptive they are.
+
+Here is a MicroSim that describes the five levels:
+
+<iframe src="https://dmccreary.github.io/intelligent-textbooks/sims/book-levels/main.html" height="500px" scrolling="no"></iframe>
+
+This table also summarizes the five levels:
 
 | Level | Name | Description | Example Features |
 |-------|------|-------------|-----------------|
@@ -20,7 +26,12 @@ Not all digital textbooks are created equal. We categorize intelligent textbooks
 | **Level 4** | AI-Assisted | Includes an AI tutor that can answer student questions | Chatbot integration, automated feedback |
 | **Level 5** | Fully Adaptive AI | Continuously learns from student interactions and optimizes the experience | Real-time content generation, predictive analytics |
 
-**This textbook is a Level 2 Intelligent Textbook.** It includes 53 interactive MicroSims, chapter quizzes, a 480-term glossary, a comprehensive FAQ, and an interactive learning graph viewer — all freely accessible in any web browser.
+This textbook is a **Level 2.99**  Intelligent Textbook: it tries to be as interactive
+as possible but it does not store any information about individual students to
+avoid legal actions against our instructors for data privacy violations.
+
+ This textbook includes a search tool, over 54 interactive MicroSims, chapter quizzes, a 480-term glossary, a comprehensive FAQ, detailed annotated references and an interactive learning graph viewer — all freely accessible in any web browser.  The structure is designed to be "Level 3" ready
+ if you have a Learning Record Store to store student private event data.
 
 ### What Makes This Textbook Different
 
