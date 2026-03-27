@@ -5,7 +5,7 @@
 
 let containerWidth;
 let canvasWidth = 400;
-let drawHeight = 520;
+let drawHeight = 470;
 let controlHeight = 40;
 let canvasHeight = drawHeight + controlHeight;
 let containerHeight = canvasHeight;
@@ -80,9 +80,9 @@ function draw() {
     rect(0, 0, canvasWidth, drawHeight);
 
     fill('white');
-    noStroke();
     rect(0, drawHeight, canvasWidth, controlHeight);
-
+    noStroke();
+    
     // Title
     fill('#1a1a1a');
     noStroke();
@@ -90,6 +90,10 @@ function draw() {
     textSize(15);
     textStyle(BOLD);
     text('Contact Map & Residue Interaction Network', canvasWidth / 2, 4);
+    textStyle(ITALIC);
+    fill('#666');
+    textSize(11);
+    text('Click a cell in the matrix or a node in the network to highlight', canvasWidth / 2, 22);
     textStyle(NORMAL);
 
     let halfW = canvasWidth / 2;
@@ -99,19 +103,21 @@ function draw() {
     strokeWeight(1);
     line(halfW, 24, halfW, drawHeight - 10);
 
-    // Left panel: Contact Map Heatmap
-    drawContactMap(margin, 28, halfW - margin * 2, drawHeight - 50);
-
-    // Right panel: Circular Network
-    drawNetwork(halfW + margin, 28, halfW - margin * 2, drawHeight - 50);
-
-    // Panel labels
+    // Panel labels (top of each panel)
     fill('#666');
     noStroke();
-    textAlign(CENTER, BOTTOM);
-    textSize(10);
-    text('Contact Map (distance heatmap)', halfW / 2, drawHeight - 4);
-    text('Residue Interaction Network', halfW + halfW / 2, drawHeight - 4);
+    textAlign(CENTER, TOP);
+    textSize(14);
+    textStyle(BOLD);
+    text('Contact Map (distance heatmap)', halfW / 2, 38);
+    text('Residue Interaction Network', halfW + halfW / 2, 38);
+    textStyle(NORMAL);
+
+    // Left panel: Contact Map Heatmap
+    drawContactMap(margin, 58, halfW - margin * 2, drawHeight - 70);
+
+    // Right panel: Circular Network
+    drawNetwork(halfW + margin, 58, halfW - margin * 2, drawHeight - 70);
 }
 
 function drawContactMap(px, py, pw, ph) {
