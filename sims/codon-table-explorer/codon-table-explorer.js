@@ -89,8 +89,8 @@ function draw() {
   rect(0, 0, canvasWidth, drawHeight);
 
   fill('white');
-  noStroke();
   rect(0, drawHeight, canvasWidth, controlHeight);
+  noStroke();
 
   // Title
   fill('#1a1a1a');
