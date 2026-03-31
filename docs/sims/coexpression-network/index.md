@@ -11,7 +11,7 @@ quality_score: 3
 
 # Co-Expression Network and Module Detection
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the Co-Expression Network and Module Detection MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -51,7 +51,7 @@ The soft-threshold slider controls which edges are displayed. At low thresholds,
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/coexpression-network/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

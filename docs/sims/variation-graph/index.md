@@ -11,7 +11,7 @@ quality_score: 3
 
 # Variation Graph for a Genomic Region
 
-<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="600" width="100%" scrolling="no"></iframe>
 
 [Run the Variation Graph for a Genomic Region MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -54,7 +54,7 @@ Traditional linear reference genomes introduce **reference bias** — reads from
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/variation-graph/main.html"
-        height="502"
+        height="600"
         width="100%"
         scrolling="no"></iframe>
 ```

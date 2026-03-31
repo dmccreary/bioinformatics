@@ -11,7 +11,7 @@ quality_score: 3
 
 # Flux Balance Analysis Formulation
 
-<iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="660" width="100%" scrolling="no"></iframe>
 
 [Run the Flux Balance Analysis Formulation MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -39,7 +39,7 @@ This MicroSim demonstrates **Flux Balance Analysis (FBA)** — the mathematical 
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/fba-formulation/main.html"
-        height="562"
+        height="660"
         width="100%"
         scrolling="no"></iframe>
 ```

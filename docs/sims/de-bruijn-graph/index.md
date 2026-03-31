@@ -11,7 +11,7 @@ quality_score: 3
 
 # De Bruijn Graph Construction
 
-<iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="670" width="100%" scrolling="no"></iframe>
 
 [Run the De Bruijn Graph Construction MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -58,7 +58,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/de-bruijn-graph/main.html"
-        height="562"
+        height="670"
         width="100%"
         scrolling="no"></iframe>
 ```

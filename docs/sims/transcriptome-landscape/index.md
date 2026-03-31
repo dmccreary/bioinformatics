@@ -11,7 +11,7 @@ quality_score: 3
 
 # The Transcriptome Landscape
 
-<iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="660" width="100%" scrolling="no"></iframe>
 
 [Run the The Transcriptome Landscape MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -43,7 +43,7 @@ This MicroSim presents the **transcriptome landscape** — the complete set of R
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/transcriptome-landscape/main.html"
-        height="562"
+        height="660"
         width="100%"
         scrolling="no"></iframe>
 ```

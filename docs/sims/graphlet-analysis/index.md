@@ -11,7 +11,7 @@ quality_score: 3
 
 # Graphlet Orbits and Network Comparison
 
-<iframe src="main.html" height="602" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="690" width="100%" scrolling="no"></iframe>
 
 [Run the Graphlet Orbits and Network Comparison MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -53,7 +53,7 @@ Graphlet analysis is used in bioinformatics to:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/graphlet-analysis/main.html"
-        height="602"
+        height="690"
         width="100%"
         scrolling="no"></iframe>
 ```

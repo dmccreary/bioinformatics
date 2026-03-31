@@ -180,7 +180,7 @@ Local alignment is the appropriate choice when you expect that only a portion of
 
 #### Diagram: Dynamic Programming Matrix Visualization
 
-<iframe src="../../sims/dp-alignment-matrix/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/dp-alignment-matrix/main.html" width="100%" height="730" scrolling="no"></iframe>
 
 *[View DP Alignment Matrix MicroSim Fullscreen](../../sims/dp-alignment-matrix/main.html)*
 

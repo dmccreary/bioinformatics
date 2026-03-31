@@ -155,7 +155,7 @@ In bioinformatics, primary structure is stored as sequence data (FASTA format), 
 
 #### Diagram: Protein Structure Hierarchy
 
-<iframe src="../../sims/protein-structure-levels/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/protein-structure-levels/main.html" width="100%" height="560" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Protein Structure Hierarchy</summary>
@@ -292,7 +292,7 @@ In bioinformatics, gene expression data is typically captured as read counts fro
 
 #### Diagram: Central Dogma Information Flow
 
-<iframe src="../../sims/central-dogma-flow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/central-dogma-flow/main.html" width="100%" height="510" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Central Dogma Information Flow</summary>
@@ -458,7 +458,7 @@ These exceptions are not merely biological curiosities — they have direct bioi
 
 #### Diagram: Central Dogma and Its Exceptions
 
-<iframe src="../../sims/central-dogma-exceptions/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/central-dogma-exceptions/main.html" width="100%" height="510" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Central Dogma and Its Exceptions</summary>

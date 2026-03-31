@@ -11,7 +11,7 @@ quality_score: 3
 
 # Molecular Docking and Protein-Ligand Graph
 
-<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="610" width="100%" scrolling="no"></iframe>
 
 [Run the Molecular Docking and Protein-Ligand Graph MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -50,7 +50,7 @@ Graph representations of protein-ligand interactions are used in:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/molecular-docking-graph/main.html"
-        height="522"
+        height="610"
         width="100%"
         scrolling="no"></iframe>
 ```

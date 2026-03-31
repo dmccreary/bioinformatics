@@ -11,7 +11,7 @@ quality_score: 3
 
 # Protein Structure Hierarchy
 
-<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="620" width="100%" scrolling="no"></iframe>
 
 [Run the Protein Structure Hierarchy MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -38,7 +38,7 @@ This MicroSim presents the **four levels of protein structure** (primary, second
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/protein-structure-hierarchy/main.html"
-        height="522"
+        height="620"
         width="100%"
         scrolling="no"></iframe>
 ```

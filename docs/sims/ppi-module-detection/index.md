@@ -11,7 +11,7 @@ quality_score: 3
 
 # Module Detection in PPI Networks
 
-<iframe src="main.html" height="562" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="660" width="100%" scrolling="no"></iframe>
 
 [Run the Module Detection in PPI Networks MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -51,7 +51,7 @@ Protein complexes are the functional units of the cell. Identifying them computa
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/ppi-module-detection/main.html"
-        height="562"
+        height="660"
         width="100%"
         scrolling="no"></iframe>
 ```

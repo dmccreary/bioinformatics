@@ -11,7 +11,7 @@ quality_score: 3
 
 # RNA-Seq Pipeline Overview
 
-<iframe src="main.html" height="522" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="620" width="100%" scrolling="no"></iframe>
 
 [Run the RNA-Seq Pipeline Overview MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -41,7 +41,7 @@ This MicroSim walks through the **RNA-seq pipeline** as an animated flowchart, f
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/rnaseq-pipeline/main.html"
-        height="522"
+        height="620"
         width="100%"
         scrolling="no"></iframe>
 ```

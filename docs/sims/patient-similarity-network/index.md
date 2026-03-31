@@ -11,7 +11,7 @@ quality_score: 3
 
 # Patient Similarity Network Construction
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the Patient Similarity Network Construction MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -44,7 +44,7 @@ Patient similarity networks are used in precision medicine to:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/patient-similarity-network/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

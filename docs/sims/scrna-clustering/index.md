@@ -11,7 +11,7 @@ quality_score: 3
 
 # Single-Cell Clustering and Trajectory
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the Single-Cell Clustering and Trajectory MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -62,7 +62,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/scrna-clustering/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

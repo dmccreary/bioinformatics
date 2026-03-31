@@ -11,7 +11,7 @@ quality_score: 3
 
 # Protein Structure Hierarchy
 
-<iframe src="main.html" height="452" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="560" width="100%" scrolling="no"></iframe>
 
 [Run the Protein Structure Hierarchy MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -48,7 +48,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/protein-structure-levels/main.html"
-        height="452"
+        height="560"
         width="100%"
         scrolling="no"></iframe>
 ```

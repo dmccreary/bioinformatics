@@ -11,7 +11,7 @@ quality_score: 3
 
 # Dynamic Programming Matrix Visualization
 
-<iframe src="main.html" height="582" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="730" width="100%" scrolling="no"></iframe>
 
 [Run the Dynamic Programming Matrix Visualization MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -62,7 +62,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/dp-alignment-matrix/main.html"
-        height="582"
+        height="730"
         width="100%"
         scrolling="no"></iframe>
 ```

@@ -70,7 +70,7 @@ RNA comes in many forms. Messenger RNA (mRNA) carries protein-coding information
 
 #### Diagram: The Transcriptome Landscape
 
-<iframe src="../../sims/transcriptome-landscape/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/transcriptome-landscape/main.html" width="100%" height="660" scrolling="no"></iframe>
 
 *[View Transcriptome Landscape MicroSim Fullscreen](../../sims/transcriptome-landscape/main.html)*
 
@@ -159,7 +159,7 @@ where $q$ is the desired FDR threshold (typically 0.05). All genes with rank $\l
 
 #### Diagram: Volcano Plot for Differential Expression
 
-<iframe src="../../sims/volcano-plot/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/volcano-plot/main.html" width="100%" height="650" scrolling="no"></iframe>
 
 *[View Volcano Plot MicroSim Fullscreen](../../sims/volcano-plot/main.html)*
 
