@@ -13,7 +13,6 @@ let margin = 15;
 
 let currentStep = 0;
 let prevBtn, nextBtn;
-let flowNodes = []; // cached node positions for click detection
 
 const STEPS = [
   {
@@ -119,9 +118,6 @@ function drawFlowDiagram() {
     { label: 'Translation', x: margin + (nodeW + spacing) * 3, col: [255, 87, 34], step: 3 },
     { label: 'Protein', x: margin + (nodeW + spacing) * 4, col: [156, 39, 176], step: 4 }
   ];
-
-  // Cache geometry for click/hover detection
-  flowNodes = nodes.map(n => ({ x: n.x, y: y, w: nodeW, h: nodeH, step: n.step }));
 
   // Draw arrows
   for (let i = 0; i < nodes.length - 1; i++) {
@@ -375,24 +371,4 @@ function updateCanvasSize() {
   const container = document.querySelector('main').getBoundingClientRect();
   containerWidth = Math.floor(container.width);
   canvasWidth = containerWidth;
-}
-
-function mousePressed() {
-  for (let n of flowNodes) {
-    if (mouseX >= n.x && mouseX <= n.x + n.w && mouseY >= n.y && mouseY <= n.y + n.h) {
-      currentStep = n.step;
-      return;
-    }
-  }
-}
-
-function mouseMoved() {
-  let overNode = false;
-  for (let n of flowNodes) {
-    if (mouseX >= n.x && mouseX <= n.x + n.w && mouseY >= n.y && mouseY <= n.y + n.h) {
-      overNode = true;
-      break;
-    }
-  }
-  cursor(overNode ? HAND : ARROW);
 }
