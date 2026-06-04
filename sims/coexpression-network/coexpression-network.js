@@ -141,11 +141,12 @@ function draw() {
     rect(0, 0, canvasWidth, drawHeight);
 
     fill('white');
-    noStroke();
+    // draw the control region and a silver line around it for alignement
     rect(0, drawHeight, canvasWidth, controlHeight);
+    noStroke();
 
     // Title
-    fill('#1a1a1a');
+    fill('black');
     noStroke();
     textAlign(CENTER, TOP);
     textSize(15);
