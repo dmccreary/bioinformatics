@@ -11,7 +11,7 @@ quality_score: 3
 
 # Codon Table Explorer
 
-<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="458" width="100%" scrolling="no"></iframe>
 
 [Run the Codon Table Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
