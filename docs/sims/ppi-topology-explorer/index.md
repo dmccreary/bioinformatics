@@ -11,7 +11,7 @@ quality_score: 3
 
 # PPI Network Topology Explorer
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the PPI Network Topology Explorer MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -49,7 +49,7 @@ This MicroSim provides a **topology explorer** for a PPI network. The left panel
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/ppi-topology-explorer/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

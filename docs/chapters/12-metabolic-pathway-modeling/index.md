@@ -187,7 +187,7 @@ where $c$ is a vector of objective coefficients, typically zero everywhere excep
 
 #### Diagram: Flux Balance Analysis Formulation
 
-<iframe src="../../sims/fba-formulation/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/fba-formulation/main.html" width="100%" height="660" scrolling="no"></iframe>
 
 *[View FBA Formulation MicroSim Fullscreen](../../sims/fba-formulation/main.html)*
 

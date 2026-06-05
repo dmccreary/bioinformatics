@@ -11,7 +11,7 @@ quality_score: 3
 
 # Rooted and Unrooted Phylogenetic Trees
 
-<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="590" width="100%" scrolling="no"></iframe>
 
 [Run the Rooted and Unrooted Phylogenetic Trees MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -51,7 +51,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/phylogenetic-tree-types/main.html"
-        height="502"
+        height="590"
         width="100%"
         scrolling="no"></iframe>
 ```

@@ -11,7 +11,7 @@ quality_score: 3
 
 # Genome Assembly Pipeline Overview
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the Genome Assembly Pipeline Overview MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -42,7 +42,7 @@ This MicroSim presents the **genome assembly pipeline** as an animated, step-thr
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/genome-assembly-pipeline/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

@@ -297,7 +297,7 @@ DFS is used for topological sorting of directed acyclic graphs, detecting cycles
 
 #### Diagram: BFS vs DFS Traversal Comparison
 
-<iframe src="../../sims/bfs-vs-dfs/main.html" width="100%" height="500" scrolling="no"></iframe>
+<iframe src="../../sims/bfs-vs-dfs/main.html" width="100%" height="580" scrolling="no"></iframe>
 
 *[View BFS vs DFS Traversal MicroSim Fullscreen](../../sims/bfs-vs-dfs/main.html)*
 

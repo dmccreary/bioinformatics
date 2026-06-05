@@ -11,7 +11,7 @@ quality_score: 3
 
 # Metabolomics to Network Mapping Pipeline
 
-<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="600" width="100%" scrolling="no"></iframe>
 
 [Run the Metabolomics to Network Mapping Pipeline MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -39,7 +39,7 @@ This MicroSim walks through the **metabolomics analysis pipeline**, from biologi
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/metabolomics-pipeline/main.html"
-        height="502"
+        height="600"
         width="100%"
         scrolling="no"></iframe>
 ```

@@ -11,7 +11,7 @@ quality_score: 3
 
 # Gene Tree vs Species Tree Discordance
 
-<iframe src="main.html" height="502" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="590" width="100%" scrolling="no"></iframe>
 
 [Run the Gene Tree vs Species Tree Discordance MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -45,7 +45,7 @@ This MicroSim illustrates **gene tree / species tree discordance** — the pheno
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/gene-tree-species-tree/main.html"
-        height="502"
+        height="590"
         width="100%"
         scrolling="no"></iframe>
 ```

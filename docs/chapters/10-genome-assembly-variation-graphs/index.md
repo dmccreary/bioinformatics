@@ -172,7 +172,7 @@ The resulting graph has six nodes (`ATG`, `TGC`, `GCG`, `CGT`, `GTA`, `TAC`) and
 
 #### Diagram: De Bruijn Graph Construction
 
-<iframe src="../../sims/de-bruijn-graph/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/de-bruijn-graph/main.html" width="100%" height="670" scrolling="no"></iframe>
 
 *[View De Bruijn Graph MicroSim Fullscreen](../../sims/de-bruijn-graph/main.html)*
 

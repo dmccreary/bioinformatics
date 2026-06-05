@@ -11,7 +11,7 @@ quality_score: 3
 
 # Central Dogma and Its Exceptions
 
-<iframe src="main.html" height="422" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="510" width="100%" scrolling="no"></iframe>
 
 [Run the Central Dogma and Its Exceptions MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -61,7 +61,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/central-dogma-exceptions/main.html"
-        height="422"
+        height="510"
         width="100%"
         scrolling="no"></iframe>
 ```

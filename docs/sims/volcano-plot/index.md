@@ -11,7 +11,7 @@ quality_score: 3
 
 # Volcano Plot for Differential Expression
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="650" width="100%" scrolling="no"></iframe>
 
 [Run the Volcano Plot for Differential Expression MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -63,7 +63,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/volcano-plot/main.html"
-        height="542"
+        height="650"
         width="100%"
         scrolling="no"></iframe>
 ```

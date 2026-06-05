@@ -11,7 +11,7 @@ quality_score: 3
 
 # Louvain vs. Leiden Community Detection
 
-<iframe src="main.html" height="542" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="640" width="100%" scrolling="no"></iframe>
 
 [Run the Louvain vs. Leiden Community Detection MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -59,7 +59,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/louvain-vs-leiden/main.html"
-        height="542"
+        height="640"
         width="100%"
         scrolling="no"></iframe>
 ```

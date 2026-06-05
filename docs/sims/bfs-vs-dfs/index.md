@@ -11,7 +11,7 @@ quality_score: 3
 
 # BFS vs DFS Traversal Comparison
 
-<iframe src="main.html" height="482" width="100%" scrolling="no"></iframe>
+<iframe src="main.html" height="580" width="100%" scrolling="no"></iframe>
 
 [Run the BFS vs DFS Traversal Comparison MicroSim Fullscreen](./main.html){ .md-button .md-button--primary }
 <br/>
@@ -57,7 +57,7 @@ You can add this MicroSim to any web page by adding this to your HTML:
 
 ```html
 <iframe src="https://dmccreary.github.io/bioinformatics/sims/bfs-vs-dfs/main.html"
-        height="482"
+        height="580"
         width="100%"
         scrolling="no"></iframe>
 ```

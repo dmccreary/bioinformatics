@@ -218,7 +218,7 @@ However, strict clique requirements are often too stringent for noisy PPI data w
 
 #### Diagram: Module Detection in PPI Networks
 
-<iframe src="../../sims/ppi-module-detection/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/ppi-module-detection/main.html" width="100%" height="660" scrolling="no"></iframe>
 
 *[View Module Detection MicroSim Fullscreen](../../sims/ppi-module-detection/main.html)*
 
@@ -301,7 +301,7 @@ where $r_{ij}^{(G)}$ is the Spearman correlation between orbits $i$ and $j$ in g
 
 #### Diagram: Graphlet Orbits and Network Comparison
 
-<iframe src="../../sims/graphlet-analysis/main.html" width="100%" height="640" scrolling="no"></iframe>
+<iframe src="../../sims/graphlet-analysis/main.html" width="100%" height="690" scrolling="no"></iframe>
 
 *[View Graphlet Analysis MicroSim Fullscreen](../../sims/graphlet-analysis/main.html)*
 
