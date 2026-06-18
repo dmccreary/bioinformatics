@@ -236,9 +236,9 @@ copyright: Copyright &copy; 2026 Dan McCreary. Licensed under <a href="license/"
 extra:
   # remove the made with mkdocs from the footer
   generator: false
-  #analytics:
-  #  provider: google
-  #  property: G-XXXXXXXXXX
+  analytics:
+    provider: google
+    property: G-SNS8LVYHPC
   schema: https://dmccreary.github.io/intelligent-textbooks/ns/textbook/v1
   textbook_name: Bioinformatics
   textbook_version: "1.0"
